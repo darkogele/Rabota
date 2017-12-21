@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5f95fa89-633d-41d1-9416-3ab2034ed4fc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/CRRMServicesProd.Host/ListOfSubjectsCU.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ListOfSubjectsCU.xsd" MetadataType="Schema" ID="f9d16c19-a2dc-4a22-822b-bd532ff50b7d" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/ListOfSubjectsCU.svc?xsd=xsd2" />
+    <MetadataFile FileName="ListOfSubjectsCU.wsdl" MetadataType="Wsdl" ID="eb50d191-5d6c-48ba-bb68-c80cfff57936" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/ListOfSubjectsCU.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ListOfSubjectsCU1.xsd" MetadataType="Schema" ID="59dd7345-ce68-4e38-8e5c-e5a9b38e3e40" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/ListOfSubjectsCU.svc?xsd=xsd1" />
+    <MetadataFile FileName="ListOfSubjectsCU.disco" MetadataType="Disco" ID="18217441-aa95-4c11-a01c-ef57f88d267f" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/ListOfSubjectsCU.svc?disco" />
+    <MetadataFile FileName="ListOfSubjectsCU1.wsdl" MetadataType="Wsdl" ID="eaa66669-67a4-4072-881c-f4ef954a5cf7" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/ListOfSubjectsCU.svc?wsdl" />
+    <MetadataFile FileName="ListOfSubjectsCU2.xsd" MetadataType="Schema" ID="d2dc0f74-5179-434d-a0c6-70f96e629f54" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/ListOfSubjectsCU.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

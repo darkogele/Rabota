@@ -1,0 +1,103 @@
+﻿@model Interop.CC.Models.DTO.Institutions.EDB_EMB_OutputDTO
+<head>
+    <style type="text/css">
+        table, tr, td {
+            border: 1px solid gray;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+
+        th {
+            border: 2px solid black;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<div style="width: 100%;">
+
+    <div style="float: left; width: 70%;">
+        <img src="@Server.MapPath("~/Views/Template/grbMak.jpg")" style="float: left" alt="MIOA logo" />
+        <label>Република Македонија</label>
+        <h4 style="font-size:.6em;">Министерство за информатичко општество и администрација</h4>
+    </div>
+    <div style="float: right; width: 30%; font-size: .6em">
+        <a style="margin-left: 80px;" href="http://www.interoperabilnost.gov.mk">www.interoperabilnost.gov.mk</a>
+
+        <table class="table-striped" style="margin-top: 20px;">
+            <thead style="display: table-row-group">
+
+            </thead>
+            <tbody style="font-size: .6em">
+                <tr>
+                    <td>Име на услугата:</td>
+                    <td>@Model.ServiceName</td>
+                </tr>
+                <tr>
+                    <td>Услугата ја користи:</td>
+                    <td>@Model.ConsumerName</td>
+                </tr>
+                <tr>
+                    <td>Услугата ја нуди:</td>
+                    <td>@Model.ProviderName</td>
+                </tr>
+                <tr>
+                    <td>Време на повик до услугата:</td>
+                    <td>@Model.ServiceCalledTime.ToString("dd.MM.yyyy HH:mm")</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div style="height: 70px; width: 100%; float: left"></div>
+
+
+<table class="col-lg-12 pull-left">
+    <thead style="display: table-row-group">
+        <tr id="row1">
+            <th>ЕДБ</th>
+            <th>Назив</th>
+            <th>ЕМБ</th>
+            <th>Жиро Сметка</th>
+            <th>Жиро Сметка на Банката</th>
+            <th>Датум на пријава</th>
+            <th>Вид на пријава</th>
+            <th>Статус на пријава</th>
+            <th>Дејност</th>
+            <th>Назив на седиште</th>
+            <th>Број на седиште</th>
+            <th>Улица на седиште</th>
+            <th>Телефон на седиште</th>
+            <th>Телефакс на седиште</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            @foreach (var general in Model.Edb_EmbList)
+            {
+                <td>@general.Edb</td>
+                <td>@general.Naziv</td>
+                <td>@general.Emb</td>
+                <td>@general.Ziro</td>
+                <td>@general.BankaZiro</td>
+                <td>@general.DatumPrijava</td>
+                <td>@general.PrijavaVid</td>
+                <td>@general.PrijavaStatus</td>
+                <td>@general.DejnostNace</td>
+                <td>@general.SedisteNaziv</td>
+                <td>@general.SedisteBroj</td>
+                <td>@general.SedisteUlica</td>
+                <td>@general.SedisteTelefon</td>
+                <td>@general.SedisteTelefax</td>
+
+            <tr></tr>
+
+            }
+            </tr>
+
+
+        </tbody>
+    </table>

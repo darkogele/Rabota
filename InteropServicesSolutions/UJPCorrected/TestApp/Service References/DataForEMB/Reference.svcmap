@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="eb48a3dc-6447-4716-a25b-c6eac7d553f6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/UJPServicesProd.Host/DataForEMB.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataForEMB.xsd" MetadataType="Schema" ID="34b93bd9-6c59-4378-b5fa-bfefd0fbc227" SourceId="1" SourceUrl="http://localhost/UJPServicesProd.Host/DataForEMB.svc?xsd=xsd0" />
+    <MetadataFile FileName="DataForEMB1.xsd" MetadataType="Schema" ID="1ad76d17-f50c-46b1-878b-e1767b0d8018" SourceId="1" SourceUrl="http://localhost/UJPServicesProd.Host/DataForEMB.svc?xsd=xsd3" />
+    <MetadataFile FileName="DataForEMB2.xsd" MetadataType="Schema" ID="87812559-01ca-4d93-9b98-96df382472c2" SourceId="1" SourceUrl="http://localhost/UJPServicesProd.Host/DataForEMB.svc?xsd=xsd2" />
+    <MetadataFile FileName="DataForEMB.wsdl" MetadataType="Wsdl" ID="48c6957d-18ec-4a1d-b7b1-1bb68bbb94d7" SourceId="1" SourceUrl="http://localhost/UJPServicesProd.Host/DataForEMB.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="DataForEMB1.wsdl" MetadataType="Wsdl" ID="a2f8cfb4-9556-47fd-8f5b-759b0b07e68a" SourceId="1" SourceUrl="http://localhost/UJPServicesProd.Host/DataForEMB.svc?wsdl" />
+    <MetadataFile FileName="DataForEMB.disco" MetadataType="Disco" ID="73511c3a-8839-41ba-ad98-2eb19faaf4d0" SourceId="1" SourceUrl="http://localhost/UJPServicesProd.Host/DataForEMB.svc?disco" />
+    <MetadataFile FileName="DataForEMB3.xsd" MetadataType="Schema" ID="e4f661a7-3df6-4e12-ade3-d7cfcd78fbe4" SourceId="1" SourceUrl="http://localhost/UJPServicesProd.Host/DataForEMB.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

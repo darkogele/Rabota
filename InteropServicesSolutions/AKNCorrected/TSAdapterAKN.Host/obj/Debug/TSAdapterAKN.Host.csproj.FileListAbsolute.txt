@@ -1,0 +1,15 @@
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN.Host\bin\TSAdapterAKN.Host.dll.config
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN.Host\bin\TSAdapterAKN.Host.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN.Host\bin\TSAdapterAKN.Host.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN.Host\bin\TSAdapterAKN.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN.Host\bin\Contracts.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN.Host\bin\Helpers.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN.Host\bin\TSAdapterAKN.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN.Host\bin\TSAdapterAKN.dll.config
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN.Host\bin\Contracts.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN.Host\bin\Contracts.dll.config
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN.Host\bin\Helpers.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN.Host\obj\Debug\TSAdapterAKN.Host.csprojResolveAssemblyReference.cache
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN.Host\obj\Debug\TSAdapterAKN.Host.csproj.CoreCompileInputs.cache
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN.Host\obj\Debug\TSAdapterAKN.Host.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN.Host\obj\Debug\TSAdapterAKN.Host.pdb

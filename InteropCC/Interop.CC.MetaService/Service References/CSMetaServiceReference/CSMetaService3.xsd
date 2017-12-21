@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Interop.CS.Models.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Interop.CS.Models.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CSService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Participant" nillable="true" type="tns:Participant" />
+      <xs:element minOccurs="0" name="ParticipantCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Wsdl" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CSService" nillable="true" type="tns:CSService" />
+  <xs:complexType name="Participant">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PublicKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Uri" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Participant" nillable="true" type="tns:Participant" />
+</xs:schema>

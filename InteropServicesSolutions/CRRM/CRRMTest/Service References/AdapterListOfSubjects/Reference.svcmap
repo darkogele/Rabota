@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="69d8bf09-b2f9-41ed-a30f-2ee3ddb387ec" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AdapterServiceCRM.Host/ListOfSubjectsCU.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ListOfSubjectsCU.wsdl" MetadataType="Wsdl" ID="c2130fb1-c364-4d02-a10a-7a17145dfb30" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/ListOfSubjectsCU.svc?wsdl" />
+    <MetadataFile FileName="ListOfSubjectsCU.disco" MetadataType="Disco" ID="b063c6c3-5c59-47c5-a1ed-07f5dedb7101" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/ListOfSubjectsCU.svc?disco" />
+    <MetadataFile FileName="ListOfSubjectsCU.xsd" MetadataType="Schema" ID="199a3761-7572-445c-962c-f2ae7eb5d715" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/ListOfSubjectsCU.svc?xsd=xsd1" />
+    <MetadataFile FileName="ListOfSubjectsCU1.xsd" MetadataType="Schema" ID="8c4cf042-a357-400c-b10e-e044de987b39" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/ListOfSubjectsCU.svc?xsd=xsd0" />
+    <MetadataFile FileName="ListOfSubjectsCU1.wsdl" MetadataType="Wsdl" ID="ab20f531-0cc0-4d01-9a42-ec783bee7274" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/ListOfSubjectsCU.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

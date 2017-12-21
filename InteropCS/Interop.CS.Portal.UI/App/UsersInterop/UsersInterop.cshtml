@@ -1,0 +1,69 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+<h2><i class="fa fa-user"></i> Корисници</h2>
+
+<hr ng-if="authentication.isAuth && authentication.permision">
+<div ng-if="authentication.isAuth && authentication.permision" class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-4">
+            <a ui-sref="register" class="btn btn-primary col-lg-6 col-md-2 col-sm-2 col-xs-6"><i class="fa fa-plus"></i> Креирај корисник</a>
+        </div>
+    </div>
+</div>
+<hr>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="table-responsive" ng-show="totalSize != 0">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th ng-click="sort('userName')" style="cursor:pointer;">
+                            <u>
+                                Корисничко име
+                            </u>
+                            <span ng-show="sortCol == 'userName' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'userName' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+                        <th ng-click="sort('email')" style="cursor:pointer;">
+                            <u>
+                                E-mail
+                            </u>
+                            <span ng-show="sortCol == 'email' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'email' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+                        <th>
+                            Улога
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in users  | orderBy : sortType : sortReverse" ng-class="{'selected': $index==selectedRow}" ng-click="setClickedRow($index)">
+                        <td>{{user.userName}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.roles[0]}}</td>
+                        <td class="text-center"><a ui-sref="edituserinter({id:user.userId})" ng-disabled="!user.canBeModified" class="btn btn-xs btn-primary"><i class="fa fa-pencil-square-o"></i> Измени</a></td>
+                        <td class="text-center" ng-if="authentication.isAuth && authentication.permision">
+                            <button class="btn btn-danger btn-xs" ng-disabled="!user.canBeModified" ng-click-confirm-message="Дали сакате да го отстраните записот?" ng-click-confirm="$parent.deleteUser(user.userId)"><i class="fa fa-times"></i> Отстрани </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="pull-left">
+            <div previous-text="Претходна" next-text="Следна" pagination total-items="totalSize" ng-show="totalSize != 0" items-per-page="pageSize" ng-model="pageIndex" class="pagination-sm" ng-change="pageChangeHandler(pageIndex)"></div>
+        </div>
+        <div class="pull-left">
+            <select class="form-control" ng-show="totalSize != 0" name="servicesPerPage" ng-model="itemsPerPage" ng-change="pageSizeChanged(itemsPerPage)" style="margin: 18px 30px;"
+                    ng-options="item.itemId as item.itemName for item in itemsPage"></select>
+        </div>
+        <div ng-show="totalSize != 0" class="pull-right">
+            <strong>Вкупен број на записи: {{totalSize}}</strong>
+        </div>
+    </div>
+    <div class="col-md-12 alert alert-warning" ng-show="totalSize == 0">
+        <strong>Нема податоци</strong>
+    </div>
+</div>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://interop.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="YearsOfWorkExperience" targetNamespace="http://interop.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://interop.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/InteropServices.FPIOM.Implementations" />
+      <xs:element name="GetYWExpReport">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="EMBG" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetYWExpReportResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetYWExpReportResult" nillable="true" type="xs:base64Binary" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetYWExpXML">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="EMBG" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetYWExpXMLResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/InteropServices.FPIOM.Implementations" minOccurs="0" name="GetYWExpXMLResult" nillable="true" type="q1:YearsOfWorkExperienceOutput" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/InteropServices.FPIOM.Implementations" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/InteropServices.FPIOM.Implementations" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="YearsOfWorkExperienceOutput">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GeneralData" nillable="true" type="tns:YWEGeneralData" />
+          <xs:element minOccurs="0" name="InsuranceData" nillable="true" type="tns:ArrayOfYWEInsuranceData" />
+          <xs:element minOccurs="0" name="InvalidM4" nillable="true" type="tns:ArrayOfYWEInvalidM4" />
+          <xs:element minOccurs="0" name="M4" nillable="true" type="tns:ArrayOfYWEM4" />
+          <xs:element minOccurs="0" name="OldAndForeignExperience" nillable="true" type="tns:ArrayOfYWEOldAndForegnExperience" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="YearsOfWorkExperienceOutput" nillable="true" type="tns:YearsOfWorkExperienceOutput" />
+      <xs:complexType name="YWEGeneralData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DateOfBirht" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Surname" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="YWEGeneralData" nillable="true" type="tns:YWEGeneralData" />
+      <xs:complexType name="ArrayOfYWEInsuranceData">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="YWEInsuranceData" nillable="true" type="tns:YWEInsuranceData" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfYWEInsuranceData" nillable="true" type="tns:ArrayOfYWEInsuranceData" />
+      <xs:complexType name="YWEInsuranceData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CompanyRegistrationNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EDB" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EMB" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StartData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WeeklyHours" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="YWEInsuranceData" nillable="true" type="tns:YWEInsuranceData" />
+      <xs:complexType name="ArrayOfYWEInvalidM4">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="YWEInvalidM4" nillable="true" type="tns:YWEInvalidM4" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfYWEInvalidM4" nillable="true" type="tns:ArrayOfYWEInvalidM4" />
+      <xs:complexType name="YWEInvalidM4">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DegreeOfIncrease" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DurationWorkExperience" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EffectiveDuration" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PeriodFrom" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PeriodTo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegistrationNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Salary" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TypeOfForm" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkingHours" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Year" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="YearOfSickLeave" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="YWEInvalidM4" nillable="true" type="tns:YWEInvalidM4" />
+      <xs:complexType name="ArrayOfYWEM4">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="YWEM4" nillable="true" type="tns:YWEM4" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfYWEM4" nillable="true" type="tns:ArrayOfYWEM4" />
+      <xs:complexType name="YWEM4">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DegreeOfIncrease" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DurationWorkExperience" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EffectiveDuration" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Meseci" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PeriodFrom" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PeriodTo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegistrationNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Salary" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TypeOfForm" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkingHours" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Year" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="YearOfSickLeave" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="YWEM4" nillable="true" type="tns:YWEM4" />
+      <xs:complexType name="ArrayOfYWEOldAndForegnExperience">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="YWEOldAndForegnExperience" nillable="true" type="tns:YWEOldAndForegnExperience" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfYWEOldAndForegnExperience" nillable="true" type="tns:ArrayOfYWEOldAndForegnExperience" />
+      <xs:complexType name="YWEOldAndForegnExperience">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DegreeOfIncreaseOfWorkExperience" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DurationWorkExperience" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PeriodFrom" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PeriodTo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TypeOfWorkExperience" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkExperience" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Year" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="YWEOldAndForegnExperience" nillable="true" type="tns:YWEOldAndForegnExperience" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IYearsOfWorkExperience_GetYWExpXML_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetYWExpXML" />
+  </wsdl:message>
+  <wsdl:message name="IYearsOfWorkExperience_GetYWExpXML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetYWExpXMLResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IYearsOfWorkExperience">
+    <wsdl:operation name="GetYWExpXML">
+      <wsdl:input wsaw:Action="http://interop.org/IYearsOfWorkExperience/GetYWExpXML" message="tns:IYearsOfWorkExperience_GetYWExpXML_InputMessage" />
+      <wsdl:output wsaw:Action="http://interop.org/IYearsOfWorkExperience/GetYWExpXMLResponse" message="tns:IYearsOfWorkExperience_GetYWExpXML_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CustomBinding_IYearsOfWorkExperience" type="tns:IYearsOfWorkExperience">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetYWExpXML">
+      <soap12:operation soapAction="http://interop.org/IYearsOfWorkExperience/GetYWExpXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="YearsOfWorkExperience">
+    <wsdl:port name="CustomBinding_IYearsOfWorkExperience" binding="tns:CustomBinding_IYearsOfWorkExperience">
+      <soap12:address location="http://externalHandler-mtv/FPIOM/GodiniRabotnoIskustvo" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

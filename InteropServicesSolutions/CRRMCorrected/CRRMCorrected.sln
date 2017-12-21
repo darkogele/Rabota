@@ -1,0 +1,110 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{BBF5C166-BC8D-4D4B-84E9-3B34A9084A7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Implementations", "Implementations\Implementations.csproj", "{129362E2-1D40-423A-BCDE-DB2D3521A405}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BBF5C166-BC8D-4D4B-84E9-3B34A9084A7C} = {BBF5C166-BC8D-4D4B-84E9-3B34A9084A7C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Implementations.Test", "Implementations.Test\Implementations.Test.csproj", "{46876B83-23CC-4142-BECF-FAA457B4CA89}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BBF5C166-BC8D-4D4B-84E9-3B34A9084A7C} = {BBF5C166-BC8D-4D4B-84E9-3B34A9084A7C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRRMServicesProd.Host", "CRRMServicesProd.Host\CRRMServicesProd.Host.csproj", "{EFAE726C-CB56-4AE8-8419-87DAB97CDE29}"
+	ProjectSection(ProjectDependencies) = postProject
+		{129362E2-1D40-423A-BCDE-DB2D3521A405} = {129362E2-1D40-423A-BCDE-DB2D3521A405}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRRMServicesTest.Host", "CRRMServicesTest.Host\CRRMServicesTest.Host.csproj", "{076F0BA6-E881-406C-8E53-DD5994105CFA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{46876B83-23CC-4142-BECF-FAA457B4CA89} = {46876B83-23CC-4142-BECF-FAA457B4CA89}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OriginalService", "OriginalService\OriginalService.csproj", "{BA3190E2-45F2-4D41-AEE1-93EC44F653A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{180E8324-2AFA-41DD-A152-45EB0232F683}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EFAE726C-CB56-4AE8-8419-87DAB97CDE29} = {EFAE726C-CB56-4AE8-8419-87DAB97CDE29}
+		{076F0BA6-E881-406C-8E53-DD5994105CFA} = {076F0BA6-E881-406C-8E53-DD5994105CFA}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.csproj", "{332BE3E8-28DA-487B-84BA-77B9673C414D}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.11.21.108:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Contracts\\Contracts.csproj
+		SccProjectName1 = Contracts
+		SccLocalPath1 = Contracts
+		SccProjectUniqueName2 = Implementations\\Implementations.csproj
+		SccProjectName2 = Implementations
+		SccLocalPath2 = Implementations
+		SccProjectUniqueName3 = Implementations.Test\\Implementations.Test.csproj
+		SccProjectName3 = Implementations.Test
+		SccLocalPath3 = Implementations.Test
+		SccProjectUniqueName4 = CRRMServicesProd.Host\\CRRMServicesProd.Host.csproj
+		SccProjectName4 = CRRMServicesProd.Host
+		SccLocalPath4 = CRRMServicesProd.Host
+		SccProjectUniqueName5 = CRRMServicesTest.Host\\CRRMServicesTest.Host.csproj
+		SccProjectName5 = CRRMServicesTest.Host
+		SccLocalPath5 = CRRMServicesTest.Host
+		SccProjectUniqueName6 = OriginalService\\OriginalService.csproj
+		SccProjectName6 = OriginalService
+		SccLocalPath6 = OriginalService
+		SccProjectUniqueName7 = TestApp\\TestApp.csproj
+		SccProjectName7 = TestApp
+		SccLocalPath7 = TestApp
+		SccProjectUniqueName8 = Helpers\\Helpers.csproj
+		SccProjectName8 = Helpers
+		SccLocalPath8 = Helpers
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBF5C166-BC8D-4D4B-84E9-3B34A9084A7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBF5C166-BC8D-4D4B-84E9-3B34A9084A7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBF5C166-BC8D-4D4B-84E9-3B34A9084A7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBF5C166-BC8D-4D4B-84E9-3B34A9084A7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{129362E2-1D40-423A-BCDE-DB2D3521A405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{129362E2-1D40-423A-BCDE-DB2D3521A405}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{129362E2-1D40-423A-BCDE-DB2D3521A405}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{129362E2-1D40-423A-BCDE-DB2D3521A405}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46876B83-23CC-4142-BECF-FAA457B4CA89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46876B83-23CC-4142-BECF-FAA457B4CA89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46876B83-23CC-4142-BECF-FAA457B4CA89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46876B83-23CC-4142-BECF-FAA457B4CA89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFAE726C-CB56-4AE8-8419-87DAB97CDE29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFAE726C-CB56-4AE8-8419-87DAB97CDE29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFAE726C-CB56-4AE8-8419-87DAB97CDE29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFAE726C-CB56-4AE8-8419-87DAB97CDE29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{076F0BA6-E881-406C-8E53-DD5994105CFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{076F0BA6-E881-406C-8E53-DD5994105CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{076F0BA6-E881-406C-8E53-DD5994105CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{076F0BA6-E881-406C-8E53-DD5994105CFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA3190E2-45F2-4D41-AEE1-93EC44F653A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA3190E2-45F2-4D41-AEE1-93EC44F653A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA3190E2-45F2-4D41-AEE1-93EC44F653A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA3190E2-45F2-4D41-AEE1-93EC44F653A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{180E8324-2AFA-41DD-A152-45EB0232F683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{180E8324-2AFA-41DD-A152-45EB0232F683}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{180E8324-2AFA-41DD-A152-45EB0232F683}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{180E8324-2AFA-41DD-A152-45EB0232F683}.Release|Any CPU.Build.0 = Release|Any CPU
+		{332BE3E8-28DA-487B-84BA-77B9673C414D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{332BE3E8-28DA-487B-84BA-77B9673C414D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{332BE3E8-28DA-487B-84BA-77B9673C414D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{332BE3E8-28DA-487B-84BA-77B9673C414D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

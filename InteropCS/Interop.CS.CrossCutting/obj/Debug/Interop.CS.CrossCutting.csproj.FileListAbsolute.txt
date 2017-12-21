@@ -1,0 +1,10 @@
+D:\Work\InteropCS\Interop.CS.CrossCutting\bin\Debug\Interop.CS.CrossCutting.dll
+D:\Work\InteropCS\Interop.CS.CrossCutting\bin\Debug\Interop.CS.CrossCutting.pdb
+D:\Work\InteropCS\Interop.CS.CrossCutting\bin\Debug\NLog.dll
+D:\Work\InteropCS\Interop.CS.CrossCutting\bin\Debug\NLog.Extended.dll
+D:\Work\InteropCS\Interop.CS.CrossCutting\bin\Debug\NLog.xml
+D:\Work\InteropCS\Interop.CS.CrossCutting\bin\Debug\NLog.Extended.xml
+D:\Work\InteropCS\Interop.CS.CrossCutting\obj\Debug\Interop.CS.CrossCutting.csprojResolveAssemblyReference.cache
+D:\Work\InteropCS\Interop.CS.CrossCutting\obj\Debug\Interop.CS.CrossCutting.csproj.CoreCompileInputs.cache
+D:\Work\InteropCS\Interop.CS.CrossCutting\obj\Debug\Interop.CS.CrossCutting.dll
+D:\Work\InteropCS\Interop.CS.CrossCutting\obj\Debug\Interop.CS.CrossCutting.pdb

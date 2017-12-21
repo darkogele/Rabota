@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1858D11D-2B3F-4D9F-8318-92CC563922C9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestApp</RootNamespace>
+    <AssemblyName>TestApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\DataExeExpProd\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DataExeExpTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DataExeImpProd\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DataExeImpTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SingleCustDocProd\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SingleCustDocTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Service References\DataExeExpProd\DataExeExp.wsdl" />
+    <None Include="Service References\DataExeExpProd\DataExeExp.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataExeExpProd\DataExeExp1.wsdl" />
+    <None Include="Service References\DataExeExpProd\DataExeExp1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataExeExpProd\DataExeExp2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataExeExpProd\DataExeExp3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataExeExpProd\DataExeExp4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataExeExpProd\TestApp.DataExeExpProd.ExecutedExportOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataExeExpTest\DataExeExp_Test.wsdl" />
+    <None Include="Service References\DataExeExpTest\DataForExecutedExportTest.wsdl" />
+    <None Include="Service References\DataExeExpTest\DataForExecutedExportTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataExeExpTest\DataForExecutedExportTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataExeExpTest\DataForExecutedExportTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataExeExpTest\DataForExecutedExportTest3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataExeExpTest\DataForExecutedExportTest4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataExeExpTest\TestApp.DataExeExpTest.ExecutedExportOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataExeImpProd\DataExeImp.wsdl" />
+    <None Include="Service References\DataExeImpProd\DataExeImp.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataExeImpProd\DataExeImp1.wsdl" />
+    <None Include="Service References\DataExeImpProd\DataExeImp1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataExeImpProd\DataExeImp2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataExeImpProd\DataExeImp3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataExeImpProd\DataExeImp4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataExeImpProd\TestApp.DataExeImpProd.ExecutedImportOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataExeImpTest\DataExeImp_Test.wsdl" />
+    <None Include="Service References\DataExeImpTest\DataForExecutedImportTest.wsdl" />
+    <None Include="Service References\DataExeImpTest\DataForExecutedImportTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataExeImpTest\DataForExecutedImportTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataExeImpTest\DataForExecutedImportTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataExeImpTest\DataForExecutedImportTest3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataExeImpTest\DataForExecutedImportTest4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataExeImpTest\TestApp.DataExeImpTest.ExecutedImportOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SingleCustDocProd\SingleCustDoc.wsdl" />
+    <None Include="Service References\SingleCustDocProd\SingleCustDoc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SingleCustDocProd\SingleCustDoc1.wsdl" />
+    <None Include="Service References\SingleCustDocProd\SingleCustDoc1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SingleCustDocProd\SingleCustDoc2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SingleCustDocProd\SingleCustDoc3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SingleCustDocProd\TestApp.SingleCustDocProd.CustomsOfficeNumbers.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SingleCustDocProd\TestApp.SingleCustDocProd.SingleCustomsDocumentOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SingleCustDocTest\SingleCustDoc_Test.wsdl" />
+    <None Include="Service References\SingleCustDocTest\SingleCustomsDocumentTest.wsdl" />
+    <None Include="Service References\SingleCustDocTest\SingleCustomsDocumentTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SingleCustDocTest\SingleCustomsDocumentTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SingleCustDocTest\SingleCustomsDocumentTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SingleCustDocTest\SingleCustomsDocumentTest3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SingleCustDocTest\TestApp.SingleCustDocTest.CustomsOfficeNumbers.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SingleCustDocTest\TestApp.SingleCustDocTest.SingleCustomsDocumentOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DataExeExpProd\" />
+    <WCFMetadataStorage Include="Service References\DataExeExpTest\" />
+    <WCFMetadataStorage Include="Service References\DataExeImpProd\" />
+    <WCFMetadataStorage Include="Service References\DataExeImpTest\" />
+    <WCFMetadataStorage Include="Service References\SingleCustDocProd\" />
+    <WCFMetadataStorage Include="Service References\SingleCustDocTest\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataExeExpProd\DataExeExp.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataExeExpProd\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataExeExpProd\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataExeExpProd\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataExeImpProd\DataExeImp.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataExeImpProd\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataExeImpProd\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataExeImpProd\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SingleCustDocProd\SingleCustDoc.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SingleCustDocProd\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SingleCustDocProd\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SingleCustDocProd\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataExeExpTest\DataForExecutedExportTest.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataExeExpTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataExeExpTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataExeExpTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataExeImpTest\DataForExecutedImportTest.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataExeImpTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataExeImpTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataExeImpTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SingleCustDocTest\SingleCustomsDocumentTest.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SingleCustDocTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SingleCustDocTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SingleCustDocTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

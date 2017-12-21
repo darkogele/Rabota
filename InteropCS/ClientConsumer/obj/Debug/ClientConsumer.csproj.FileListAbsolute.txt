@@ -1,0 +1,7 @@
+D:\Work\InteropCS\ClientConsumer\bin\Debug\ClientConsumer.exe.config
+D:\Work\InteropCS\ClientConsumer\bin\Debug\ClientConsumer.exe
+D:\Work\InteropCS\ClientConsumer\bin\Debug\ClientConsumer.pdb
+D:\Work\InteropCS\ClientConsumer\obj\Debug\ClientConsumer.csproj.CoreCompileInputs.cache
+D:\Work\InteropCS\ClientConsumer\obj\Debug\ClientConsumer.exe
+D:\Work\InteropCS\ClientConsumer\obj\Debug\ClientConsumer.pdb
+D:\Work\InteropCS\ClientConsumer\obj\Debug\ClientConsumer.csprojResolveAssemblyReference.cache

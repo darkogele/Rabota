@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://interop.org" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RegExcBonds" targetNamespace="http://interop.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://interop.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/InteropServices.UJP.Implementations" />
+      <xs:element name="GetRegExcBonds">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/InteropServices.UJP.Implementations" minOccurs="0" name="input" nillable="true" type="q1:ExciseBondsInput" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRegExcBondsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/InteropServices.UJP.Implementations" minOccurs="0" name="GetRegExcBondsResult" nillable="true" type="q2:ExciseBondsOutput" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/InteropServices.UJP.Implementations" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/InteropServices.UJP.Implementations" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="ExciseBondsInput">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EDB" type="xs:long" />
+          <xs:element minOccurs="0" name="Number" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ExciseBondsInput" nillable="true" type="tns:ExciseBondsInput" />
+      <xs:complexType name="ExciseBondsOutput">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ExciseBonds" nillable="true" type="tns:ArrayOfExciseBonds" />
+          <xs:element minOccurs="0" name="ExciseGoods" nillable="true" type="tns:ArrayOfExciseGoods" />
+          <xs:element minOccurs="0" name="ExciseSpaces" nillable="true" type="tns:ArrayOfExciseSpaces" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ExciseBondsOutput" nillable="true" type="tns:ExciseBondsOutput" />
+      <xs:complexType name="ArrayOfExciseBonds">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ExciseBonds" nillable="true" type="tns:ExciseBonds" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfExciseBonds" nillable="true" type="tns:ArrayOfExciseBonds" />
+      <xs:complexType name="ExciseBonds">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="broj_odobrenie" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="datum_odobrenie" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="edb" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="embg_odgovorno_lice" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="embg_polnomosnik" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="naziv_odgovorno_lice" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="naziv_polnomosnik" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="prethodno_odobrenie" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="sledno_odobrenie" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vid_odobrenie" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ExciseBonds" nillable="true" type="tns:ExciseBonds" />
+      <xs:complexType name="ArrayOfExciseGoods">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ExciseGoods" nillable="true" type="tns:ExciseGoods" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfExciseGoods" nillable="true" type="tns:ArrayOfExciseGoods" />
+      <xs:complexType name="ExciseGoods">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="broj_odobrenie" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="kolicina" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="opis_merka" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="proizvod" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="stavka" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="tarifa" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="za_proizvodstvo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="za_skladiranje" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ExciseGoods" nillable="true" type="tns:ExciseGoods" />
+      <xs:complexType name="ArrayOfExciseSpaces">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ExciseSpaces" nillable="true" type="tns:ExciseSpaces" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfExciseSpaces" nillable="true" type="tns:ArrayOfExciseSpaces" />
+      <xs:complexType name="ExciseSpaces">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="broj_odobrenie" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="embg_odgovorno_lice" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="mesto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="naziv_mesto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="naziv_odgovorno_lice" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="naziv_opstina" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="naziv_ulica" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="opstina" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="status_datum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="stavka" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ulica_broj" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="za_proizvodstvo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="za_skladiranje" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="zabeleska" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ExciseSpaces" nillable="true" type="tns:ExciseSpaces" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IRegExcBonds_GetRegExcBonds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegExcBonds" />
+  </wsdl:message>
+  <wsdl:message name="IRegExcBonds_GetRegExcBonds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegExcBondsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRegExcBonds">
+    <wsdl:operation name="GetRegExcBonds">
+      <wsdl:input wsaw:Action="http://interop.org/IRegExcBonds/GetRegExcBonds" message="tns:IRegExcBonds_GetRegExcBonds_InputMessage" />
+      <wsdl:output wsaw:Action="http://interop.org/IRegExcBonds/GetRegExcBondsResponse" message="tns:IRegExcBonds_GetRegExcBonds_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CustomBinding_IRegExcBonds" type="tns:IRegExcBonds">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetRegExcBonds">
+      <soap12:operation soapAction="http://interop.org/IRegExcBonds/GetRegExcBonds" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RegExcBonds">
+    <wsdl:port name="CustomBinding_IRegExcBonds" binding="tns:CustomBinding_IRegExcBonds">
+      <soap12:address location="http://10.10.0.75/services-curmujp/RegExcBonds.svc/custom" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

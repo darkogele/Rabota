@@ -1,0 +1,8 @@
+D:\Projects\Interoperability\Interop\InteropServicesSolutions\CRRM\AdapterServiceCRM.Host\bin\AdapterServiceCRM.Host.dll.config
+D:\Projects\Interoperability\Interop\InteropServicesSolutions\CRRM\AdapterServiceCRM.Host\bin\AdapterServiceCRM.Host.dll
+D:\Projects\Interoperability\Interop\InteropServicesSolutions\CRRM\AdapterServiceCRM.Host\bin\AdapterServiceCRM.Host.pdb
+D:\Projects\Interoperability\Interop\InteropServicesSolutions\CRRM\AdapterServiceCRM.Host\bin\AdapterServiceCRM.dll
+D:\Projects\Interoperability\Interop\InteropServicesSolutions\CRRM\AdapterServiceCRM.Host\bin\AdapterServiceCRM.pdb
+D:\Projects\Interoperability\Interop\InteropServicesSolutions\CRRM\AdapterServiceCRM.Host\obj\Debug\AdapterServiceCRM.Host.csprojResolveAssemblyReference.cache
+D:\Projects\Interoperability\Interop\InteropServicesSolutions\CRRM\AdapterServiceCRM.Host\obj\Debug\AdapterServiceCRM.Host.dll
+D:\Projects\Interoperability\Interop\InteropServicesSolutions\CRRM\AdapterServiceCRM.Host\obj\Debug\AdapterServiceCRM.Host.pdb

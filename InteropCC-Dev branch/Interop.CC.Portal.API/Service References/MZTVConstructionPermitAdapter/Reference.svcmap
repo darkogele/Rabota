@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="49037042-ee7c-422f-b389-c6a6be779a3e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/InteropServices.MzTV.Host/MzTVAdapter.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MzTVAdapter.wsdl" MetadataType="Wsdl" ID="73b06cef-d389-4b2d-90ac-580a15e43059" SourceId="1" SourceUrl="http://localhost/InteropServices.MzTV.Host/MzTVAdapter.svc?wsdl" />
+    <MetadataFile FileName="MzTVAdapter.disco" MetadataType="Disco" ID="44bcc314-b96b-4bc2-a520-60a46e72d6c8" SourceId="1" SourceUrl="http://localhost/InteropServices.MzTV.Host/MzTVAdapter.svc?disco" />
+    <MetadataFile FileName="MzTVAdapter.xsd" MetadataType="Schema" ID="52bd84ca-3d8b-49e5-8181-36f1e9544663" SourceId="1" SourceUrl="http://localhost/InteropServices.MzTV.Host/MzTVAdapter.svc?xsd=xsd1" />
+    <MetadataFile FileName="MzTVAdapter1.xsd" MetadataType="Schema" ID="f3150d2e-0761-4aa8-b266-aa515f7b7f7e" SourceId="1" SourceUrl="http://localhost/InteropServices.MzTV.Host/MzTVAdapter.svc?xsd=xsd2" />
+    <MetadataFile FileName="MzTVAdapter2.xsd" MetadataType="Schema" ID="30c7ea87-be27-445b-ab69-02e4140c9bb7" SourceId="1" SourceUrl="http://localhost/InteropServices.MzTV.Host/MzTVAdapter.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

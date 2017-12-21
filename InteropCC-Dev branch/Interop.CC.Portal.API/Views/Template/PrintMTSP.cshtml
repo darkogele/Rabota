@@ -1,0 +1,176 @@
+﻿@model Interop.CC.Models.DTO.Institutions.AnnualRevenuesMTSPOutputDTO
+<head>
+    <style type="text/css">
+        table, tr, td {
+            border: 1px solid gray;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+
+        th {
+            border: 2px solid black;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<div style="width: 100%;">
+
+    <div style="float: left; width: 70%;">
+        <img src="@Server.MapPath("~/Views/Template/grbMak.jpg")" style="float: left" alt="MIOA logo" />
+        <label>Република Македонија</label>
+        <h4 style="font-size:.6em;">Министерство за информатичко општество и администрација</h4>
+    </div>
+    <div style="float: right; width: 30%; font-size: .6em">
+        <a style="margin-left: 80px;" href="http://www.interoperabilnost.gov.mk">www.interoperabilnost.gov.mk</a>
+
+        <table class="table-striped" style="margin-top: 20px;">
+            <thead style="display: table-row-group">
+
+            </thead>
+            <tbody style="font-size: .6em">
+                <tr>
+                    <td>Име на услугата:</td>
+                    <td>@Model.ServiceName</td>
+                </tr>
+                <tr>
+                    <td>Услугата ја користи:</td>
+                    <td>@Model.ConsumerName</td>
+                </tr>
+                <tr>
+                    <td>Услугата ја нуди:</td>
+                    <td>@Model.ProviderName</td>
+                </tr>
+                <tr>
+                    <td>Време на повик до услугата:</td>
+                    <td>@Model.ServiceCalledTime.ToString("dd.MM.yyyy HH:mm")</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div style="height: 70px; width: 100%; float: left"></div>
+
+<table class="col-lg-12 pull-left">
+    <caption> Годишни Приходи МТСП </caption>
+    <tr>
+        <th>ЕДБ</th>
+        <td>@Model.AnnualRevenuesMTSP.EDB</td>
+    </tr>
+    <tr>
+        <th>Име на обврзникот</th>
+        <td>@Model.AnnualRevenuesMTSP.FirstName</td>
+    </tr>
+    <tr>
+        <th>Презиме на обврзникот</th>
+        <td>@Model.AnnualRevenuesMTSP.LastName</td>
+    </tr>
+    <tr>
+        <th>Година</th>
+        <td>@Model.AnnualRevenuesMTSP.Year</td>
+    </tr>
+    <tr>
+        <th>Исплатена плата за последни 3 месеци (бруто)</th>
+        <td>@Model.AnnualRevenuesMTSP.Plata_3m_Bruto</td>
+    </tr>
+    <tr>
+        <th>Исплатена плата за последни 3 месеци (нето)</th>
+        <td>@Model.AnnualRevenuesMTSP.Plata_3m_Neto</td>
+    </tr>
+    <tr>
+        <th>Лични примања (бруто)</th>
+        <td>@Model.AnnualRevenuesMTSP.Licniprim_Bruto</td>
+    </tr>
+    <tr>
+        <th>Лични примања (нето)</th>
+        <td>@Model.AnnualRevenuesMTSP.Licniprim_Neto</td>
+    </tr>
+    <tr>
+        <th>Приходи од самостојна дејност</th>
+        <td>@Model.AnnualRevenuesMTSP.Prihodi_Svd</td>
+    </tr>
+    <tr>
+        <th>Приходи од земјоделска дејност</th>
+        <td>@Model.AnnualRevenuesMTSP.Prihodi_Zem</td>
+    </tr>
+    <tr>
+        <th>Приходи од имот и имотни права</th>
+        <td>@Model.AnnualRevenuesMTSP.Prihodi_Imot</td>
+    </tr>
+    <tr>
+        <th>Приходи од авторски права и права од индустриска сопственост</th>
+        <td>@Model.AnnualRevenuesMTSP.Prihodi_Avtor</td>
+    </tr>
+    <tr>
+        <th>Приходи од капитал(дивиденди и др.)</th>
+        <td>@Model.AnnualRevenuesMTSP.Prihodi_Kapital</td>
+    </tr>
+    <tr>
+        <th>Приходи од капитални добивки</th>
+        <td>@Model.AnnualRevenuesMTSP.Prihodi_Kapdob</td>
+    </tr>
+    <tr>
+        <th>Приходи од игри на среќа и наградни игри</th>
+        <td>@Model.AnnualRevenuesMTSP.Prihodi_Igri</td>
+    </tr>
+    <tr>
+        <th>Други приходи</th>
+        <td>@Model.AnnualRevenuesMTSP.Prihodi_Drugo</td>
+    </tr>
+    <tr>
+        <th>Забелешка</th>
+        <td>@Model.AnnualRevenuesMTSP.Zabeleska</td>
+    </tr>
+    @*<thead style="display: table-row-group; width: 100%;">
+        <tr id="row1">
+            <th>ЕДБ</th>
+            <th>Име на обврзникот</th>
+            <th>Презиме на обврзникот</th>
+            <th>Година</th>
+            <th>Исплатена плата за последни 3 месеци (бруто) (бруто)</th>
+            <th>Исплатена платa за последни 3 месеци (нето)</th>
+            <th>Лични примања (бруто)</th>
+            <th>Лични примања (нето)</th>
+            <th>Приходи од самостојна дејност</th>
+            <th>Приходи од земјоделска дејност</th>
+            <th>Приходи од имот и имотни права</th>
+            <th>Приходи од авторски права и права од индустриска сопственост</th>
+            <th>Приходи од капитал(дивиденди и др.)</th>
+            <th>Приходи од капитални добивки</th>
+            <th>Приходи од игри на среќа и наградни игри</th>
+            <th>Други приходи</th>
+            <th>Забелешка</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+
+            <td>@Model.AnnualRevenuesMTSP.EDB</td>
+            <td>@Model.AnnualRevenuesMTSP.FirstName</td>
+            <td>@Model.AnnualRevenuesMTSP.LastName</td>
+            <td>@Model.AnnualRevenuesMTSP.Year</td>
+            <td>@Model.AnnualRevenuesMTSP.Plata_3m_Bruto</td>
+            <td>@Model.AnnualRevenuesMTSP.Plata_3m_Neto</td>
+            <td>@Model.AnnualRevenuesMTSP.Licniprim_Bruto</td>
+            <td>@Model.AnnualRevenuesMTSP.Licniprim_Neto</td>
+            <td>@Model.AnnualRevenuesMTSP.Prihodi_Svd</td>
+            <td>@Model.AnnualRevenuesMTSP.Prihodi_Zem</td>
+            <td>@Model.AnnualRevenuesMTSP.Prihodi_Imot</td>
+            <td>@Model.AnnualRevenuesMTSP.Prihodi_Avtor</td>
+            <td>@Model.AnnualRevenuesMTSP.Prihodi_Kapital</td>
+            <td>@Model.AnnualRevenuesMTSP.Prihodi_Kapdob</td>
+            <td>@Model.AnnualRevenuesMTSP.Prihodi_Igri</td>
+            <td>@Model.AnnualRevenuesMTSP.Prihodi_Drugo</td>
+            <td>@Model.AnnualRevenuesMTSP.Zabeleska</td>
+
+
+
+        </tr>*@
+
+
+    @*</tbody>*@
+</table>

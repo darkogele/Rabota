@@ -1,0 +1,7 @@
+D:\Work\InteropCS\InteropCS.Resources\bin\Debug\InteropCS.Resources.dll
+D:\Work\InteropCS\InteropCS.Resources\bin\Debug\InteropCS.Resources.pdb
+D:\Work\InteropCS\InteropCS.Resources\obj\Debug\InteropCS.Resources.Resources.resources
+D:\Work\InteropCS\InteropCS.Resources\obj\Debug\InteropCS.Resources.csproj.GenerateResource.Cache
+D:\Work\InteropCS\InteropCS.Resources\obj\Debug\InteropCS.Resources.csproj.CoreCompileInputs.cache
+D:\Work\InteropCS\InteropCS.Resources\obj\Debug\InteropCS.Resources.dll
+D:\Work\InteropCS\InteropCS.Resources\obj\Debug\InteropCS.Resources.pdb

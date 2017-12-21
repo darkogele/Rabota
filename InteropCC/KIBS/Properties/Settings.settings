@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="KIBS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="KIBS_kibs_wsTSATest" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://wstsatest.kibs.mk/wsTSATest.asmx</Value>
+    </Setting>
+    <Setting Name="KIBS_KIBSProd_wsTSA" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://wstsa.kibs.mk/wsTSA.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="65040b8b-65d2-4e93-bf5a-0a7765d1c4d0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/UJPServicesTest.Host/DataForEMBTest.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataForEMBTest.disco" MetadataType="Disco" ID="d5984e8f-7098-42ed-95ac-140316aede11" SourceId="1" SourceUrl="http://localhost/UJPServicesTest.Host/DataForEMBTest.svc?disco" />
+    <MetadataFile FileName="DataForEMBTest.xsd" MetadataType="Schema" ID="e33bbe03-5252-42c5-8b7e-9ceac182a368" SourceId="1" SourceUrl="http://localhost/UJPServicesTest.Host/DataForEMBTest.svc?xsd=xsd0" />
+    <MetadataFile FileName="DataForEMBTest1.xsd" MetadataType="Schema" ID="cf9e6133-f47f-48ec-8df7-f78a48f6ec7e" SourceId="1" SourceUrl="http://localhost/UJPServicesTest.Host/DataForEMBTest.svc?xsd=xsd1" />
+    <MetadataFile FileName="DataForEMBTest.wsdl" MetadataType="Wsdl" ID="45cebe1a-ee5f-4114-b9e0-4a5d90843dec" SourceId="1" SourceUrl="http://localhost/UJPServicesTest.Host/DataForEMBTest.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="DataForEMBTest1.wsdl" MetadataType="Wsdl" ID="d4d589ce-6867-4837-a650-f3883257052d" SourceId="1" SourceUrl="http://localhost/UJPServicesTest.Host/DataForEMBTest.svc?wsdl" />
+    <MetadataFile FileName="DataForEMBTest2.xsd" MetadataType="Schema" ID="74af07d8-2c1c-4180-9c1d-509049a2466a" SourceId="1" SourceUrl="http://localhost/UJPServicesTest.Host/DataForEMBTest.svc?xsd=xsd3" />
+    <MetadataFile FileName="DataForEMBTest3.xsd" MetadataType="Schema" ID="4c6c096c-03ba-48a3-bfd3-4aae23e1fa37" SourceId="1" SourceUrl="http://localhost/UJPServicesTest.Host/DataForEMBTest.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

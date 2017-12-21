@@ -1,0 +1,212 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>Единствен царински документ - Царинска Управа на Република Македонија</h2>
+
+<form name="curmSingleCustomsDocumentForm" ng-controller="CurmCtrl">
+
+    <div class="container">
+        <div class="col-lg-3">
+            <div class="form-group" ng-class="{ 'has-error' : yearFormField.year.$invalid }">
+                <ng-form name="yearFormField">
+                    <label for="year">Година:</label>
+                    @*<input id="year" type="text" class="form-control" name="year" ng-model="year" required>*@
+                    <p class="input-group">
+                        <input type="text" class="form-control" datepicker-popup="{{format}}"
+                               ng-model="year" is-open="status.opened" ng-click="status.opened = true" datepicker-append-to-body="true" show-weeks="false" datepicker-mode="'year'"
+                               datepicker-options="dateOptions" ng-disabled="true" ng-required="true" current-text="Денес"
+                               clear-text="Исчисти"
+                               close-text="Затвори" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </p>
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : edbOfShippingCompanyFormField.edbOfShippingCompany.$invalid }">
+                <ng-form name="edbOfShippingCompanyFormField">
+                    <label for="edbOfShippingCompany">ЕДБ на фирмата испраќач:</label>
+                    <input id="edbOfShippingCompany" type="text" class="form-control" name="edbOfShippingCompany" ng-model="edbOfShippingCompany" only-digits required>
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : numberOfCustomsOfficeFormField.numberOfCustomsOffice.$invalid }">
+                <ng-form name="numberOfCustomsOfficeFormField">
+                    <label for="numberOfCustomsOffice">Број на царинска испостава:</label>
+                    <input id="numberOfCustomsOffice" type="text" class="form-control" name="numberOfCustomsOffice" ng-model="numberOfCustomsOffice" required>
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : regNumberFormField.regNumber.$invalid }">
+                <ng-form name="regNumberFormField">
+                    <label for="regNumber">Регистрациски број:</label>
+                    <input id="regNumber" type="text" class="form-control" name="regNumber" ng-model="regNumber" required>
+                </ng-form>
+            </div>
+           
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-disabled="curmSingleCustomsDocumentForm.$invalid" ng-click="curmSingleCustomsDocument(year, edbOfShippingCompany, numberOfCustomsOffice, regNumber)"><i class="fa fa-save"></i> Испрати</button>
+                <a class="btn btn-warning" href="#/curm/curmsinglecustomsdocument" ui-sref="curmsinglecustomsdocumentindex">Откажи</a>
+            </div>
+        </div>
+
+        <div ng-show="show" class="col-lg-9">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <button ng-show="!expandLoad" ng-click="expandedLoad()">+</button>
+                            <button ng-show="expandLoad" ng-click="expandedLoad()">-</button>
+                            Општи податоци
+                        </th>
+                    </tr>
+                    <tr ng-show="expandLoad">
+                        <th>Код на царинска испостава</th>
+                        <th>Код на декларант(обврзник)</th>
+                        <th>Референтен број </th>
+                        <th>увоз/извоз</th>
+                        <th>Тип на декларација</th>
+                        <th>Тип на процедура</th>
+                        <th>Испраќач/Извозник (ЕДБ)</th>
+                        <th>Серија на регистрација</th>
+                        <th>Број на регистрација</th>
+                        <th>Датум на регистрација</th>
+                        <th>Број на наименувание</th>
+                        <th>Увозник (ЕДБ)</th>
+                        <th>Податок за вредност</th>
+                        <th>Земја на извоз</th>
+                        <th>Земја на потекло</th>
+                        <th>Земја на намена</th>
+                        <th>Услови на испраќање (код)</th>
+                        <th>Услови на испраќање (место)</th>
+                        <th>Delivery terms situation code</th>
+                        <th>Регистрација на превозно средство</th>
+                        <th>Националност на превозно средство</th>
+                        <th>Код на валута</th>
+                        <th>Вкупна фактурна вредност</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-show="expandLoad">
+                        <td>{{generalData.exciseStoreCode}}</td>
+                        <td>{{generalData.declarantCode}}</td>
+                        <td>{{generalData.referentNumber}}</td>
+                        <td>{{generalData.importExport}}</td>
+                        <td>{{generalData.declatarionType}}</td>
+                        <td>{{generalData.procedureType}}</td>
+                        <td>{{generalData.senderEDB}}</td>
+                        <td>{{generalData.registrationSeries}}</td>
+                        <td>{{generalData.registrationNumber}}</td>
+                        <td>{{generalData.registrationDate}}</td>
+                        <td>{{generalData.itemNumber}}</td>
+                        <td>{{generalData.importerEDB}}</td>
+                        <td>{{generalData.valueData}}</td>
+                        <td>{{generalData.exportingCountry}}</td>
+                        <td>{{generalData.originCountry}}</td>
+                        <td>{{generalData.destinationCountry}}</td>
+                        <td>{{generalData.exportingConditionCode}}</td>
+                        <td>{{generalData.exportingConditionPlace}}</td>
+                        <td>{{generalData.deliveryTermsSituationCode}}</td>
+                        <td>{{generalData.registrationOfVehicle}}</td>
+                        <td>{{generalData.nationalityOfVehicle}}</td>
+                        <td>{{generalData.currencyCode}}</td>
+                        <td>{{generalData.totalInvoiceAmount}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <button ng-show="!expandOps" ng-click="expandedOps()">+</button>
+                            <button ng-show="expandOps" ng-click="expandedOps()">-</button>
+                            Податоци по документ
+                        </th>
+                    </tr>
+                    <tr ng-show="expandOps">
+                        <th>Тарифна оснака дел 1</th>
+                        <th>Тарифна оснака дел 2</th>
+                        <th>Опис на стока дел 1</th>
+                        <th>Опис на стока дел 2</th>
+                        <th>Опис на стока дел 3</th>
+                        <th>Земја потекло</th>
+                        <th>Бруто маса</th>
+                        <th>Предност</th>
+                        <th>Статичка вредност</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in itemData" ng-show="expandOps">
+                        <td>{{item.tariffTagPart1}}</td>
+                        <td>{{item.tariffTagPart2}}</td>
+                        <td>{{item.descriptionOfGoodsPart1}}</td>
+                        <td>{{item.descriptionOfGoodsPart2}}</td>
+                        <td>{{item.descriptionOfGoodsPart3}}</td>
+                        <td>{{item.countryOfOrigin}}</td>
+                        <td>{{item.grossMass}}</td>
+                        <td>{{item.preference}}</td>
+                        <td>{{item.statisticalValue}}</td>
+                        <tr></tr>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <button ng-show="!expandObject" ng-click="expandedObject()">+</button>
+                            <button ng-show="expandObject" ng-click="expandedObject()">-</button>
+                            Податоци за испраќач
+                        </th>
+                    </tr>
+                    <tr ng-show="expandObject">
+                        <th>Име на испраќач</th>
+                        <th>Адреса на испраќач дел 1</th>
+                        <th>Адреса на испраќач дел 2</th>
+                        <th>Место</th>
+                        <th>Поштенски код</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-show="expandObject">
+                        <td>{{exporterData.senderName}}</td>
+                        <td>{{exporterData.senderAddressPart1}}</td>
+                        <td>{{exporterData.senderAddressPart2}}</td>
+                        <td>{{exporterData.senderPlace}}</td>
+                        <td>{{exporterData.senderPostalCode}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <button ng-show="!expandOwner" ng-click="expandedOwner()">+</button>
+                            <button ng-show="expandOwner" ng-click="expandedOwner()">-</button>
+                            Податоци за увозник
+                        </th>
+                    </tr>
+                    <tr ng-show="expandOwner">
+                        <th>Име на увозник</th>
+                        <th>Адреса на увозник дел 1</th>
+                        <th>Адреса на увозник дел 2</th>
+                        <th>Место</th>
+                        <th>Поштенски код</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-show="expandOwner">
+                        <td>{{importerData.importerName}}</td>
+                        <td>{{importerData.importerAddressPart1}}</td>
+                        <td>{{importerData.importerAddressPart2}}</td>
+                        <td>{{importerData.importerPlace}}</td>
+                        <td>{{importerData.importerPostalCode}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row text-center">
+                <a class="btn btn-default" ng-click="SingleDocumentXML()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во XML формат</a>
+                <a class="btn btn-default" ng-click="SingleDocumentPDF()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во PDF формат</a>
+            </div>
+        </div>
+    </div>
+</form>

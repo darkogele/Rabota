@@ -1,0 +1,6 @@
+D:\Work\InteropCC\LoadTestClient\bin\Debug\LoadTestClient.exe.config
+D:\Work\InteropCC\LoadTestClient\bin\Debug\LoadTestClient.exe
+D:\Work\InteropCC\LoadTestClient\bin\Debug\LoadTestClient.pdb
+D:\Work\InteropCC\LoadTestClient\obj\Debug\LoadTestClient.exe
+D:\Work\InteropCC\LoadTestClient\obj\Debug\LoadTestClient.pdb
+D:\Work\InteropCC\LoadTestClient\obj\Debug\LoadTestClient.csprojResolveAssemblyReference.cache

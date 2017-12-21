@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PIOMApplication", "PIOMApplication\PIOMApplication.csproj", "{1D656B8E-DDB1-4D76-B22F-88E53664260A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PIOMApplication.API", "PIOMApplication.API\PIOMApplication.API.csproj", "{D464F42B-28D1-4163-9D93-F58A5CC1DA6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AKNDesktopApplication", "AKNDesktopApplication\AKNDesktopApplication.csproj", "{7C01B4DC-694A-40DD-981C-A3392E54BE47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PIOMApplicationMVC", "PIOMApplicationMVC\PIOMApplicationMVC.csproj", "{B3D223D0-7FC9-48CD-AB3A-7AD5BCA3635B}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.11.21.108:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = PIOMApplication\\PIOMApplication.csproj
+		SccProjectName1 = PIOMApplication
+		SccLocalPath1 = PIOMApplication
+		SccProjectUniqueName2 = PIOMApplication.API\\PIOMApplication.API.csproj
+		SccProjectName2 = PIOMApplication.API
+		SccLocalPath2 = PIOMApplication.API
+		SccProjectUniqueName3 = AKNDesktopApplication\\AKNDesktopApplication.csproj
+		SccProjectName3 = AKNDesktopApplication
+		SccLocalPath3 = AKNDesktopApplication
+		SccProjectUniqueName4 = PIOMApplicationMVC\\PIOMApplicationMVC.csproj
+		SccProjectName4 = PIOMApplicationMVC
+		SccLocalPath4 = PIOMApplicationMVC
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D656B8E-DDB1-4D76-B22F-88E53664260A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D656B8E-DDB1-4D76-B22F-88E53664260A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D656B8E-DDB1-4D76-B22F-88E53664260A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D656B8E-DDB1-4D76-B22F-88E53664260A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D464F42B-28D1-4163-9D93-F58A5CC1DA6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D464F42B-28D1-4163-9D93-F58A5CC1DA6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D464F42B-28D1-4163-9D93-F58A5CC1DA6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D464F42B-28D1-4163-9D93-F58A5CC1DA6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C01B4DC-694A-40DD-981C-A3392E54BE47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C01B4DC-694A-40DD-981C-A3392E54BE47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C01B4DC-694A-40DD-981C-A3392E54BE47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C01B4DC-694A-40DD-981C-A3392E54BE47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3D223D0-7FC9-48CD-AB3A-7AD5BCA3635B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3D223D0-7FC9-48CD-AB3A-7AD5BCA3635B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3D223D0-7FC9-48CD-AB3A-7AD5BCA3635B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3D223D0-7FC9-48CD-AB3A-7AD5BCA3635B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

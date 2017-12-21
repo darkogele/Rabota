@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6adfe15f-4f63-4272-b310-a0f9cdfb3847" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/CRRMServicesProd.Host/CRM_TS_AKN.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CRM_TS_AKN.disco" MetadataType="Disco" ID="592414d2-b337-4631-926d-b722d9bc2d39" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/CRM_TS_AKN.svc?disco" />
+    <MetadataFile FileName="CRM_TS_AKN.wsdl" MetadataType="Wsdl" ID="766da11c-d8ab-48f0-87e0-a39ba5976ea6" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/CRM_TS_AKN.svc?wsdl" />
+    <MetadataFile FileName="CRM_TS_AKN1.wsdl" MetadataType="Wsdl" ID="057ecc54-cd94-440e-b303-6d8de15f7c71" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/CRM_TS_AKN.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="CRM_TS_AKN.xsd" MetadataType="Schema" ID="f38c2bd9-20e2-480d-9e6f-d5c0b36c8165" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/CRM_TS_AKN.svc?xsd=xsd2" />
+    <MetadataFile FileName="CRM_TS_AKN1.xsd" MetadataType="Schema" ID="ca309758-c5b4-412b-b1bc-61824ed7cd8c" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/CRM_TS_AKN.svc?xsd=xsd0" />
+    <MetadataFile FileName="CRM_TS_AKN2.xsd" MetadataType="Schema" ID="6947aa26-5fde-4362-9a7a-904fb9eb232a" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/CRM_TS_AKN.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

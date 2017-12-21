@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cfd267c6-594d-43a1-9bb3-e56df7f511fc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/CRRMServicesProd.Host/CRMService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CRMService.disco" MetadataType="Disco" ID="0b457c91-2e9d-48ca-b5f2-2a8e0d767a65" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/CRMService.svc?disco" />
+    <MetadataFile FileName="CRMService.xsd" MetadataType="Schema" ID="1dff650b-68d9-41b5-8259-8ea1378ad9f0" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/CRMService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CRMService1.xsd" MetadataType="Schema" ID="c15725f4-65c1-4c1a-acf3-bb8c98357dd4" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/CRMService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CRMService2.xsd" MetadataType="Schema" ID="44d80921-0bec-439d-88b8-5e027dea842a" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/CRMService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CRMService.wsdl" MetadataType="Wsdl" ID="2b6af68f-38fb-4bba-875a-70f178f3a167" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/CRMService.svc?wsdl" />
+    <MetadataFile FileName="CRMService1.wsdl" MetadataType="Wsdl" ID="06331865-beb3-4696-9e8d-c58de91122dc" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/CRMService.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

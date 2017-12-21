@@ -1,0 +1,99 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>Листа на провајдери</h2>
+<form name="ProvidersListForm">
+    <div class="table">
+        <div class="col-lg-12">
+            <hr />
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-xs-12">
+                    <form class="ng-pristine ng-valid" name="searchProviderForm">
+                        <div class="col-lg-3 col-md-3"><input type="text" class="form-control" id="codeId" placeholder="Име на провајдер/институција" ng-model="filterProviderName"></div>
+                        <div class="col-lg-2 col-md-2"><button type="submit" class="btn btn-primary col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0" ng-click="filterHandler(filterProviderName)"><i class="fa fa-search"></i> Барај</button></div>
+                        <div class="col-lg-2 col-md-2"><button type="button" class="btn btn-default col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0" ng-click="filterClear()"><i class="fa fa-eraser"></i> Исчисти</button></div>
+                        <div class="col-lg-2 col-md-2" style="float: right;"><button type="submit" class="btn btn-primary" ng-click="refreshprovidersList()"><i class="fa fa-refresh" aria-hidden="true"></i>  Освежи ја листата</button></div>
+                    </form>
+                </div>
+            </div>
+            <hr />
+            <div class="table-responsive" ng-show="totalItems!=0">
+                <table class="table" style="margin-bottom: 0 !important;">
+                    <thead>
+                        <tr>
+                            <th class="col-lg-8" ng-click="sort('Name')" style=" cursor:pointer;">
+                                Провајдер/Институција
+                                <span ng-show="sortCol == 'Name' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                                <span ng-show="sortCol == 'Name' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                            </th>
+                            <th class="col-lg-2"></th>
+                            <th class="col-lg-2"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="provider in providers">
+                            <td>{{provider.name}}<p style="font-size:12px">({{provider.providerMim}})</p></td>
+                            <td class="text-right" style="vertical-align: middle">
+                                <a ng-click="getServicesList(provider.code)" button class="btn btn-info btn-sm"><i class="fa fa-list"></i> Листа на сервиси </a>
+                            </td>
+                            <td class="text-right" style="vertical-align: middle" ng-if="authentication.isAuth && (getUserPermission('SuperAdmin') || getUserPermission('Admin'))">
+                                <button class="btn btn-info btn-sm" ng-click="interopTestCommunication(provider.code)"><i class="fa fa-signal"></i> Тестирај комуникација</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="modal-footer" style="margin-top: 0 !important">
+                    
+                    @*<a class="btn btn-warning" href="#/akn/akncadastralparcel" ui-sref="akncadastralparcelindex">Откажи</a>*@
+                </div>
+                @*<table class="table" ng-show="showServicesList">
+                <thead>
+                    <tr>
+                        <th>Провајдер</th>
+                        <th>Код</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <tr ng-repeat="service in servicesList">
+                            <td>{{providerCode}}</td>
+                            <td>{{service}}</td>
+                            <td class="text-center"><a ng-click="showWsdl(service)" button class="btn btn-info btn-xs"><i class="fa fa-info"></i> Детали за WSDL </a>
+                        </tr>
+                    </tr>
+                </tbody>
+            </table>*@
+            </div>
+            @*<div class="form-group" ng-show="showWsdlText">
+                <ng-form name="wsdlform">
+                    <label for="wsdl">WSDL:</label>
+                    <textarea id="wsdl" type="text" class="form-control" style="width:100%; height: 500px" name="wsdl" ng-model="wsdlservice" readonly></textarea>
+                </ng-form>
+            </div>*@
+        </div>
+
+    </div>
+    <div class="col-md-12">
+        <div class="pull-left">
+            <div ng-show="totalItems!=0" previous-text="Претходна" next-text="Следна" pagination total-items="totalItems" items-per-page="pageSize" ng-model="currentPage" class="pagination-sm" ng-change="pageChangeHandler(currentPage)"></div>
+        </div>
+        <div class="pull-left">
+            <select class="form-control" ng-model="itemsPerPage" style="margin: 18px 30px;"
+                    ng-options="item.itemId as item.itemName for item in itemsPage" ng-change="pageSizeChanged(itemsPerPage)"></select>
+        </div>
+    </div>
+        @*<div class="col-md-12">
+                <div class="pull-left">
+                    <div previous-text="Претходна" next-text="Следна" pagination total-items="totalItems" ng-show="totalItems != 0" items-per-page="pageSize" ng-model="currentPage" class="pagination-sm"></div>
+                </div>
+                <div class="pull-left">
+                    <select class="form-control" ng-show="totalItems != 0" name="servicesPerPage" ng-model="itemsPerPage" style="margin: 18px 30px;"
+                            ng-options="item.itemId as item.itemName for item in itemsPage"></select>
+                </div>
+                <div ng-show="totalItems != 0" class="pull-right">
+                    <strong>Вкупен број на записи: {{totalItems}}</strong>
+                </div>
+            </div>*@
+        <div class="col-md-12 alert alert-warning text-center" ng-show="totalItems==0">
+            <strong>Нема податоци</strong>
+        </div>
+</form>

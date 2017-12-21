@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5375a2d9-fe0c-47f9-91cc-60b05d14f11b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/FPIOMServicesTest.Host/InsuredStatusTest.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="InsuredStatusTest.xsd" MetadataType="Schema" ID="55dd69aa-55b0-41dc-8a86-ba8d9db28364" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/InsuredStatusTest.svc?xsd=xsd1" />
+    <MetadataFile FileName="InsuredStatusTest.wsdl" MetadataType="Wsdl" ID="738d44db-52d1-407a-9cd8-9718a390293f" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/InsuredStatusTest.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="InsuredStatusTest1.wsdl" MetadataType="Wsdl" ID="6b1fb10a-fa14-4aca-afe7-f1c750d2742d" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/InsuredStatusTest.svc?wsdl" />
+    <MetadataFile FileName="InsuredStatusTest1.xsd" MetadataType="Schema" ID="6583ba03-e270-4daa-8ca2-9c1deaaaa2b0" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/InsuredStatusTest.svc?xsd=xsd0" />
+    <MetadataFile FileName="InsuredStatusTest.disco" MetadataType="Disco" ID="dcd3e71b-a022-402d-b1aa-78f4a068fea7" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/InsuredStatusTest.svc?disco" />
+    <MetadataFile FileName="InsuredStatusTest2.xsd" MetadataType="Schema" ID="8bdd0128-2b51-4340-b329-e3410357edd2" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/InsuredStatusTest.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

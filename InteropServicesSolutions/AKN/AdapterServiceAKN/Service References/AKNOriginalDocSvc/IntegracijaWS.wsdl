@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://integracija.ekat.igea.si/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="IntegracijaWS" targetNamespace="http://integracija.ekat.igea.si/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://10.177.157.203:28081/ws/IntegracijaWS?xsd=1" namespace="http://integracija.ekat.igea.si/" />
+    </xsd:schema>
+  </types>
+  <message name="getTestResult">
+    <part name="parameters" element="tns:getTestResult" />
+  </message>
+  <message name="getTestResultResponse">
+    <part name="parameters" element="tns:getTestResultResponse" />
+  </message>
+  <message name="printMessage">
+    <part name="parameters" element="tns:printMessage" />
+  </message>
+  <message name="printMessageResponse">
+    <part name="parameters" element="tns:printMessageResponse" />
+  </message>
+  <message name="insOISDUser">
+    <part name="parameters" element="tns:insOISDUser" />
+  </message>
+  <message name="insOISDUserResponse">
+    <part name="parameters" element="tns:insOISDUserResponse" />
+  </message>
+  <message name="insNewProcedure">
+    <part name="parameters" element="tns:insNewProcedure" />
+  </message>
+  <message name="insNewProcedureResponse">
+    <part name="parameters" element="tns:insNewProcedureResponse" />
+  </message>
+  <message name="insLiteUser">
+    <part name="parameters" element="tns:insLiteUser" />
+  </message>
+  <message name="insLiteUserResponse">
+    <part name="parameters" element="tns:insLiteUserResponse" />
+  </message>
+  <message name="getPayedReq">
+    <part name="parameters" element="tns:getPayedReq" />
+  </message>
+  <message name="getPayedReqResponse">
+    <part name="parameters" element="tns:getPayedReqResponse" />
+  </message>
+  <message name="getPlistInfo">
+    <part name="parameters" element="tns:getPlistInfo" />
+  </message>
+  <message name="getPlistInfoResponse">
+    <part name="parameters" element="tns:getPlistInfoResponse" />
+  </message>
+  <message name="generateDocument">
+    <part name="parameters" element="tns:generateDocument" />
+  </message>
+  <message name="generateDocumentResponse">
+    <part name="parameters" element="tns:generateDocumentResponse" />
+  </message>
+  <portType name="IntegracijaWSImpl">
+    <operation name="getTestResult">
+      <input wsam:Action="http://integracija.ekat.igea.si/IntegracijaWSImpl/getTestResultRequest" message="tns:getTestResult" />
+      <output wsam:Action="http://integracija.ekat.igea.si/IntegracijaWSImpl/getTestResultResponse" message="tns:getTestResultResponse" />
+    </operation>
+    <operation name="printMessage">
+      <input wsam:Action="http://integracija.ekat.igea.si/IntegracijaWSImpl/printMessageRequest" message="tns:printMessage" />
+      <output wsam:Action="http://integracija.ekat.igea.si/IntegracijaWSImpl/printMessageResponse" message="tns:printMessageResponse" />
+    </operation>
+    <operation name="insOISDUser">
+      <input wsam:Action="http://integracija.ekat.igea.si/IntegracijaWSImpl/insOISDUserRequest" message="tns:insOISDUser" />
+      <output wsam:Action="http://integracija.ekat.igea.si/IntegracijaWSImpl/insOISDUserResponse" message="tns:insOISDUserResponse" />
+    </operation>
+    <operation name="insNewProcedure">
+      <input wsam:Action="http://integracija.ekat.igea.si/IntegracijaWSImpl/insNewProcedureRequest" message="tns:insNewProcedure" />
+      <output wsam:Action="http://integracija.ekat.igea.si/IntegracijaWSImpl/insNewProcedureResponse" message="tns:insNewProcedureResponse" />
+    </operation>
+    <operation name="insLiteUser">
+      <input wsam:Action="http://integracija.ekat.igea.si/IntegracijaWSImpl/insLiteUserRequest" message="tns:insLiteUser" />
+      <output wsam:Action="http://integracija.ekat.igea.si/IntegracijaWSImpl/insLiteUserResponse" message="tns:insLiteUserResponse" />
+    </operation>
+    <operation name="getPayedReq">
+      <input wsam:Action="http://integracija.ekat.igea.si/IntegracijaWSImpl/getPayedReqRequest" message="tns:getPayedReq" />
+      <output wsam:Action="http://integracija.ekat.igea.si/IntegracijaWSImpl/getPayedReqResponse" message="tns:getPayedReqResponse" />
+    </operation>
+    <operation name="getPlistInfo">
+      <input wsam:Action="http://integracija.ekat.igea.si/IntegracijaWSImpl/getPlistInfoRequest" message="tns:getPlistInfo" />
+      <output wsam:Action="http://integracija.ekat.igea.si/IntegracijaWSImpl/getPlistInfoResponse" message="tns:getPlistInfoResponse" />
+    </operation>
+    <operation name="generateDocument">
+      <input wsam:Action="http://integracija.ekat.igea.si/IntegracijaWSImpl/generateDocumentRequest" message="tns:generateDocument" />
+      <output wsam:Action="http://integracija.ekat.igea.si/IntegracijaWSImpl/generateDocumentResponse" message="tns:generateDocumentResponse" />
+    </operation>
+  </portType>
+  <binding name="IntegracijaWSPortBinding" type="tns:IntegracijaWSImpl">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getTestResult">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="printMessage">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insOISDUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insNewProcedure">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insLiteUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPayedReq">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPlistInfo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="generateDocument">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="IntegracijaWS">
+    <port name="IntegracijaWSPort" binding="tns:IntegracijaWSPortBinding">
+      <soap:address location="http://10.177.157.203:28081/ws/IntegracijaWS" />
+    </port>
+  </service>
+</definitions>

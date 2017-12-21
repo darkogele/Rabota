@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0a20858a-436e-48d0-a411-1daad272c6eb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/BigMessagesService.Host/BigData.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BigData.wsdl" MetadataType="Wsdl" ID="3ec114b3-5c0c-441a-b558-7ac0a2390a13" SourceId="1" SourceUrl="http://localhost/BigMessagesService.Host/BigData.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="BigData.xsd" MetadataType="Schema" ID="e6fde9ba-b740-4f1a-8e17-d97bee8458b9" SourceId="1" SourceUrl="http://localhost/BigMessagesService.Host/BigData.svc?xsd=xsd1" />
+    <MetadataFile FileName="BigData1.xsd" MetadataType="Schema" ID="a84f3134-117a-43a2-ad0b-e3343a56936a" SourceId="1" SourceUrl="http://localhost/BigMessagesService.Host/BigData.svc?xsd=xsd0" />
+    <MetadataFile FileName="BigData2.xsd" MetadataType="Schema" ID="b4a16df4-4e65-4763-af37-f79a128ed7e1" SourceId="1" SourceUrl="http://localhost/BigMessagesService.Host/BigData.svc?xsd=xsd2" />
+    <MetadataFile FileName="BigData.disco" MetadataType="Disco" ID="37b8b0bd-0761-447e-8527-a9919a48e025" SourceId="1" SourceUrl="http://localhost/BigMessagesService.Host/BigData.svc?disco" />
+    <MetadataFile FileName="BigData1.wsdl" MetadataType="Wsdl" ID="c242feeb-b6b1-4654-bf8d-2569515aa230" SourceId="1" SourceUrl="http://localhost/BigMessagesService.Host/BigData.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

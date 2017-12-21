@@ -1,0 +1,219 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemToSystemFromListProvidersWsdls", "SystemToSystemFromListProvidersWsdls\SystemToSystemFromListProvidersWsdls.csproj", "{00FD7894-B140-4BD1-860C-2B4D173BF259}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Implementations.Test", "Implementations.Test\Implementations.Test.csproj", "{C1BB1E10-77A4-4B15-8B1E-E7E489B65EAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CURM", "CURM", "{77F5B235-97B1-4A97-B20D-C9A3AB93D7E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CRRM", "CRRM", "{C16356A4-FB52-4EB7-B5BE-E8795B0AF77D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRRMSystemToSystemFromListProviders", "CRRMSystemToSystemFromListProviders\CRRMSystemToSystemFromListProviders.csproj", "{E8F90808-8429-4605-B1EB-79DB97EB899E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CURMTekovnaSosojbaProdukciskiNaTest", "CURMTekovnaSosojbaProdukciskiNaTest", "{E6C1234E-1CAB-4519-9156-2CA3041FD4CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SToSTekovnaSostojbaProdukciskiNaTest", "SToSTekovnaSostojbaProdukciskiNaTest\SToSTekovnaSostojbaProdukciskiNaTest.csproj", "{A87529EC-8CBE-48C0-8C84-F63542A15EE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CURMTekovnaSosojbaCURMProdukciskiNaTest", "CURMTekovnaSosojbaCURMProdukciskiNaTest", "{61EB5EC8-170B-4063-8700-5485EED2B017}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SToSTekSostojbaCURMProdukciskiNaTest", "SToSTekSostojbaCURMProdukciskiNaTest\SToSTekSostojbaCURMProdukciskiNaTest.csproj", "{D55C8AC9-5B45-4AEA-94BA-EE94B2FB763B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Implementations.Production", "Implementations.Production\Implementations.Production.csproj", "{A31B6FE4-0E63-426B-B0A1-A8C2971FDBC4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CURMListaNaSubjektiInteresProdukciskiNaTest", "CURMListaNaSubjektiInteresProdukciskiNaTest", "{B7E849D8-2A7C-4090-AE83-EA143BEC0870}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SToSListaNaSubjektiProdukciskiNaTest", "SToSListaNaSubjektiProdukciskiNaTest\SToSListaNaSubjektiProdukciskiNaTest.csproj", "{E2E6E0CE-9895-42C5-BEF5-4C85AEED8739}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CURMListaNaSubjektiPromenaProdukciskiNaTest", "CURMListaNaSubjektiPromenaProdukciskiNaTest", "{606F9109-D9C2-472D-AEFD-247F64DEF351}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SToSListaNaSubjPromProdukciskiNaTest", "SToSListaNaSubjPromProdukciskiNaTest\SToSListaNaSubjPromProdukciskiNaTest.csproj", "{8F27FD55-67EE-4B70-8BB9-02554E87BA6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSDL(s)ProductionServices", "WSDL(s)ProductionServices\WSDL(s)ProductionServices.csproj", "{34129C77-2818-42BC-8DA8-70D92FA0D42C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CRMImotenListProdukciskiNaTest", "CRMImotenListProdukciskiNaTest", "{417CDAED-7B2C-4FA2-A29F-71D88B408002}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SToSImotenListProdukciskiNaTest", "SToSImotenListProdukciskiNaTest\SToSImotenListProdukciskiNaTest.csproj", "{387069CA-9DB9-4E70-B402-AF8809E448FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CRMParcelaProdukciskiNaTest", "CRMParcelaProdukciskiNaTest", "{F204C687-A30E-4660-AD61-0F49A7CAB963}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SToSParcelaProdukciskiNaTest", "SToSParcelaProdukciskiNaTest\SToSParcelaProdukciskiNaTest.csproj", "{8D79CD99-62C0-48A9-BEE3-4D29D8768692}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CRMDokumentImotenListProdukcijaNaTest", "CRMDokumentImotenListProdukcijaNaTest", "{5F0BE1A3-6771-4C77-BC86-8D6A65A74089}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SToSDokumentImotenListProdukcijaNaTest", "SToSDokumentImotenListProdukcijaNaTest\SToSDokumentImotenListProdukcijaNaTest.csproj", "{92F6D921-882F-435E-9883-E3A26677B712}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CRMDokumentCopijaOdKatastarskiPlanProdukcijaNaTest", "CRMDokumentCopijaOdKatastarskiPlanProdukcijaNaTest", "{BE4C3BD3-40E9-49CB-AE89-093D1CDB5F01}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CRMPodatociZaInfrastrukturniObjektiProdukcijjaNaTest", "CRMPodatociZaInfrastrukturniObjektiProdukcijjaNaTest", "{9D8EAE60-CD0D-4874-90DA-288A66D9DA7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SToSCopijaOdKatastarskiPlanProdukcijaNaTest", "SToSCopijaOdKatastarskiPlanProdukcijaNaTest\SToSCopijaOdKatastarskiPlanProdukcijaNaTest.csproj", "{8522AB2F-EAAB-48E5-8B7E-897091999DF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SToSInfrastukturniObjektiProdukcijaNaTest", "SToSInfrastukturniObjektiProdukcijaNaTest\SToSInfrastukturniObjektiProdukcijaNaTest.csproj", "{F400AED8-556E-4A40-BF04-F626CE39C5FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AKNTekovnaSostojbaAKNProdukciskiNaTest - OdPomosenAdapter", "AKNTekovnaSostojbaAKNProdukciskiNaTest - OdPomosenAdapter", "{0C88A6A0-072B-4209-B046-FB78EC82C80A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SToSTekSostojbaAKNProdukciskiNaTest", "SToSTekSostojbaAKNProdukciskiNaTest\SToSTekSostojbaAKNProdukciskiNaTest.csproj", "{4EB9CF33-F9F8-42AF-8743-792096482A6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AKNTekovnaSostojbaAKNProdukciskiNaTest - OdListaProvajderi", "AKNTekovnaSostojbaAKNProdukciskiNaTest - OdListaProvajderi", "{4F1C5B73-0BE0-46C7-B90D-42FFD1DF8E3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SToSTekSostojbaAKNProdukLPNaTest", "SToSTekSostojbaAKNProdukLPNaTest\SToSTekSostojbaAKNProdukLPNaTest.csproj", "{ED7201DC-7D90-409E-A08E-3FB336E16783}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 16
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.11.21.108:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CRRMSystemToSystemFromListProviders\\CRRMSystemToSystemFromListProviders.csproj
+		SccProjectTopLevelParentUniqueName1 = SystemToSystemFromListProvidersWsdls.sln
+		SccProjectName1 = CRRMSystemToSystemFromListProviders
+		SccLocalPath1 = CRRMSystemToSystemFromListProviders
+		SccProjectUniqueName2 = Implementations.Production\\Implementations.Production.csproj
+		SccProjectName2 = Implementations.Production
+		SccLocalPath2 = Implementations.Production
+		SccProjectUniqueName3 = Implementations.Test\\Implementations.Test.csproj
+		SccProjectName3 = Implementations.Test
+		SccLocalPath3 = Implementations.Test
+		SccProjectUniqueName4 = SToSCopijaOdKatastarskiPlanProdukcijaNaTest\\SToSCopijaOdKatastarskiPlanProdukcijaNaTest.csproj
+		SccProjectTopLevelParentUniqueName4 = SystemToSystemFromListProvidersWsdls.sln
+		SccProjectName4 = SToSCopijaOdKatastarskiPlanProdukcijaNaTest
+		SccLocalPath4 = SToSCopijaOdKatastarskiPlanProdukcijaNaTest
+		SccProjectUniqueName5 = SToSDokumentImotenListProdukcijaNaTest\\SToSDokumentImotenListProdukcijaNaTest.csproj
+		SccProjectTopLevelParentUniqueName5 = SystemToSystemFromListProvidersWsdls.sln
+		SccProjectName5 = SToSDokumentImotenListProdukcijaNaTest
+		SccLocalPath5 = SToSDokumentImotenListProdukcijaNaTest
+		SccProjectUniqueName6 = SToSImotenListProdukciskiNaTest\\SToSImotenListProdukciskiNaTest.csproj
+		SccProjectTopLevelParentUniqueName6 = SystemToSystemFromListProvidersWsdls.sln
+		SccProjectName6 = SToSImotenListProdukciskiNaTest
+		SccLocalPath6 = SToSImotenListProdukciskiNaTest
+		SccProjectUniqueName7 = SToSInfrastukturniObjektiProdukcijaNaTest\\SToSInfrastukturniObjektiProdukcijaNaTest.csproj
+		SccProjectTopLevelParentUniqueName7 = SystemToSystemFromListProvidersWsdls.sln
+		SccProjectName7 = SToSInfrastukturniObjektiProdukcijaNaTest
+		SccLocalPath7 = SToSInfrastukturniObjektiProdukcijaNaTest
+		SccProjectUniqueName8 = SToSListaNaSubjektiProdukciskiNaTest\\SToSListaNaSubjektiProdukciskiNaTest.csproj
+		SccProjectTopLevelParentUniqueName8 = SystemToSystemFromListProvidersWsdls.sln
+		SccProjectName8 = SToSListaNaSubjektiProdukciskiNaTest
+		SccLocalPath8 = SToSListaNaSubjektiProdukciskiNaTest
+		SccProjectUniqueName9 = SToSListaNaSubjPromProdukciskiNaTest\\SToSListaNaSubjPromProdukciskiNaTest.csproj
+		SccProjectTopLevelParentUniqueName9 = SystemToSystemFromListProvidersWsdls.sln
+		SccProjectName9 = SToSListaNaSubjPromProdukciskiNaTest
+		SccLocalPath9 = SToSListaNaSubjPromProdukciskiNaTest
+		SccProjectUniqueName10 = SToSParcelaProdukciskiNaTest\\SToSParcelaProdukciskiNaTest.csproj
+		SccProjectTopLevelParentUniqueName10 = SystemToSystemFromListProvidersWsdls.sln
+		SccProjectName10 = SToSParcelaProdukciskiNaTest
+		SccLocalPath10 = SToSParcelaProdukciskiNaTest
+		SccProjectUniqueName11 = SToSTekovnaSostojbaProdukciskiNaTest\\SToSTekovnaSostojbaProdukciskiNaTest.csproj
+		SccProjectTopLevelParentUniqueName11 = SystemToSystemFromListProvidersWsdls.sln
+		SccProjectName11 = SToSTekovnaSostojbaProdukciskiNaTest
+		SccLocalPath11 = SToSTekovnaSostojbaProdukciskiNaTest
+		SccProjectUniqueName12 = SToSTekSostojbaAKNProdukciskiNaTest\\SToSTekSostojbaAKNProdukciskiNaTest.csproj
+		SccProjectTopLevelParentUniqueName12 = SystemToSystemFromListProvidersWsdls.sln
+		SccProjectName12 = SToSTekSostojbaAKNProdukciskiNaTest
+		SccLocalPath12 = SToSTekSostojbaAKNProdukciskiNaTest
+		SccProjectUniqueName13 = SToSTekSostojbaAKNProdukLPNaTest\\SToSTekSostojbaAKNProdukLPNaTest.csproj
+		SccProjectTopLevelParentUniqueName13 = SystemToSystemFromListProvidersWsdls.sln
+		SccProjectName13 = SToSTekSostojbaAKNProdukLPNaTest
+		SccLocalPath13 = SToSTekSostojbaAKNProdukLPNaTest
+		SccProjectUniqueName14 = SToSTekSostojbaCURMProdukciskiNaTest\\SToSTekSostojbaCURMProdukciskiNaTest.csproj
+		SccProjectTopLevelParentUniqueName14 = SystemToSystemFromListProvidersWsdls.sln
+		SccProjectName14 = SToSTekSostojbaCURMProdukciskiNaTest
+		SccLocalPath14 = SToSTekSostojbaCURMProdukciskiNaTest
+		SccProjectUniqueName15 = WSDL(s)ProductionServices\\WSDL(s)ProductionServices.csproj
+		SccProjectName15 = WSDL(s)ProductionServices
+		SccLocalPath15 = WSDL(s)ProductionServices
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00FD7894-B140-4BD1-860C-2B4D173BF259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00FD7894-B140-4BD1-860C-2B4D173BF259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00FD7894-B140-4BD1-860C-2B4D173BF259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00FD7894-B140-4BD1-860C-2B4D173BF259}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1BB1E10-77A4-4B15-8B1E-E7E489B65EAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1BB1E10-77A4-4B15-8B1E-E7E489B65EAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1BB1E10-77A4-4B15-8B1E-E7E489B65EAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1BB1E10-77A4-4B15-8B1E-E7E489B65EAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8F90808-8429-4605-B1EB-79DB97EB899E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8F90808-8429-4605-B1EB-79DB97EB899E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8F90808-8429-4605-B1EB-79DB97EB899E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8F90808-8429-4605-B1EB-79DB97EB899E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A87529EC-8CBE-48C0-8C84-F63542A15EE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A87529EC-8CBE-48C0-8C84-F63542A15EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A87529EC-8CBE-48C0-8C84-F63542A15EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A87529EC-8CBE-48C0-8C84-F63542A15EE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D55C8AC9-5B45-4AEA-94BA-EE94B2FB763B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D55C8AC9-5B45-4AEA-94BA-EE94B2FB763B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D55C8AC9-5B45-4AEA-94BA-EE94B2FB763B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D55C8AC9-5B45-4AEA-94BA-EE94B2FB763B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A31B6FE4-0E63-426B-B0A1-A8C2971FDBC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A31B6FE4-0E63-426B-B0A1-A8C2971FDBC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A31B6FE4-0E63-426B-B0A1-A8C2971FDBC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A31B6FE4-0E63-426B-B0A1-A8C2971FDBC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2E6E0CE-9895-42C5-BEF5-4C85AEED8739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2E6E0CE-9895-42C5-BEF5-4C85AEED8739}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2E6E0CE-9895-42C5-BEF5-4C85AEED8739}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2E6E0CE-9895-42C5-BEF5-4C85AEED8739}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F27FD55-67EE-4B70-8BB9-02554E87BA6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F27FD55-67EE-4B70-8BB9-02554E87BA6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F27FD55-67EE-4B70-8BB9-02554E87BA6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F27FD55-67EE-4B70-8BB9-02554E87BA6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34129C77-2818-42BC-8DA8-70D92FA0D42C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34129C77-2818-42BC-8DA8-70D92FA0D42C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34129C77-2818-42BC-8DA8-70D92FA0D42C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34129C77-2818-42BC-8DA8-70D92FA0D42C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{387069CA-9DB9-4E70-B402-AF8809E448FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{387069CA-9DB9-4E70-B402-AF8809E448FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{387069CA-9DB9-4E70-B402-AF8809E448FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{387069CA-9DB9-4E70-B402-AF8809E448FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D79CD99-62C0-48A9-BEE3-4D29D8768692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D79CD99-62C0-48A9-BEE3-4D29D8768692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D79CD99-62C0-48A9-BEE3-4D29D8768692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D79CD99-62C0-48A9-BEE3-4D29D8768692}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92F6D921-882F-435E-9883-E3A26677B712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92F6D921-882F-435E-9883-E3A26677B712}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92F6D921-882F-435E-9883-E3A26677B712}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92F6D921-882F-435E-9883-E3A26677B712}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8522AB2F-EAAB-48E5-8B7E-897091999DF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8522AB2F-EAAB-48E5-8B7E-897091999DF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8522AB2F-EAAB-48E5-8B7E-897091999DF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8522AB2F-EAAB-48E5-8B7E-897091999DF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F400AED8-556E-4A40-BF04-F626CE39C5FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F400AED8-556E-4A40-BF04-F626CE39C5FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F400AED8-556E-4A40-BF04-F626CE39C5FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F400AED8-556E-4A40-BF04-F626CE39C5FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EB9CF33-F9F8-42AF-8743-792096482A6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EB9CF33-F9F8-42AF-8743-792096482A6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EB9CF33-F9F8-42AF-8743-792096482A6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EB9CF33-F9F8-42AF-8743-792096482A6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED7201DC-7D90-409E-A08E-3FB336E16783}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED7201DC-7D90-409E-A08E-3FB336E16783}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED7201DC-7D90-409E-A08E-3FB336E16783}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED7201DC-7D90-409E-A08E-3FB336E16783}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{00FD7894-B140-4BD1-860C-2B4D173BF259} = {77F5B235-97B1-4A97-B20D-C9A3AB93D7E3}
+		{E8F90808-8429-4605-B1EB-79DB97EB899E} = {C16356A4-FB52-4EB7-B5BE-E8795B0AF77D}
+		{A87529EC-8CBE-48C0-8C84-F63542A15EE0} = {E6C1234E-1CAB-4519-9156-2CA3041FD4CB}
+		{D55C8AC9-5B45-4AEA-94BA-EE94B2FB763B} = {61EB5EC8-170B-4063-8700-5485EED2B017}
+		{E2E6E0CE-9895-42C5-BEF5-4C85AEED8739} = {B7E849D8-2A7C-4090-AE83-EA143BEC0870}
+		{8F27FD55-67EE-4B70-8BB9-02554E87BA6B} = {606F9109-D9C2-472D-AEFD-247F64DEF351}
+		{387069CA-9DB9-4E70-B402-AF8809E448FB} = {417CDAED-7B2C-4FA2-A29F-71D88B408002}
+		{8D79CD99-62C0-48A9-BEE3-4D29D8768692} = {F204C687-A30E-4660-AD61-0F49A7CAB963}
+		{92F6D921-882F-435E-9883-E3A26677B712} = {5F0BE1A3-6771-4C77-BC86-8D6A65A74089}
+		{8522AB2F-EAAB-48E5-8B7E-897091999DF8} = {BE4C3BD3-40E9-49CB-AE89-093D1CDB5F01}
+		{F400AED8-556E-4A40-BF04-F626CE39C5FA} = {9D8EAE60-CD0D-4874-90DA-288A66D9DA7F}
+		{4EB9CF33-F9F8-42AF-8743-792096482A6A} = {0C88A6A0-072B-4209-B046-FB78EC82C80A}
+		{ED7201DC-7D90-409E-A08E-3FB336E16783} = {4F1C5B73-0BE0-46C7-B90D-42FFD1DF8E3C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9E3AE03-1065-41F8-8E99-9343290E09C0}
+	EndGlobalSection
+EndGlobal

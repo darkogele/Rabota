@@ -1,0 +1,132 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>Единствен Даночен Број - Управа за јавни приходи</h2>
+
+<form name="ujpEdbEmbForm" ng-controller="UjpCtrl">
+
+    <div class="container">
+        <div class="col-lg-3">
+            <div class="form-group" ng-class="{ 'has-error' : edb_embFormField.edb_emb.$invalid }">
+                <ng-form name="edb_embFormField">
+                    <label for="edb_emb">ЕМБ:</label>
+                    <input id="edb_emb" type="text" class="form-control" name="edb_emb" ng-model="edb_emb" required>
+                </ng-form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-disabled="ujpEdbEmbForm.$invalid" ng-click="ujpEdbEmb(edb_emb)"><i class="fa fa-save"></i> Испрати</button>
+                <a class="btn btn-warning" href="#/ujp/ujpedbemb" ui-sref="ujpedbembindex">Откажи</a>
+            </div>
+        </div>
+
+        <div ng-show="show" class="col-lg-10">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @*<button ng-show="!expandOps" ng-click="expandedOps()">+</button>
+                            <button ng-show="expandOps" ng-click="expandedOps()">-</button>*@
+                            Податоци за субјектот
+                        </th>
+                    </tr>
+                    @*<tr ng-show="expandOps">*@
+                    @*<tr>
+                        <th>ЕДБ</th>
+                        <th>Назив</th>
+                        <th>ЕМБ</th>
+                        <th>Жиро Сметка</th>
+                        <th>Жиро Сметка на Банката</th>
+                        <th>Датум на пријава</th>
+                        <th>Вид на пријава</th>
+                        <th>Статус на пријава</th>
+                        <th>Дејност</th>
+                        <th>Назив на седиште</th>
+                        <th>Број на седиште</th>
+                        <th>Улица на седиште</th>
+                        <th>Телефон на седиште</th>
+                        <th>Телефакс на седиште</th>
+                    </tr>*@
+                </thead>
+                <tbody>
+                    <tr id="row1" ng-repeat="edb_emb in edb_EmbList">
+                        <th>ЕДБ</th>
+
+                        <td>{{edb_emb.edb}}</td>
+                    </tr>
+                    <tr ng-repeat="edb_emb in edb_EmbList">
+                        <th>Назив</th>
+                        <td>{{edb_emb.naziv}}</td>
+                    </tr>
+                    <tr ng-repeat="edb_emb in edb_EmbList">
+                        <th>ЕМБ</th>
+                        <td>{{edb_emb.emb}}</td>
+                    </tr>
+                    <tr ng-repeat="edb_emb in edb_EmbList">
+                        <th>Жиро сметка</th>
+                        <td>{{edb_emb.ziro}}</td>
+                    </tr>
+                    <tr ng-repeat="edb_emb in edb_EmbList">
+
+                        <th>Жиро сметка на банката</th>
+                        <td>{{edb_emb.bankaZiro}}</td>
+                    </tr>
+                    <tr ng-repeat="edb_emb in edb_EmbList">
+                        <th>Датум на пријава</th>
+                        <td>{{edb_emb.datumPrijava}}</td>
+                    </tr>
+                    <tr ng-repeat="edb_emb in edb_EmbList">
+                        <th>Вид на пријава</th>
+                        <td>{{edb_emb.prijavaVid}}</td>
+                    </tr>
+                    <tr ng-repeat="edb_emb in edb_EmbList">
+                        <th>Статус на пријава</th>
+                        <td>{{edb_emb.prijavaStatus}}</td>
+                    </tr>
+                    <tr ng-repeat="edb_emb in edb_EmbList">
+                        <th>ОДејност</th>
+                        <td>{{edb_emb.dejnostNace}}</td>
+                    </tr>
+                    <tr ng-repeat="edb_emb in edb_EmbList">
+                        <th>Назив на седиште</th>
+                        <td>{{edb_emb.sedisteNaziv}}</td>
+                    </tr>
+                    <tr ng-repeat="edb_emb in edb_EmbList">
+                        <th>Број на седиште</th>
+                        <td>{{edb_emb.sedisteBroj}}</td>
+                    </tr>
+                    <tr ng-repeat="edb_emb in edb_EmbList">
+                        <th>Улица на седиште</th>
+                        <td>{{edb_emb.sedisteUlica}}</td>
+                    </tr>
+                    <tr ng-repeat="edb_emb in edb_EmbList">
+                        <th>Телефон на седиште</th>
+                        <td>{{edb_emb.sedisteTelefon}}</td>
+                    </tr>
+                    <tr ng-repeat="edb_emb in edb_EmbList">
+                        <th>Телефакс на седиште</th>
+                        <td>{{edb_emb.sedisteTelefax}}</td>
+                    </tr>
+                    @*<tr ng-repeat="edb_emb in edb_EmbList" ng-show="expandOps">
+                        <td>{{edb_emb.edb}}</td>
+                        <td>{{edb_emb.naziv}}</td>
+                        <td>{{edb_emb.emb}}</td>
+                        <td>{{edb_emb.ziro}}</td>
+                        <td>{{edb_emb.bankaZiro}}</td>
+                        <td>{{edb_emb.datumPrijava}}</td>
+                        <td>{{edb_emb.prijavaVid}}</td>
+                        <td>{{edb_emb.prijavaStatus}}</td>
+                        <td>{{edb_emb.dejnostNace}}</td>
+                        <td>{{edb_emb.sedisteNaziv}}</td>
+                        <td>{{edb_emb.sedisteBroj}}</td>
+                        <td>{{edb_emb.sedisteUlica}}</td>
+                        <td>{{edb_emb.sedisteTelefon}}</td>
+                        <td>{{edb_emb.sedisteTelefax}}</td>
+                    </tr>*@
+                </tbody>
+            </table>
+            <div class="row text-center">
+                <a class="btn btn-default" ng-click="EDBXML()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во XML формат</a>
+                <a class="btn btn-default" ng-click="EDBPDF()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во PDF формат</a>
+            </div>
+        </div>
+    </div>
+</form>

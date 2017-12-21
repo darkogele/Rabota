@@ -1,0 +1,61 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>Податоци за осигуреник - Фонд за пензиско и инвалидско осигурување</h2>
+
+<form name="piomDataForInsureeForm" ng-controller="PiomCtrl">
+
+    <div class="container">
+        <div class="col-lg-3">
+
+            @* EMBG *@
+            <div class="form-group" ng-class="{ 'has-error' : embgFormFieldvalidation.embg.$invalid }">
+                <ng-form name="embgFormFieldvalidation">
+                    <label for="embg">ЕМБГ:</label>
+                    <input id="embg" type="text" class="form-control" name="embg" ng-minlength="13" ng-maxlength="13" ng-model="embg" only-digits required>
+                    <br />
+                    <p style="color:red;font-size: 12px;" ng-show="((embgFormFieldvalidation.embg.$error.minlength ||
+                        embgFormFieldvalidation.embg.$error.maxlength))">
+                        ЕМБГ мора да содржи точно 13 цифри!
+                    </p>
+                </ng-form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-disabled="piomDataForInsureeForm.$invalid" ng-click="piomDataForEnsuree(embg)"><i class="fa fa-save"></i> Испрати</button>
+                <a class="btn btn-warning" href="#/piom/piomdataforensuree" ui-sref="piomdataforensureeindex">Откажи</a>
+            </div>
+        </div>
+
+        <div ng-show="show" class="col-lg-9">
+
+            <div class="form-group">
+                <ng-form name="embgFormField">
+                    <label for="embg">ЕМБГ:</label>
+                    <input id="embg" type="text" class="form-control" name="embg" ng-model="embg">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="nameFormField">
+                    <label for="name">Име:</label>
+                    <input id="name" type="text" class="form-control" name="name" ng-model="name">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="surnameFormField">
+                    <label for="surname">Презиме:</label>
+                    <input id="surname" type="text" class="form-control" name="surname" ng-model="surname">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="workExperienceFormField">
+                    <label for="workExperience">Години работно искуство:</label>
+                    <input id="workExperience" type="text" class="form-control" name="workExperience" ng-model="workExperience">
+                </ng-form>
+            </div>
+            <div class="row text-center">
+                <a class="btn btn-default" ng-click="EnsureeXML()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во XML формат</a>
+                <a class="btn btn-default" ng-click="EnsureePDF()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во PDF формат</a>
+            </div>
+        </div>
+    </div>
+</form>

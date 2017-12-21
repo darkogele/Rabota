@@ -1,0 +1,59 @@
+﻿@*@{
+    Layout = null;
+}
+@inherits System.Web.Mvc.WebViewPage*@
+@model List<Interop.CS.Models.DTO.MessageLogExcelDTO>
+<head>
+    <style type="text/css">
+        table, tr, td {
+            border: 1px solid gray;
+            padding: 5px;
+            border-collapse: collapse;
+
+        }
+       th {
+           
+            border: 2px solid black;
+            padding: 5px;
+            border-collapse: collapse;
+        
+       }
+    </style>
+</head>
+        <table class="table-striped">
+            <thead style="display: table-row-group">
+                <tr id="row1">
+                    <th>Идентификациски број</th>
+                    <th>Корисник</th>
+                    <th>Провајдер</th>
+                    <th>Токен на рутирање</th>
+                    <th>Сервис</th>
+                    <th>Метод</th>
+                    <th>Насока на комуникација</th>
+                    <th>Временски печат</th>
+                    <th>Дата на креирање</th>
+                    <th>Дата на креирање</th>
+                    <th>Токен временска ознака</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var messageLog in Model)
+                {
+                    <tr>
+                        <td>@messageLog.TransactionId</td>
+                        <td>@messageLog.Consumer</td>
+                        <td>@messageLog.Provider</td>
+                        <td>@messageLog.RoutingToken</td>
+                        <td>@messageLog.Service</td>
+                        <td>@messageLog.ServiceMethod</td>
+                        <td>@messageLog.Dir</td>
+                        <td>@messageLog.Timestamp</td>
+                        <td>@messageLog.CreateDate</td>
+                        <td>#messageLog.TokenTimestamp</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+   
+

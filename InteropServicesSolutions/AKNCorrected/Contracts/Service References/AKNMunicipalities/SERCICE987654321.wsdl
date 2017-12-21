@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.katastar.gov.mk/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.katastar.gov.mk/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Macedonian cadastre WEB SERVICE</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.katastar.gov.mk/">
+      <s:element name="LOG">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="us" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ps" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nizaserial" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LOGResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="vratiDATAsostojba">
+        <s:complexType />
+      </s:element>
+      <s:element name="vratiDATAsostojbaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vratiDATAsostojbaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VRATIPODATOCI_STRUKTURA_DATASET">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="us" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ps" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ops" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kops" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ilist" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nizaserial" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VRATIPODATOCI_STRUKTURA_DATASETResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VRATIPODATOCI_STRUKTURA_DATASETResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VRATIPODATOCI_STRUKTURA_DZGR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="us" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ps" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ops" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kops" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ilist" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VRATIPODATOCI_STRUKTURA_DZGRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VRATIPODATOCI_STRUKTURA_DZGRResult" type="tns:dzgr" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="dzgr">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ops" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="kops" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ilist" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="niztov" type="tns:ArrayOfTovari" />
+          <s:element minOccurs="0" maxOccurs="1" name="nizobj" type="tns:ArrayOfObjekti" />
+          <s:element minOccurs="0" maxOccurs="1" name="nizsop" type="tns:ArrayOfSopstvenici" />
+          <s:element minOccurs="0" maxOccurs="1" name="nizpar" type="tns:ArrayOfParceli" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTovari">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="tovari" type="tns:tovari" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="tovari">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="text" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfObjekti">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="objekti" type="tns:objekti" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="objekti">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="broj" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="objekt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="vlez" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="kat" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="stan" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="namena" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mesto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="povrsina" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="pravo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSopstvenici">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="sopstvenici" type="tns:sopstvenici" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="sopstvenici">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mesto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ulica" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="broj" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="del" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfParceli">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="parceli" type="tns:parceli" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="parceli">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="broj_del" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="objekt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="mesto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="kultura" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="povrsina" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="pravo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="VRATIOPSDATASET">
+        <s:complexType />
+      </s:element>
+      <s:element name="VRATIOPSDATASETResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VRATIOPSDATASETResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VRATIKATOPSDATASET">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ops" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VRATIKATOPSDATASETResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VRATIKATOPSDATASETResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VRATIKREDIT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="us" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ps" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VRATIKREDITResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VRATIKREDITResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VRATIPODATOCI_STRUKTURA_PARCELA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="us" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ps" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ops" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kops" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="broj" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VRATIPODATOCI_STRUKTURA_PARCELAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VRATIPODATOCI_STRUKTURA_PARCELAResult" type="tns:ATRparceli" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ATRparceli">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="nizpar" type="tns:ArrayOfAtributiparcela" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAtributiparcela">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="atributiparcela" type="tns:atributiparcela" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="atributiparcela">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ops" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="kops" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ilist" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="broj_del" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="objekt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="mesto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="kultura" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="povrsina" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="pravo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="VRATIulici">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="us" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VRATIuliciResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VRATIuliciResult" type="tns:ulici" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ulici">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ul" type="tns:ArrayOfTovari" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LOGSoapIn">
+    <wsdl:part name="parameters" element="tns:LOG" />
+  </wsdl:message>
+  <wsdl:message name="LOGSoapOut">
+    <wsdl:part name="parameters" element="tns:LOGResponse" />
+  </wsdl:message>
+  <wsdl:message name="vratiDATAsostojbaSoapIn">
+    <wsdl:part name="parameters" element="tns:vratiDATAsostojba" />
+  </wsdl:message>
+  <wsdl:message name="vratiDATAsostojbaSoapOut">
+    <wsdl:part name="parameters" element="tns:vratiDATAsostojbaResponse" />
+  </wsdl:message>
+  <wsdl:message name="VRATIPODATOCI_STRUKTURA_DATASETSoapIn">
+    <wsdl:part name="parameters" element="tns:VRATIPODATOCI_STRUKTURA_DATASET" />
+  </wsdl:message>
+  <wsdl:message name="VRATIPODATOCI_STRUKTURA_DATASETSoapOut">
+    <wsdl:part name="parameters" element="tns:VRATIPODATOCI_STRUKTURA_DATASETResponse" />
+  </wsdl:message>
+  <wsdl:message name="VRATIPODATOCI_STRUKTURA_DZGRSoapIn">
+    <wsdl:part name="parameters" element="tns:VRATIPODATOCI_STRUKTURA_DZGR" />
+  </wsdl:message>
+  <wsdl:message name="VRATIPODATOCI_STRUKTURA_DZGRSoapOut">
+    <wsdl:part name="parameters" element="tns:VRATIPODATOCI_STRUKTURA_DZGRResponse" />
+  </wsdl:message>
+  <wsdl:message name="VRATIOPSDATASETSoapIn">
+    <wsdl:part name="parameters" element="tns:VRATIOPSDATASET" />
+  </wsdl:message>
+  <wsdl:message name="VRATIOPSDATASETSoapOut">
+    <wsdl:part name="parameters" element="tns:VRATIOPSDATASETResponse" />
+  </wsdl:message>
+  <wsdl:message name="VRATIKATOPSDATASETSoapIn">
+    <wsdl:part name="parameters" element="tns:VRATIKATOPSDATASET" />
+  </wsdl:message>
+  <wsdl:message name="VRATIKATOPSDATASETSoapOut">
+    <wsdl:part name="parameters" element="tns:VRATIKATOPSDATASETResponse" />
+  </wsdl:message>
+  <wsdl:message name="VRATIKREDITSoapIn">
+    <wsdl:part name="parameters" element="tns:VRATIKREDIT" />
+  </wsdl:message>
+  <wsdl:message name="VRATIKREDITSoapOut">
+    <wsdl:part name="parameters" element="tns:VRATIKREDITResponse" />
+  </wsdl:message>
+  <wsdl:message name="VRATIPODATOCI_STRUKTURA_PARCELASoapIn">
+    <wsdl:part name="parameters" element="tns:VRATIPODATOCI_STRUKTURA_PARCELA" />
+  </wsdl:message>
+  <wsdl:message name="VRATIPODATOCI_STRUKTURA_PARCELASoapOut">
+    <wsdl:part name="parameters" element="tns:VRATIPODATOCI_STRUKTURA_PARCELAResponse" />
+  </wsdl:message>
+  <wsdl:message name="VRATIuliciSoapIn">
+    <wsdl:part name="parameters" element="tns:VRATIulici" />
+  </wsdl:message>
+  <wsdl:message name="VRATIuliciSoapOut">
+    <wsdl:part name="parameters" element="tns:VRATIuliciResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service_MACEDONIAN_CADASTRESoap">
+    <wsdl:operation name="LOG">
+      <wsdl:input message="tns:LOGSoapIn" />
+      <wsdl:output message="tns:LOGSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="vratiDATAsostojba">
+      <wsdl:input message="tns:vratiDATAsostojbaSoapIn" />
+      <wsdl:output message="tns:vratiDATAsostojbaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VRATIPODATOCI_STRUKTURA_DATASET">
+      <wsdl:input message="tns:VRATIPODATOCI_STRUKTURA_DATASETSoapIn" />
+      <wsdl:output message="tns:VRATIPODATOCI_STRUKTURA_DATASETSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VRATIPODATOCI_STRUKTURA_DZGR">
+      <wsdl:input message="tns:VRATIPODATOCI_STRUKTURA_DZGRSoapIn" />
+      <wsdl:output message="tns:VRATIPODATOCI_STRUKTURA_DZGRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VRATIOPSDATASET">
+      <wsdl:input message="tns:VRATIOPSDATASETSoapIn" />
+      <wsdl:output message="tns:VRATIOPSDATASETSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VRATIKATOPSDATASET">
+      <wsdl:input message="tns:VRATIKATOPSDATASETSoapIn" />
+      <wsdl:output message="tns:VRATIKATOPSDATASETSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VRATIKREDIT">
+      <wsdl:input message="tns:VRATIKREDITSoapIn" />
+      <wsdl:output message="tns:VRATIKREDITSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VRATIPODATOCI_STRUKTURA_PARCELA">
+      <wsdl:input message="tns:VRATIPODATOCI_STRUKTURA_PARCELASoapIn" />
+      <wsdl:output message="tns:VRATIPODATOCI_STRUKTURA_PARCELASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VRATIulici">
+      <wsdl:input message="tns:VRATIuliciSoapIn" />
+      <wsdl:output message="tns:VRATIuliciSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service_MACEDONIAN_CADASTRESoap" type="tns:Service_MACEDONIAN_CADASTRESoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LOG">
+      <soap:operation soapAction="http://www.katastar.gov.mk/LOG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vratiDATAsostojba">
+      <soap:operation soapAction="http://www.katastar.gov.mk/vratiDATAsostojba" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VRATIPODATOCI_STRUKTURA_DATASET">
+      <soap:operation soapAction="http://www.katastar.gov.mk/VRATIPODATOCI_STRUKTURA_DATASET" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VRATIPODATOCI_STRUKTURA_DZGR">
+      <soap:operation soapAction="http://www.katastar.gov.mk/VRATIPODATOCI_STRUKTURA_DZGR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VRATIOPSDATASET">
+      <soap:operation soapAction="http://www.katastar.gov.mk/VRATIOPSDATASET" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VRATIKATOPSDATASET">
+      <soap:operation soapAction="http://www.katastar.gov.mk/VRATIKATOPSDATASET" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VRATIKREDIT">
+      <soap:operation soapAction="http://www.katastar.gov.mk/VRATIKREDIT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VRATIPODATOCI_STRUKTURA_PARCELA">
+      <soap:operation soapAction="http://www.katastar.gov.mk/VRATIPODATOCI_STRUKTURA_PARCELA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VRATIulici">
+      <soap:operation soapAction="http://www.katastar.gov.mk/VRATIulici" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service_MACEDONIAN_CADASTRESoap12" type="tns:Service_MACEDONIAN_CADASTRESoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LOG">
+      <soap12:operation soapAction="http://www.katastar.gov.mk/LOG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vratiDATAsostojba">
+      <soap12:operation soapAction="http://www.katastar.gov.mk/vratiDATAsostojba" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VRATIPODATOCI_STRUKTURA_DATASET">
+      <soap12:operation soapAction="http://www.katastar.gov.mk/VRATIPODATOCI_STRUKTURA_DATASET" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VRATIPODATOCI_STRUKTURA_DZGR">
+      <soap12:operation soapAction="http://www.katastar.gov.mk/VRATIPODATOCI_STRUKTURA_DZGR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VRATIOPSDATASET">
+      <soap12:operation soapAction="http://www.katastar.gov.mk/VRATIOPSDATASET" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VRATIKATOPSDATASET">
+      <soap12:operation soapAction="http://www.katastar.gov.mk/VRATIKATOPSDATASET" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VRATIKREDIT">
+      <soap12:operation soapAction="http://www.katastar.gov.mk/VRATIKREDIT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VRATIPODATOCI_STRUKTURA_PARCELA">
+      <soap12:operation soapAction="http://www.katastar.gov.mk/VRATIPODATOCI_STRUKTURA_PARCELA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VRATIulici">
+      <soap12:operation soapAction="http://www.katastar.gov.mk/VRATIulici" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service_MACEDONIAN_CADASTRE">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Macedonian cadastre WEB SERVICE</wsdl:documentation>
+    <wsdl:port name="Service_MACEDONIAN_CADASTRESoap" binding="tns:Service_MACEDONIAN_CADASTRESoap">
+      <soap:address location="https://www.katastar.gov.mk/dzgrservis/SERCICE987654321.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service_MACEDONIAN_CADASTRESoap12" binding="tns:Service_MACEDONIAN_CADASTRESoap12">
+      <soap12:address location="https://www.katastar.gov.mk/dzgrservis/SERCICE987654321.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

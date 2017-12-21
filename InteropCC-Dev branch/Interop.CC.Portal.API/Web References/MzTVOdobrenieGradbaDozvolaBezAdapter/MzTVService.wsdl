@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://www.gradezna-dozvola.mk/Services/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://www.gradezna-dozvola.mk/Services/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://www.gradezna-dozvola.mk/Services/">
+      <s:element name="GetRequestDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="parameters" type="tns:InteropInputViewModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InteropInputViewModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ArchiveNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SendDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConstructionTypeId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MunicipalityId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="GetDocuments" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetRequestDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRequestDetailsResult" type="tns:InteropOutputViewModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InteropOutputViewModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Investors" type="tns:ArrayOfString" />
+          <s:element minOccurs="1" maxOccurs="1" name="SendDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ArchiveDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConstructionDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConstructionTypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConstructionAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Municipalities" type="tns:ArrayOfInteropRequestMunicipalityViewModel" />
+          <s:element minOccurs="1" maxOccurs="1" name="EffectDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Documents" type="tns:ArrayOfInteropDocumentsViewModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfInteropRequestMunicipalityViewModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="InteropRequestMunicipalityViewModel" nillable="true" type="tns:InteropRequestMunicipalityViewModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InteropRequestMunicipalityViewModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MunicipalityName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CadastreMunicipalities" type="tns:ArrayOfInteropCadastreMunicipalityViewModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfInteropCadastreMunicipalityViewModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="InteropCadastreMunicipalityViewModel" nillable="true" type="tns:InteropCadastreMunicipalityViewModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InteropCadastreMunicipalityViewModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Ko" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Kp" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfInteropDocumentsViewModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="InteropDocumentsViewModel" nillable="true" type="tns:InteropDocumentsViewModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InteropDocumentsViewModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContentBytes" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetRequestDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRequestDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetRequestDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRequestDetailsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="InteropWebServiceSoap">
+    <wsdl:operation name="GetRequestDetails">
+      <wsdl:input message="tns:GetRequestDetailsSoapIn" />
+      <wsdl:output message="tns:GetRequestDetailsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InteropWebServiceSoap" type="tns:InteropWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetRequestDetails">
+      <soap:operation soapAction="https://www.gradezna-dozvola.mk/Services/GetRequestDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="InteropWebServiceSoap12" type="tns:InteropWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetRequestDetails">
+      <soap12:operation soapAction="https://www.gradezna-dozvola.mk/Services/GetRequestDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InteropWebService">
+    <wsdl:port name="InteropWebServiceSoap" binding="tns:InteropWebServiceSoap">
+      <soap:address location="https://www.stage.gradezna-dozvola.mk/Services/InteropWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="InteropWebServiceSoap12" binding="tns:InteropWebServiceSoap12">
+      <soap12:address location="https://www.stage.gradezna-dozvola.mk/Services/InteropWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

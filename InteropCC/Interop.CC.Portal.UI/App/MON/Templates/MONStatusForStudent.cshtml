@@ -1,0 +1,38 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>Статус за ученик - Министерство за Образование и Наука</h2>
+
+<form name="monStatusForStudentForm" ng-controller="MonCtrl">
+
+    <div class="container">
+        <div class="col-lg-3">
+
+            @* EMBG *@
+            <div class="form-group" ng-class="{ 'has-error' : embgFormField.embg.$invalid }">
+                <ng-form name="embgFormField">
+                    <label for="embg">ЕМБГ:</label>
+                    <input id="embg" type="text" class="form-control" name="embg" ng-minlength="13" ng-maxlength="13" ng-model="embg" only-digits required>
+                    <br/><p style="color:red;font-size: 12px;" ng-show="((embgFormField.embg.$error.minlength ||
+                        embgFormField.embg.$error.maxlength))">
+                        ЕМБГ мора да содржи точно 13 цифри!
+                    </p>
+                </ng-form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-disabled="monStatusForStudentForm.$invalid" ng-click="monStatusForStudent(embg)"><i class="fa fa-save"></i> Испрати</button>
+                <a class="btn btn-warning" href="#/mon/monstatusforstudent" ui-sref="monstatusforstudentindex">Откажи</a>
+            </div>
+        </div>
+
+        <div ng-show="show" class="col-lg-9">
+
+            <div class="form-group">
+                <ng-form name="respFormField">
+                    <label for="resp">СТАТУС:</label>
+                    <input id="resp" type="text" class="form-control" name="resp" ng-model="resp">
+                </ng-form>
+            </div>
+        </div>
+    </div>
+</form>

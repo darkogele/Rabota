@@ -1,0 +1,16 @@
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesProd.Host\bin\AKNServicesProd.Host.dll.config
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesProd.Host\bin\AKNServicesProd.Host.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesProd.Host\bin\AKNServicesProd.Host.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesProd.Host\bin\Contracts.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesProd.Host\bin\Implementations.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesProd.Host\bin\Renci.SshNet.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesProd.Host\bin\Helpers.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesProd.Host\bin\Contracts.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesProd.Host\bin\Contracts.dll.config
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesProd.Host\bin\Implementations.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesProd.Host\bin\Renci.SshNet.xml
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesProd.Host\bin\Helpers.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesProd.Host\obj\Debug\AKNServicesProd.Host.csprojResolveAssemblyReference.cache
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesProd.Host\obj\Debug\AKNServicesProd.Host.csproj.CoreCompileInputs.cache
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesProd.Host\obj\Debug\AKNServicesProd.Host.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesProd.Host\obj\Debug\AKNServicesProd.Host.pdb

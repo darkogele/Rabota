@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c9b03996-5255-4cc5-b783-4d0007fc2432" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AKNServicesTest.Host/AKNPListDocTest.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AKNPListDocTest.xsd" MetadataType="Schema" ID="107326ce-9ee2-4eea-9108-7c685275d645" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/AKNPListDocTest.svc?xsd=xsd2" />
+    <MetadataFile FileName="AKNPListDocTest.wsdl" MetadataType="Wsdl" ID="22457f5e-fd64-4cd4-967b-bc1254cf2212" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/AKNPListDocTest.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="AKNPListDocTest.disco" MetadataType="Disco" ID="dbed48f4-9120-48ac-86a2-bfda1b612ffe" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/AKNPListDocTest.svc?disco" />
+    <MetadataFile FileName="AKNPListDoc.wsdl" MetadataType="Wsdl" ID="0272ca2d-1a37-4dc2-8a4b-666798d858d4" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/AKNPListDocTest.svc?wsdl" />
+    <MetadataFile FileName="AKNPListDocTest1.xsd" MetadataType="Schema" ID="b4e2f267-363b-4eed-b21c-e2911a9c6a64" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/AKNPListDocTest.svc?xsd=xsd1" />
+    <MetadataFile FileName="AKNPListDocTest2.xsd" MetadataType="Schema" ID="93c94a68-824b-4ab0-9457-2b59b9f5d2fa" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/AKNPListDocTest.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

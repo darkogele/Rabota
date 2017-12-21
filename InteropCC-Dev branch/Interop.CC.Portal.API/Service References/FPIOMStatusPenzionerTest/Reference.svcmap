@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="82ae046d-64ca-4362-8ca5-715f1ae3e44f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/FPIOMServicesTest.Host/RetiredStatusTest.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RetiredStatusTest.xsd" MetadataType="Schema" ID="1fd4361c-5512-4ce7-a1c6-80a40921a51b" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/RetiredStatusTest.svc?xsd=xsd1" />
+    <MetadataFile FileName="RetiredStatusTest.disco" MetadataType="Disco" ID="7cf19d1b-2db0-4432-b60f-b5a11c040ca0" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/RetiredStatusTest.svc?disco" />
+    <MetadataFile FileName="RetiredStatusTest1.xsd" MetadataType="Schema" ID="1622de6c-3c71-41e0-8834-d124b434f680" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/RetiredStatusTest.svc?xsd=xsd2" />
+    <MetadataFile FileName="RetiredStatusTest.wsdl" MetadataType="Wsdl" ID="b00018f5-a457-4665-9040-76e0b3ce241c" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/RetiredStatusTest.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="RetiredStatusTest2.xsd" MetadataType="Schema" ID="657174ed-88c6-4246-b09c-362900c89b86" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/RetiredStatusTest.svc?xsd=xsd0" />
+    <MetadataFile FileName="RetiredStatusTest1.wsdl" MetadataType="Wsdl" ID="77833430-7f19-4b42-983e-56cc02eaa33d" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/RetiredStatusTest.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

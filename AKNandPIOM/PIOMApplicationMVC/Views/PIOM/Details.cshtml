@@ -1,0 +1,91 @@
+﻿@model PIOMApplicationMVC.Models.CadastralParcelDTO
+
+@{
+    ViewBag.Title = "Катастарска Парцела";
+}
+
+@*<h2>Details</h2>*@
+
+<div>
+    @*<h4>CadastralParcelDTO</h4>*@
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Message)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Message)
+        </dd>
+
+    </dl>
+    @if (!Model.Message.Contains("NE POSTOI"))
+    {
+        
+    
+    <table>
+
+        <tr>
+            @*<th>
+                @Html.DisplayNameFor(model => model.AttributesList[0].Municipality)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttributesList[0].CadastralMunicipality)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.AttributesList[0].PropertyList)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttributesList[0].PartNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttributesList[0].Object)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttributesList[0].Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttributesList[0].Culture)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttributesList[0].Area)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttributesList[0].Pravo)
+            </th>
+            <th></th>
+        </tr>
+
+        @for (int i = 0; i < Model.AttributesList.Count; i++)
+        {
+            <tr>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.AttributesList[i].PropertyList)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.AttributesList[i].PartNumber)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.AttributesList[i].Object)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.AttributesList[i].Location)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.AttributesList[i].Culture)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.AttributesList[i].Area)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.AttributesList[i].Pravo)
+                </td>
+            </tr>
+        }
+
+    </table>
+    }
+</div>
+<p>
+    @Html.ActionLink("НАЗАД", "Index")
+</p>

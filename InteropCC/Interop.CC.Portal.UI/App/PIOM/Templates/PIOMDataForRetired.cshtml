@@ -1,0 +1,85 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>Податоци за пензионер - Фонд за пензиско и инвалидско осигурување</h2>
+
+<form name="piomDataForRetiredForm" ng-controller="PiomCtrl">
+    
+    <div class="container">
+        <div class="col-lg-3">
+
+            @* EMBG *@
+            <div class="form-group" ng-class="{ 'has-error' : embgFormField.embg.$invalid }">
+                <ng-form name="embgFormField">
+                    <label for="embg">ЕМБГ:</label>
+                    <input id="embg" type="text" class="form-control" name="embg" ng-minlength="13" ng-maxlength="13" ng-model="embg" only-digits required>
+                    <br />
+                    <p style="color:red;font-size: 12px;" ng-show="((embgFormField.embg.$error.minlength ||
+                        embgFormField.embg.$error.maxlength))">
+                        ЕМБГ мора да содржи точно 13 цифри!
+                    </p>
+                </ng-form>
+            </div>
+            
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-disabled="piomDataForRetiredForm.$invalid" ng-click="piomDataForRetired(embg)"><i class="fa fa-save"></i> Испрати</button>
+                <a class="btn btn-warning" href="#/piom/piomdataforretired" ui-sref="piomdataforretiredindex">Откажи</a>
+            </div>
+        </div>
+
+        <div ng-show="show" class="col-lg-9">
+
+            <div class="form-group">
+                <ng-form name="pensionNumberFormField">
+                    <label for="pensionNumber">Пензиски број:</label>
+                    <input id="pensionNumber" type="text" class="form-control" name="pensionNumber" ng-model="pensionNumber">
+                </ng-form>
+            </div>
+
+            <div class="form-group">
+                <ng-form name="nameSurnameFormField">
+                    <label for="nameSurname">Име и презиме:</label>
+                    <input id="nameSurname" type="text" class="form-control" name="nameSurname" ng-model="nameSurname">
+                </ng-form>
+            </div>
+
+            @*<div class="form-group">
+                <ng-form name="opzAmountFormField">
+                    <label for="opzAmount">Износ опз:</label>
+                    <input id="opzAmount" type="text" class="form-control" name="opzAmount" ng-model="opzAmount">
+                </ng-form>
+            </div>
+
+            <div class="form-group">
+                <ng-form name="pensionAmountFormField">
+                    <label for="pensionAmount">Износ пензија:</label>
+                    <input id="pensionAmount" type="text" class="form-control" name="pensionAmount" ng-model="pensionAmount">
+                </ng-form>
+            </div>*@
+
+            @*<div class="form-group">
+                <ng-form name="currencyDateFormField">
+                    <label for="currencyDate">Датум валута:</label>
+                    <input id="currencyDate" type="text" class="form-control" name="currencyDate" ng-model="currencyDate">
+                </ng-form>
+            </div>*@
+
+            <div class="form-group">
+                <ng-form name="pensionStatusFormField">
+                    <label for="pensionStatus">Статус пензија:</label>
+                    <input id="pensionStatus" type="text" class="form-control" name="pensionStatus" ng-model="pensionStatus">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="pensionStatusDescFormField">
+                    <label for="pensionStatusDesc">Опис на Статус на Пензија:</label>
+                    <input id="pensionStatusDesc" type="text" class="form-control" name="pensionStatusDesc" ng-model="pensionStatusDesc">
+                </ng-form>
+            </div>
+            <div class="row text-center">
+                <a class="btn btn-default" ng-click="RetiredXML()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во XML формат</a>
+                <a class="btn btn-default" ng-click="RetiredPDF()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во PDF формат</a>
+            </div>
+
+        </div>
+    </div>
+</form>

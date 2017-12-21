@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="55581f0d-b37d-4ff6-bb0c-a8a03e61c43f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/CRRMServicesTest.Host/CRM_TS_AKN_Test.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CRM_TS_AKN_Test2.xsd" MetadataType="Schema" ID="4bce101d-61f0-454b-84c2-4f45298bcc70" SourceId="1" SourceUrl="http://localhost/CRRMServicesTest.Host/CRM_TS_AKN_Test.svc?xsd=xsd2" />
+    <MetadataFile FileName="CRM_TS_AKN_Test.wsdl" MetadataType="Wsdl" ID="bdd74b4e-9321-40c9-b6ca-688093268618" SourceId="1" SourceUrl="http://localhost/CRRMServicesTest.Host/CRM_TS_AKN_Test.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="CRM_TS_AKN_Test.xsd" MetadataType="Schema" ID="8e8f8601-751b-48a4-ab62-aeebda111fb6" SourceId="1" SourceUrl="http://localhost/CRRMServicesTest.Host/CRM_TS_AKN_Test.svc?xsd=xsd0" />
+    <MetadataFile FileName="CRM_TS_AKN_Test1.xsd" MetadataType="Schema" ID="163e6aa2-f11c-4668-9dcf-4cafec2f6aef" SourceId="1" SourceUrl="http://localhost/CRRMServicesTest.Host/CRM_TS_AKN_Test.svc?xsd=xsd1" />
+    <MetadataFile FileName="CRM_TS_AKN_Test.disco" MetadataType="Disco" ID="d1f7165b-e505-4718-b015-f9ffdb89c4d7" SourceId="1" SourceUrl="http://localhost/CRRMServicesTest.Host/CRM_TS_AKN_Test.svc?disco" />
+    <MetadataFile FileName="CRM_TS_AKN_Test1.wsdl" MetadataType="Wsdl" ID="ff0d3301-f8ac-4e3f-a9c8-3a91788b3fd9" SourceId="1" SourceUrl="http://localhost/CRRMServicesTest.Host/CRM_TS_AKN_Test.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

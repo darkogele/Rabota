@@ -1,0 +1,323 @@
+﻿@model Interop.CC.Models.DTO.Institutions.SingleCustomsDocumentDTO
+
+<head>
+    <style type="text/css">
+        table, tr, td {
+            border: 1px solid gray;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+
+        th {
+            border: 2px solid black;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<div style="width: 100%;">
+
+    <div style="float: left; width: 70%;">
+        <img src="@Server.MapPath("~/Views/Template/grbMak.jpg")" style="float: left" alt="MIOA logo" />
+        <label>Република Македонија</label>
+        <h4 style="font-size:.6em;">Министерство за информатичко општество и администрација</h4>
+    </div>
+    <div style="float: right; width: 30%; font-size: .6em">
+        <a style="margin-left: 80px;" href="http://www.interoperabilnost.gov.mk">www.interoperabilnost.gov.mk</a>
+
+        <table class="table-striped" style="margin-top: 20px;">
+            <thead style="display: table-row-group">
+
+            </thead>
+            <tbody style="font-size: .6em">
+                <tr>
+                    <td>Име на услугата:</td>
+                    <td>@Model.ServiceName</td>
+                </tr>
+                <tr>
+                    <td>Услугата ја користи:</td>
+                    <td>@Model.ConsumerName</td>
+                </tr>
+                <tr>
+                    <td>Услугата ја нуди:</td>
+                    <td>@Model.ProviderName</td>
+                </tr>
+                <tr>
+                    <td>Време на повик до услугата:</td>
+                    <td>@Model.ServiceCalledTime.ToString("dd.MM.yyyy HH:mm")</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div style="height: 70px; width: 100%; float: left"></div>
+
+<table class="table-striped">
+    <caption>Општи податоци</caption>
+    <thead style="display: table-row-group">
+        <tr id="row1">
+            <th>Код на царинска испостава</th>
+            <td>@Model.GeneralData.ExciseStoreCode</td>
+        </tr>
+        <tr>
+            <th>Код на декларант(обврзник)</th>
+            <td>@Model.GeneralData.DeclarantCode</td>
+        </tr>
+        <tr>
+            <th>Референтен број</th>
+            <td>@Model.GeneralData.ReferentNumber</td>
+        </tr>
+        <tr>
+            <th>увоз/извоз</th>
+            <td>@Model.GeneralData.ImportExport</td>
+        </tr>
+        <tr>
+            <th>Тип на декларација</th>
+            <td>@Model.GeneralData.DeclatarionType</td>
+        </tr>
+        <tr>
+            <th>Тип на процедура</th>
+            <td>@Model.GeneralData.ProcedureType</td>
+        </tr>
+        <tr>
+            <th>Испраќач/Извозник (ЕДБ)</th>
+            <td>@Model.GeneralData.SenderEDB</td>
+        </tr>
+        <tr>
+            <th>Серија на регистрација</th>
+            <td>@Model.GeneralData.RegistrationSeries</td>
+        </tr>
+        <tr>
+            <th>Број на регистрација</th>
+            <td>@Model.GeneralData.RegistrationNumber</td>
+        </tr>
+        <tr>
+            <th>Датум на регистрација</th>
+            <td>@Model.GeneralData.RegistrationDate</td>
+        </tr>
+        <tr>
+            <th>Број на наименувание</th>
+            <td>@Model.GeneralData.ItemNumber</td>
+        </tr>
+        <tr>
+            <th>Увозник (ЕДБ)</th>
+            <td>@Model.GeneralData.ImporterEDB</td>
+        </tr>
+        <tr>
+            <th>Податок за вредност</th>
+            <td>@Model.GeneralData.ValueData</td>
+        </tr>
+        <tr>
+            <th>Земја на извоз</th>
+            <td>@Model.GeneralData.ExportingCountry</td>
+        </tr>
+        <tr>
+            <th>Земја на потекло</th>
+            <td>@Model.GeneralData.OriginCountry</td>
+        </tr>
+        <tr>
+            <th>Земја на намена</th>
+            <td>@Model.GeneralData.DestinationCountry</td>
+        </tr>
+        <tr>
+            <th>Услови на испраќање (код)</th>
+            <td>@Model.GeneralData.ExportingConditionCode</td>
+        </tr>
+        <tr>
+            <th>Услови на испраќање (место)</th>
+            <td>@Model.GeneralData.ExportingConditionPlace</td>
+        </tr>
+        <tr>
+            <th>Delivery terms situation code</th>
+            <td>@Model.GeneralData.DeliveryTermsSituationCode</td>
+        </tr>
+        <tr>
+            <th>Регистрација на превозно средство</th>
+            <td>@Model.GeneralData.RegistrationOfVehicle</td>
+        </tr>
+        <tr>
+            <th>Националност на превозно средство</th>
+            <td>@Model.GeneralData.NationalityOfVehicle</td>
+        </tr>
+        <tr>
+            <th>Код на валута</th>
+            <td>@Model.GeneralData.CurrencyCode</td>
+        </tr>
+        <tr>
+            <th>Вкупна фактурна вредност</th>
+            <td>@Model.GeneralData.TotalInvoiceAmount</td>
+        </tr>
+            @*<th>Код на царинска испостава</th>
+            <th>Код на декларант(обврзник)</th>
+            <th>Референтен број </th>
+            <th>увоз/извоз</th>
+            <th>Тип на декларација</th>
+            <th>Тип на процедура</th>
+            <th>Испраќач/Извозник (ЕДБ)</th>
+            <th>Серија на регистрација</th>
+            <th>Број на регистрација</th>
+            <th>Датум на регистрација</th>
+            <th>Број на наименувание</th>
+            <th>Увозник (ЕДБ)</th>
+            <th>Податок за вредност</th>
+            <th>Земја на извоз</th>
+            <th>Земја на потекло</th>
+            <th>Земја на намена</th>
+            <th>Услови на испраќање (код)</th>
+            <th>Услови на испраќање (место)</th>
+            <th>Delivery terms situation code</th>
+            <th>Регистрација на превозно средство</th>
+            <th>Националност на превозно средство</th>
+            <th>Код на валута</th>
+            <th>Вкупна фактурна вредност</th>*@
+      
+
+    </thead>
+    @*<tbody>
+
+        <tr>
+            
+          
+                <td>@Model.GeneralData.ExciseStoreCode</td>
+                <td>@Model.GeneralData.DeclarantCode</td>
+                <td>@Model.GeneralData.ReferentNumber</td>
+                <td>@Model.GeneralData.ImportExport</td>
+                <td>@Model.GeneralData.DeclatarionType</td>
+                <td>@Model.GeneralData.ProcedureType</td>
+                <td>@Model.GeneralData.SenderEDB</td>
+                <td>@Model.GeneralData.RegistrationSeries</td>
+                <td>@Model.GeneralData.RegistrationNumber</td>
+                <td>@Model.GeneralData.RegistrationDate</td>
+                <td>@Model.GeneralData.ItemNumber</td>
+                <td>@Model.GeneralData.ImporterEDB</td>
+                <td>@Model.GeneralData.ValueData</td>
+                <td>@Model.GeneralData.ExportingCountry</td>
+                <td>@Model.GeneralData.OriginCountry</td>
+                <td>@Model.GeneralData.DestinationCountry</td>
+                <td>@Model.GeneralData.ExportingConditionCode</td>
+                <td>@Model.GeneralData.ExportingConditionPlace</td>
+                <td>@Model.GeneralData.DeliveryTermsSituationCode</td>
+                <td>@Model.GeneralData.RegistrationOfVehicle</td>
+                <td>@Model.GeneralData.NationalityOfVehicle</td>
+                <td>@Model.GeneralData.CurrencyCode</td>
+                <td>@Model.GeneralData.TotalInvoiceAmount</td>
+                
+
+
+            
+        </tr>
+
+
+    </tbody>*@
+</table>
+
+<div style="height: 30px; width: 100%; float: left"></div>
+
+<table class="table-striped">
+    <caption> Податоци по документ </caption>
+    <thead style="display: table-row-group">
+        <tr id="row1">
+            <th>Тарифна оснака дел 1</th>
+            <th>Тарифна оснака дел 2</th>
+            <th>Опис на стока дел 1</th>
+            <th>Опис на стока дел 2</th>
+            <th>Опис на стока дел 3</th>
+            <th>Земја потекло</th>
+            <th>Бруто маса</th>
+            <th>Предност</th>
+            <th>Статичка вредност</th>
+        </tr>
+
+    </thead>
+    <tbody>
+
+        <tr>
+
+                        @foreach (var b in Model.ItemData)
+                        {
+                                <td>@b.TariffTagPart1</td>
+                                <td>@b.TariffTagPart2</td>
+                                <td>@b.</td>
+                                <td>@b.DescriptionOfGoodsPart1</td>
+                                <td>@b.DescriptionOfGoodsPart2</td>
+                                <td>@b.DescriptionOfGoodsPart3</td>
+                                <td>@b.CountryOfOrigin</td>
+                                <td>@b.GrossMass</td>
+                                <td>@b.Preference</td>
+                                <td>@b.StatisticalValue</td>
+
+                                <tr></tr>
+                  }
+                    </tr>
+     
+        
+</tbody>
+
+</table>
+
+<div style="height: 30px; width: 100%; float: left"></div>
+
+<table class="table-striped">
+    <caption> Податоци за испраќач </caption>
+
+    <thead style="display: table-row-group">
+        <tr id="row1">
+            <th>Име на испраќач</th>
+            <th>Адреса на испраќач дел 1</th>
+            <th>Адреса на испраќач дел 2</th>
+            <th>Место</th>
+            <th>Поштенски код</th>
+            
+        </tr>
+
+    </thead>
+   
+        <tbody>
+
+            
+                <tr>
+                    <td>@Model.ExporterData.SenderName</td>
+                    <td>@Model.ExporterData.SenderAddressPart1</td>
+                    <td>@Model.ExporterData.SenderAddressPart2</td>
+                    <td>@Model.ExporterData.SenderPlace</td>
+                    <td>@Model.ExporterData.SenderPostalCode</td>
+                </tr>
+         
+        </tbody>
+    
+   
+</table>
+
+<div style="height: 30px; width: 100%; float: left"></div>
+
+<table class="table-striped">
+    <caption> Податоци за увозник </caption>
+
+    <thead style="display: table-row-group">
+        <tr id="row1">
+            <th>Име на увозник</th>
+            <th>Адреса на увозник дел 1</th>
+            <th>Адреса на увозник дел 2</th>
+            <th>Место</th>
+            <th>Поштенски код</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+      
+            <tr>
+                <td>@Model.ImporterData.ImporterName</td>
+                <td>@Model.ImporterData.ImporterAddressPart1</td>
+                <td>@Model.ImporterData.ImporterAddressPart2</td>
+                <td>@Model.ImporterData.ImporterPlace</td>
+                <td>@Model.ImporterData.ImporterPostalCode</td>
+            </tr>
+        
+    </tbody>
+
+
+</table>

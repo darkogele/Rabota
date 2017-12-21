@@ -1,0 +1,8 @@
+D:\Work\InteropCC\KIBS\bin\Debug\KIBS.dll.config
+D:\Work\InteropCC\KIBS\bin\Debug\KIBS.dll
+D:\Work\InteropCC\KIBS\bin\Debug\KIBS.pdb
+D:\Work\InteropCC\KIBS\bin\Debug\BouncyCastle.Crypto.dll
+D:\Work\InteropCC\KIBS\bin\Debug\BouncyCastle.Crypto.pdb
+D:\Work\InteropCC\KIBS\obj\Debug\KIBS.dll
+D:\Work\InteropCC\KIBS\obj\Debug\KIBS.pdb
+D:\Work\InteropCC\KIBS\obj\Debug\KIBS.csprojResolveAssemblyReference.cache

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9C022E21-C7BD-4A30-AF9C-F96E4A5AF0B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InteropServices.UJP</RootNamespace>
+    <AssemblyName>InteropServices.UJP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IBM.Data.Informix, Version=9.7.4.4, Culture=neutral, PublicKeyToken=7c307b91aa13d208, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\ibm\Informix\Client-SDK\bin\netf20\IBM.Data.Informix.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Implementations\BondsDataForCalcAndPayOfContributions\BondsDataForCalcAndPayOfContributions.cs" />
+    <Compile Include="Implementations\DataForAnnualRevenues\AnnualRevenuesFZOOutput.cs" />
+    <Compile Include="Implementations\DataForAnnualRevenues\AnnualRevenuesKKKSOutput.cs" />
+    <Compile Include="Implementations\DataForAnnualRevenues\AnnualRevenuesMONOutput.cs" />
+    <Compile Include="Implementations\DataForAnnualRevenues\AnnualRevenuesMTSPOutput.cs" />
+    <Compile Include="Implementations\DataForAnnualRevenues\DataForAnnualRevenues.cs" />
+    <Compile Include="Implementations\DataForPaidContributionsByEmployeeAndPayer\DataForPaidContributionsByEmployeeAndPayer.cs" />
+    <Compile Include="Implementations\DataForUnpaidContributions\DataForUnpaidContributions.cs" />
+    <Compile Include="Implementations\EDB_EMB\EDB_EMB.cs" />
+    <Compile Include="Implementations\EDB_EMB\EDB_EMB_Output.cs" />
+    <Compile Include="Implementations\RegisterOfExciseBond\ExciseBondsInput.cs" />
+    <Compile Include="Implementations\RegisterOfExciseBond\ExciseBondsOutput.cs" />
+    <Compile Include="Implementations\RegisterOfExciseBond\RegExcBonds.cs" />
+    <Compile Include="Interfaces\BondsDataForCalcAndPayOfContributions\IBondsDataForCalcAndPayOfContributions.cs" />
+    <Compile Include="Interfaces\DataForAnnualRevenues\IDataForAnnualRevenues.cs" />
+    <Compile Include="Interfaces\DataForPaidContributionsByEmployeeAndPayer\IDataForPaidContributionsByEmployeeAndPayer.cs" />
+    <Compile Include="Interfaces\DataForUnpaidContributions\IDataForUnpaidContributions.cs" />
+    <Compile Include="Interfaces\EDB_EMB\IEDB_EMB.cs" />
+    <Compile Include="Interfaces\RegisterOfExciseBonds\IRegExcBonds.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

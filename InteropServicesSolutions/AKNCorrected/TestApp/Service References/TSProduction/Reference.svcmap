@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="93cbd90c-0d0a-4eac-8972-3cc354a70d33" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AKNServicesProd.Host/TSProduction.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TSProduction.disco" MetadataType="Disco" ID="5597b1c4-b01a-4ad4-98f6-2a18fa093f46" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/TSProduction.svc?disco" />
+    <MetadataFile FileName="TSProduction.xsd" MetadataType="Schema" ID="cb8493a6-6b06-4aeb-bde7-557263b5b146" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/TSProduction.svc?xsd=xsd0" />
+    <MetadataFile FileName="TSProduction.wsdl" MetadataType="Wsdl" ID="bdd2e69f-e2e9-406c-9582-645c7120ebfd" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/TSProduction.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="TSProduction1.wsdl" MetadataType="Wsdl" ID="c22f0486-768b-49ef-957a-bd88c2c1a980" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/TSProduction.svc?wsdl" />
+    <MetadataFile FileName="TSProduction1.xsd" MetadataType="Schema" ID="058ea9dd-8ce1-496b-b2ac-5722620510f9" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/TSProduction.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

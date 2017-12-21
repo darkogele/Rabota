@@ -1,0 +1,140 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.csproj", "{9CA0D1FC-32FA-4146-8874-17311AFD1322}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Simulation", "Simulation", "{D2C1BCDF-06EA-4658-A177-05BB2E26D38F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulateApp", "SimulateApp\SimulateApp.csproj", "{35A2D734-2726-4FA4-918A-57A48041417C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions", "Exceptions\Exceptions.csproj", "{C7E2C5F5-C282-4E43-A65E-28211CC1E3D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiCallingHandler", "Api\ApiCallingHandler.csproj", "{0EC4ECE1-AD82-4128-8488-D9A3D684A59C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{70D55BF2-8DE4-466A-A418-627A747A9E0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulateApp2", "SimulateApp2\SimulateApp2.csproj", "{A65B317E-1EFC-46C8-8D73-3D32C5CF3430}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternalHandler", "InternalHandler\InternalHandler.csproj", "{9911D4C5-C104-433A-8554-41205A01658D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalHandler", "ExternalHandler\ExternalHandler.csproj", "{7B9AC909-98B0-4383-89E4-96D4F48122AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadWsdlFile", "ReadWsdlFile\ReadWsdlFile.csproj", "{B353DE7A-CBC4-4FC3-8E91-7C1987736EFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossCutting", "CrossCutting\CrossCutting.csproj", "{9ADF47EA-A7C3-4331-94F4-D33078B86FF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encryption", "Encryption\Encryption.csproj", "{26ABA656-BCE0-4A1D-A9BB-894CF4CE608B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KIBS", "KIBS\KIBS.csproj", "{112135B7-A240-407C-8A88-A615F4557403}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 13
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.11.21.108:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Api\\ApiCallingHandler.csproj
+		SccProjectName1 = Api
+		SccLocalPath1 = Api
+		SccProjectUniqueName2 = Exceptions\\Exceptions.csproj
+		SccProjectName2 = Exceptions
+		SccLocalPath2 = Exceptions
+		SccProjectUniqueName3 = ExternalHandler\\ExternalHandler.csproj
+		SccProjectName3 = ExternalHandler
+		SccLocalPath3 = ExternalHandler
+		SccProjectUniqueName4 = Helpers\\Helpers.csproj
+		SccProjectName4 = Helpers
+		SccLocalPath4 = Helpers
+		SccProjectUniqueName5 = InternalHandler\\InternalHandler.csproj
+		SccProjectName5 = InternalHandler
+		SccLocalPath5 = InternalHandler
+		SccProjectUniqueName6 = ReadWsdlFile\\ReadWsdlFile.csproj
+		SccProjectTopLevelParentUniqueName6 = HttpHandler.sln
+		SccProjectName6 = ReadWsdlFile
+		SccLocalPath6 = ReadWsdlFile
+		SccProjectUniqueName7 = SimulateApp2\\SimulateApp2.csproj
+		SccProjectTopLevelParentUniqueName7 = HttpHandler.sln
+		SccProjectName7 = SimulateApp2
+		SccLocalPath7 = SimulateApp2
+		SccProjectUniqueName8 = SimulateApp\\SimulateApp.csproj
+		SccProjectTopLevelParentUniqueName8 = HttpHandler.sln
+		SccProjectName8 = SimulateApp
+		SccLocalPath8 = SimulateApp
+		SccProjectUniqueName9 = UI\\UI.csproj
+		SccProjectName9 = UI
+		SccLocalPath9 = UI
+		SccProjectUniqueName10 = CrossCutting\\CrossCutting.csproj
+		SccProjectName10 = CrossCutting
+		SccLocalPath10 = CrossCutting
+		SccProjectUniqueName11 = Encryption\\Encryption.csproj
+		SccProjectName11 = Encryption
+		SccLocalPath11 = Encryption
+		SccProjectUniqueName12 = KIBS\\KIBS.csproj
+		SccProjectName12 = KIBS
+		SccLocalPath12 = KIBS
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CA0D1FC-32FA-4146-8874-17311AFD1322}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CA0D1FC-32FA-4146-8874-17311AFD1322}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CA0D1FC-32FA-4146-8874-17311AFD1322}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CA0D1FC-32FA-4146-8874-17311AFD1322}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35A2D734-2726-4FA4-918A-57A48041417C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35A2D734-2726-4FA4-918A-57A48041417C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35A2D734-2726-4FA4-918A-57A48041417C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35A2D734-2726-4FA4-918A-57A48041417C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7E2C5F5-C282-4E43-A65E-28211CC1E3D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7E2C5F5-C282-4E43-A65E-28211CC1E3D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7E2C5F5-C282-4E43-A65E-28211CC1E3D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7E2C5F5-C282-4E43-A65E-28211CC1E3D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EC4ECE1-AD82-4128-8488-D9A3D684A59C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EC4ECE1-AD82-4128-8488-D9A3D684A59C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EC4ECE1-AD82-4128-8488-D9A3D684A59C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EC4ECE1-AD82-4128-8488-D9A3D684A59C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70D55BF2-8DE4-466A-A418-627A747A9E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70D55BF2-8DE4-466A-A418-627A747A9E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70D55BF2-8DE4-466A-A418-627A747A9E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70D55BF2-8DE4-466A-A418-627A747A9E0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A65B317E-1EFC-46C8-8D73-3D32C5CF3430}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A65B317E-1EFC-46C8-8D73-3D32C5CF3430}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A65B317E-1EFC-46C8-8D73-3D32C5CF3430}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A65B317E-1EFC-46C8-8D73-3D32C5CF3430}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9911D4C5-C104-433A-8554-41205A01658D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9911D4C5-C104-433A-8554-41205A01658D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9911D4C5-C104-433A-8554-41205A01658D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9911D4C5-C104-433A-8554-41205A01658D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B9AC909-98B0-4383-89E4-96D4F48122AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B9AC909-98B0-4383-89E4-96D4F48122AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B9AC909-98B0-4383-89E4-96D4F48122AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B9AC909-98B0-4383-89E4-96D4F48122AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B353DE7A-CBC4-4FC3-8E91-7C1987736EFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B353DE7A-CBC4-4FC3-8E91-7C1987736EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B353DE7A-CBC4-4FC3-8E91-7C1987736EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B353DE7A-CBC4-4FC3-8E91-7C1987736EFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ADF47EA-A7C3-4331-94F4-D33078B86FF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ADF47EA-A7C3-4331-94F4-D33078B86FF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ADF47EA-A7C3-4331-94F4-D33078B86FF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ADF47EA-A7C3-4331-94F4-D33078B86FF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26ABA656-BCE0-4A1D-A9BB-894CF4CE608B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26ABA656-BCE0-4A1D-A9BB-894CF4CE608B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26ABA656-BCE0-4A1D-A9BB-894CF4CE608B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26ABA656-BCE0-4A1D-A9BB-894CF4CE608B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{112135B7-A240-407C-8A88-A615F4557403}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{112135B7-A240-407C-8A88-A615F4557403}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{112135B7-A240-407C-8A88-A615F4557403}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{112135B7-A240-407C-8A88-A615F4557403}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{35A2D734-2726-4FA4-918A-57A48041417C} = {D2C1BCDF-06EA-4658-A177-05BB2E26D38F}
+		{A65B317E-1EFC-46C8-8D73-3D32C5CF3430} = {D2C1BCDF-06EA-4658-A177-05BB2E26D38F}
+		{B353DE7A-CBC4-4FC3-8E91-7C1987736EFB} = {D2C1BCDF-06EA-4658-A177-05BB2E26D38F}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,2613 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1FF76316-F002-4724-A1D4-D5B7218E19F1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Interop.CC.Portal.API</RootNamespace>
+    <AssemblyName>Interop.CC.Portal.API</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac.Integration.WebApi, Version=3.4.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.WebApi2.3.4.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CyrilicInterop">
+      <HintPath>..\Interop.CC.CrossCutting\Libs\CyrilicInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\packages\EPPlus.4.0.4\lib\net20\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.IdentityModel.6.1.7600.16394\lib\net35\Microsoft.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors">
+      <HintPath>..\packages\Microsoft.Owin.Cors.3.0.1\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.HttpListener, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Host.HttpListener.3.0.1\lib\net45\Microsoft.Owin.Host.HttpListener.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Hosting, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Hosting.3.0.1\lib\net45\Microsoft.Owin.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.1.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NLog.4.1.0\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog.Extended">
+      <HintPath>..\packages\NLog.Extended.4.0.0.1\lib\net45-full\NLog.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="Rotativa, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rotativa.1.6.4\lib\net40\Rotativa.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Cors">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.3\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Thinktecture.IdentityModel.Client.Net45">
+      <HintPath>..\packages\Thinktecture.IdentityModel.Client.4.0.1\lib\net45\Thinktecture.IdentityModel.Client.Net45.dll</HintPath>
+    </Reference>
+    <Reference Include="Thinktecture.IdentityModel.Core, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Thinktecture.IdentityModel.Core.1.4.0\lib\net45\Thinktecture.IdentityModel.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Thinktecture.IdentityModel.Owin.ClientCertificates">
+      <HintPath>..\packages\Thinktecture.IdentityModel.Owin.ClientCertificates.1.1.0\lib\net45\Thinktecture.IdentityModel.Owin.ClientCertificates.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.WebApi, Version=5.1.0.0, Culture=neutral, PublicKeyToken=43da31bc42a85347, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.WebAPI.5.1\lib\net45\Unity.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccessMappingController.cs" />
+    <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\Institutions\CRMController.cs" />
+    <Compile Include="Controllers\Institutions\CURMController.cs" />
+    <Compile Include="Controllers\Institutions\FPIOMController.cs" />
+    <Compile Include="Controllers\Institutions\AKNController.cs" />
+    <Compile Include="Controllers\Institutions\InstitutionBController.cs" />
+    <Compile Include="Controllers\Institutions\MONController.cs" />
+    <Compile Include="Controllers\Institutions\MZTVController.cs" />
+    <Compile Include="Controllers\Institutions\TESTMIOAController.cs" />
+    <Compile Include="Controllers\Institutions\UJPController.cs" />
+    <Compile Include="Controllers\InteropTestCommunicationController.cs" />
+    <Compile Include="Controllers\MessageLogController.cs" />
+    <Compile Include="Controllers\MetaServicesController.cs" />
+    <Compile Include="Controllers\RefreshTokensController.cs" />
+    <Compile Include="Controllers\ServiceController.cs" />
+    <Compile Include="Controllers\SoapFaultController.cs" />
+    <Compile Include="Controllers\TemplateController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\CRRMServicesTemplates.cs" />
+    <Compile Include="Helpers\ExcelHelper.cs" />
+    <Compile Include="Helpers\RequestToCsHelper.cs" />
+    <Compile Include="Helpers\WsdlParsingHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Provider\SimpleAuthorizationServerProvider.cs" />
+    <Compile Include="Provider\SimpleRefreshTokenProvider.cs" />
+    <Compile Include="Security\ClientCertificateAuthenticationHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Security\ClientCertificateAuthenticationMiddleware.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Security\ClientCertificateAuthenticationOptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Security\Helper.cs" />
+    <Compile Include="Service References\AKNCPlanDocProduction\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNCPlanDoc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNDataForIFDocProduction\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNDataForIFDoc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNImotenListDokumentTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNImotenListDokument\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNImotenListTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNImotenList\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNKatastarskaParcelaDokumentTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNKatastarskaParcelaDokument\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNKatastarskaParcelaTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNKatastarskaParcela\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNMunicipalityService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNOpshtini\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNPListDocProduction\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNPListDoc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNPodatociZaInfraObjektiTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNPodatociZaInfraObjekti\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNPropertyListCadastralParcelAdapter\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CRMListaNaPromeniTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CRMListaNaPromeni\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CRMListaPosebenInteresTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CRMTekovnaSostojbaAKNTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CRMTekovnaSostojbaAKN\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CRMTekovnaSostojbaCURMTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CRMTekovnaSostojbaCURM\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CRMTekovnaSostojbaTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CRMTekovnaSostojbaUJPTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CRMTekovnaSostojbaUJP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CRMTekovnaSostojba\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CRM_TS_AKN\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CRM_TS_AKN_Test\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CRM_TS_CURM\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CRM_TS_CURM_Test\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CRM_TS_UJP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CRM_TS_UJP_Test\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CURMDataForExecutedExport\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CURMDataForExecutedImport\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CURMEdinstvenCarinskiDokumentTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CURMEdinstvenCarinskiDokument\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CURMPodatociZaIzvozTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CURMPodatociZaIzvoz\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CURMPodatociZaUvozTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CURMPodatociZaUvoz\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CURMSingleCustomsDocument\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FPIOMInsuredRetiredAdapter\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FPIOMInsuredStatus\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FPIOMPodatociOsigurenikTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FPIOMPodatociOsigurenik\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FPIOMPodatociPenzionerTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FPIOMPodatociPenzioner\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FPIOMRabotnoIskustvoTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FPIOMRabotnoIskustvo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FPIOMRetiredStatus\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FPIOMStatusOsigurenikTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FPIOMStatusOsigurenik\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FPIOMStatusPenzionerTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FPIOMStatusPenzioner\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FPIOMYearsOfWorkExperience\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GetDocForOUorNPorPP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\InstitutionBNameSurname\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\InstitutionBPersonData\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MetaServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MONBigDataService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MONDataForRegularStudent\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MONPotvrdaZaRedovenUcenikTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MONPotvrdaZaRedovenUcenik\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MONStatusForRegularStudent\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MONStatusNaUcenikTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MONStatusNaUcenik\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MZTVConstructionPermitAdapter\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TestServiceMIOA\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UJPBondsData\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UJPDataForAnnualRevenues\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UJPDataPContr\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UJPDataUnpContr\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UJPEDB_EMB\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UJPEdinstvenDanocenBrojTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UJPEdinstvenDanocenBroj\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UJPEdinstvenMaticenBrojTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UJPEdinstvenMaticenBroj\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UJPRegistarNaObvrzniciZaAkcizaTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UJPRegistarNaObvrzniciZaAkciza\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UJPRegisterOfExciseBonds\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="Web References\MzTVOdobrenieGradbaDozvolaBezAdapter\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\enism.pubxml" />
+    <None Include="Properties\PublishProfiles\Interop.CC.Portal.API.pubxml" />
+    <Content Include="Rotativa\wkhtmltopdf.exe" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AKNCPlanDocProduction\AKNCPlanDocProduction1.disco" />
+    <Content Include="Service References\AKNCPlanDocProduction\Interop.CC.Portal.API.AKNCPlanDocProduction.AKNDocOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AKNCPlanDocProduction\AKNCPlanDocProduction2.wsdl" />
+    <None Include="Service References\AKNCPlanDocProduction\AKNCPlanDocProduction21.wsdl" />
+    <None Include="Service References\AKNCPlanDocProduction\AKNCPlanDocProduction3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNCPlanDocProduction\AKNCPlanDocProduction31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNCPlanDocProduction\AKNCPlanDocProduction32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNCPlanDoc\AKNCPlanDoc.wsdl" />
+    <None Include="Service References\AKNCPlanDoc\AKNCPlanDoc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNCPlanDoc\AKNCPlanDoc1.wsdl" />
+    <None Include="Service References\AKNCPlanDoc\AKNCPlanDoc1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNCPlanDoc\AKNCPlanDoc2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNCPlanDocProduction\configuration91.svcinfo" />
+    <None Include="Service References\AKNCPlanDocProduction\configuration.svcinfo" />
+    <None Include="Service References\AKNCPlanDocProduction\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\AKNCPlanDoc\Interop.CC.Portal.API.AKNCPlanDoc.AKNDocOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AKNDataForIFDocProduction\AKNDataForIFDocProduction1.disco" />
+    <Content Include="Service References\AKNDataForIFDocProduction\Interop.CC.Portal.API.AKNDataForIFDocProduction.AKNDocOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AKNDataForIFDocProduction\AKNDataForIFDocProduction2.wsdl" />
+    <None Include="Service References\AKNDataForIFDocProduction\AKNDataForIFDocProduction21.wsdl" />
+    <None Include="Service References\AKNDataForIFDocProduction\AKNDataForIFDocProduction3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNDataForIFDocProduction\AKNDataForIFDocProduction31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNDataForIFDocProduction\AKNDataForIFDocProduction32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNDataForIFDoc\AKNDataForIFDoc.wsdl" />
+    <None Include="Service References\AKNDataForIFDoc\AKNDataForIFDoc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNDataForIFDoc\AKNDataForIFDoc1.wsdl" />
+    <None Include="Service References\AKNDataForIFDoc\AKNDataForIFDoc1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNDataForIFDoc\AKNDataForIFDoc2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNDataForIFDocProduction\configuration91.svcinfo" />
+    <None Include="Service References\AKNDataForIFDocProduction\configuration.svcinfo" />
+    <None Include="Service References\AKNDataForIFDocProduction\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\AKNDataForIFDoc\Interop.CC.Portal.API.AKNDataForIFDoc.AKNDocOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AKNImotenListDokumentTest\AKNPListDoc.wsdl" />
+    <None Include="Service References\AKNImotenListDokumentTest\AKNPListDocTest.wsdl" />
+    <None Include="Service References\AKNImotenListDokumentTest\AKNPListDocTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNImotenListDokumentTest\AKNPListDocTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNImotenListDokumentTest\AKNPListDocTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\AKNImotenListDokumentTest\Interop.CC.Portal.API.AKNImotenListDokumentTest.AKNDocOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AKNImotenListDokument\AKNPListDocProduction.disco" />
+    <None Include="Service References\AKNImotenListDokument\configuration91.svcinfo" />
+    <None Include="Service References\AKNImotenListDokument\configuration.svcinfo" />
+    <None Include="Service References\AKNImotenListDokumentTest\AKNPListDocTest.disco" />
+    <None Include="Service References\AKNImotenListDokumentTest\configuration91.svcinfo" />
+    <None Include="Service References\AKNImotenListDokumentTest\configuration.svcinfo" />
+    <None Include="Service References\AKNImotenListDokumentTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\AKNImotenListDokument\Interop.CC.Portal.API.AKNImotenListDokument.AKNDocOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AKNImotenListDokument\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\AKNImotenListTest\Interop.CC.Portal.API.AKNImotenListTest.dzgr.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AKNImotenListDokument\AKNPListDocProduction.wsdl" />
+    <None Include="Service References\AKNImotenListDokument\AKNPListDocProduction.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNImotenListDokument\AKNPListDocProduction1.wsdl" />
+    <None Include="Service References\AKNImotenListDokument\AKNPListDocProduction1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNImotenListDokument\AKNPListDocProduction2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNImotenListTest\PropertyListTest.disco" />
+    <None Include="Service References\AKNImotenListTest\configuration91.svcinfo" />
+    <None Include="Service References\AKNImotenListTest\configuration.svcinfo" />
+    <None Include="Service References\AKNImotenListTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\AKNImotenList\Interop.CC.Portal.API.AKNImotenList.dzgr.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AKNImotenListTest\PropertyListTest.wsdl" />
+    <None Include="Service References\AKNImotenListTest\PropertyListTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNImotenListTest\PropertyListTest1.wsdl" />
+    <None Include="Service References\AKNImotenListTest\PropertyListTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNImotenListTest\PropertyListTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNImotenList\PropertyList.wsdl" />
+    <None Include="Service References\AKNImotenList\PropertyList.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNImotenList\PropertyList1.wsdl" />
+    <None Include="Service References\AKNImotenList\PropertyList1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNImotenList\PropertyList2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNKatastarskaParcelaDokumentTest\AKNCPlanDoc.wsdl" />
+    <None Include="Service References\AKNKatastarskaParcelaDokumentTest\AKNCPlanDocTest.wsdl" />
+    <None Include="Service References\AKNKatastarskaParcelaDokumentTest\AKNCPlanDocTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNKatastarskaParcelaDokumentTest\AKNCPlanDocTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNKatastarskaParcelaDokumentTest\AKNCPlanDocTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\AKNKatastarskaParcelaDokumentTest\Interop.CC.Portal.API.AKNKatastarskaParcelaDokumentTest.AKNDocOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AKNKatastarskaParcelaDokument\AKNCPlanDocProduction.wsdl" />
+    <None Include="Service References\AKNKatastarskaParcelaDokument\AKNCPlanDocProduction.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNKatastarskaParcelaDokumentTest\AKNCPlanDoc.wsdl" />
+    <None Include="Service References\AKNKatastarskaParcelaDokumentTest\AKNCPlanDocTest.wsdl" />
+    <None Include="Service References\AKNKatastarskaParcelaDokumentTest\AKNCPlanDocTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNKatastarskaParcelaDokumentTest\AKNCPlanDocTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNKatastarskaParcelaDokumentTest\AKNCPlanDocTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\AKNKatastarskaParcelaDokumentTest\Interop.CC.Portal.API.AKNKatastarskaParcelaDokumentTest.AKNDocOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AKNKatastarskaParcelaDokument\AKNCPlanDocProduction.wsdl" />
+    <None Include="Service References\AKNKatastarskaParcelaDokument\AKNCPlanDocProduction.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNKatastarskaParcelaDokument\AKNCPlanDocProduction1.wsdl" />
+    <None Include="Service References\AKNKatastarskaParcelaDokument\AKNCPlanDocProduction1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNKatastarskaParcelaDokument\AKNCPlanDocProduction2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNKatastarskaParcelaDokumentTest\AKNCPlanDocTest.disco" />
+    <None Include="Service References\AKNKatastarskaParcelaDokumentTest\configuration91.svcinfo" />
+    <None Include="Service References\AKNKatastarskaParcelaDokumentTest\configuration.svcinfo" />
+    <None Include="Service References\AKNKatastarskaParcelaDokumentTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\AKNKatastarskaParcelaDokument\Interop.CC.Portal.API.AKNKatastarskaParcelaDokument.AKNDocOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AKNKatastarskaParcelaTest\CadastrialParcelTest.wsdl" />
+    <None Include="Service References\AKNKatastarskaParcelaTest\CadastrialParcelTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNKatastarskaParcelaTest\CadastrialParcelTest1.wsdl" />
+    <None Include="Service References\AKNKatastarskaParcelaTest\CadastrialParcelTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNKatastarskaParcelaTest\CadastrialParcelTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNKatastarskaParcelaDokument\AKNCPlanDocProduction.disco" />
+    <None Include="Service References\AKNKatastarskaParcelaDokument\configuration91.svcinfo" />
+    <None Include="Service References\AKNKatastarskaParcelaDokument\configuration.svcinfo" />
+    <None Include="Service References\AKNKatastarskaParcelaDokument\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\AKNKatastarskaParcelaTest\Interop.CC.Portal.API.AKNKatastarskaParcelaTest.ATRparceli.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AKNKatastarskaParcela\CadastrialParcel.wsdl" />
+    <None Include="Service References\AKNKatastarskaParcela\CadastrialParcel.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNKatastarskaParcela\CadastrialParcel1.wsdl" />
+    <None Include="Service References\AKNKatastarskaParcela\CadastrialParcel1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNKatastarskaParcela\CadastrialParcel2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNKatastarskaParcelaTest\CadastrialParcelTest.disco" />
+    <None Include="Service References\AKNKatastarskaParcelaTest\configuration91.svcinfo" />
+    <None Include="Service References\AKNKatastarskaParcelaTest\configuration.svcinfo" />
+    <None Include="Service References\AKNKatastarskaParcelaTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\AKNKatastarskaParcela\Interop.CC.Portal.API.AKNKatastarskaParcela.ATRparceli.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AKNMunicipalityService\AKNMunicipalityService.wsdl" />
+    <None Include="Service References\AKNMunicipalityService\AKNMunSvc.wsdl" />
+    <None Include="Service References\AKNMunicipalityService\AKNMunSvc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNMunicipalityService\AKNMunSvc1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNMunicipalityService\AKNMunSvc2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNCPlanDoc\AKNCPlanDoc.disco" />
+    <None Include="Service References\AKNCPlanDoc\configuration91.svcinfo" />
+    <None Include="Service References\AKNCPlanDoc\configuration.svcinfo" />
+    <None Include="Service References\AKNCPlanDoc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AKNDataForIFDoc\AKNDataForIFDoc.disco" />
+    <None Include="Service References\AKNDataForIFDoc\configuration91.svcinfo" />
+    <None Include="Service References\AKNDataForIFDoc\configuration.svcinfo" />
+    <None Include="Service References\AKNDataForIFDoc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AKNImotenList\PropertyList.disco" />
+    <None Include="Service References\AKNImotenList\configuration91.svcinfo" />
+    <None Include="Service References\AKNImotenList\configuration.svcinfo" />
+    <None Include="Service References\AKNImotenList\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AKNKatastarskaParcela\CadastrialParcel.disco" />
+    <None Include="Service References\AKNKatastarskaParcela\configuration91.svcinfo" />
+    <None Include="Service References\AKNKatastarskaParcela\configuration.svcinfo" />
+    <None Include="Service References\AKNKatastarskaParcela\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\AKNMunicipalityService\Interop.CC.Portal.API.AKNMunicipalityService.MunicipalityDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AKNOpshtini\AKNMunicipality.wsdl" />
+    <None Include="Service References\AKNOpshtini\AKNMunicipality.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNOpshtini\AKNMunicipality1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNOpshtini\AKNMunicipality2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNOpshtini\AKNMunicipalityService.wsdl" />
+    <Content Include="Service References\AKNOpshtini\Interop.CC.Portal.API.AKNOpshtini.MunicipalityDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AKNPListDocProduction\AKNPListDocProduction1.disco" />
+    <None Include="Service References\AKNOpshtini\AKNMunicipality.disco" />
+    <None Include="Service References\AKNOpshtini\configuration91.svcinfo" />
+    <None Include="Service References\AKNOpshtini\configuration.svcinfo" />
+    <None Include="Service References\AKNOpshtini\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\AKNPListDocProduction\Interop.CC.Portal.API.AKNPListDocProduction.AKNDocOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AKNPListDocProduction\AKNPListDocProduction2.wsdl" />
+    <None Include="Service References\AKNPListDocProduction\AKNPListDocProduction21.wsdl" />
+    <None Include="Service References\AKNPListDocProduction\AKNPListDocProduction3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPListDocProduction\AKNPListDocProduction31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPListDocProduction\AKNPListDocProduction32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPListDoc\AKNPListDoc.wsdl" />
+    <None Include="Service References\AKNPListDoc\AKNPListDoc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPListDoc\AKNPListDoc1.wsdl" />
+    <None Include="Service References\AKNPListDoc\AKNPListDoc1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPListDoc\AKNPListDoc2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPListDocProduction\configuration91.svcinfo" />
+    <None Include="Service References\AKNPListDocProduction\configuration.svcinfo" />
+    <None Include="Service References\AKNPListDocProduction\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\AKNPListDoc\Interop.CC.Portal.API.AKNPListDoc.AKNDocOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AKNPodatociZaInfraObjektiTest\AKNDataForIFDoc.wsdl" />
+    <None Include="Service References\AKNPodatociZaInfraObjektiTest\AKNDataForIFDocTest.wsdl" />
+    <None Include="Service References\AKNPodatociZaInfraObjektiTest\AKNDataForIFDocTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPodatociZaInfraObjektiTest\AKNDataForIFDocTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPodatociZaInfraObjektiTest\AKNDataForIFDocTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\AKNPodatociZaInfraObjektiTest\Interop.CC.Portal.API.AKNPodatociZaInfraObjektiTest.AKNDocOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AKNPodatociZaInfraObjekti\AKNDataForIFDocProduction.wsdl" />
+    <None Include="Service References\AKNPodatociZaInfraObjekti\AKNDataForIFDocProduction.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPodatociZaInfraObjekti\AKNDataForIFDocProduction1.wsdl" />
+    <None Include="Service References\AKNPodatociZaInfraObjekti\AKNDataForIFDocProduction1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPodatociZaInfraObjekti\AKNDataForIFDocProduction2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPodatociZaInfraObjektiTest\AKNDataForIFDocTest.disco" />
+    <None Include="Service References\AKNPodatociZaInfraObjektiTest\configuration91.svcinfo" />
+    <None Include="Service References\AKNPodatociZaInfraObjektiTest\configuration.svcinfo" />
+    <None Include="Service References\AKNPodatociZaInfraObjektiTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\AKNPodatociZaInfraObjekti\Interop.CC.Portal.API.AKNPodatociZaInfraObjekti.AKNDocOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AKNPropertyListCadastralParcelAdapter\AdapterServiceAKN.disco" />
+    <None Include="Service References\AKNMunicipalityService\AKNMunSvc.disco" />
+    <None Include="Service References\AKNMunicipalityService\configuration91.svcinfo" />
+    <None Include="Service References\AKNMunicipalityService\configuration.svcinfo" />
+    <None Include="Service References\AKNMunicipalityService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AKNPListDoc\AKNPListDoc.disco" />
+    <None Include="Service References\AKNPListDoc\configuration91.svcinfo" />
+    <None Include="Service References\AKNPListDoc\configuration.svcinfo" />
+    <None Include="Service References\AKNPListDoc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AKNPodatociZaInfraObjekti\AKNDataForIFDocProduction.disco" />
+    <None Include="Service References\AKNPodatociZaInfraObjekti\configuration91.svcinfo" />
+    <None Include="Service References\AKNPodatociZaInfraObjekti\configuration.svcinfo" />
+    <None Include="Service References\AKNPodatociZaInfraObjekti\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\AKNPropertyListCadastralParcelAdapter\Interop.CC.Portal.API.AKNPropertyListCadastralParcelAdapter.ATRparceli.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AKNPropertyListCadastralParcelAdapter\Interop.CC.Portal.API.AKNPropertyListCadastralParcelAdapter.dzgr.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AKNPropertyListCadastralParcelAdapter\AdapterServiceAKN.wsdl" />
+    <None Include="Service References\AKNPropertyListCadastralParcelAdapter\AdapterServiceAKN2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPropertyListCadastralParcelAdapter\AdapterServiceAKN3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPropertyListCadastralParcelAdapter\AdapterServiceAKN4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPropertyListCadastralParcelAdapter\AKNService1.wsdl" />
+    <None Include="Service References\CRMListaNaPromeniTest\ListOfChangesCU_Test.wsdl" />
+    <None Include="Service References\CRMListaNaPromeniTest\ListOfChangesCU_Test.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMListaNaPromeniTest\ListOfChangesCU_Test1.wsdl" />
+    <None Include="Service References\CRMListaNaPromeniTest\ListOfChangesCU_Test1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMListaNaPromeniTest\ListOfChangesCU_Test2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMListaNaPromeni\ListOfChangesCU.wsdl" />
+    <None Include="Service References\CRMListaNaPromeni\ListOfChangesCU.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMListaNaPromeni\ListOfChangesCU1.wsdl" />
+    <None Include="Service References\CRMListaNaPromeni\ListOfChangesCU1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMListaPosebenInteresTest\ListOfSubjectsCUTest.wsdl" />
+    <None Include="Service References\CRMListaPosebenInteresTest\ListOfSubjectsCUTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMListaPosebenInteresTest\ListOfSubjectsCUTest1.wsdl" />
+    <None Include="Service References\CRMListaPosebenInteresTest\ListOfSubjectsCUTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMListaPosebenInteresTest\ListOfSubjectsCUTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaAKNTest\CRM_TS_AKN_Test.wsdl" />
+    <None Include="Service References\CRMTekovnaSostojbaAKNTest\CRM_TS_AKN_Test.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaAKNTest\CRM_TS_AKN_Test1.wsdl" />
+    <None Include="Service References\CRMTekovnaSostojbaAKNTest\CRM_TS_AKN_Test1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaAKNTest\CRM_TS_AKN_Test2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaAKN\CRM_TS_AKN.wsdl" />
+    <None Include="Service References\CRMTekovnaSostojbaAKN\CRM_TS_AKN.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaAKN\CRM_TS_AKN1.wsdl" />
+    <None Include="Service References\CRMTekovnaSostojbaAKN\CRM_TS_AKN1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaAKN\CRM_TS_AKN2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaCURMTest\CRM_TS_CURM_Test.wsdl" />
+    <None Include="Service References\CRMTekovnaSostojbaCURMTest\CRM_TS_CURM_Test.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaCURMTest\CRM_TS_CURM_Test1.wsdl" />
+    <None Include="Service References\CRMTekovnaSostojbaCURMTest\CRM_TS_CURM_Test1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaCURMTest\CRM_TS_CURM_Test2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaCURM\CRM_TS_CURM.wsdl" />
+    <None Include="Service References\CRMTekovnaSostojbaCURM\CRM_TS_CURM.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaCURM\CRM_TS_CURM1.wsdl" />
+    <None Include="Service References\CRMTekovnaSostojbaCURM\CRM_TS_CURM1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaCURM\CRM_TS_CURM2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaTest\CRMService_Test.wsdl" />
+    <None Include="Service References\CRMTekovnaSostojbaTest\CRMService_Test.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaTest\CRMService_Test1.wsdl" />
+    <None Include="Service References\CRMTekovnaSostojbaTest\CRMService_Test1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaTest\CRMService_Test2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaUJPTest\CRM_TS_UJP_Test.wsdl" />
+    <None Include="Service References\CRMTekovnaSostojbaUJPTest\CRM_TS_UJP_Test.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaUJPTest\CRM_TS_UJP_Test1.wsdl" />
+    <None Include="Service References\CRMTekovnaSostojbaUJPTest\CRM_TS_UJP_Test1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaUJPTest\CRM_TS_UJP_Test2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaUJP\CRM_TS_UJP.wsdl" />
+    <None Include="Service References\CRMTekovnaSostojbaUJP\CRM_TS_UJP.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaUJP\CRM_TS_UJP1.wsdl" />
+    <None Include="Service References\CRMTekovnaSostojbaUJP\CRM_TS_UJP1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaUJP\CRM_TS_UJP2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojba\CRMService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojba\CRMService1.wsdl" />
+    <None Include="Service References\CRMTekovnaSostojba\CRMService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojba\CRMService11.wsdl" />
+    <None Include="Service References\CRMTekovnaSostojba\CRMService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRM_TS_AKN\AdapterServiceCRM_TS_AKN.wsdl" />
+    <None Include="Service References\CRM_TS_AKN\AdapterServiceCRM_TS_AKN.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRM_TS_AKN\AdapterServiceCRM_TS_AKN1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRM_TS_AKN\CRM_TS_AKN.wsdl" />
+    <None Include="Service References\CRM_TS_AKN_Test\Test_CRM_TS_AKN.wsdl" />
+    <None Include="Service References\CRM_TS_AKN_Test\Test_CRM_TS_AKN.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRM_TS_AKN_Test\Test_CRM_TS_AKN1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRM_TS_AKN_Test\Test_TS_AKN.wsdl" />
+    <None Include="Service References\CRM_TS_CURM\AdapterServiceCRM_TS_CURM.wsdl" />
+    <None Include="Service References\CRM_TS_CURM\AdapterServiceCRM_TS_CURM.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRM_TS_CURM\AdapterServiceCRM_TS_CURM1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRM_TS_CURM\CRM_TS_CURM.wsdl" />
+    <None Include="Service References\CRM_TS_CURM_Test\Test_CRM_TS_CURM.wsdl" />
+    <None Include="Service References\CRM_TS_CURM_Test\Test_CRM_TS_CURM.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRM_TS_CURM_Test\Test_CRM_TS_CURM1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRM_TS_CURM_Test\Test_TS_CURM.wsdl" />
+    <None Include="Service References\CRM_TS_UJP\AdapterServiceCRM_TS_UJP.wsdl" />
+    <None Include="Service References\CRM_TS_UJP\AdapterServiceCRM_TS_UJP.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRM_TS_UJP\AdapterServiceCRM_TS_UJP1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRM_TS_UJP\CRM_TS_UJP.wsdl" />
+    <None Include="Service References\CRM_TS_UJP_Test\Test_CRM_TS_UJP.wsdl" />
+    <None Include="Service References\CRM_TS_UJP_Test\Test_CRM_TS_UJP.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRM_TS_UJP_Test\Test_CRM_TS_UJP1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRM_TS_UJP_Test\Test_TS_UJP.wsdl" />
+    <None Include="Service References\CRM_TS_UJP\AdapterServiceCRM_TS_UJP.disco" />
+    <None Include="Service References\CRM_TS_UJP\configuration91.svcinfo" />
+    <None Include="Service References\CRM_TS_UJP\configuration.svcinfo" />
+    <None Include="Service References\CRM_TS_UJP\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CRM_TS_CURM\AdapterServiceCRM_TS_CURM.disco" />
+    <None Include="Service References\CRM_TS_CURM\configuration91.svcinfo" />
+    <None Include="Service References\CRM_TS_CURM\configuration.svcinfo" />
+    <None Include="Service References\CRM_TS_CURM\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CRMListaNaPromeni\configuration91.svcinfo" />
+    <None Include="Service References\CRMListaNaPromeni\configuration.svcinfo" />
+    <None Include="Service References\CRMListaNaPromeni\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CRM_TS_UJP_Test\Test_CRM_TS_UJP.disco" />
+    <None Include="Service References\CRM_TS_UJP_Test\configuration91.svcinfo" />
+    <None Include="Service References\CRM_TS_UJP_Test\configuration.svcinfo" />
+    <None Include="Service References\CRM_TS_UJP_Test\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CURMDataForExecutedExport\DataExeExp.wsdl" />
+    <None Include="Service References\CURMDataForExecutedExport\DataExeExp.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMDataForExecutedExport\DataExeExp1.wsdl" />
+    <None Include="Service References\CURMDataForExecutedExport\DataExeExp1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMDataForExecutedExport\DataExeExp2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRM_TS_AKN_Test\configuration91.svcinfo" />
+    <None Include="Service References\CRM_TS_AKN_Test\configuration.svcinfo" />
+    <None Include="Service References\CRM_TS_AKN_Test\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CRM_TS_AKN\configuration91.svcinfo" />
+    <None Include="Service References\CRM_TS_AKN\configuration.svcinfo" />
+    <None Include="Service References\CRM_TS_AKN\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CRM_TS_AKN_Test\Test_CRM_TS_AKN.disco" />
+    <None Include="Service References\CRM_TS_AKN\AdapterServiceCRM_TS_AKN.disco" />
+    <None Include="Service References\CRM_TS_CURM_Test\Test_CRM_TS_CURM.disco" />
+    <None Include="Service References\CRM_TS_CURM_Test\configuration91.svcinfo" />
+    <None Include="Service References\CRM_TS_CURM_Test\configuration.svcinfo" />
+    <None Include="Service References\CRM_TS_CURM_Test\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CRMListaNaPromeniTest\ListOfChangesCU_Test.disco" />
+    <None Include="Service References\CRMListaNaPromeniTest\configuration91.svcinfo" />
+    <None Include="Service References\CRMListaNaPromeniTest\configuration.svcinfo" />
+    <None Include="Service References\CRMListaNaPromeniTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CRMListaPosebenInteresTest\ListOfSubjectsCUTest.disco" />
+    <None Include="Service References\CRMListaPosebenInteresTest\configuration91.svcinfo" />
+    <None Include="Service References\CRMListaPosebenInteresTest\configuration.svcinfo" />
+    <None Include="Service References\CRMListaPosebenInteresTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaAKN\CRM_TS_AKN.disco" />
+    <None Include="Service References\CRMTekovnaSostojbaAKN\configuration91.svcinfo" />
+    <None Include="Service References\CRMTekovnaSostojbaAKN\configuration.svcinfo" />
+    <None Include="Service References\CRMTekovnaSostojbaAKN\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaAKNTest\CRM_TS_AKN_Test.disco" />
+    <None Include="Service References\CRMTekovnaSostojbaAKNTest\configuration91.svcinfo" />
+    <None Include="Service References\CRMTekovnaSostojbaAKNTest\configuration.svcinfo" />
+    <None Include="Service References\CRMTekovnaSostojbaAKNTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaCURM\CRM_TS_CURM.disco" />
+    <None Include="Service References\CRMTekovnaSostojbaCURM\configuration91.svcinfo" />
+    <None Include="Service References\CRMTekovnaSostojbaCURM\configuration.svcinfo" />
+    <None Include="Service References\CRMTekovnaSostojbaCURM\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaCURMTest\CRM_TS_CURM_Test.disco" />
+    <None Include="Service References\CRMTekovnaSostojbaCURMTest\configuration91.svcinfo" />
+    <None Include="Service References\CRMTekovnaSostojbaCURMTest\configuration.svcinfo" />
+    <None Include="Service References\CRMTekovnaSostojbaCURMTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaUJP\CRM_TS_UJP.disco" />
+    <None Include="Service References\CRMTekovnaSostojbaUJP\configuration91.svcinfo" />
+    <None Include="Service References\CRMTekovnaSostojbaUJP\configuration.svcinfo" />
+    <None Include="Service References\CRMTekovnaSostojbaUJP\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaUJPTest\CRM_TS_UJP_Test.disco" />
+    <None Include="Service References\CRMTekovnaSostojbaUJPTest\configuration91.svcinfo" />
+    <None Include="Service References\CRMTekovnaSostojbaUJPTest\configuration.svcinfo" />
+    <None Include="Service References\CRMTekovnaSostojbaUJPTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojbaTest\CRMService_Test.disco" />
+    <None Include="Service References\CRMTekovnaSostojbaTest\configuration91.svcinfo" />
+    <None Include="Service References\CRMTekovnaSostojbaTest\configuration.svcinfo" />
+    <None Include="Service References\CRMTekovnaSostojbaTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojba\CRMService.disco" />
+    <Content Include="Service References\CURMDataForExecutedExport\Interop.CC.Portal.API.CURMDataForExecutedExport.ExecutedExportOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\CURMDataForExecutedImport\DataExeImp.disco" />
+    <None Include="Service References\CURMDataForExecutedExport\DataExeExp.disco" />
+    <None Include="Service References\CURMDataForExecutedExport\configuration91.svcinfo" />
+    <None Include="Service References\CURMDataForExecutedExport\configuration.svcinfo" />
+    <None Include="Service References\CURMDataForExecutedExport\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\CURMDataForExecutedImport\Interop.CC.Portal.API.CURMDataForExecutedImport.ExecutedImportOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CURMEdinstvenCarinskiDokumentTest\Interop.CC.Portal.API.CURMEdinstvenCarinskiDokumentTest.CustomsOfficeNumbers.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CURMEdinstvenCarinskiDokumentTest\Interop.CC.Portal.API.CURMEdinstvenCarinskiDokumentTest.SingleCustomsDocumentOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\CURMEdinstvenCarinskiDokumentTest\SingleCustomsDocumentTest.disco" />
+    <None Include="Service References\CURMEdinstvenCarinskiDokumentTest\configuration91.svcinfo" />
+    <None Include="Service References\CURMEdinstvenCarinskiDokumentTest\configuration.svcinfo" />
+    <None Include="Service References\CURMEdinstvenCarinskiDokumentTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\CURMEdinstvenCarinskiDokument\Interop.CC.Portal.API.CURMEdinstvenCarinskiDokument.CustomsOfficeNumbers.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CURMEdinstvenCarinskiDokument\Interop.CC.Portal.API.CURMEdinstvenCarinskiDokument.SingleCustomsDocumentOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\CURMEdinstvenCarinskiDokument\SingleCustDoc.disco" />
+    <None Include="Service References\CURMEdinstvenCarinskiDokument\configuration91.svcinfo" />
+    <None Include="Service References\CURMEdinstvenCarinskiDokument\configuration.svcinfo" />
+    <None Include="Service References\CURMEdinstvenCarinskiDokument\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CURMPodatociZaIzvozTest\DataExeExp_Test.wsdl" />
+    <None Include="Service References\CURMPodatociZaIzvozTest\DataForExecutedExportTest.wsdl" />
+    <None Include="Service References\CURMPodatociZaIzvozTest\DataForExecutedExportTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMPodatociZaIzvozTest\DataForExecutedExportTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMPodatociZaIzvozTest\DataForExecutedExportTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMPodatociZaIzvozTest\DataForExecutedExportTest3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMPodatociZaIzvozTest\DataForExecutedExportTest4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\CURMPodatociZaIzvozTest\Interop.CC.Portal.API.CURMPodatociZaIzvozTest.ExecutedExportOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\CURMPodatociZaIzvoz\DataExeExp.disco" />
+    <None Include="Service References\CURMPodatociZaIzvoz\configuration91.svcinfo" />
+    <None Include="Service References\CURMPodatociZaIzvoz\configuration.svcinfo" />
+    <None Include="Service References\CURMPodatociZaIzvozTest\DataForExecutedExportTest.disco" />
+    <None Include="Service References\CURMPodatociZaIzvozTest\configuration91.svcinfo" />
+    <None Include="Service References\CURMPodatociZaIzvozTest\configuration.svcinfo" />
+    <None Include="Service References\CURMPodatociZaIzvozTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\CURMPodatociZaIzvoz\Interop.CC.Portal.API.CURMPodatociZaIzvoz.ExecutedExportOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\CURMPodatociZaIzvoz\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CURMPodatociZaUvozTest\DataExeImp_Test.wsdl" />
+    <None Include="Service References\CURMPodatociZaUvozTest\DataForExecutedImportTest.wsdl" />
+    <None Include="Service References\CURMPodatociZaUvozTest\DataForExecutedImportTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMPodatociZaUvozTest\DataForExecutedImportTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMPodatociZaUvozTest\DataForExecutedImportTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMPodatociZaUvozTest\DataForExecutedImportTest3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMPodatociZaUvozTest\DataForExecutedImportTest4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\CURMPodatociZaUvozTest\Interop.CC.Portal.API.CURMPodatociZaUvozTest.ExecutedImportOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\CURMPodatociZaUvoz\DataExeImp.disco" />
+    <None Include="Service References\CURMPodatociZaUvoz\configuration91.svcinfo" />
+    <None Include="Service References\CURMPodatociZaUvoz\configuration.svcinfo" />
+    <None Include="Service References\CURMPodatociZaUvozTest\DataForExecutedImportTest.disco" />
+    <None Include="Service References\CURMPodatociZaUvozTest\configuration91.svcinfo" />
+    <None Include="Service References\CURMPodatociZaUvozTest\configuration.svcinfo" />
+    <None Include="Service References\CURMPodatociZaUvozTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\CURMPodatociZaUvoz\Interop.CC.Portal.API.CURMPodatociZaUvoz.ExecutedImportOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\CURMPodatociZaUvoz\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\CURMSingleCustomsDocument\Interop.CC.Portal.API.CURMSingleCustomsDocument.CustomsOfficeNumbers.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CURMSingleCustomsDocument\Interop.CC.Portal.API.CURMSingleCustomsDocument.SingleCustomsDocumentOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\CURMDataForExecutedImport\DataExeImp.wsdl" />
+    <None Include="Service References\CURMDataForExecutedImport\DataExeImp.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMDataForExecutedImport\DataExeImp1.wsdl" />
+    <None Include="Service References\CURMDataForExecutedImport\DataExeImp1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMDataForExecutedImport\DataExeImp2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMEdinstvenCarinskiDokumentTest\SingleCustDoc_Test.wsdl" />
+    <None Include="Service References\CURMEdinstvenCarinskiDokumentTest\SingleCustomsDocumentTest.wsdl" />
+    <None Include="Service References\CURMEdinstvenCarinskiDokumentTest\SingleCustomsDocumentTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMEdinstvenCarinskiDokumentTest\SingleCustomsDocumentTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMEdinstvenCarinskiDokumentTest\SingleCustomsDocumentTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMEdinstvenCarinskiDokumentTest\SingleCustomsDocumentTest3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMEdinstvenCarinskiDokument\SingleCustDoc.wsdl" />
+    <None Include="Service References\CURMEdinstvenCarinskiDokument\SingleCustDoc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMEdinstvenCarinskiDokument\SingleCustDoc1.wsdl" />
+    <None Include="Service References\CURMEdinstvenCarinskiDokument\SingleCustDoc1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMEdinstvenCarinskiDokument\SingleCustDoc2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMEdinstvenCarinskiDokument\SingleCustDoc3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMPodatociZaIzvoz\DataExeExp.wsdl" />
+    <None Include="Service References\CURMPodatociZaIzvoz\DataExeExp.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMPodatociZaIzvoz\DataExeExp1.wsdl" />
+    <None Include="Service References\CURMPodatociZaIzvoz\DataExeExp1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMPodatociZaIzvoz\DataExeExp2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMPodatociZaIzvoz\DataExeExp3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMPodatociZaIzvoz\DataExeExp4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMPodatociZaUvoz\DataExeImp.wsdl" />
+    <None Include="Service References\CURMPodatociZaUvoz\DataExeImp.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMPodatociZaUvoz\DataExeImp1.wsdl" />
+    <None Include="Service References\CURMPodatociZaUvoz\DataExeImp1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMPodatociZaUvoz\DataExeImp2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMPodatociZaUvoz\DataExeImp3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMPodatociZaUvoz\DataExeImp4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMSingleCustomsDocument\SingleCustDoc.wsdl" />
+    <None Include="Service References\FPIOMInsuredRetiredAdapter\AdapterServiceFPIOM.wsdl" />
+    <None Include="Service References\FPIOMInsuredRetiredAdapter\AdapterServiceFPIOM.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMPodatociZaUvoz\DataExeImp3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMPodatociZaUvoz\DataExeImp4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURMSingleCustomsDocument\SingleCustDoc.wsdl" />
+    <None Include="Service References\AKNPropertyListCadastralParcelAdapter\configuration91.svcinfo" />
+    <None Include="Service References\AKNPropertyListCadastralParcelAdapter\configuration.svcinfo" />
+    <None Include="Service References\AKNPropertyListCadastralParcelAdapter\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\FPIOMInsuredRetiredAdapter\AdapterServiceFPIOM1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMInsuredRetiredAdapter\FPIOMService.wsdl" />
+    <None Include="Service References\FPIOMInsuredStatus\InsuredStatus.disco" />
+    <None Include="Service References\FPIOMInsuredStatus\configuration91.svcinfo" />
+    <None Include="Service References\FPIOMInsuredStatus\configuration.svcinfo" />
+    <None Include="Service References\FPIOMInsuredStatus\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\FPIOMPodatociOsigurenikTest\DataForEnsurersTest.wsdl" />
+    <None Include="Service References\FPIOMPodatociOsigurenikTest\DataForEnsurersTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMPodatociOsigurenikTest\DataForEnsurersTest1.wsdl" />
+    <None Include="Service References\FPIOMPodatociOsigurenikTest\DataForEnsurersTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMPodatociOsigurenikTest\DataForEnsurersTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMPodatociOsigurenik\DataForEnsurers.wsdl" />
+    <None Include="Service References\FPIOMPodatociOsigurenik\DataForEnsurers.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMPodatociOsigurenik\DataForEnsurers1.wsdl" />
+    <None Include="Service References\FPIOMPodatociOsigurenik\DataForEnsurers1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMPodatociOsigurenik\DataForEnsurers2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMPodatociPenzionerTest\DataForRetiredTest.wsdl" />
+    <None Include="Service References\FPIOMPodatociPenzionerTest\DataForRetiredTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMPodatociPenzionerTest\DataForRetiredTest1.wsdl" />
+    <None Include="Service References\FPIOMPodatociPenzionerTest\DataForRetiredTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMPodatociPenzionerTest\DataForRetiredTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMPodatociPenzioner\DataForRetired.wsdl" />
+    <None Include="Service References\FPIOMPodatociPenzioner\DataForRetired.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMPodatociPenzioner\DataForRetired1.wsdl" />
+    <None Include="Service References\FPIOMPodatociPenzioner\DataForRetired1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMPodatociPenzioner\DataForRetired2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMInsuredRetiredAdapter\AdapterServiceFPIOM.disco" />
+    <None Include="Service References\FPIOMInsuredRetiredAdapter\configuration.svcinfo" />
+    <None Include="Service References\FPIOMInsuredRetiredAdapter\configuration91.svcinfo" />
+    <None Include="Service References\FPIOMInsuredRetiredAdapter\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference1.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\FPIOMRabotnoIskustvoTest\Interop.CC.Portal.API.FPIOMRabotnoIskustvoTest.YearsOfWorkExperienceOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\FPIOMRabotnoIskustvoTest\YearsOfWorkExperienceTest.disco" />
+    <None Include="Service References\FPIOMRabotnoIskustvoTest\configuration91.svcinfo" />
+    <None Include="Service References\FPIOMRabotnoIskustvoTest\configuration.svcinfo" />
+    <None Include="Service References\FPIOMRabotnoIskustvoTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\FPIOMRabotnoIskustvo\Interop.CC.Portal.API.FPIOMRabotnoIskustvo.YearsOfWorkExperienceOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\FPIOMRabotnoIskustvoTest\YearsOfWorkExperienceTest.wsdl" />
+    <None Include="Service References\FPIOMRabotnoIskustvoTest\YearsOfWorkExperienceTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMRabotnoIskustvoTest\YearsOfWorkExperienceTest1.wsdl" />
+    <None Include="Service References\FPIOMRabotnoIskustvoTest\YearsOfWorkExperienceTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMRabotnoIskustvoTest\YearsOfWorkExperienceTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMRabotnoIskustvoTest\YearsOfWorkExperienceTest3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMRabotnoIskustvo\YearsOfWorkExperience.wsdl" />
+    <None Include="Service References\FPIOMRabotnoIskustvo\YearsOfWorkExperience.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMRabotnoIskustvo\YearsOfWorkExperience1.wsdl" />
+    <None Include="Service References\FPIOMRabotnoIskustvo\YearsOfWorkExperience1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMRabotnoIskustvo\YearsOfWorkExperience2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMRabotnoIskustvo\YearsOfWorkExperience3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMRetiredStatus\RetiredStatus.disco" />
+    <None Include="Service References\FPIOMRetiredStatus\configuration91.svcinfo" />
+    <None Include="Service References\FPIOMRetiredStatus\configuration.svcinfo" />
+    <None Include="Service References\FPIOMRetiredStatus\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CRMTekovnaSostojba\configuration91.svcinfo" />
+    <None Include="Service References\CRMTekovnaSostojba\configuration.svcinfo" />
+    <None Include="Service References\CRMTekovnaSostojba\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CURMDataForExecutedImport\configuration91.svcinfo" />
+    <None Include="Service References\CURMDataForExecutedImport\configuration.svcinfo" />
+    <None Include="Service References\CURMDataForExecutedImport\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CURMSingleCustomsDocument\configuration91.svcinfo" />
+    <None Include="Service References\CURMSingleCustomsDocument\configuration.svcinfo" />
+    <None Include="Service References\CURMSingleCustomsDocument\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\FPIOMPodatociOsigurenik\DataForEnsurers.disco" />
+    <None Include="Service References\FPIOMPodatociOsigurenik\configuration91.svcinfo" />
+    <None Include="Service References\FPIOMPodatociOsigurenik\configuration.svcinfo" />
+    <None Include="Service References\FPIOMPodatociOsigurenik\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\FPIOMPodatociPenzioner\DataForRetired.disco" />
+    <None Include="Service References\FPIOMPodatociPenzioner\configuration91.svcinfo" />
+    <None Include="Service References\FPIOMPodatociPenzioner\configuration.svcinfo" />
+    <None Include="Service References\FPIOMPodatociPenzioner\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\FPIOMPodatociOsigurenikTest\DataForEnsurersTest.disco" />
+    <None Include="Service References\FPIOMPodatociOsigurenikTest\configuration91.svcinfo" />
+    <None Include="Service References\FPIOMPodatociOsigurenikTest\configuration.svcinfo" />
+    <None Include="Service References\FPIOMPodatociOsigurenikTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\FPIOMPodatociPenzionerTest\DataForRetiredTest.disco" />
+    <None Include="Service References\FPIOMPodatociPenzionerTest\configuration91.svcinfo" />
+    <None Include="Service References\FPIOMPodatociPenzionerTest\configuration.svcinfo" />
+    <None Include="Service References\FPIOMPodatociPenzionerTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\FPIOMStatusOsigurenikTest\InsuredStatusTest.disco" />
+    <None Include="Service References\FPIOMStatusOsigurenikTest\configuration91.svcinfo" />
+    <None Include="Service References\FPIOMStatusOsigurenikTest\configuration.svcinfo" />
+    <None Include="Service References\FPIOMStatusOsigurenikTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\FPIOMStatusOsigurenik\InsuredStatus.disco" />
+    <None Include="Service References\FPIOMStatusOsigurenik\configuration91.svcinfo" />
+    <None Include="Service References\FPIOMStatusOsigurenik\configuration.svcinfo" />
+    <None Include="Service References\FPIOMStatusOsigurenik\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\FPIOMStatusPenzionerTest\RetiredStatusTest.disco" />
+    <None Include="Service References\FPIOMStatusPenzionerTest\configuration91.svcinfo" />
+    <None Include="Service References\FPIOMStatusPenzionerTest\configuration.svcinfo" />
+    <None Include="Service References\FPIOMStatusPenzionerTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\FPIOMStatusPenzioner\RetiredStatus.disco" />
+    <None Include="Service References\FPIOMStatusPenzioner\configuration91.svcinfo" />
+    <None Include="Service References\FPIOMStatusPenzioner\configuration.svcinfo" />
+    <None Include="Service References\FPIOMStatusPenzioner\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\FPIOMRabotnoIskustvo\YearsOfWorkExperience.disco" />
+    <None Include="Service References\FPIOMRabotnoIskustvo\configuration91.svcinfo" />
+    <None Include="Service References\FPIOMRabotnoIskustvo\configuration.svcinfo" />
+    <None Include="Service References\FPIOMRabotnoIskustvo\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\FPIOMYearsOfWorkExperience\Interop.CC.Portal.API.FPIOMYearsOfWorkExperience.YearsOfWorkExperienceOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\FPIOMStatusOsigurenikTest\InsuredStatusTest.wsdl" />
+    <None Include="Service References\FPIOMStatusOsigurenikTest\InsuredStatusTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMStatusOsigurenikTest\InsuredStatusTest1.wsdl" />
+    <None Include="Service References\FPIOMStatusOsigurenikTest\InsuredStatusTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMStatusOsigurenikTest\InsuredStatusTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMStatusOsigurenik\InsuredStatus.wsdl" />
+    <None Include="Service References\FPIOMStatusOsigurenik\InsuredStatus.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMStatusOsigurenik\InsuredStatus1.wsdl" />
+    <None Include="Service References\FPIOMStatusOsigurenik\InsuredStatus1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMStatusOsigurenik\InsuredStatus2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMStatusPenzionerTest\RetiredStatusTest.wsdl" />
+    <None Include="Service References\FPIOMStatusPenzionerTest\RetiredStatusTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMStatusPenzionerTest\RetiredStatusTest1.wsdl" />
+    <None Include="Service References\FPIOMStatusPenzionerTest\RetiredStatusTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMStatusPenzionerTest\RetiredStatusTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMStatusPenzioner\RetiredStatus.wsdl" />
+    <None Include="Service References\FPIOMStatusPenzioner\RetiredStatus.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMStatusPenzioner\RetiredStatus1.wsdl" />
+    <None Include="Service References\FPIOMStatusPenzioner\RetiredStatus1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMStatusPenzioner\RetiredStatus2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMYearsOfWorkExperience\YearsOfWorkExperience.disco" />
+    <None Include="Service References\FPIOMYearsOfWorkExperience\configuration91.svcinfo" />
+    <None Include="Service References\FPIOMYearsOfWorkExperience\configuration.svcinfo" />
+    <None Include="Service References\FPIOMYearsOfWorkExperience\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GetDocForOUorNPorPP\GetDocForOUorNPorPP.disco" />
+    <None Include="Service References\GetDocForOUorNPorPP\configuration91.svcinfo" />
+    <None Include="Service References\GetDocForOUorNPorPP\configuration.svcinfo" />
+    <Content Include="Service References\GetDocForOUorNPorPP\Interop.CC.Portal.API.GetDocForOUorNPorPP.OutputData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\GetDocForOUorNPorPP\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\InstitutionBNameSurname\EvalNameSurname.disco" />
+    <None Include="Service References\InstitutionBNameSurname\configuration91.svcinfo" />
+    <None Include="Service References\InstitutionBNameSurname\configuration.svcinfo" />
+    <None Include="Service References\InstitutionBNameSurname\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\InstitutionBPersonData\EvalPersonData.disco" />
+    <None Include="Service References\InstitutionBPersonData\configuration91.svcinfo" />
+    <None Include="Service References\InstitutionBPersonData\configuration.svcinfo" />
+    <None Include="Service References\InstitutionBPersonData\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\FPIOMInsuredStatus\InsuredStatus.wsdl" />
+    <None Include="Service References\FPIOMInsuredStatus\InsuredStatus.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMInsuredStatus\InsuredStatus1.wsdl" />
+    <None Include="Service References\FPIOMInsuredStatus\InsuredStatus1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMRetiredStatus\RetiredStatus.wsdl" />
+    <None Include="Service References\FPIOMRetiredStatus\RetiredStatus.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMRetiredStatus\RetiredStatus1.wsdl" />
+    <None Include="Service References\FPIOMRetiredStatus\RetiredStatus1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMYearsOfWorkExperience\YearsOfWorkExperience.wsdl" />
+    <None Include="Service References\FPIOMYearsOfWorkExperience\YearsOfWorkExperience.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMYearsOfWorkExperience\YearsOfWorkExperience1.wsdl" />
+    <None Include="Service References\FPIOMYearsOfWorkExperience\YearsOfWorkExperience1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FPIOMYearsOfWorkExperience\YearsOfWorkExperience2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GetDocForOUorNPorPP\GetDocForOUorNPorPP.wsdl" />
+    <None Include="Service References\GetDocForOUorNPorPP\GetDocForOUorNPorPP.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GetDocForOUorNPorPP\GetDocForOUorNPorPP1.wsdl" />
+    <None Include="Service References\GetDocForOUorNPorPP\GetDocForOUorNPorPP1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GetDocForOUorNPorPP\GetDocForOUorNPorPP2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InstitutionBNameSurname\EvalNameSurname.wsdl" />
+    <None Include="Service References\InstitutionBNameSurname\EvalNameSurname.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InstitutionBNameSurname\EvalNameSurname1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InstitutionBNameSurname\NameSurname.wsdl" />
+    <None Include="Service References\InstitutionBPersonData\EvalPersonData.wsdl" />
+    <None Include="Service References\InstitutionBPersonData\EvalPersonData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InstitutionBPersonData\EvalPersonData1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InstitutionBPersonData\EvalPersonData2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InstitutionBPersonData\PersonData.wsdl" />
+    <None Include="Service References\MetaServiceReference\MetaService.wsdl" />
+    <None Include="Service References\MetaServiceReference\MetaService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MetaServiceReference\MetaService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MetaServiceReference\MetaService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MetaServiceReference\MetaService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MetaServiceReference\MetaService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MetaServiceReference\MetaService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONBigDataService\BigData.wsdl" />
+    <None Include="Service References\MONBigDataService\BigData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONBigDataService\BigData1.wsdl" />
+    <None Include="Service References\MONBigDataService\BigData1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONBigDataService\BigData2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONDataForRegularStudent\DRegStudent.wsdl" />
+    <None Include="Service References\MONDataForRegularStudent\DRegStudent.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONDataForRegularStudent\DRegStudent1.wsdl" />
+    <None Include="Service References\MONDataForRegularStudent\DRegStudent1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONPotvrdaZaRedovenUcenikTest\DataForRegularStudentTest.wsdl" />
+    <None Include="Service References\MONPotvrdaZaRedovenUcenikTest\DataForRegularStudentTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONPotvrdaZaRedovenUcenikTest\DataForRegularStudentTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONPotvrdaZaRedovenUcenikTest\DataForRegularStudentTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONPotvrdaZaRedovenUcenikTest\DRegStudentTest.wsdl" />
+    <None Include="Service References\MONPotvrdaZaRedovenUcenik\DataForRegularStudent.wsdl" />
+    <None Include="Service References\MONPotvrdaZaRedovenUcenik\DataForRegularStudent.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONPotvrdaZaRedovenUcenik\DataForRegularStudent1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONPotvrdaZaRedovenUcenik\DataForRegularStudent2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONPotvrdaZaRedovenUcenik\DRegStudent.wsdl" />
+    <None Include="Service References\MONStatusForRegularStudent\configuration91.svcinfo" />
+    <None Include="Service References\MONStatusForRegularStudent\configuration.svcinfo" />
+    <None Include="Service References\MONStatusForRegularStudent\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MONDataForRegularStudent\DRegStudent.disco" />
+    <None Include="Service References\MONStatusForRegularStudent\SRegStudent.disco" />
+    <None Include="Service References\MONPotvrdaZaRedovenUcenik\DataForRegularStudent.disco" />
+    <None Include="Service References\MONPotvrdaZaRedovenUcenik\configuration91.svcinfo" />
+    <None Include="Service References\MONPotvrdaZaRedovenUcenik\configuration.svcinfo" />
+    <None Include="Service References\MONPotvrdaZaRedovenUcenik\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MONStatusNaUcenikTest\SRegStudentTest.wsdl" />
+    <None Include="Service References\MONStatusNaUcenikTest\StatusForRegularStudentTest.wsdl" />
+    <None Include="Service References\MONStatusNaUcenikTest\StatusForRegularStudentTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONStatusNaUcenikTest\StatusForRegularStudentTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONStatusNaUcenikTest\StatusForRegularStudentTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONStatusNaUcenik\StatusForRegularStudent.disco" />
+    <None Include="Service References\MONStatusNaUcenik\configuration91.svcinfo" />
+    <None Include="Service References\MONStatusNaUcenik\configuration.svcinfo" />
+    <None Include="Service References\MONStatusNaUcenik\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MONStatusNaUcenikTest\StatusForRegularStudentTest.disco" />
+    <None Include="Service References\MONStatusNaUcenikTest\configuration91.svcinfo" />
+    <None Include="Service References\MONStatusNaUcenikTest\configuration.svcinfo" />
+    <None Include="Service References\MONStatusNaUcenikTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MONPotvrdaZaRedovenUcenikTest\DataForRegularStudentTest.disco" />
+    <None Include="Service References\MONPotvrdaZaRedovenUcenikTest\configuration91.svcinfo" />
+    <None Include="Service References\MONPotvrdaZaRedovenUcenikTest\configuration.svcinfo" />
+    <None Include="Service References\MONPotvrdaZaRedovenUcenikTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MONBigDataService\BigData.disco" />
+    <None Include="Service References\MONBigDataService\configuration91.svcinfo" />
+    <None Include="Service References\MONBigDataService\configuration.svcinfo" />
+    <None Include="Service References\MONBigDataService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MetaServiceReference\MetaService.disco" />
+    <None Include="Service References\MetaServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\MetaServiceReference\configuration.svcinfo" />
+    <None Include="Service References\MetaServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\MZTVConstructionPermitAdapter\Interop.CC.Portal.API.MZTVConstructionPermitAdapter.InteropOutputViewModel.datasource" />
+    <None Include="Service References\MONDataForRegularStudent\configuration91.svcinfo" />
+    <None Include="Service References\MONDataForRegularStudent\configuration.svcinfo" />
+    <None Include="Service References\MONDataForRegularStudent\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\MZTVConstructionPermitAdapter\Interop.CC.Portal.API.MZTVConstructionPermitAdapter.InteropOutputViewModel1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\MONStatusForRegularStudent\SRegStudent.wsdl" />
+    <None Include="Service References\MONStatusForRegularStudent\SRegStudent.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONStatusForRegularStudent\SRegStudent1.wsdl" />
+    <None Include="Service References\MONStatusForRegularStudent\SRegStudent1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONStatusNaUcenik\SRegStudent.wsdl" />
+    <None Include="Service References\MONStatusNaUcenik\StatusForRegularStudent.wsdl" />
+    <None Include="Service References\MONStatusNaUcenik\StatusForRegularStudent.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONStatusNaUcenik\StatusForRegularStudent1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONStatusNaUcenik\StatusForRegularStudent2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MZTVConstructionPermitAdapter\MzTVAdapter.wsdl" />
+    <None Include="Service References\MZTVConstructionPermitAdapter\MzTVAdapter.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MZTVConstructionPermitAdapter\MzTVAdapter1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MZTVConstructionPermitAdapter\MzTVAdapter2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MZTVConstructionPermitAdapter\MzTVAdapter.disco" />
+    <None Include="Service References\MZTVConstructionPermitAdapter\configuration91.svcinfo" />
+    <None Include="Service References\MZTVConstructionPermitAdapter\configuration.svcinfo" />
+    <None Include="Service References\MZTVConstructionPermitAdapter\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TestServiceMIOA\ServiceMioa.wsdl" />
+    <None Include="Service References\TestServiceMIOA\ServiceMioa.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TestServiceMIOA\ServiceMioa1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TestServiceMIOA\TestServiceMioa.wsdl" />
+    <None Include="Service References\TestServiceMIOA\ServiceMioa.disco" />
+    <None Include="Service References\TestServiceMIOA\configuration91.svcinfo" />
+    <None Include="Service References\TestServiceMIOA\configuration.svcinfo" />
+    <None Include="Service References\TestServiceMIOA\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UJPBondsData\configuration91.svcinfo" />
+    <None Include="Service References\UJPBondsData\configuration.svcinfo" />
+    <None Include="Service References\UJPBondsData\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\UJPDataForAnnualRevenues\Interop.CC.Portal.API.UJPDataForAnnualRevenues.AnnualRevenuesFZOOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UJPDataForAnnualRevenues\Interop.CC.Portal.API.UJPDataForAnnualRevenues.AnnualRevenuesKKKSOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UJPDataForAnnualRevenues\Interop.CC.Portal.API.UJPDataForAnnualRevenues.AnnualRevenuesMONOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UJPDataForAnnualRevenues\Interop.CC.Portal.API.UJPDataForAnnualRevenues.AnnualRevenuesMTSPOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\UJPBondsData\BondsData.wsdl" />
+    <None Include="Service References\UJPDataForAnnualRevenues\DataAnnRev.wsdl" />
+    <None Include="Service References\UJPDataPContr\DataPContr.wsdl" />
+    <None Include="Service References\UJPDataUnpContr\DataUnpContr.wsdl" />
+    <None Include="Service References\UJPEDB_EMB\configuration91.svcinfo" />
+    <None Include="Service References\UJPEDB_EMB\configuration.svcinfo" />
+    <None Include="Service References\UJPDataForAnnualRevenues\configuration91.svcinfo" />
+    <None Include="Service References\UJPDataForAnnualRevenues\configuration.svcinfo" />
+    <None Include="Service References\UJPDataForAnnualRevenues\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UJPDataPContr\configuration91.svcinfo" />
+    <None Include="Service References\UJPDataPContr\configuration.svcinfo" />
+    <None Include="Service References\UJPDataPContr\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UJPDataUnpContr\configuration91.svcinfo" />
+    <None Include="Service References\UJPDataUnpContr\configuration.svcinfo" />
+    <None Include="Service References\UJPDataUnpContr\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\UJPEDB_EMB\Interop.CC.Portal.API.UJPEDB_EMB.EDB_EMB_Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\UJPEDB_EMB\EDB_EMB.wsdl" />
+    <None Include="Service References\UJPEDB_EMB\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UJPEdinstvenDanocenBrojTest\DataForEDBTest.wsdl" />
+    <None Include="Service References\UJPEdinstvenDanocenBrojTest\DataForEDBTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPEdinstvenDanocenBrojTest\DataForEDBTest1.wsdl" />
+    <None Include="Service References\UJPEdinstvenDanocenBrojTest\DataForEDBTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPEdinstvenDanocenBrojTest\DataForEDBTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPEdinstvenDanocenBrojTest\DataForEDBTest3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPEdinstvenDanocenBroj\Contracts.DataAccessLibrary.InteropFault.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPEdinstvenDanocenBroj\Contracts.Models.DataFor_EDB_EMB.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPEdinstvenDanocenBroj\DataForEDB.disco" />
+    <None Include="Service References\UJPEdinstvenDanocenBrojTest\DataForEDBTest.disco" />
+    <None Include="Service References\UJPEdinstvenDanocenBrojTest\configuration91.svcinfo" />
+    <None Include="Service References\UJPEdinstvenDanocenBrojTest\configuration.svcinfo" />
+    <None Include="Service References\UJPEdinstvenDanocenBrojTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\UJPEdinstvenDanocenBroj\Interop.CC.Portal.API.UJPEdinstvenDanocenBroj.EDB_EMB_Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\UJPEdinstvenDanocenBroj\DataForEDB.wsdl" />
+    <None Include="Service References\UJPEdinstvenDanocenBroj\DataForEDB.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPEdinstvenDanocenBroj\DataForEDB1.wsdl" />
+    <None Include="Service References\UJPEdinstvenDanocenBroj\DataForEDB1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPEdinstvenDanocenBroj\DataForEDB2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPEdinstvenDanocenBroj\DataForEDB3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPEdinstvenDanocenBroj\interop.org.wsdl" />
+    <None Include="Service References\UJPEdinstvenDanocenBroj\interop.org.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPEdinstvenDanocenBroj\service.wsdl" />
+    <None Include="Service References\UJPEdinstvenDanocenBroj\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPEdinstvenMaticenBrojTest\DataForEMBTest.wsdl" />
+    <None Include="Service References\UJPEdinstvenMaticenBrojTest\DataForEMBTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPEdinstvenMaticenBrojTest\DataForEMBTest1.wsdl" />
+    <None Include="Service References\UJPEdinstvenMaticenBrojTest\DataForEMBTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPEdinstvenMaticenBrojTest\DataForEMBTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPEdinstvenMaticenBrojTest\DataForEMBTest3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\UJPEdinstvenMaticenBrojTest\Interop.CC.Portal.API.UJPEdinstvenMaticenBrojTest.EDB_EMB_Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\UJPEdinstvenMaticenBroj\DataForEMB.disco" />
+    <None Include="Service References\UJPEdinstvenMaticenBroj\configuration91.svcinfo" />
+    <None Include="Service References\UJPEdinstvenMaticenBroj\configuration.svcinfo" />
+    <None Include="Service References\UJPEdinstvenDanocenBroj\configuration91.svcinfo" />
+    <None Include="Service References\UJPEdinstvenDanocenBroj\configuration.svcinfo" />
+    <None Include="Service References\UJPEdinstvenDanocenBroj\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UJPEdinstvenMaticenBrojTest\DataForEMBTest.disco" />
+    <None Include="Service References\UJPEdinstvenMaticenBrojTest\configuration91.svcinfo" />
+    <None Include="Service References\UJPEdinstvenMaticenBrojTest\configuration.svcinfo" />
+    <None Include="Service References\UJPEdinstvenMaticenBrojTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\UJPEdinstvenMaticenBroj\Interop.CC.Portal.API.UJPEdinstvenMaticenBroj.EDB_EMB_Output.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\UJPEdinstvenMaticenBroj\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\UJPRegistarNaObvrzniciZaAkcizaTest\Interop.CC.Portal.API.UJPRegistarNaObvrzniciZaAkcizaTest.ExciseBondsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\UJPRegistarNaObvrzniciZaAkcizaTest\RegExcBondsTest.disco" />
+    <None Include="Service References\UJPRegistarNaObvrzniciZaAkcizaTest\configuration91.svcinfo" />
+    <None Include="Service References\UJPRegistarNaObvrzniciZaAkcizaTest\configuration.svcinfo" />
+    <None Include="Service References\UJPRegistarNaObvrzniciZaAkcizaTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\UJPRegistarNaObvrzniciZaAkciza\Interop.CC.Portal.API.UJPRegistarNaObvrzniciZaAkciza.ExciseBondsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\UJPRegistarNaObvrzniciZaAkciza\RegExcBonds.disco" />
+    <None Include="Service References\UJPRegistarNaObvrzniciZaAkciza\configuration91.svcinfo" />
+    <None Include="Service References\UJPRegistarNaObvrzniciZaAkciza\configuration.svcinfo" />
+    <None Include="Service References\UJPRegistarNaObvrzniciZaAkciza\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\UJPRegisterOfExciseBonds\Interop.CC.Portal.API.UJPRegisterOfExciseBonds.ExciseBondsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\UJPEdinstvenMaticenBroj\DataForEMB.wsdl" />
+    <None Include="Service References\UJPEdinstvenMaticenBroj\DataForEMB.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPEdinstvenMaticenBroj\DataForEMB1.wsdl" />
+    <None Include="Service References\UJPEdinstvenMaticenBroj\DataForEMB1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPEdinstvenMaticenBroj\DataForEMB2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPEdinstvenMaticenBroj\DataForEMB3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPRegistarNaObvrzniciZaAkcizaTest\RegExcBondsTest.wsdl" />
+    <None Include="Service References\UJPRegistarNaObvrzniciZaAkcizaTest\RegExcBondsTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPRegistarNaObvrzniciZaAkcizaTest\RegExcBondsTest1.wsdl" />
+    <None Include="Service References\UJPRegistarNaObvrzniciZaAkcizaTest\RegExcBondsTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPRegistarNaObvrzniciZaAkcizaTest\RegExcBondsTest2.wsdl" />
+    <None Include="Service References\UJPRegistarNaObvrzniciZaAkcizaTest\RegExcBondsTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPRegistarNaObvrzniciZaAkcizaTest\RegExcBondsTest3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPRegistarNaObvrzniciZaAkciza\RegExcBonds.wsdl" />
+    <None Include="Service References\UJPRegistarNaObvrzniciZaAkciza\RegExcBonds.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPRegistarNaObvrzniciZaAkciza\RegExcBonds1.wsdl" />
+    <None Include="Service References\UJPRegistarNaObvrzniciZaAkciza\RegExcBonds1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPRegistarNaObvrzniciZaAkciza\RegExcBonds2.wsdl" />
+    <None Include="Service References\UJPRegistarNaObvrzniciZaAkciza\RegExcBonds2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPRegistarNaObvrzniciZaAkciza\RegExcBonds3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UJPRegisterOfExciseBonds\configuration91.svcinfo" />
+    <None Include="Service References\UJPRegisterOfExciseBonds\configuration.svcinfo" />
+    <None Include="Service References\UJPRegisterOfExciseBonds\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Template\grbMak.jpg" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Template\PrintMessageLogs.cshtml" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Template\PrintSoapFaults.cshtml" />
+    <Content Include="Views\Template\PrintDataForEnsuree.cshtml" />
+    <Content Include="Views\Template\PrintDataForRegularStudent.cshtml" />
+    <Content Include="Views\Template\PrintDataForRetired.cshtml" />
+    <Content Include="Views\Template\PrintYearsOfExperience.cshtml" />
+    <Content Include="Views\Template\PrintDataForConstructionPermit.cshtml" />
+    <None Include="Service References\UJPRegisterOfExciseBonds\RegExcBonds.wsdl" />
+    <Content Include="Views\Template\PrintDataExport.cshtml" />
+    <Content Include="Views\Template\PrintDataImport.cshtml" />
+    <Content Include="Views\Template\PrintSingleDocument.cshtml" />
+    <Content Include="Views\Template\PrintEDB.cshtml" />
+    <Content Include="Views\Template\PrintEMB.cshtml" />
+    <Content Include="Views\Template\PrintFZO.cshtml" />
+    <Content Include="Views\Template\PrintMON.cshtml" />
+    <Content Include="Views\Template\PrintMTSP.cshtml" />
+    <Content Include="Views\Template\PrintRegistar.cshtml" />
+    <Content Include="Views\Template\PrintPropertyList.cshtml" />
+    <Content Include="Views\Template\PrintCadastralParcel.cshtml" />
+    <Content Include="Views\Template\PrintTekovnaSostojba.cshtml" />
+    <Content Include="Views\Template\PrintTekovnaSostojbaUJP.cshtml" />
+    <Content Include="Views\Template\PrintTekovnaSostojbaCURM.cshtml" />
+    <Content Include="Views\Template\PrintTekovnaSostojbaCURMProduc.cshtml" />
+    <Content Include="Web References\MzTVOdobrenieGradbaDozvolaBezAdapter\InteropOutputViewModel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Views\Template\PrintTekovnaSostojbaAKN.cshtml" />
+    <None Include="Web References\MzTVOdobrenieGradbaDozvolaBezAdapter\MzTVService.wsdl" />
+    <Content Include="Web References\MzTVOdobrenieGradbaDozvolaBezAdapter\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web.AKN.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.PIOM.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Interop.CC.CrossCutting\Interop.CC.CrossCutting.csproj">
+      <Project>{bc0d59f5-0bd5-4723-b76d-59e4c47607bf}</Project>
+      <Name>Interop.CC.CrossCutting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interop.CC.Models\Interop.CC.Models.csproj">
+      <Project>{E5808CF1-8263-4F3B-84BA-BAB317628CFE}</Project>
+      <Name>Interop.CC.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AKNCPlanDocProduction\" />
+    <WCFMetadataStorage Include="Service References\AKNCPlanDoc\" />
+    <WCFMetadataStorage Include="Service References\AKNDataForIFDocProduction\" />
+    <WCFMetadataStorage Include="Service References\AKNDataForIFDoc\" />
+    <WCFMetadataStorage Include="Service References\AKNImotenListDokumentTest\" />
+    <WCFMetadataStorage Include="Service References\AKNImotenListDokument\" />
+    <WCFMetadataStorage Include="Service References\AKNImotenListTest\" />
+    <WCFMetadataStorage Include="Service References\AKNImotenList\" />
+    <WCFMetadataStorage Include="Service References\AKNKatastarskaParcelaDokumentTest\" />
+    <WCFMetadataStorage Include="Service References\AKNKatastarskaParcelaDokument\" />
+    <WCFMetadataStorage Include="Service References\AKNKatastarskaParcelaTest\" />
+    <WCFMetadataStorage Include="Service References\AKNKatastarskaParcela\" />
+    <WCFMetadataStorage Include="Service References\AKNMunicipalityService\" />
+    <WCFMetadataStorage Include="Service References\AKNOpshtini\" />
+    <WCFMetadataStorage Include="Service References\AKNPListDocProduction\" />
+    <WCFMetadataStorage Include="Service References\AKNPListDoc\" />
+    <WCFMetadataStorage Include="Service References\AKNPodatociZaInfraObjektiTest\" />
+    <WCFMetadataStorage Include="Service References\AKNPodatociZaInfraObjekti\" />
+    <WCFMetadataStorage Include="Service References\AKNPropertyListCadastralParcelAdapter\" />
+    <WCFMetadataStorage Include="Service References\CRMListaNaPromeniTest\" />
+    <WCFMetadataStorage Include="Service References\CRMListaNaPromeni\" />
+    <WCFMetadataStorage Include="Service References\CRMListaPosebenInteresTest\" />
+    <WCFMetadataStorage Include="Service References\CRMTekovnaSostojbaAKNTest\" />
+    <WCFMetadataStorage Include="Service References\CRMTekovnaSostojbaAKN\" />
+    <WCFMetadataStorage Include="Service References\CRMTekovnaSostojbaCURMTest\" />
+    <WCFMetadataStorage Include="Service References\CRMTekovnaSostojbaCURM\" />
+    <WCFMetadataStorage Include="Service References\CRMTekovnaSostojbaTest\" />
+    <WCFMetadataStorage Include="Service References\CRMTekovnaSostojbaUJPTest\" />
+    <WCFMetadataStorage Include="Service References\CRMTekovnaSostojbaUJP\" />
+    <WCFMetadataStorage Include="Service References\CRMTekovnaSostojba\" />
+    <WCFMetadataStorage Include="Service References\CRM_TS_AKN\" />
+    <WCFMetadataStorage Include="Service References\CRM_TS_AKN_Test\" />
+    <WCFMetadataStorage Include="Service References\CRM_TS_CURM\" />
+    <WCFMetadataStorage Include="Service References\CRM_TS_CURM_Test\" />
+    <WCFMetadataStorage Include="Service References\CRM_TS_UJP\" />
+    <WCFMetadataStorage Include="Service References\CRM_TS_UJP_Test\" />
+    <WCFMetadataStorage Include="Service References\CURMDataForExecutedExport\" />
+    <WCFMetadataStorage Include="Service References\CURMDataForExecutedImport\" />
+    <WCFMetadataStorage Include="Service References\CURMEdinstvenCarinskiDokumentTest\" />
+    <WCFMetadataStorage Include="Service References\CURMEdinstvenCarinskiDokument\" />
+    <WCFMetadataStorage Include="Service References\CURMPodatociZaIzvozTest\" />
+    <WCFMetadataStorage Include="Service References\CURMPodatociZaIzvoz\" />
+    <WCFMetadataStorage Include="Service References\CURMPodatociZaUvozTest\" />
+    <WCFMetadataStorage Include="Service References\CURMPodatociZaUvoz\" />
+    <WCFMetadataStorage Include="Service References\CURMSingleCustomsDocument\" />
+    <WCFMetadataStorage Include="Service References\FPIOMInsuredStatus\" />
+    <WCFMetadataStorage Include="Service References\FPIOMInsuredRetiredAdapter\" />
+    <WCFMetadataStorage Include="Service References\FPIOMPodatociOsigurenikTest\" />
+    <WCFMetadataStorage Include="Service References\FPIOMPodatociOsigurenik\" />
+    <WCFMetadataStorage Include="Service References\FPIOMPodatociPenzionerTest\" />
+    <WCFMetadataStorage Include="Service References\FPIOMPodatociPenzioner\" />
+    <WCFMetadataStorage Include="Service References\FPIOMRabotnoIskustvoTest\" />
+    <WCFMetadataStorage Include="Service References\FPIOMRabotnoIskustvo\" />
+    <WCFMetadataStorage Include="Service References\FPIOMRetiredStatus\" />
+    <WCFMetadataStorage Include="Service References\FPIOMStatusOsigurenikTest\" />
+    <WCFMetadataStorage Include="Service References\FPIOMStatusOsigurenik\" />
+    <WCFMetadataStorage Include="Service References\FPIOMStatusPenzionerTest\" />
+    <WCFMetadataStorage Include="Service References\FPIOMStatusPenzioner\" />
+    <WCFMetadataStorage Include="Service References\FPIOMYearsOfWorkExperience\" />
+    <WCFMetadataStorage Include="Service References\GetDocForOUorNPorPP\" />
+    <WCFMetadataStorage Include="Service References\InstitutionBNameSurname\" />
+    <WCFMetadataStorage Include="Service References\InstitutionBPersonData\" />
+    <WCFMetadataStorage Include="Service References\MetaServiceReference\" />
+    <WCFMetadataStorage Include="Service References\MONBigDataService\" />
+    <WCFMetadataStorage Include="Service References\MONDataForRegularStudent\" />
+    <WCFMetadataStorage Include="Service References\MONPotvrdaZaRedovenUcenikTest\" />
+    <WCFMetadataStorage Include="Service References\MONPotvrdaZaRedovenUcenik\" />
+    <WCFMetadataStorage Include="Service References\MONStatusForRegularStudent\" />
+    <WCFMetadataStorage Include="Service References\MONStatusNaUcenikTest\" />
+    <WCFMetadataStorage Include="Service References\MONStatusNaUcenik\" />
+    <WCFMetadataStorage Include="Service References\MZTVConstructionPermitAdapter\" />
+    <WCFMetadataStorage Include="Service References\TestServiceMIOA\" />
+    <WCFMetadataStorage Include="Service References\UJPBondsData\" />
+    <WCFMetadataStorage Include="Service References\UJPDataForAnnualRevenues\" />
+    <WCFMetadataStorage Include="Service References\UJPDataPContr\" />
+    <WCFMetadataStorage Include="Service References\UJPDataUnpContr\" />
+    <WCFMetadataStorage Include="Service References\UJPEDB_EMB\" />
+    <WCFMetadataStorage Include="Service References\UJPEdinstvenDanocenBrojTest\" />
+    <WCFMetadataStorage Include="Service References\UJPEdinstvenDanocenBroj\" />
+    <WCFMetadataStorage Include="Service References\UJPEdinstvenMaticenBrojTest\" />
+    <WCFMetadataStorage Include="Service References\UJPEdinstvenMaticenBroj\" />
+    <WCFMetadataStorage Include="Service References\UJPRegistarNaObvrzniciZaAkcizaTest\" />
+    <WCFMetadataStorage Include="Service References\UJPRegistarNaObvrzniciZaAkciza\" />
+    <WCFMetadataStorage Include="Service References\UJPRegisterOfExciseBonds\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="D:\MzTVService.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MzTVOdobrenieGradbaDozvolaBezAdapter\</RelPath>
+      <UpdateFromURL>D:\MzTVService.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Interop_CC_Portal_API_MzTVOdobrenieGradbaDozvolaBezAdapter_InteropWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'AKN|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PIOM|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>18774</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Interop.CC.Portal.API</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

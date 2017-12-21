@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2B778A5B-CBA2-446B-A3D8-0ACB9F90A8B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InteropServices.CURM</RootNamespace>
+    <AssemblyName>InteropServices.CURM</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Npgsql">
+      <HintPath>..\packages\Npgsql.3.1.0-alpha5\lib\net45\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.2400\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Implementations\SingleCustomsDocument\CustomsOfficeNumbers.cs" />
+    <Compile Include="Implementations\DataForExecutedExport\DataExeExp.cs" />
+    <Compile Include="Implementations\DataForExecutedExport\ExecutedExportOutput.cs" />
+    <Compile Include="Implementations\DataForExecutedImport\DataExeImp.cs" />
+    <Compile Include="Implementations\DataForExecutedExport\ExecutedExportInput.cs" />
+    <Compile Include="Implementations\DataForExecutedImport\ExecutedImportInput.cs" />
+    <Compile Include="Implementations\DataForExecutedImport\ExecutedImportOutput.cs" />
+    <Compile Include="Implementations\SingleCustomsDocument\ObjectGeneratorHelper.cs" />
+    <Compile Include="Implementations\SingleCustomsDocument\SCDExporterData.cs" />
+    <Compile Include="Implementations\SingleCustomsDocument\SCDGeneralData.cs" />
+    <Compile Include="Implementations\SingleCustomsDocument\SCDImporterData.cs" />
+    <Compile Include="Implementations\SingleCustomsDocument\SCDItemData.cs" />
+    <Compile Include="Implementations\SingleCustomsDocument\SingleCustomsDocumentOutput.cs" />
+    <Compile Include="Implementations\SingleCustomsDocument\SingleCustDoc.cs" />
+    <Compile Include="Interfaces\DataForExecutedExport\IDataExeExp.cs" />
+    <Compile Include="Interfaces\DataForExecutedImport\IDataExeImp.cs" />
+    <Compile Include="Interfaces\SingleCustomsDocument\ISingleCustDoc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

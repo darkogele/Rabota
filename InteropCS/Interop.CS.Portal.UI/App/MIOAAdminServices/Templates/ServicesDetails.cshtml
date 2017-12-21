@@ -1,0 +1,203 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+<h2><i class="fa fa-user"></i> Детали за Административен податок</h2>
+
+<hr ng-if="authentication.isAuth && authentication.permision">
+<div ng-if="authentication.isAuth && authentication.permision" class="row">
+
+</div>
+<hr>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th ng-click="sort('id')" style="cursor:pointer;">
+                            <u>
+                                Реден број
+                            </u>
+                            <span ng-show="sortCol == 'id' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'id' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+                        <th ng-click="sort('changeDate')" style="cursor:pointer;">
+                            <u>
+                                Датум на промена
+                            </u>
+                            <span ng-show="sortCol == 'changeDate' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'changeDate' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+                        <th ng-click="sort('userName')" style="cursor:pointer;">
+                            <u>
+                                Корисник
+                            </u>
+                            <span ng-show="sortCol == 'userName' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'userName' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+                        <th ng-click="sort('itemNumber')" style="cursor:pointer;">
+                            <u>
+                                Реден број
+                            </u>
+                            <span ng-show="sortCol == 'itemNumber' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'itemNumber' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+                        <th ng-click="sort('dateReceived')" style="cursor:pointer;">
+                            <u>
+                                Датум на прием
+                            </u>
+                            <span ng-show="sortCol == 'dateReceived' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'dateReceived' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+                        <th ng-click="sort('applicantNameAddress')" style="cursor:pointer;">
+                            <u>
+                                Назив и седиште на подносител
+                            </u>
+                            <span ng-show="sortCol == 'applicantNameAddress' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'applicantNameAddress' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+                        <th ng-click="sort('administrativeServiceName')" style="cursor:pointer;">
+                            <u>
+                                Назив на Административната Услуга
+                            </u>
+                            <span ng-show="sortCol == 'administrativeServiceName' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'administrativeServiceName' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+                        <th ng-click="sort('administrativeServiceDesc')" style="cursor:pointer;">
+                            <u>
+                                Опис на Административната Услуга
+                            </u>
+                            <span ng-show="sortCol == 'administrativeServiceDesc' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'administrativeServiceDesc' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+                        <th ng-click="sort('legislationForAdminService')" style="cursor:pointer;">
+                            <u>
+                                Правна регулатива за услугата
+                            </u>
+                            <span ng-show="sortCol == 'legislationForAdminService' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'legislationForAdminService' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+                        <th ng-click="sort('legislationForAdminServicePayment')" style="cursor:pointer;">
+                            <u>
+                                Правна регулатива за надоместокот за услугата
+                            </u>
+                            <span ng-show="sortCol == 'legislationForAdminServicePayment' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'legislationForAdminServicePayment' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+                        <th ng-click="sort('аdminServicePaymentAmount')" style="cursor:pointer;">
+                            <u>
+                                Висина на надоместокот за услугата
+                            </u>
+                            <span ng-show="sortCol == 'аdminServicePaymentAmount' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'аdminServicePaymentAmount' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+                        <th ng-click="sort('adminServiceSubmissionLeagalDeadline')" style="cursor:pointer;">
+                            <u>
+                                Законски рок за доставување на услугата
+                            </u>
+                            <span ng-show="sortCol == 'adminServiceSubmissionLeagalDeadline' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'adminServiceSubmissionLeagalDeadline' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+                        <th ng-click="sort('deliveringSpecialFormData')" style="cursor:pointer;">
+                            <u>
+                                Податок за потребата од посебен образец
+                            </u>
+                            <span ng-show="sortCol == 'deliveringSpecialFormData' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'deliveringSpecialFormData' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+                        <th ng-click="sort('previousSubmittedDocDependencyData')" style="cursor:pointer;">
+                            <u>
+                                Податок за зависност од претходно доставен документ
+                            </u>
+                            <span ng-show="sortCol == 'previousSubmittedDocDependencyData' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'previousSubmittedDocDependencyData' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+
+                        <th ng-click="sort('electronicDBTypeVersion')" style="cursor:pointer;">
+                            <u>
+                                Тип и верзија на база на податоци
+                            </u>
+                            <span ng-show="sortCol == 'electronicDBTypeVersion' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'electronicDBTypeVersion' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+
+                        <th ng-click="sort('authorizedPersonData')" style="cursor:pointer;">
+                            <u>
+                                Податоци за овластеното лице
+                            </u>
+                            <span ng-show="sortCol == 'authorizedPersonData' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'authorizedPersonData' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+                        <th ng-click="sort('note')" style="cursor:pointer;">
+                            <u>
+                                Забелешка
+                            </u>
+                            <span ng-show="sortCol == 'note' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'note' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+                        <th ng-click="sort('optionalField1')" style="cursor:pointer;">
+                            <u>
+                                Опционална колона 1
+                            </u>
+                            <span ng-show="sortCol == 'optionalField1' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'optionalField1' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+                        <th ng-click="sort('optionalField2')" style="cursor:pointer;">
+                            <u>
+                                Опционална колона 2
+                            </u>
+                            <span ng-show="sortCol == 'optionalField2' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'optionalField2' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="log in logs  | orderBy : sortType : sortReverse" ng-class="{'selected': $index==selectedRow}" ng-click="setClickedRow($index)">
+                        <td>{{log.id}}</td>
+                        <td>{{log.changeDate}}</td>
+                        <td>{{log.userName}}</td>
+                        <td>{{log.itemNumber}}</td>
+                        <td>{{log.dateReceived}}</td>
+                        <td>{{log.applicantNameAddress}}</td>
+                        <td>{{log.administrativeServiceName}}</td>
+                        <td>{{log.administrativeServiceDesc}}</td>
+                        <td>{{log.legislationForAdminService}}</td>
+                        <td>{{log.legislationForAdminServicePayment}}</td>
+                        <td>{{log.adminServicePaymentAmount}}</td>
+                        <td>{{log.adminServiceSubmissionLeagalDeadline}}</td>
+                        <td>{{log.deliveringSpecialFormData}}</td>
+                        <td>{{log.previousSubmittedDocDependencyData}}</td>
+                        <td>{{log.electronicDBTypeVersion}}</td>
+                        <td>{{log.authorizedPersonData}}</td>
+                        <td>{{log.note}}</td>
+                        <td>{{log.optionalField1}}</td>
+                        <td>{{log.optionalField2}}</td>
+
+                        @*<td class="text-center"><a ui-sref="edituserinter({id:user.userId})" class="btn btn-xs btn-primary"><i class="fa fa-pencil-square-o"></i> Измени</a></td>
+                            <td class="text-center"><a ui-sref="detailrecords({id:record.id})" class="btn btn-xs btn-primary"><i class="fa fa-pencil-square-o"></i> Измениiiii</a></td>
+
+                            @*<td class="text-center" ng-if="authentication.isAuth && authentication.permision">
+                                                        <button class="btn btn-info btn-xs" ui-sref="detailrecords({id:record.id})"><i class="fa fa-times"></i> Детали </button>
+                                </td>*@
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="pull-left">
+            <div pagination total-items="totalSize" ng-show="totalSize != 0" items-per-page="pageSize" ng-model="pageIndex" class="pagination-sm" ng-change="pageChangeHandler(pageIndex)"></div>
+        </div>
+        <div class="pull-left">
+            <select class="form-control" ng-show="totalSize != 0" name="servicesPerPage" ng-model="itemsPerPage" ng-change="pageSizeChanged(itemsPerPage)" style="margin: 18px 30px;"
+                    ng-options="item.itemId as item.itemName for item in itemsPage"></select>
+        </div>
+        <div ng-show="totalSize != 0" class="pull-right">
+            <strong>Вкупен број на записи: {{totalSize}}</strong>
+        </div>
+    </div>
+    <div class="col-md-12 alert alert-warning" ng-show="totalSize == 0">
+        <strong>Нема податоци</strong>
+    </div>
+</div>

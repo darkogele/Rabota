@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html ng-app="AngularApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/angular-material.css" rel="stylesheet" />
+    <link href="~/Content/angular-material.layout-attributes.css" rel="stylesheet" />
+    <link href="~/Content/angular-material.layouts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+</head>
+<body>
+    <div class="loading-spiner-holder" data-loading>
+        <div class="loading-spiner">
+        </div>
+    </div>
+    <div class="container body-content" style="padding-top: 30px; padding-bottom: 30px">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p style="color: grey">&copy; @DateTime.Now.Year - </p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/angular.js"></script>
+    @*<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>*@
+    <script>
+        var app = angular.module("AngularApp", ['ngMessages']);
+        app.constant('apiUrl', '@System.Configuration.ConfigurationManager.AppSettings["ApiUrl"]');
+    </script>
+    <script src="~/Scripts/App/app.js"></script>
+    <script src="~/Scripts/App/Service.js"></script>
+    <script src="~/Scripts/App/Controller.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

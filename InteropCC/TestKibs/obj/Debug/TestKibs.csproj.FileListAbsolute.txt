@@ -1,0 +1,17 @@
+D:\Work\InteropCC\TestKibs\bin\Debug\NLog.config
+D:\Work\InteropCC\TestKibs\bin\Debug\Files\10Mb.txt
+D:\Work\InteropCC\TestKibs\bin\Debug\Files\1Mb.txt
+D:\Work\InteropCC\TestKibs\bin\Debug\TestKibs.exe.config
+D:\Work\InteropCC\TestKibs\bin\Debug\TestKibs.exe
+D:\Work\InteropCC\TestKibs\bin\Debug\TestKibs.pdb
+D:\Work\InteropCC\TestKibs\bin\Debug\Interop.CC.CrossCutting.dll
+D:\Work\InteropCC\TestKibs\bin\Debug\KIBS.dll
+D:\Work\InteropCC\TestKibs\bin\Debug\NLog.dll
+D:\Work\InteropCC\TestKibs\bin\Debug\BouncyCastle.Crypto.dll
+D:\Work\InteropCC\TestKibs\bin\Debug\Interop.CC.CrossCutting.pdb
+D:\Work\InteropCC\TestKibs\bin\Debug\KIBS.pdb
+D:\Work\InteropCC\TestKibs\bin\Debug\NLog.xml
+D:\Work\InteropCC\TestKibs\bin\Debug\BouncyCastle.Crypto.pdb
+D:\Work\InteropCC\TestKibs\obj\Debug\TestKibs.csprojResolveAssemblyReference.cache
+D:\Work\InteropCC\TestKibs\obj\Debug\TestKibs.exe
+D:\Work\InteropCC\TestKibs\obj\Debug\TestKibs.pdb

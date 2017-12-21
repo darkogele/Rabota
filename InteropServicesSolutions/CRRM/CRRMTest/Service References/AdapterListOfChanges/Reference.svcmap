@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="adad0d6d-bd06-4d14-9997-624679f8be04" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AdapterServiceCRM.Host/ListOfChangesCU.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ListOfChangesCU.disco" MetadataType="Disco" ID="c0bb646e-b186-4378-9e3d-58d4de954055" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/ListOfChangesCU.svc?disco" />
+    <MetadataFile FileName="ListOfChangesCU.xsd" MetadataType="Schema" ID="78bddd85-b9e0-41ac-a5c1-ffe66c62e33e" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/ListOfChangesCU.svc?xsd=xsd1" />
+    <MetadataFile FileName="ListOfChangesCU1.xsd" MetadataType="Schema" ID="52da909b-d192-4fb7-933b-682ea6b3058b" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/ListOfChangesCU.svc?xsd=xsd0" />
+    <MetadataFile FileName="ListOfChangesCU.wsdl" MetadataType="Wsdl" ID="8e5892f4-a230-4c39-96c4-23741f2d84cd" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/ListOfChangesCU.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ListOfChangesCU1.wsdl" MetadataType="Wsdl" ID="2b96dd11-5ec4-4b50-966d-a1ac1c1f21c8" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/ListOfChangesCU.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

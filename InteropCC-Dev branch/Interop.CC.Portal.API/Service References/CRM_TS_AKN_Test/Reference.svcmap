@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6d85511d-12a9-44ea-a579-5d26215c7039" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AdapterServiceCRM.Host/Test_CRM_TS_AKN.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Test_CRM_TS_AKN.disco" MetadataType="Disco" ID="1bab75e3-c13c-494c-8b3e-11bc9085e1d8" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/Test_CRM_TS_AKN.svc?disco" />
+    <MetadataFile FileName="Test_TS_AKN.wsdl" MetadataType="Wsdl" ID="60b44d93-a3ab-4726-9abf-4796d6a77e58" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/Test_CRM_TS_AKN.svc?wsdl" />
+    <MetadataFile FileName="Test_CRM_TS_AKN.xsd" MetadataType="Schema" ID="9c8feab1-961a-415a-97d7-b857e19f704f" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/Test_CRM_TS_AKN.svc?xsd=xsd0" />
+    <MetadataFile FileName="Test_CRM_TS_AKN.wsdl" MetadataType="Wsdl" ID="962990c4-b623-4751-8ecb-7479d4685c99" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/Test_CRM_TS_AKN.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="Test_CRM_TS_AKN1.xsd" MetadataType="Schema" ID="641e150a-fbe7-4699-a373-006a5d6ec3fe" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/Test_CRM_TS_AKN.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

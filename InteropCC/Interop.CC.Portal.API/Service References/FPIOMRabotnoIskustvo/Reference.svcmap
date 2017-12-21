@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="31342c98-4005-47c6-ac26-9397b08d6e79" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/FPIOMServicesProd.Host/YearsOfWorkExperience.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="YearsOfWorkExperience.wsdl" MetadataType="Wsdl" ID="ada9d75a-3fe3-4632-a571-49995d5b0630" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/YearsOfWorkExperience.svc?wsdl" />
+    <MetadataFile FileName="YearsOfWorkExperience.xsd" MetadataType="Schema" ID="ef996cc8-8d89-4805-b596-49a52d19f49a" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/YearsOfWorkExperience.svc?xsd=xsd3" />
+    <MetadataFile FileName="YearsOfWorkExperience1.xsd" MetadataType="Schema" ID="6b9f7df3-7726-402d-aa53-7cf799b771b5" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/YearsOfWorkExperience.svc?xsd=xsd0" />
+    <MetadataFile FileName="YearsOfWorkExperience2.xsd" MetadataType="Schema" ID="be28fed7-2ce2-4b53-af76-d815334b31c2" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/YearsOfWorkExperience.svc?xsd=xsd1" />
+    <MetadataFile FileName="YearsOfWorkExperience3.xsd" MetadataType="Schema" ID="a3e05f38-7a1f-4375-840c-3d30db1a7ef8" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/YearsOfWorkExperience.svc?xsd=xsd2" />
+    <MetadataFile FileName="YearsOfWorkExperience.disco" MetadataType="Disco" ID="746cccc0-b851-4103-8faa-2a3f73277fef" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/YearsOfWorkExperience.svc?disco" />
+    <MetadataFile FileName="YearsOfWorkExperience1.wsdl" MetadataType="Wsdl" ID="a551c9e0-ee3b-4e80-a3fd-5af118419484" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/YearsOfWorkExperience.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

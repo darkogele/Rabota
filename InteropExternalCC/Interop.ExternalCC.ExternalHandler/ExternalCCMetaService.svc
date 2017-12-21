@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Interop.ExternalCC.MetaService.ExternalCCMetaService" Factory="Ninject.Extensions.Wcf.NinjectServiceHostFactory" %>

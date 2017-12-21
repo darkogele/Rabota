@@ -1,0 +1,18 @@
+﻿using Interop.ExternalCC.CrossCutting.Logging;
+using Interop.ExternalCC.HandlersHelper.Contracts;
+using Interop.ExternalCC.HandlersHelper.HelperMethods;
+using Ninject.Modules;
+namespace Interop.ExternalCC.ExternalHandler.Ninject
+{
+    public class RegisterNinjectModule : NinjectModule
+    {
+        public override void Load()
+        {
+            //Injects the constructors of all DI-ed objects 
+            //with a LinqToSQL implementation of IRepository
+            Bind<IExternalCCRequestHelper>().To<ExternalCCRequestHelper>();
+            Bind<IRequestExtensionMethods>().To<RequestExtensionMethods>();
+            Bind<ILogger>().To<NLogger>();
+        }
+    }
+}

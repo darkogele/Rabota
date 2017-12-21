@@ -1,0 +1,846 @@
+﻿@model Interop.CC.Models.DTO.Institutions.TekovnaSostojbaCURMDTO
+
+<head>
+    <style type="text/css">
+        table, tr, td {
+            border: 1px solid gray;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+
+        th {
+            border: 2px solid black;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+
+        .HeaderStyle, .PagerStyle {
+            border: 2px solid #999999 !important;
+            background-position: top;
+            background-repeat: repeat-x;
+            background-color: #06B4C0;
+        }
+
+        .RowStyle td, .AltRowStyle td, .SelectedRowStyle td, .EditRowStyle td {
+            border: solid 1px #91a7b4;
+            border-right-color: #bcbcbc;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .GridViewStyle {
+            font-family: Arial, Sans-Serif;
+            font-size: small;
+            table-layout: auto;
+            border-collapse: collapse;
+            border: 1px solid #CCCCCC;
+            overflow: auto;
+        }
+
+        .RowStyle td {
+            background-color: #f7f7f7;
+        }
+
+        .AltRowStyle td {
+            background-color: #E1E1E1;
+            background-position: 0 -80px;
+            background-repeat: repeat-x;
+        }
+
+        .PagerStyle table {
+            text-align: center;
+            margin: auto;
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+    </style>
+
+</head>
+<div style="width:100%; height: 100%">
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <h1>
+        Извештај за тековна состојба на субјектот -ЦУРМ
+    </h1>
+    <hr width="100%"></hr>
+    <h1 style="text-align: right;">Централен регистар</h1>
+    <br />
+    <div style="width:800px; margin:0 auto; margin-bottom: 10px">
+        <br /><br /><br />
+        <p style="text-align: right ;">Извештајот е креиран од корисникот @Model.ConsumerName</p>
+        <p style="text-align: right;">Време на поднесено барање @Model.ServiceCalledTime.ToString("dd.MM.yyyy HH:mm")</p>
+    </div>
+    <div></div>
+
+</div>
+<div style="width: 100%;">
+
+    @*<div style="float: left; width: 70%;">
+        <img src="@Server.MapPath("~/Views/Template/grbMak.jpg")" style="float: left" alt="MIOA logo" />
+        <label>Република Македонија</label>
+        <h4 style="font-size:.6em;">Министерство за информатичко општество и администрација</h4>
+    </div>
+    <div style="float: right; width: 30%; font-size: .6em">
+        <a style="margin-left: 80px;" href="http://www.interoperabilnost.gov.mk">www.interoperabilnost.gov.mk</a>
+
+        <table class="table-striped" style="margin-top: 20px;">
+            <thead style="display: table-row-group">
+
+            </thead>
+            <tbody style="font-size: .6em">
+                <tr>
+                    <td>Име на услугата:</td>
+                    <td>@Model.ServiceName</td>
+                </tr>
+                <tr>
+                    <td>Услугата ја користи:</td>
+                    <td>@Model.ConsumerName</td>
+                </tr>
+                <tr>
+                    <td>Услугата ја нуди:</td>
+                    <td>@Model.ProviderName</td>
+                </tr>
+                <tr>
+                    <td>Време на повик до услугата:</td>
+                    <td>@Model.ServiceCalledTime.ToString("dd.MM.yyyy HH:mm")</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>*@
+</div>
+
+<div style="height: 70px; width: 100%; float: left"></div>
+
+@foreach (var info in Model.Info)
+{
+    <h3 style="font-size:1.17em; font-weight:bold">
+        <span> Податоци за субјектот</span>
+    </h3>
+    <table class="GridViewStyle" cellspacing="0" rules="all" border="1" id="GridViewListTemplate1" style="font-weight:bold;border-collapse:collapse;width: auto; min-width:500px">
+
+
+
+        <tbody>
+            <tr class="HeaderStyle">
+                <th scope="col">Наслов на податок</th>
+
+                <th scope="col">Податок</th>
+            </tr>
+            <tr class="RowStyle">
+                <td>Информативна порака</td>
+                <td>
+                    @info.InfoMessage
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Дали субјектот е избришан</td>
+                <td>
+                    @info.IsLETerminated
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>ЕМБС</td>
+                <td>
+                    @info.LEID
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Целосен назив</td>
+                <td>
+                    @info.TaxPayerNumber
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>ЕДБ</td>
+                <td>
+                    @*{{inf.leid}}*@
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Кратко име</td>
+                <td>
+                    @info.ShortName
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Причина за престанок</td>
+                <td>
+                    @info.TerminationTypeID
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Опис на причина за престанок</td>
+                <td>
+                    @info.TerminationTypeDesc
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Основ за бришење</td>
+                <td>
+                    @info.TerminationBasis
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Датум на бришење во ЦР</td>
+                <td>
+                    @info.DateDeletedInCR
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Вид на субјект на упис</td>
+                <td>
+                    @info.LETypeID
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Опис на вид на субјект на упис</td>
+                <td>
+                    @info.LETypeDesc
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Големина на субјектот</td>
+                <td>
+                    @info.LESizeID
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Опис на големината на субјектот</td>
+                <td>
+                    @info.LESizeDesc
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Општина</td>
+                <td>
+                    @info.Municipality
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Код на општина</td>
+                <td>
+                    @info.MunicipalityCode
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Место</td>
+                <td>
+                    @info.Place
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Код на место</td>
+                <td>
+                    @info.PlaceCode
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Улица</td>
+                <td>
+                    @info.Street
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Код на Улица</td>
+                <td>
+                    @info.StreetCode
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Број на куќа</td>
+                <td>
+                    @info.HouseNo
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Број на влез</td>
+                <td>
+                    @info.EntranceNo
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Број на стан</td>
+                <td>
+                    @info.FlatNo
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Код на организационен облик</td>
+                <td>
+                    @info.OrganisationTypeCode
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Опис на организационен облик</td>
+                <td>
+                    @info.OrganisationTypeDesc
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Надлежен регистар</td>
+                <td>
+                    @info.AuthorisedRegisterID
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Опис на надлежен регистар</td>
+                <td>
+                    @info.AuthorisedRegister
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Вид на сопственост</td>
+                <td>
+                    @info.OwnershipTypeID
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Опис на вид на сопственост</td>
+                <td>
+                    @info.OwnershipTypeDesc
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Евидентирани дејности во надворешен промет</td>
+                <td>
+                    @info.IsForeignAct
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Општа клаузула за бизнис</td>
+                <td>
+                    @info.IsActivityNoLicence
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Код на приоритетна дејност</td>
+                <td>
+                    @info.CoreActivityCode
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Опис на приоритетна дејност</td>
+                <td>
+                    @info.CoreActivityDesc
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Одобренија, потврди, лиценци и др.</td>
+                <td>
+                    @info.Licence
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Други дејности</td>
+                <td>
+                    @info.ForeignActivity
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Електронско сандаче</td>
+                <td>
+                    @info.Email
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Дополнителни информации</td>
+                <td>
+                    @info.AdditionalInfo
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Индикатор за потврдени податоци од овластеното лице за застапување</td>
+                <td>
+                    @info.IsDataConfirmed
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Деловен статус на субјектот од Регистарот на годишни сметки/УЈП</td>
+                <td>
+                    @info.IsAAActive
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Статус од ПКД</td>
+                <td>
+                    @info.PKDStatus
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Времетраење</td>
+                <td>
+                    @info.ActingPeriod
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Статус</td>
+                <td>
+                    @info.LEStatus
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Статус на мирување од</td>
+                <td>
+                    @info.LEStatusDateFrom
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Статус на мирување до</td>
+                <td>
+                    @info.LEStatusDateUntil
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Подрачје на суд</td>
+                <td>
+                    @info.CourtRegion
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+}
+
+<div style="height: 30px; width: 100%; float: left"></div>
+@foreach (var found in Model.Founding)
+{
+    <h3 style="font-size: 1.17em; font-weight: bold">
+        <span> Податоци за основање</span>
+    </h3>
+    <table class="GridViewStyle" cellspacing="0" rules="all" border="1" id="GridViewListTemplate1" style="font-weight: bold; border-collapse: collapse; width: auto; min-width: 500px">
+
+        <tbody>
+            <tr class="HeaderStyle">
+                <th scope="col">Наслов на податок</th>
+
+                <th scope="col">Податок</th>
+            </tr>
+            <tr class="RowStyle">
+                <td>ЕМБС</td>
+                <td>
+                    @found.LEID
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Датум на основање</td>
+                <td>
+                    @found.FoundingDate
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Потекло на капиталот</td>
+                <td>
+                    @found.CapitalOriginID
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Опис на потекло на капиталот</td>
+                <td>
+                    @found.CapitalOriginDesc
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Валута</td>
+                <td>
+                    @found.FCCode
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Паричен влог</td>
+                <td>
+                    @found.CapitalFC_Cash
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Непаричен влог</td>
+                <td>
+                    @found.CapitalFC_NonCash
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Уплатен дел</td>
+                <td>
+                    @found.CapitalFC_Payd
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Број на издадени акции</td>
+                <td>
+                    @found.SharesTotal
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Вкупен број на уплатени акции</td>
+                <td>
+                    @found.SharesPayd
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Вид на акции</td>
+                <td>
+                    @found.TypeOfShares
+                </td>
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Начин на плаќање</td>
+                <td>
+                    @found.SharesPayment
+                </td>
+            </tr>
+            <tr class="RowStyle">
+                <td>Вкупно основна главнина</td>
+                <td>
+                    @found.CapitalFC_Total
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+}
+<div style="height: 30px; width: 100%; float: left"></div>
+@foreach (var owner in Model.Owners)
+{
+    <h3 style="font-size:1.17em; font-weight:bold">
+
+        <span>Податоци за сопственици</span>
+    </h3>
+
+    <table class="GridViewStyle" ng-repeat="owner in owners" cellspacing="0" rules="all" border="1" id="GridViewListTemplate1" style="font-weight:bold;border-collapse:collapse;width: auto; min-width:500px">
+
+
+        <tbody>
+            <tr class="HeaderStyle">
+                <th scope="col">Наслов на податок</th>
+
+                <th scope="col">Податок</th>
+            </tr>
+            <tr class="RowStyle">
+                <td>ЕМБС</td>
+
+                <td> @owner.LEID</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Забелешка</td>
+
+                <td> @owner.Note</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Тип на сопственик</td>
+
+                <td> @owner.PersonOrLEID</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Опис на тип на сопственик</td>
+
+                <td> @owner.PersonOrLEDesc</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Матичен број на сопственик</td>
+
+                <td> @owner.OwnerID</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Тип на сопственик 2</td>
+
+                <td>@owner.OwnerTypeID</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Опис на тип на сопственик 2</td>
+
+                <td> @owner.OwnerTypeDesc</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Вид на одговорност</td>
+
+                <td> @owner.LiabilityID</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Опис на вид на одговорност</td>
+
+                <td> @owner.LiabilityDesc</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Име</td>
+
+                <td> @owner.OwnerName</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Презиме</td>
+
+                <td> @owner.OwnerSurname</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Код на земја</td>
+
+                <td> @owner.CountryCode</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Земја</td>
+
+                <td> @owner.Country</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Општина</td>
+
+                <td> @owner.Municipality</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Место</td>
+
+                <td> @owner.Place</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Улица</td>
+
+                <td> @owner.Street</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Број</td>
+
+                <td> @owner.HouseNo</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Влез</td>
+
+                <td> @owner.EntranceNo</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Стан</td>
+
+                <td> @owner.FlatNo</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Електронско сандаче</td>
+
+                <td> @owner.Email</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Валута</td>
+
+                <td>@owner.FCCode</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Паричен влог</td>
+
+                <td> @owner.ParticipationFC_Cash</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Непаричен влог</td>
+
+                <td>@owner.ParticipationFC_NonCash</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Уплатен дел</td>
+
+                <td>@owner.ParticipationFC_Payd</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Вкупен влог</td>
+
+                <td> @owner.ParticipationFC_Total</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Статус од ПКД</td>
+
+                <td> @owner.PKDStatus</td>
+
+            </tr>
+
+
+        </tbody>
+    </table>
+
+}
+<div style="height: 30px; width: 100%; float: left"></div>
+
+@foreach (var actor in Model.Actors)
+{
+    <h3 style="font-size:1.17em; font-weight:bold">
+
+        <span>Податоци за актери</span>
+    </h3>
+
+    <table class="GridViewStyle" cellspacing="0" rules="all" border="1" id="GridViewListTemplate1" style="font-weight:bold;border-collapse:collapse;width: auto; min-width:500px">
+
+
+
+        <tbody>
+            <tr class="HeaderStyle">
+                <th scope="col">Управител</th>
+
+                <th scope="col"></th>
+            </tr>
+            <tr class="RowStyle">
+                <td>ЕМБС</td>
+
+                <td> @actor.LEID</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Број на подружница</td>
+
+                <td> @actor.UnitNo</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Тип на овластено лице</td>
+
+                <td> @actor.PersonOrLEID</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Опис на тип на овластено лице</td>
+
+                <td> @actor.PersonOrLEDesc</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Матичен број на овластено лице</td>
+
+                <td> @actor.ActorID</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Шифра на тип на овластено лице</td>
+
+                <td> @actor.ActorTypeID</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Опис на тип на овластено лице</td>
+
+                <td> @actor.ActorTypeDesc</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Име</td>
+
+                <td> @actor.ActorName</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Презиме</td>
+
+                <td> @actor.ActorSurname</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Код на земја</td>
+
+                <td> @actor.CountryCode</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Земја</td>
+
+                <td> @actor.Country</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Општина</td>
+
+                <td> @actor.Municipality</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Место</td>
+
+                <td> @actor.Place</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Улица</td>
+
+                <td> @actor.Street</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Број</td>
+
+                <td> @actor.HouseNo</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Влез</td>
+
+                <td>@actor.EntranceNo</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Стан</td>
+
+                <td> @actor.FlatNo</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Електронско сандаче</td>
+
+                <td> @actor.Email</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Овластувања</td>
+
+                <td> @actor.Description</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Ограничувања</td>
+
+                <td> @actor.Restrictions</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Тип на овластување</td>
+
+                <td> @actor.AuthorisationTypeID</td>
+
+            </tr>
+            <tr class="AltRowStyle">
+                <td>Опис на тип на овластување</td>
+
+                <td> @actor.AuthorisationTypeDesc</td>
+
+            </tr>
+            <tr class="RowStyle">
+                <td>Статус од ПКД</td>
+
+                <td> @actor.PKDStatus</td>
+
+            </tr>
+
+        </tbody>
+    </table>
+}
+<div style="height: 30px; width: 100%; float: left"></div>
+
+
+

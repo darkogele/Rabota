@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://interop.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Test_TS_CURM" targetNamespace="http://interop.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost/AdapterServiceCRM.Host/Test_CRM_TS_CURM.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://interop.org/Imports">
+      <xsd:import schemaLocation="http://localhost/AdapterServiceCRM.Host/Test_CRM_TS_CURM.svc?xsd=xsd0" namespace="http://interop.org/" />
+      <xsd:import schemaLocation="http://localhost/AdapterServiceCRM.Host/Test_CRM_TS_CURM.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITest_TS_CURM_Get_TS_CURM_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_TS_CURM" />
+  </wsdl:message>
+  <wsdl:message name="ITest_TS_CURM_Get_TS_CURM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_TS_CURMResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITest_TS_CURM">
+    <wsdl:operation name="Get_TS_CURM">
+      <wsdl:input wsaw:Action="http://interop.org/ITest_TS_CURM/Get_TS_CURM" message="tns:ITest_TS_CURM_Get_TS_CURM_InputMessage" />
+      <wsdl:output wsaw:Action="http://interop.org/ITest_TS_CURM/Get_TS_CURMResponse" message="tns:ITest_TS_CURM_Get_TS_CURM_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="Test_TS_CURM">
+    <wsdl:port name="CustomBinding_ITest_TS_CURM" binding="i0:CustomBinding_ITest_TS_CURM">
+      <soap12:address location="http://localhost/AdapterServiceCRM.Host/Test_CRM_TS_CURM.svc/custom" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

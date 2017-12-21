@@ -1,0 +1,170 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<style>
+    span {
+        word-wrap: break-word;
+    }
+</style>
+
+<div class="panel panel-primary">
+    <div class="panel-heading" style="font-size:large">
+        <span >Број на трансакција: {{message.logCS[0].transactionId || message.logParticipantConsumer[0].transactionId || message.logParticipantProvider[0].transactionId}}</span>
+    </div>
+    
+    <div>
+        <div class="tableContainer">
+            <table class="tableMessageLogs">
+                <tbody>
+                    <tr>
+                        <td class="text-center">
+                            <div style="display: inline-block; padding-right: 5px" ng-repeat="message in message.logParticipantConsumer track by $index" ng-click="messageLogStatisticDetailsPreview(message, 'consumer'); selectX($index);">
+                                <div>
+                                    <span ng-class="{selectedDirection: $index == selectedX && modelToPreview.isShown}" class="glyphicon glyphicon-info-sign"></span>
+                                    <span class="info">{{message.dir === 'Request' ? 'Повик' : 'Одговор'}}</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td></td>
+                        <td class="text-center">
+                            <div style="display: inline-block; padding-right: 5px" ng-repeat="message in message.logCS track by $index" style="margin: 0 auto;" ng-click="messageLogStatisticDetailsPreview(message, 'cs'); selectCS($index);">
+                                <div style="display: inline-block">
+                                    <span ng-class="{selectedDirection: $index == selectedCS && modelToPreview.isShown}" class="glyphicon glyphicon-info-sign"></span>
+                                    <span class="info">{{message.dir === 'Request' ? 'Повик' : 'Одговор'}}</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td></td>
+                        <td class="text-center">
+                            <div style="display: inline-block; padding-right: 5px" ng-repeat="message in message.logParticipantProvider track by $index" ng-click="messageLogStatisticDetailsPreview(message, 'routingToken'); selectY($index);">
+                                <div>
+                                    <span ng-class="{selectedDirection: $index == selectedY && modelToPreview.isShown}" class="glyphicon glyphicon-info-sign"></span>
+                                    <span class="info">{{message.dir === 'Request' ? 'Повик' : 'Одговор'}}</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td ng-class="message.dirParticipantConsumer == 2 ? 'participantBox success' : 'participantBox failed'">{{message.logParticipantConsumer[0].consumerName}}</td>
+                        <td class="text-center">
+                            <div class="smartArrow"></div>
+                            @*test*@
+                        </td>
+                        <td ng-class="message.dirCS == 2 ? 'participantBox info' : 'participantBox failed'">Централна локација</td>
+                        <td class="text-center">
+                            <div class="smartArrow"></div>
+                            @*test*@
+                        </td>
+                        <td ng-class="message.dirParticipantProvider == 2 ? 'participantBox success' : 'participantBox failed'">{{message.logParticipantProvider[0].routingTokenName}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="panel-footer">
+            <a class="btn btn-default"
+               ng-click="handleBackBtn()"
+               style="width:80px">
+                <i class="glyphicon glyphicon-chevron-left"></i>
+                Назад
+            </a>
+        </div>
+    </div>
+    <div class="panel tableMessageLogsInfo" ng-class="modelToPreview.styleHeading" ng-show="modelToPreview.isShown">
+        <div class="panel-heading">
+            <strong>{{modelToPreview.typeInfo}}: {{modelToPreview.title}} - {{modelToPreview.data.dir === 'Request' ? 'Повик' : 'Одговор'}}</strong>
+            <span class="right"><button type="button" class="close" aria-label="Close" ng-click="modelToPreview.isShown = false"><span aria-hidden="true">&times;</span></button></span>
+        </div>
+        <div class="panel-body">
+            <div class="row" ng-show="modelToPreview.data.faultReason != null">
+                <div class="col-xs-6">Настаната грешка:</div>
+                <div class="col-xs-6">{{modelToPreview.data.faultReason}}</div>
+            </div><hr ng-show="modelToPreview.data.faultReason != null" />
+            <div class="row">
+                <div class="col-xs-6">Сервис:</div>
+                <div class="col-xs-6">{{modelToPreview.data.service}}</div>
+            </div><hr />
+            <div class="row">
+                <div class="col-xs-6">Трансакција:</div>
+                <div class="col-xs-6">{{modelToPreview.data.transactionId}}</div>
+            </div><hr />
+            <div class="row">
+                <div class="col-xs-6">Корисник:</div>
+                <div class="col-xs-6">{{modelToPreview.data.consumerName}}</div>
+            </div><hr />
+            <div class="row">
+                <div class="col-xs-6">Провајдер:</div>
+                <div class="col-xs-6">{{modelToPreview.data.routingTokenName}}</div>
+            </div><hr />
+            <div class="row">
+                <div class="col-xs-6">Насока на комуникација:</div>
+                <div class="col-xs-6">{{modelToPreview.data.dir === 'Request' ? 'Повик' : 'Одговор'}}</div>
+            </div><hr />
+            <div class="row">
+                <div class="col-xs-6">Тип на повик:</div>
+                <div class="col-xs-6">{{modelToPreview.data.callType === 'synchronous' ? 'синхрон' : 'асинхрон'}}</div>
+            </div><hr />
+            <div class="row">
+                <div class="col-xs-6">Статус:</div>
+                <div class="col-xs-6">{{modelToPreview.data.status}}</div>
+            </div><hr />
+            <div class="row">
+                <div class="col-xs-6">MIME type:</div>
+                <div class="col-xs-6">{{modelToPreview.data.mimeType}}</div>
+            </div><hr />
+            <div class="row">
+                <div class="col-xs-6">Временски печат:</div>
+                <div class="col-xs-6">{{modelToPreview.data.timestamp | date:'dd.MM.yyyy HH:mm:ss'}}</div>
+            </div><hr />
+            <div class="row">
+                <div class="col-xs-6">Дата на креирање:</div>
+                <div class="col-xs-6">{{modelToPreview.data.createDate | date:'dd.MM.yyyy HH:mm:ss'}}</div>
+            </div><hr />
+            <div class="row">
+                <div class="col-xs-6">Провери Временски Печат:</div>
+                <div class="col-xs-3">
+                    Во ред
+                    @*<a ng-click="getMessageLogCheckTimeStamp(modelToPreview.data.tokenTimestamp)" class="btn btn-xs btn-info"><i class="fa fa-info"></i> Провери</a>*@
+                </div>
+                <div class="col-xs-3" ng-show="showCheck">
+                    <input type="text" ng-model="checkTimestampResponse" readonly size="35">
+                </div>
+            </div>
+        </div>
+
+
+        @*<div class="panel-body">
+                <div class="row">
+                    <div>{{message.logParticipantX[0].consumer}}</div>
+                    <div ng-repeat="message in message.logParticipantX">
+                        <div>{{message.dir}}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-body">
+                <div class="row">
+                    <div>CS</div>
+                    <div ng-repeat="message in message.logCS">
+                        <div>{{message.dir}}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-body">
+                <div class="row">
+                    <div>{{message.logParticipantY[0].routingToken}}</div>
+                    <div ng-repeat="message in message.logParticipantY">
+                        <div>{{message.dir}}</div>
+                    </div>
+                </div>
+            </div>*@
+        <div class="panel-footer">
+            <a class="btn btn-default"
+               ng-click="handleBackBtn()"
+               style="width:80px">
+                <i class="glyphicon glyphicon-chevron-left"></i>
+                Назад
+            </a>
+        </div>
+    </div>
+</div>

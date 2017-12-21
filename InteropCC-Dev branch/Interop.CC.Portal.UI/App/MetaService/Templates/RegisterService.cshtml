@@ -1,0 +1,57 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+<form name="registerServiceForm" >
+    <div class="container">
+        <div class="col-lg-5 col-lg-offset-3">
+            <h2 class="text-center">Регистрирање на сервис</h2>
+            <hr/>
+            <div class="form-group" ng-class="{ 'has-error' : serviceform.newservice.$invalid }">
+                <ng-form name="serviceform">
+                    <label for="newservice">Име на сервис:</label>
+                    <input id="newservice" type="text" class="form-control" name="newservice" ng-model="registerservice.newservice" required>
+                </ng-form>
+            </div>
+            @*<div>
+                <ng-form name="uploadwsdlformfield">
+                    <label>Избери</label>
+                    <span class="btn btn-default btn-file">
+                        <input type="file" id="wsdl" file-model="myFile" name="certificate" ng-model="registerservice.wsdl" required />
+                    </span>
+                </ng-form>
+            </div>*@
+            
+            <ng-form name="uploadwsdlform">
+                <div class="form-group" ng-class="{ 'has-error' : uploadwsdlformfield.certificate.$invalid }" style="display: inline-block;">
+                    <ng-form name="uploadwsdlformfield">
+                        <label>Избери WSDL датотека</label>
+                        <span class="btn btn-default btn-file">
+                            <input type="file" id="wsdlupload" file-model="myFile" name="wsdlupload" ng-model="myFile" accept=".wsdl" required />
+                        </span>
+                    </ng-form>
+
+                    <div class="form-group" ng-class="{ 'has-error' :wsdform.wsdl.$invalid }">
+                        <ng-form name="wsdform">
+                            <label id="wsdl" type="text" class="form-control" name="wsdl" ng-model="registerservice.wsdl" required style="display: none"></label>
+                        </ng-form>
+                    </div>
+
+                </div>
+               
+                <div style="display: inline-block;" class="form-group" ng-class="{ 'has-error' : wsdform.wsdl.$invalid }" >
+                    <a ng-click="uploadWSDLfile($file)"  class="btn btn-primary" disabled> Прикачи</a>
+                </div>
+                @*<div class="form-group" ng-class="{ 'has-error' :wsdform.wsdl.$invalid }">
+                    <ng-form name="wsdform">
+                        <label for="wsdl">Локација на сервис:</label>
+                        <input id="wsdl" type="text" class="form-control" name="wsdl" ng-model="registerservice.wsdl" required>
+                    </ng-form>
+                </div>*@
+            </ng-form>
+               
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" ng-disabled="registerServiceForm.$invalid" ng-click="registerservice.SaveService(registerservice)"><i class="fa fa-save"></i> Испрати</button>
+                <a class="btn btn-warning" ui-sref="home">Откажи</a>
+            </div>
+        </div>
+
+    </div>
+</form>

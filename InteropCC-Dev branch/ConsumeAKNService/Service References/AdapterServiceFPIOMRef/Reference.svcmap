@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d072ed11-b9f3-433c-9e4d-e5f5a7c97e07" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AdapterServiceFPIOM.Host/AdapterServiceFPIOM.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AdapterServiceFPIOM.disco" MetadataType="Disco" ID="e24334d7-d5f6-4890-b8af-c98c2242acbc" SourceId="1" SourceUrl="http://localhost/AdapterServiceFPIOM.Host/AdapterServiceFPIOM.svc?disco" />
+    <MetadataFile FileName="AdapterServiceFPIOM.xsd" MetadataType="Schema" ID="db419368-bb25-444c-b7ef-e66f32bb34c3" SourceId="1" SourceUrl="http://localhost/AdapterServiceFPIOM.Host/AdapterServiceFPIOM.svc?xsd=xsd0" />
+    <MetadataFile FileName="FPIOMService.wsdl" MetadataType="Wsdl" ID="6dfd0b6c-6593-4328-9ad1-bfe20f6dfe10" SourceId="1" SourceUrl="http://localhost/AdapterServiceFPIOM.Host/AdapterServiceFPIOM.svc?wsdl" />
+    <MetadataFile FileName="AdapterServiceFPIOM1.xsd" MetadataType="Schema" ID="1177d999-0873-410f-8a55-8212a2821034" SourceId="1" SourceUrl="http://localhost/AdapterServiceFPIOM.Host/AdapterServiceFPIOM.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

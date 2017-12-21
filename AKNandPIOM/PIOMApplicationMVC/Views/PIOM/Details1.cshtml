@@ -1,0 +1,239 @@
+﻿@model PIOMApplicationMVC.Models.DataForPropertyListDTO
+
+@{
+    ViewBag.Title = "Имотен Лист";
+}
+
+<h2>Имотен Лист</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PropertyList)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PropertyList)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Message)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Message)
+        </dd>
+
+    </dl>
+@if (!Model.Message.Contains("NE POSTOI"))
+    {
+    <table>
+
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LoadsList[0].Text)
+            </th>
+        </tr>
+
+        @for (int i = 0; i < Model.LoadsList.Count; i++)
+        {
+            <tr>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.LoadsList[i].Text)
+                </td>
+            </tr>
+        }
+
+    </table>
+    <table>
+
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OwnersList[0].PersonalNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OwnersList[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OwnersList[0].Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OwnersList[0].Street)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OwnersList[0].Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OwnersList[0].Part)
+            </th>
+            <th></th>
+        </tr>
+
+        @for (int i = 0; i < Model.OwnersList.Count; i++)
+        {
+            <tr>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.OwnersList[i].PersonalNumber)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.OwnersList[i].Name)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.OwnersList[i].Location)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.OwnersList[i].Street)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.OwnersList[i].Number)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.OwnersList[i].Part)
+                </td>
+            </tr>
+        }
+
+    </table>
+    <table>
+
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ObjectsList[0].Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ObjectsList[0].Object)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ObjectsList[0].Entry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ObjectsList[0].Floor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ObjectsList[0].Apartment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ObjectsList[0].Purpose)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ObjectsList[0].Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ObjectsList[0].Grounds)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ObjectsList[0].YearBuilt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ObjectsList[0].Pravo)
+            </th>
+            <th></th>
+        </tr>
+
+        @for (int i = 0; i < Model.ObjectsList.Count; i++)
+        {
+            <tr>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.ObjectsList[i].Number)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.ObjectsList[i].Object)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.ObjectsList[i].Entry)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.ObjectsList[i].Floor)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.ObjectsList[i].Apartment)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.ObjectsList[i].Purpose)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.ObjectsList[i].Location)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.ObjectsList[i].Grounds)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.ObjectsList[i].YearBuilt)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.ObjectsList[i].Pravo)
+                </td>
+            </tr>
+        }
+
+    </table>
+    <table>
+
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ParcelsList[0].PartNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParcelsList[0].ObjectParcel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParcelsList[0].Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParcelsList[0].Culture)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParcelsList[0].Class)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParcelsList[0].Grounds)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParcelsList[0].Pravo)
+            </th>
+            <th></th>
+        </tr>
+
+        @for (int i = 0; i < Model.ParcelsList.Count; i++)
+        {
+            <tr>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.ParcelsList[i].PartNumber)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.ParcelsList[i].ObjectParcel)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.ParcelsList[i].Location)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.ParcelsList[i].Culture)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.ParcelsList[i].Class)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.ParcelsList[i].Grounds)
+                </td>
+                <td>
+                    @Html.TextBox("updatedContents[" + i + "].data", Model.ParcelsList[i].Pravo)
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+</div>
+<p>
+   
+    @Html.ActionLink("Назад", "Index")
+</p>

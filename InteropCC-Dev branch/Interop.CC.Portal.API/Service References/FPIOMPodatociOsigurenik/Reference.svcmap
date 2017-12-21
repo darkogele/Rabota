@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ca122f21-eb97-4b72-8aa9-0827905365e7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/FPIOMServicesProd.Host/DataForEnsurers.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataForEnsurers.xsd" MetadataType="Schema" ID="5a16b962-ed9d-48b8-a3df-5b62b265e947" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/DataForEnsurers.svc?xsd=xsd2" />
+    <MetadataFile FileName="DataForEnsurers.wsdl" MetadataType="Wsdl" ID="66601713-1907-43c5-a935-5f1094dfec0e" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/DataForEnsurers.svc?wsdl" />
+    <MetadataFile FileName="DataForEnsurers1.xsd" MetadataType="Schema" ID="c49b71fb-ccd2-40d0-b923-bd5a97e7ddb2" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/DataForEnsurers.svc?xsd=xsd0" />
+    <MetadataFile FileName="DataForEnsurers.disco" MetadataType="Disco" ID="28ec22b9-43bc-40b6-80ff-e1772517077e" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/DataForEnsurers.svc?disco" />
+    <MetadataFile FileName="DataForEnsurers2.xsd" MetadataType="Schema" ID="cea04be1-620d-4adc-96f5-d3bf9f5f2900" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/DataForEnsurers.svc?xsd=xsd1" />
+    <MetadataFile FileName="DataForEnsurers1.wsdl" MetadataType="Wsdl" ID="234eef42-d8cf-43f8-9384-fe970e5b4ec3" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/DataForEnsurers.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

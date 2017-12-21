@@ -1,0 +1,104 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<div class="col-lg-5 col-lg-offset-3">
+    <form name="record.form">
+        <h2 class="text-center">Креирај запис</h2>
+        <hr />
+        <div class="row">
+            <div class="form-group" ng-class="{ 'has-error' : itemNumberFormField.itemNumber.$invalid }">
+                <label class="clearfix">Реден број</label>
+                <ng-form name="itemNumberFormField">
+                    <input type="text" class="form-control" name="itemNumber" data-ng-model="rec.itemNumber" required autofocus />
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : dateReceivedFormField.dateReceived.$invalid }">
+                <ng-form name="dateReceivedFormField">
+                    <label for="dateReceived">Датум на прием:</label>
+                    
+                    <input type="text"
+                           placeholder="Од"
+                           class="form-control"
+                           datepicker-popup="M.d.yyyy"
+                           ng-disabled="false"
+                           datepicker-append-to-body="true"
+                           data-ng-model="rec.dateReceived"
+                           is-open="status1.opened"
+                           
+                           current-text="Денес"
+                           clear-text="Исчисти"
+                           close-text="Затвори"
+                           ng-click="status1.opened = true" />
+                    @*<input id="sendDate" type="text" class="form-control" name="sendDate" ng-model="sendDate">*@
+                </ng-form>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : applicantNameAddressFormField.applicantNameAddress.$invalid }">
+                <label class="clearfix">Назив и седиште на подносител</label>
+                <ng-form name="applicantNameAddressFormField">
+                    <input type="text" class="form-control" name="applicantNameAddress" data-ng-model="rec.applicantNameAddress" />
+                </ng-form>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : electronicDBNameFormField.electronicDBName.$invalid }">
+                <label class="clearfix">Назив на база на податоци</label>
+                <ng-form name="electronicDBNameFormField">
+                    <input type="text" class="form-control" name="electronicDBName" data-ng-model="rec.electronicDBName" />
+                </ng-form>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : electronicDBTypeVersionFormField.electronicDBTypeVersion.$invalid }">
+                <label class="clearfix">Тип и верзија на база на податоци</label>
+                <ng-form name="electronicDBTypeVersionFormField">
+                    <input type="text" class="form-control" name="electronicDBTypeVersion" data-ng-model="rec.electronicDBTypeVersion" />
+                </ng-form>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : dataTypeFormField.dataType.$invalid }">
+                <label class="clearfix">Вид на податоците</label>
+                <ng-form name="dataTypeFormField">
+                    <input type="text" class="form-control" name="dataType" data-ng-model="rec.dataType" />
+                </ng-form>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : legislationDataFormField.legislationData.$invalid }">
+                <label class="clearfix">Податоци за правната регулатива</label>
+                <ng-form name="legislationDataFormField">
+                    <input type="text" class="form-control" name="legislationData" data-ng-model="rec.legislationData" />
+                </ng-form>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : authorizedPersonDataFormField.authorizedPersonData.$invalid }">
+                <label class="clearfix">Податоци за овластеното лице</label>
+                <ng-form name="authorizedPersonDataFormField">
+                    <input type="text" class="form-control" name="authorizedPersonData" data-ng-model="rec.authorizedPersonData" />
+                </ng-form>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : noteFormField.note.$invalid }">
+                <label class="clearfix">Забелешка</label>
+                <ng-form name="noteFormField">
+                    <input type="text" class="form-control" name="note" data-ng-model="rec.note" />
+                </ng-form>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : optionalField1FormField.optionalField1.$invalid }">
+                <label class="clearfix">Опционална колона 1</label>
+                <ng-form name="optionalField1FormField">
+                    <input type="text" class="form-control" name="optionalField1" data-ng-model="rec.optionalField1" />
+                </ng-form>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : optionalField2FormField.optionalField2.$invalid }">
+                <label class="clearfix">Опционална колона 2</label>
+                <ng-form name="optionalField2FormField">
+                    <input type="text" class="form-control" name="optionalField2" data-ng-model="rec.optionalField2" />
+                </ng-form>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button ng-click="savee(rec)" type="submit" class="btn btn-primary" ng-disabled="record.form.$invalid"><i class="fa fa-save" /> Зачувај</button>
+            <button type="submit" class="btn btn-warning" ui-sref="adminrecords({pageIndex:1,itemsPerPage:10, sortDir:'asc', sortCol:'ItemNumber'})">Откажи</button>
+        </div>
+    </form>
+</div>

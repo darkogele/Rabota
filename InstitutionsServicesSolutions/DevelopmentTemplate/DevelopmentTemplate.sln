@@ -1,0 +1,102 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{10D4A855-28BA-4E48-AF8F-0825B4520A05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Implementations", "Implementations\Implementations.csproj", "{07255E0F-5BE0-4B08-8DE8-8FD62E546E95}"
+	ProjectSection(ProjectDependencies) = postProject
+		{70C9C1C8-276D-4DBE-A924-822B04C7D456} = {70C9C1C8-276D-4DBE-A924-822B04C7D456}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Implementations.Test", "Implementations.Test\Implementations.Test.csproj", "{3658496D-8B1C-4664-B66F-A426FCA5997D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{70C9C1C8-276D-4DBE-A924-822B04C7D456} = {70C9C1C8-276D-4DBE-A924-822B04C7D456}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MockService", "MockService\MockService.csproj", "{70C9C1C8-276D-4DBE-A924-822B04C7D456}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstitutionNameServicesTest.Host", "InstitutionNameServicesTest.Host\InstitutionNameServicesTest.Host.csproj", "{91AAED7A-8C23-40E5-B669-D58D4EC05666}"
+	ProjectSection(ProjectDependencies) = postProject
+		{70C9C1C8-276D-4DBE-A924-822B04C7D456} = {70C9C1C8-276D-4DBE-A924-822B04C7D456}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{05367327-DDA5-4118-AFF3-54018A63D972}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E9D9F904-CA93-4E11-A8F9-48BF7F32239D} = {E9D9F904-CA93-4E11-A8F9-48BF7F32239D}
+		{91AAED7A-8C23-40E5-B669-D58D4EC05666} = {91AAED7A-8C23-40E5-B669-D58D4EC05666}
+		{70C9C1C8-276D-4DBE-A924-822B04C7D456} = {70C9C1C8-276D-4DBE-A924-822B04C7D456}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstitutionNameServicesProd.Host", "InstitutionNameServicesProd.Host\InstitutionNameServicesProd.Host.csproj", "{E9D9F904-CA93-4E11-A8F9-48BF7F32239D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{70C9C1C8-276D-4DBE-A924-822B04C7D456} = {70C9C1C8-276D-4DBE-A924-822B04C7D456}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10D4A855-28BA-4E48-AF8F-0825B4520A05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10D4A855-28BA-4E48-AF8F-0825B4520A05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10D4A855-28BA-4E48-AF8F-0825B4520A05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10D4A855-28BA-4E48-AF8F-0825B4520A05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07255E0F-5BE0-4B08-8DE8-8FD62E546E95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07255E0F-5BE0-4B08-8DE8-8FD62E546E95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07255E0F-5BE0-4B08-8DE8-8FD62E546E95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07255E0F-5BE0-4B08-8DE8-8FD62E546E95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3658496D-8B1C-4664-B66F-A426FCA5997D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3658496D-8B1C-4664-B66F-A426FCA5997D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3658496D-8B1C-4664-B66F-A426FCA5997D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3658496D-8B1C-4664-B66F-A426FCA5997D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70C9C1C8-276D-4DBE-A924-822B04C7D456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70C9C1C8-276D-4DBE-A924-822B04C7D456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70C9C1C8-276D-4DBE-A924-822B04C7D456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70C9C1C8-276D-4DBE-A924-822B04C7D456}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91AAED7A-8C23-40E5-B669-D58D4EC05666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91AAED7A-8C23-40E5-B669-D58D4EC05666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91AAED7A-8C23-40E5-B669-D58D4EC05666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91AAED7A-8C23-40E5-B669-D58D4EC05666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05367327-DDA5-4118-AFF3-54018A63D972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05367327-DDA5-4118-AFF3-54018A63D972}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05367327-DDA5-4118-AFF3-54018A63D972}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05367327-DDA5-4118-AFF3-54018A63D972}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9D9F904-CA93-4E11-A8F9-48BF7F32239D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9D9F904-CA93-4E11-A8F9-48BF7F32239D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9D9F904-CA93-4E11-A8F9-48BF7F32239D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9D9F904-CA93-4E11-A8F9-48BF7F32239D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.11.21.108:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Contracts\\Contracts.csproj
+		SccProjectName1 = Contracts
+		SccLocalPath1 = Contracts
+		SccProjectUniqueName2 = Implementations\\Implementations.csproj
+		SccProjectName2 = Implementations
+		SccLocalPath2 = Implementations
+		SccProjectUniqueName3 = Implementations.Test\\Implementations.Test.csproj
+		SccProjectName3 = Implementations.Test
+		SccLocalPath3 = Implementations.Test
+		SccProjectUniqueName4 = MockService\\MockService.csproj
+		SccProjectName4 = MockService
+		SccLocalPath4 = MockService
+		SccProjectUniqueName5 = InstitutionNameServicesTest.Host\\InstitutionNameServicesTest.Host.csproj
+		SccProjectName5 = InstitutionNameServicesTest.Host
+		SccLocalPath5 = InstitutionNameServicesTest.Host
+		SccProjectUniqueName6 = TestApp\\TestApp.csproj
+		SccProjectName6 = TestApp
+		SccLocalPath6 = TestApp
+		SccProjectUniqueName7 = InstitutionNameServicesProd.Host\\InstitutionNameServicesProd.Host.csproj
+		SccProjectName7 = InstitutionNameServicesProd.Host
+		SccLocalPath7 = InstitutionNameServicesProd.Host
+	EndGlobalSection
+EndGlobal

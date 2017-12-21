@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://interop.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SingleCustDoc" targetNamespace="http://interop.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://interop.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/InteropServices.CURM.Implementations" />
+      <xs:element name="GetSingleCustDoc">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="year" type="xs:int" />
+            <xs:element minOccurs="0" name="EDBOfShippingCompany" type="xs:long" />
+            <xs:element minOccurs="0" name="NumberOfCustomsOffice" type="xs:int" />
+            <xs:element minOccurs="0" name="regNumber" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSingleCustDocResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/InteropServices.CURM.Implementations" minOccurs="0" name="GetSingleCustDocResult" nillable="true" type="q1:SingleCustomsDocumentOutput" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCustomsOfficeNumbers">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCustomsOfficeNumbersResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/InteropServices.CURM.Implementations" minOccurs="0" name="GetCustomsOfficeNumbersResult" nillable="true" type="q2:ArrayOfCustomsOfficeNumbers" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/InteropServices.CURM.Implementations" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/InteropServices.CURM.Implementations" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="SingleCustomsDocumentOutput">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ExporterData" nillable="true" type="tns:SCDExporterData" />
+          <xs:element minOccurs="0" name="GeneralData" nillable="true" type="tns:SCDGeneralData" />
+          <xs:element minOccurs="0" name="ImporterData" nillable="true" type="tns:SCDImporterData" />
+          <xs:element minOccurs="0" name="ItemData" nillable="true" type="tns:ArrayOfSCDItemData" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="SingleCustomsDocumentOutput" nillable="true" type="tns:SingleCustomsDocumentOutput" />
+      <xs:complexType name="SCDExporterData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SenderAddressPart1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderAddressPart2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderPlace" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderPostalCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="SCDExporterData" nillable="true" type="tns:SCDExporterData" />
+      <xs:complexType name="SCDGeneralData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeclarantCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeclatarionType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeliveryTermsSituationCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DestinationCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExciseStoreCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExportingConditionCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExportingConditionPlace" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExportingCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ImportExport" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ImporterEDB" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NationalityOfVehicle" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OriginCountry" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProcedureType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReferentNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegistrationDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegistrationNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegistrationOfVehicle" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegistrationSeries" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SenderEDB" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TotalInvoiceAmount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValueData" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="SCDGeneralData" nillable="true" type="tns:SCDGeneralData" />
+      <xs:complexType name="SCDImporterData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ImporterAddressPart1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ImporterAddressPart2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ImporterName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ImporterPlace" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ImporterPostalCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="SCDImporterData" nillable="true" type="tns:SCDImporterData" />
+      <xs:complexType name="ArrayOfSCDItemData">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="SCDItemData" nillable="true" type="tns:SCDItemData" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfSCDItemData" nillable="true" type="tns:ArrayOfSCDItemData" />
+      <xs:complexType name="SCDItemData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CountryOfOrigin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DescriptionOfGoodsPart1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DescriptionOfGoodsPart2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DescriptionOfGoodsPart3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GrossMass" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Preference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StatisticalValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TariffTagPart1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TariffTagPart2" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="SCDItemData" nillable="true" type="tns:SCDItemData" />
+      <xs:complexType name="ArrayOfCustomsOfficeNumbers">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomsOfficeNumbers" nillable="true" type="tns:CustomsOfficeNumbers" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfCustomsOfficeNumbers" nillable="true" type="tns:ArrayOfCustomsOfficeNumbers" />
+      <xs:complexType name="CustomsOfficeNumbers">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CustomsOfficeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomsOfficeNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CustomsOfficeNumbers" nillable="true" type="tns:CustomsOfficeNumbers" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="ISingleCustDoc_GetSingleCustDoc_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCustDoc" />
+  </wsdl:message>
+  <wsdl:message name="ISingleCustDoc_GetSingleCustDoc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleCustDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISingleCustDoc_GetCustomsOfficeNumbers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomsOfficeNumbers" />
+  </wsdl:message>
+  <wsdl:message name="ISingleCustDoc_GetCustomsOfficeNumbers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomsOfficeNumbersResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISingleCustDoc">
+    <wsdl:operation name="GetSingleCustDoc">
+      <wsdl:input wsaw:Action="http://interop.org/ISingleCustDoc/GetSingleCustDoc" message="tns:ISingleCustDoc_GetSingleCustDoc_InputMessage" />
+      <wsdl:output wsaw:Action="http://interop.org/ISingleCustDoc/GetSingleCustDocResponse" message="tns:ISingleCustDoc_GetSingleCustDoc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomsOfficeNumbers">
+      <wsdl:input wsaw:Action="http://interop.org/ISingleCustDoc/GetCustomsOfficeNumbers" message="tns:ISingleCustDoc_GetCustomsOfficeNumbers_InputMessage" />
+      <wsdl:output wsaw:Action="http://interop.org/ISingleCustDoc/GetCustomsOfficeNumbersResponse" message="tns:ISingleCustDoc_GetCustomsOfficeNumbers_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CustomBinding_ISingleCustDoc" type="tns:ISingleCustDoc">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSingleCustDoc">
+      <soap12:operation soapAction="http://interop.org/ISingleCustDoc/GetSingleCustDoc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomsOfficeNumbers">
+      <soap12:operation soapAction="http://interop.org/ISingleCustDoc/GetCustomsOfficeNumbers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SingleCustDoc">
+    <wsdl:port name="CustomBinding_ISingleCustDoc" binding="tns:CustomBinding_ISingleCustDoc">
+      <soap12:address location="http://10.10.0.75/services-curm/SingleCustDoc.svc/custom" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

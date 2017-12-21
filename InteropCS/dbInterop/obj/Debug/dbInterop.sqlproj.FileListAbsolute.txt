@@ -1,0 +1,5 @@
+D:\Work\InteropCS\dbInterop\bin\Debug\dbInterop.dacpac
+D:\Work\InteropCS\dbInterop\bin\Debug\dbInterop.dll
+D:\Work\InteropCS\dbInterop\bin\Debug\dbInterop.pdb
+D:\Work\InteropCS\dbInterop\obj\Debug\dbInterop.dll
+D:\Work\InteropCS\dbInterop\obj\Debug\dbInterop.pdb

@@ -1,0 +1,240 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+<head>
+    <style type="text/css">
+        table, tr, td {
+            border: 1px solid gray;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+
+        th {
+            border: 2px solid black;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+
+        .HeaderStyle, .PagerStyle {
+            border: 2px solid #999999 !important;
+            background-position: top;
+            background-repeat: repeat-x;
+            background-color: #06B4C0;
+        }
+
+        .RowStyle td, .AltRowStyle td, .SelectedRowStyle td, .EditRowStyle td {
+            border: solid 1px #91a7b4;
+            border-right-color: #bcbcbc;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .GridViewStyle {
+            font-family: Arial, Sans-Serif;
+            font-size: small;
+            table-layout: auto;
+            border-collapse: collapse;
+            border: 1px solid #CCCCCC;
+            overflow: auto;
+        }
+
+        .RowStyle td {
+            background-color: #f7f7f7;
+        }
+
+        .AltRowStyle td {
+            background-color: #E1E1E1;
+            background-position: 0 -80px;
+            background-repeat: repeat-x;
+        }
+
+        .PagerStyle table {
+            text-align: center;
+            margin: auto;
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+    </style>
+</head>
+<h2>Имотен лист - Агенција за катастар на недвижности</h2>
+
+<form name="aknPropertyListForm" >
+
+    <div class="container">
+        <div class="col-lg-3">
+            @* Username *@
+            @*<div class="form-group" ng-class="{ 'has-error' : usernameFormField.username.$invalid }">
+                    <ng-form name="usernameFormField">
+                        <label for="username">Корисничко име:</label>
+                        <input id="username" type="text" class="form-control" name="username" ng-model="username" required>
+                    </ng-form>
+                </div>*@
+
+            @* Password *@
+            @*<div class="form-group" ng-class="{ 'has-error' : passwordFormField.password.$invalid }">
+                    <ng-form name="passwordFormField">
+                        <label for="password">Лозинка:</label>
+                        <input id="password" type="password" class="form-control" name="password" ng-model="password" required>
+                    </ng-form>
+                </div>*@
+
+            @* Municipality *@
+            <div class="form-group" ng-class="{ 'has-error' : municipalityFormField.municipality.$invalid }">
+                <ng-form name="municipalityFormField">
+                    <label for="municipality">Општина:</label>
+                    @*<input id="municipality" type="text" class="form-control" name="municipality" ng-model="municipality" required>*@
+                    <select class="form-control" name="userRole" ng-model="municipality" ng-change="changeMunicipality(municipality.value)" required autofocus ng-options="mun as mun.name for mun in municipalities |orderBy:'name' track by mun.value"></select>
+                </ng-form>
+            </div>
+
+            @* CadastralMunicipality *@
+            <div class="form-group" ng-class="{ 'has-error' : cadastralMunicipalityFormField.cadastralMunicipality.$invalid }">
+                <ng-form name="cadastralMunicipalityFormField">
+                    <label for="cadastralMunicipality">Катастарска Општина:</label>
+                    @*<input id="cadastralMunicipality" type="text" class="form-control" name="cadastralMunicipality" ng-model="cadastralMunicipality" required>*@
+                    <select class="form-control" name="userRole" ng-model="cadastralMunicipality" required autofocus ng-options="cadMun as cadMun.name for cadMun in cadastralMunicipalities | orderBy:'name' track by cadMun.value"></select>
+                </ng-form>
+            </div>
+
+            @* Number Of Property List  *@
+            <div class="form-group" ng-class="{ 'has-error' : noPropertyListFormField.noPropertyList.$invalid }">
+                <ng-form name="noPropertyListFormField">
+                    <label for="noPropertyList">Број на Имотен лист:</label>
+                    <input id="noPropertyList" type="text" class="form-control" name="noPropertyList" ng-model="noPropertyList" required>
+                </ng-form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-disabled="aknPropertyListForm.$invalid" ng-click="aknPropertyList(municipality.value,cadastralMunicipality.value,noPropertyList)"><i class="fa fa-save"></i> Испрати</button>
+                <a class="btn btn-warning" href="#/akn/aknpropertylist" ui-sref="aknpropertylistindex">Откажи</a>
+            </div>
+        </div>
+
+        <div ng-show="show" class="col-lg-9">
+
+            <div class="form-group">
+                <ng-form name="dateItemFormField">
+                    <label for="dateItem">Датум: </label>
+                    <input id="dateItem" type="text" class="form-control" name="dateItem" ng-model="dateItem">
+                </ng-form>
+            </div>
+
+            <div class="form-group">
+                <ng-form name="messageItemFormField">
+                    <label for="messageItem">Порака: </label>
+                    <input id="messageItem" type="text" class="form-control" name="messageItem" ng-model="messageItem">
+                </ng-form>
+            </div>
+           
+            <table class="GridViewStyle" cellspacing="0" rules="all" border="1" id="GridViewTovari" style="border-collapse:collapse;width: 100%">
+                
+                <tbody>
+                    <tr ng-repeat="load in loadsList">
+                       
+                        <td>{{load.text}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>
+                <span ng-show="(objectsList).length">Објекти</span>
+            </h3>
+            <table class="GridViewStyle" cellspacing="0" rules="all" border="1" id="GridViewObjekti" style="border-collapse:collapse;width: 100%" ng-show="(objectsList).length">
+
+
+                <tr class="HeaderStyle">
+                    <th>Бр.парцела</th>
+                    <th>Објект</th>
+                    <th>Намена</th>
+                    <th>Површина во м2</th>
+                    <th>Место</th>
+                    <th>Влез</th>
+                    <th>Кат</th>
+                    <th>Стан</th>
+                    <th>Год. на градба</th>
+                    <th>Основ на градба</th>
+                    <th>Право</th>
+                </tr>
+
+                <tbody>
+                    <tr class="RowStyle" ng-repeat="object in objectsList">
+                        <td>{{object.number}}</td>
+                        <td>{{object.object}}</td>
+                        <td>{{object.purpose}}</td>
+                        <td>{{object.grounds}}</td>
+                        <td>{{object.location}}</td>
+                        <td>{{object.entry}}</td>
+                        <td>{{object.floor}}</td>
+                        <td>{{object.apartment}}</td>
+                        <td>{{object.yearBuilt}}</td>
+                        <td>{{object.osnovGradba}}</td>
+                        <td>{{object.pravo}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+            
+           
+            
+            <h3>
+                <span ng-show="(parcelsList).length">Парцели</span>
+            </h3>
+            <table class="GridViewStyle" cellspacing="0" rules="all" border="1" id="GridViewParceli" style="border-collapse:collapse;width: 100%" ng-show="(parcelsList).length">
+
+                <tr class="HeaderStyle">
+                    <th>Бр.парцела</th>
+                    <th>Објект</th>
+                    <th>Место</th>
+                    <th>Намена</th>
+                    <th>Класа</th>
+                    <th>Површина во м2</th>
+                    <th>Право</th>
+                </tr>
+
+                <tbody>
+                    <tr ng-repeat="parcel in parcelsList" class="RowStyle">
+                        <td>{{parcel.partNumber}}</td>
+                        <td>{{parcel.objectParcel}}</td>
+                        <td>{{parcel.location}}</td>
+                        <td>{{parcel.culture}}</td>
+                        <td></td>
+                        <td>{{parcel.grounds}}</td>
+                        <td>{{parcel.pravo}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>
+                <span ng-show="(ownersList).length">Сопственици</span>
+            </h3>
+            <table class="GridViewStyle" cellspacing="0" rules="all" border="1" id="GridViewSopstvenici" style="border-collapse:collapse;width: 100%" ng-show="(ownersList).length">
+
+                <tr class="HeaderStyle">
+                    <th>Име и презиме</th>
+                    <th>ЕМБГ/ЕМБС</th>
+                    <th>Место</th>
+                    <th>Улица</th>
+                    <th>Број</th>
+                    <th>Дел на посед</th>
+                    <th>Правен основ на запишување</th>
+                </tr>
+
+                <tbody>
+                    <tr ng-repeat="owner in ownersList" class="RowStyle">
+                        <td>{{owner.name}}</td>
+                        <td>{{owner.personalNumber}}</td>
+                        <td>{{owner.location}}</td>
+                        <td>{{owner.street}}</td>
+                        <td>{{owner.number}}</td>
+                        <td>{{owner.part}}</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p></p>
+            <div class="row text-center">
+                <a class="btn btn-default" ng-click="PropertyListXML()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во XML формат</a>
+                <a class="btn btn-default" ng-click="PropertyListPDF()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во PDF формат</a>
+            </div>
+        </div>
+    </div>
+</form>

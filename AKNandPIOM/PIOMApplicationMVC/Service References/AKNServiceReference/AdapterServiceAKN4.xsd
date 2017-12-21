@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/AdapterServiceAKN.AKNOriginalService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AdapterServiceAKN.AKNOriginalService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/AdapterServiceAKN.Host/AdapterServiceAKN.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
+  <xs:complexType name="dzgr">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q1:PropertyChangedEventHandler" />
+      <xs:element name="ilistField" nillable="true" type="xs:string" />
+      <xs:element name="kopsField" nillable="true" type="xs:string" />
+      <xs:element name="messageField" nillable="true" type="xs:string" />
+      <xs:element name="nizobjField" nillable="true" type="tns:ArrayOfobjekti" />
+      <xs:element name="nizparField" nillable="true" type="tns:ArrayOfparceli" />
+      <xs:element name="nizsopField" nillable="true" type="tns:ArrayOfsopstvenici" />
+      <xs:element name="niztovField" nillable="true" type="tns:ArrayOftovari" />
+      <xs:element name="opsField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dzgr" nillable="true" type="tns:dzgr" />
+  <xs:complexType name="ArrayOfobjekti">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="objekti" nillable="true" type="tns:objekti" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfobjekti" nillable="true" type="tns:ArrayOfobjekti" />
+  <xs:complexType name="objekti">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q2:PropertyChangedEventHandler" />
+      <xs:element name="brojField" nillable="true" type="xs:string" />
+      <xs:element name="katField" nillable="true" type="xs:string" />
+      <xs:element name="mestoField" nillable="true" type="xs:string" />
+      <xs:element name="namenaField" nillable="true" type="xs:string" />
+      <xs:element name="objektField" type="xs:int" />
+      <xs:element name="povrsinaField" type="xs:long" />
+      <xs:element name="pravoField" nillable="true" type="xs:string" />
+      <xs:element name="stanField" nillable="true" type="xs:string" />
+      <xs:element name="vlezField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="objekti" nillable="true" type="tns:objekti" />
+  <xs:complexType name="ArrayOfparceli">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="parceli" nillable="true" type="tns:parceli" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfparceli" nillable="true" type="tns:ArrayOfparceli" />
+  <xs:complexType name="parceli">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q3:PropertyChangedEventHandler" />
+      <xs:element name="broj_delField" nillable="true" type="xs:string" />
+      <xs:element name="kulturaField" nillable="true" type="xs:string" />
+      <xs:element name="mestoField" nillable="true" type="xs:string" />
+      <xs:element name="objektField" type="xs:int" />
+      <xs:element name="povrsinaField" type="xs:long" />
+      <xs:element name="pravoField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="parceli" nillable="true" type="tns:parceli" />
+  <xs:complexType name="ArrayOfsopstvenici">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="sopstvenici" nillable="true" type="tns:sopstvenici" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfsopstvenici" nillable="true" type="tns:ArrayOfsopstvenici" />
+  <xs:complexType name="sopstvenici">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q4:PropertyChangedEventHandler" />
+      <xs:element name="brojField" nillable="true" type="xs:string" />
+      <xs:element name="delField" nillable="true" type="xs:string" />
+      <xs:element name="imeField" nillable="true" type="xs:string" />
+      <xs:element name="mestoField" nillable="true" type="xs:string" />
+      <xs:element name="ulicaField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="sopstvenici" nillable="true" type="tns:sopstvenici" />
+  <xs:complexType name="ArrayOftovari">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tovari" nillable="true" type="tns:tovari" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftovari" nillable="true" type="tns:ArrayOftovari" />
+  <xs:complexType name="tovari">
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q5:PropertyChangedEventHandler" />
+      <xs:element name="textField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tovari" nillable="true" type="tns:tovari" />
+  <xs:complexType name="ATRparceli">
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q6:PropertyChangedEventHandler" />
+      <xs:element name="messageField" nillable="true" type="xs:string" />
+      <xs:element name="nizparField" nillable="true" type="tns:ArrayOfatributiparcela" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ATRparceli" nillable="true" type="tns:ATRparceli" />
+  <xs:complexType name="ArrayOfatributiparcela">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="atributiparcela" nillable="true" type="tns:atributiparcela" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfatributiparcela" nillable="true" type="tns:ArrayOfatributiparcela" />
+  <xs:complexType name="atributiparcela">
+    <xs:sequence>
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q7:PropertyChangedEventHandler" />
+      <xs:element name="broj_delField" nillable="true" type="xs:string" />
+      <xs:element name="ilistField" nillable="true" type="xs:string" />
+      <xs:element name="kopsField" nillable="true" type="xs:string" />
+      <xs:element name="kulturaField" nillable="true" type="xs:string" />
+      <xs:element name="mestoField" nillable="true" type="xs:string" />
+      <xs:element name="objektField" type="xs:int" />
+      <xs:element name="opsField" nillable="true" type="xs:string" />
+      <xs:element name="povrsinaField" type="xs:long" />
+      <xs:element name="pravoField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="atributiparcela" nillable="true" type="tns:atributiparcela" />
+</xs:schema>

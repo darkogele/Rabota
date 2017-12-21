@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="900980c6-05d3-468a-a9fb-0b0b767e704b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Interop.CC.Handler.External/MetaService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MetaService.xsd" MetadataType="Schema" ID="d69e27d9-3aba-4e8f-b983-923818db6434" SourceId="1" SourceUrl="http://localhost/Interop.CC.Handler.External/MetaService.svc?xsd=xsd3" />
+    <MetadataFile FileName="MetaService1.xsd" MetadataType="Schema" ID="666f440b-2131-4301-ba62-1f7d6f697ec6" SourceId="1" SourceUrl="http://localhost/Interop.CC.Handler.External/MetaService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MetaService2.xsd" MetadataType="Schema" ID="f43b6487-cd58-4766-9665-ae0ed056c75b" SourceId="1" SourceUrl="http://localhost/Interop.CC.Handler.External/MetaService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MetaService3.xsd" MetadataType="Schema" ID="df3ce73c-5333-4438-8512-08d9473b4432" SourceId="1" SourceUrl="http://localhost/Interop.CC.Handler.External/MetaService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MetaService.wsdl" MetadataType="Wsdl" ID="75838360-4051-4f69-9864-37839d530d91" SourceId="1" SourceUrl="http://localhost/Interop.CC.Handler.External/MetaService.svc?wsdl" />
+    <MetadataFile FileName="MetaService.disco" MetadataType="Disco" ID="2b6d3430-cced-4bec-85e8-534dfef60c3a" SourceId="1" SourceUrl="http://localhost/Interop.CC.Handler.External/MetaService.svc?disco" />
+    <MetadataFile FileName="MetaService4.xsd" MetadataType="Schema" ID="78d9a7ba-67fc-4ed2-af96-becfd6e9fd0b" SourceId="1" SourceUrl="http://localhost/Interop.CC.Handler.External/MetaService.svc?xsd=xsd4" />
+    <MetadataFile FileName="MetaService5.xsd" MetadataType="Schema" ID="f49472e9-04c4-4a73-8261-40b74530784e" SourceId="1" SourceUrl="http://localhost/Interop.CC.Handler.External/MetaService.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

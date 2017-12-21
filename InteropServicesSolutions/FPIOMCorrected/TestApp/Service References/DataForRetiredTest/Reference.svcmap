@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ae39d4a7-7f25-42b4-8a7f-df48dbaafa6e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/FPIOMServicesTest.Host/DataForRetiredTest.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataForRetiredTest.xsd" MetadataType="Schema" ID="f0e94f13-ebff-440f-a882-d2cac501c0d8" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/DataForRetiredTest.svc?xsd=xsd0" />
+    <MetadataFile FileName="DataForRetiredTest1.xsd" MetadataType="Schema" ID="d8874794-2056-47d4-977e-28787e9011ba" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/DataForRetiredTest.svc?xsd=xsd1" />
+    <MetadataFile FileName="DataForRetiredTest2.xsd" MetadataType="Schema" ID="e69dd0ca-3f8b-4aff-980a-ce31f7c1d951" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/DataForRetiredTest.svc?xsd=xsd2" />
+    <MetadataFile FileName="DataForRetiredTest.wsdl" MetadataType="Wsdl" ID="d6809f15-8e4a-4d28-87fc-cbda091f4543" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/DataForRetiredTest.svc?wsdl" />
+    <MetadataFile FileName="DataForRetiredTest1.wsdl" MetadataType="Wsdl" ID="20114c01-e6f5-43f3-b1db-9cd8f7bbbc0b" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/DataForRetiredTest.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="DataForRetiredTest.disco" MetadataType="Disco" ID="6bc83af7-ee74-456d-bfb3-c4a4ea5e4208" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/DataForRetiredTest.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a4ba52fa-d4cc-4192-a5d4-ab4fa9275850" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/CURMServicesProd.Host/DataExeExp.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataExeExp.xsd" MetadataType="Schema" ID="eda6a368-25b6-46db-94b5-4f791f1193c9" SourceId="1" SourceUrl="http://localhost/CURMServicesProd.Host/DataExeExp.svc?xsd=xsd3" />
+    <MetadataFile FileName="DataExeExp.wsdl" MetadataType="Wsdl" ID="5f75476b-24a1-4fb6-97de-ab19a524bdb2" SourceId="1" SourceUrl="http://localhost/CURMServicesProd.Host/DataExeExp.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="DataExeExp4.xsd" MetadataType="Schema" ID="5c0ed745-7e07-426a-a24c-d71696b39b72" SourceId="1" SourceUrl="http://localhost/CURMServicesProd.Host/DataExeExp.svc?xsd=xsd4" />
+    <MetadataFile FileName="DataExeExp1.wsdl" MetadataType="Wsdl" ID="fc62110e-3537-4548-ae87-9fc2027882fd" SourceId="1" SourceUrl="http://localhost/CURMServicesProd.Host/DataExeExp.svc?wsdl" />
+    <MetadataFile FileName="DataExeExp1.xsd" MetadataType="Schema" ID="4c530206-3c32-4df6-897a-29d6acc4cf43" SourceId="1" SourceUrl="http://localhost/CURMServicesProd.Host/DataExeExp.svc?xsd=xsd0" />
+    <MetadataFile FileName="DataExeExp2.xsd" MetadataType="Schema" ID="0eae91ed-07f9-49d5-8504-a3c0c4f34803" SourceId="1" SourceUrl="http://localhost/CURMServicesProd.Host/DataExeExp.svc?xsd=xsd1" />
+    <MetadataFile FileName="DataExeExp3.xsd" MetadataType="Schema" ID="f5db226c-113f-49db-a741-05926611a10c" SourceId="1" SourceUrl="http://localhost/CURMServicesProd.Host/DataExeExp.svc?xsd=xsd2" />
+    <MetadataFile FileName="DataExeExp.disco" MetadataType="Disco" ID="1a212b06-6bed-4b27-84ba-1dff03c72a31" SourceId="1" SourceUrl="http://localhost/CURMServicesProd.Host/DataExeExp.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

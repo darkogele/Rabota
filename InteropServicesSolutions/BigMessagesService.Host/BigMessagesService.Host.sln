@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigMessagesService.Host", "BigMessagesService.Host\BigMessagesService.Host.csproj", "{F828FE88-C1B3-4EEB-8B6E-DCD671567802}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Implementations", "Implementations\Implementations.csproj", "{2A32CB79-9BF0-47E3-801C-25FF0D78D395}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppForTesting", "ConsoleAppForTesting\ConsoleAppForTesting.csproj", "{BC6E9472-321D-4859-BC44-BF161B2825F9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F828FE88-C1B3-4EEB-8B6E-DCD671567802} = {F828FE88-C1B3-4EEB-8B6E-DCD671567802}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.11.21.108:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BigMessagesService.Host\\BigMessagesService.Host.csproj
+		SccProjectName1 = BigMessagesService.Host
+		SccLocalPath1 = BigMessagesService.Host
+		SccProjectUniqueName2 = ConsoleAppForTesting\\ConsoleAppForTesting.csproj
+		SccProjectName2 = ConsoleAppForTesting
+		SccLocalPath2 = ConsoleAppForTesting
+		SccProjectUniqueName3 = Implementations\\Implementations.csproj
+		SccProjectName3 = Implementations
+		SccLocalPath3 = Implementations
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F828FE88-C1B3-4EEB-8B6E-DCD671567802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F828FE88-C1B3-4EEB-8B6E-DCD671567802}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F828FE88-C1B3-4EEB-8B6E-DCD671567802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F828FE88-C1B3-4EEB-8B6E-DCD671567802}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A32CB79-9BF0-47E3-801C-25FF0D78D395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A32CB79-9BF0-47E3-801C-25FF0D78D395}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A32CB79-9BF0-47E3-801C-25FF0D78D395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A32CB79-9BF0-47E3-801C-25FF0D78D395}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC6E9472-321D-4859-BC44-BF161B2825F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC6E9472-321D-4859-BC44-BF161B2825F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC6E9472-321D-4859-BC44-BF161B2825F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC6E9472-321D-4859-BC44-BF161B2825F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

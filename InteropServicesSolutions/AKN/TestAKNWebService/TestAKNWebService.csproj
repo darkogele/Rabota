@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{85BFE205-3133-4CB8-8D2E-787D79C3987A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestAKNWebService</RootNamespace>
+    <AssemblyName>TestAKNWebService</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\InteropDeploy\AKNClientTest\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>18</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C340E5E3DCEEF4F9F6B82158BAE3BC63472E6AB5</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>TestAKNWebService_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Renci.SshNet">
+      <HintPath>..\packages\SSH.NET.2014.4.6-beta2\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\AKNadapterservice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNCopyOfCadastralPlan\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNmun1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNOriginal\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FaultAKNService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ImotenListDokument\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\KopijaKatastarskiPlanDocument\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PodatociInfrastrukturniObjektiDokument\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RealAKNParcelPropertyListService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RealAKNServiceForDocuments\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TSAdapterProduction\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TSAdapterTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TSAKN_StSTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TSAKN_StS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Service References\AKNadapterservice\AdapterServiceAKN.wsdl" />
+    <None Include="Service References\AKNadapterservice\AdapterServiceAKN.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNadapterservice\AdapterServiceAKN1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNadapterservice\AdapterServiceAKN2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNadapterservice\AdapterServiceAKN3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNadapterservice\AdapterServiceAKN4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNadapterservice\AKNService.wsdl" />
+    <None Include="Service References\AKNadapterservice\TestAKNWebService.AKNadapterservice.ATRparceli.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNadapterservice\TestAKNWebService.AKNadapterservice.dzgr.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNCopyOfCadastralPlan\IntegracijaWS1.wsdl" />
+    <None Include="Service References\AKNCopyOfCadastralPlan\IntegracijaWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNCopyOfCadastralPlan\TestAKNWebService.AKNCopyOfCadastralPlan.documentInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNCopyOfCadastralPlan\TestAKNWebService.AKNCopyOfCadastralPlan.generateDocumentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNCopyOfCadastralPlan\TestAKNWebService.AKNCopyOfCadastralPlan.getPayedReqResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNCopyOfCadastralPlan\TestAKNWebService.AKNCopyOfCadastralPlan.getPlistInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNCopyOfCadastralPlan\TestAKNWebService.AKNCopyOfCadastralPlan.getTestResultResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNCopyOfCadastralPlan\TestAKNWebService.AKNCopyOfCadastralPlan.insLiteUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNCopyOfCadastralPlan\TestAKNWebService.AKNCopyOfCadastralPlan.insNewProcedureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNCopyOfCadastralPlan\TestAKNWebService.AKNCopyOfCadastralPlan.insOISDUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNCopyOfCadastralPlan\TestAKNWebService.AKNCopyOfCadastralPlan.payedReq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNCopyOfCadastralPlan\TestAKNWebService.AKNCopyOfCadastralPlan.plistInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNCopyOfCadastralPlan\TestAKNWebService.AKNCopyOfCadastralPlan.printMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNmun1\AKNMunicipalityService.wsdl" />
+    <None Include="Service References\AKNmun1\AKNMunSvc.wsdl" />
+    <None Include="Service References\AKNmun1\AKNMunSvc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNmun1\AKNMunSvc1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNmun1\AKNMunSvc2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNmun1\TestAKNWebService.AKNmun1.MunicipalityDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNOriginal\SERCICE987654321.wsdl" />
+    <None Include="Service References\AKNOriginal\TestAKNWebService.AKNOriginal.ATRparceli.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNOriginal\TestAKNWebService.AKNOriginal.dzgr.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNOriginal\TestAKNWebService.AKNOriginal.ulici.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FaultAKNService\AdapterServiceAKN.wsdl" />
+    <None Include="Service References\FaultAKNService\AdapterServiceAKN.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FaultAKNService\AdapterServiceAKN1.wsdl" />
+    <None Include="Service References\FaultAKNService\AdapterServiceAKN1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FaultAKNService\AdapterServiceAKN2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FaultAKNService\AdapterServiceAKN3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FaultAKNService\AdapterServiceAKN4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FaultAKNService\TestAKNWebService.FaultAKNService.ATRparceli.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FaultAKNService\TestAKNWebService.FaultAKNService.dzgr.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImotenListDokument\AKNPListDoc.wsdl" />
+    <None Include="Service References\ImotenListDokument\AKNPListDoc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImotenListDokument\AKNPListDoc1.wsdl" />
+    <None Include="Service References\ImotenListDokument\AKNPListDoc1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImotenListDokument\AKNPListDoc2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImotenListDokument\TestAKNWebService.ImotenListDokument.AKNDocOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KopijaKatastarskiPlanDocument\AKNCPlanDoc.wsdl" />
+    <None Include="Service References\KopijaKatastarskiPlanDocument\AKNCPlanDoc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KopijaKatastarskiPlanDocument\AKNCPlanDoc1.wsdl" />
+    <None Include="Service References\KopijaKatastarskiPlanDocument\AKNCPlanDoc1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KopijaKatastarskiPlanDocument\AKNCPlanDoc2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KopijaKatastarskiPlanDocument\TestAKNWebService.KopijaKatastarskiPlanDocument.AKNDocOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PodatociInfrastrukturniObjektiDokument\AKNDataForIFDoc.wsdl" />
+    <None Include="Service References\PodatociInfrastrukturniObjektiDokument\AKNDataForIFDoc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PodatociInfrastrukturniObjektiDokument\AKNDataForIFDoc1.wsdl" />
+    <None Include="Service References\PodatociInfrastrukturniObjektiDokument\AKNDataForIFDoc1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PodatociInfrastrukturniObjektiDokument\AKNDataForIFDoc2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PodatociInfrastrukturniObjektiDokument\TestAKNWebService.PodatociInfrastrukturniObjektiDokument.AKNDocOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RealAKNParcelPropertyListService\SERCICE987654321.wsdl" />
+    <None Include="Service References\RealAKNParcelPropertyListService\TestAKNWebService.RealAKNParcelPropertyListService.ATRparceli.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RealAKNParcelPropertyListService\TestAKNWebService.RealAKNParcelPropertyListService.dzgr.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RealAKNParcelPropertyListService\TestAKNWebService.RealAKNParcelPropertyListService.katopstini.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RealAKNParcelPropertyListService\TestAKNWebService.RealAKNParcelPropertyListService.opstini.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RealAKNParcelPropertyListService\TestAKNWebService.RealAKNParcelPropertyListService.ReturnImotenList_3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RealAKNParcelPropertyListService\TestAKNWebService.RealAKNParcelPropertyListService.ReturnKatOps_2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RealAKNParcelPropertyListService\TestAKNWebService.RealAKNParcelPropertyListService.ReturnOps_1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RealAKNParcelPropertyListService\TestAKNWebService.RealAKNParcelPropertyListService.ReturnParcela_7Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RealAKNServiceForDocuments\IntegracijaWS.wsdl" />
+    <None Include="Service References\RealAKNServiceForDocuments\IntegracijaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RealAKNServiceForDocuments\TestAKNWebService.RealAKNServiceForDocuments.documentInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RealAKNServiceForDocuments\TestAKNWebService.RealAKNServiceForDocuments.generateDocumentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RealAKNServiceForDocuments\TestAKNWebService.RealAKNServiceForDocuments.getPayedReqResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RealAKNServiceForDocuments\TestAKNWebService.RealAKNServiceForDocuments.getPlistInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RealAKNServiceForDocuments\TestAKNWebService.RealAKNServiceForDocuments.getTestResultResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RealAKNServiceForDocuments\TestAKNWebService.RealAKNServiceForDocuments.insLiteUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RealAKNServiceForDocuments\TestAKNWebService.RealAKNServiceForDocuments.insNewProcedureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RealAKNServiceForDocuments\TestAKNWebService.RealAKNServiceForDocuments.insOISDUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RealAKNServiceForDocuments\TestAKNWebService.RealAKNServiceForDocuments.payedReq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RealAKNServiceForDocuments\TestAKNWebService.RealAKNServiceForDocuments.plistInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RealAKNServiceForDocuments\TestAKNWebService.RealAKNServiceForDocuments.printMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TSAdapterProduction\TSAdapterProduction1.wsdl" />
+    <None Include="Service References\TSAdapterTest\TSAdapterTest1.wsdl" />
+    <None Include="Service References\TSAKN_StSTest\CRM_TS_AKN.wsdl" />
+    <None Include="Service References\TSAKN_StS\CRM_TS_AKN.wsdl" />
+    <None Include="TestAKNWebService_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AKNadapterservice\" />
+    <WCFMetadataStorage Include="Service References\AKNCopyOfCadastralPlan\" />
+    <WCFMetadataStorage Include="Service References\AKNmun1\" />
+    <WCFMetadataStorage Include="Service References\AKNOriginal\" />
+    <WCFMetadataStorage Include="Service References\FaultAKNService\" />
+    <WCFMetadataStorage Include="Service References\ImotenListDokument\" />
+    <WCFMetadataStorage Include="Service References\KopijaKatastarskiPlanDocument\" />
+    <WCFMetadataStorage Include="Service References\PodatociInfrastrukturniObjektiDokument\" />
+    <WCFMetadataStorage Include="Service References\RealAKNParcelPropertyListService\" />
+    <WCFMetadataStorage Include="Service References\RealAKNServiceForDocuments\" />
+    <WCFMetadataStorage Include="Service References\TSAdapterProduction\" />
+    <WCFMetadataStorage Include="Service References\TSAdapterTest\" />
+    <WCFMetadataStorage Include="Service References\TSAKN_StSTest\" />
+    <WCFMetadataStorage Include="Service References\TSAKN_StS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNCopyOfCadastralPlan\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNCopyOfCadastralPlan\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNCopyOfCadastralPlan\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNadapterservice\AdapterServiceAKN.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNadapterservice\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNadapterservice\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNadapterservice\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNOriginal\SERCICE987654321.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNOriginal\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNOriginal\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNOriginal\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ImotenListDokument\AKNPListDoc.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ImotenListDokument\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ImotenListDokument\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ImotenListDokument\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\KopijaKatastarskiPlanDocument\AKNCPlanDoc.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\KopijaKatastarskiPlanDocument\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\KopijaKatastarskiPlanDocument\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\KopijaKatastarskiPlanDocument\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PodatociInfrastrukturniObjektiDokument\AKNDataForIFDoc.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PodatociInfrastrukturniObjektiDokument\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PodatociInfrastrukturniObjektiDokument\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PodatociInfrastrukturniObjektiDokument\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNmun1\AKNMunSvc.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNmun1\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNmun1\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNmun1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSAdapterTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSAdapterTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSAdapterTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSAdapterProduction\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSAdapterProduction\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSAdapterProduction\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RealAKNParcelPropertyListService\SERCICE987654321.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RealAKNParcelPropertyListService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RealAKNParcelPropertyListService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RealAKNParcelPropertyListService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FaultAKNService\AdapterServiceAKN.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FaultAKNService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FaultAKNService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FaultAKNService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RealAKNServiceForDocuments\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RealAKNServiceForDocuments\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RealAKNServiceForDocuments\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSAKN_StS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSAKN_StS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSAKN_StS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSAKN_StSTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSAKN_StSTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSAKN_StSTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

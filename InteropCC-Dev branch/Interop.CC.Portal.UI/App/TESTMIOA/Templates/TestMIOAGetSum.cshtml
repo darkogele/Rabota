@@ -1,0 +1,41 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>Сума на броеви</h2>
+
+<form name="testmioaGetSumForm" ng-controller="TestmioaCtrl">
+
+    <div class="container">
+        <div class="col-lg-3">
+
+            @* firstName *@
+            <div class="form-group" ng-class="{ 'has-error' : firstFormField.first.$invalid }">
+                <ng-form name="firstFormField">
+                    <label for="first">Прв број:</label>
+                    <input id="first" type="text" class="form-control" name="first" ng-model="first" required>
+                </ng-form>
+            </div>
+            @* lastName *@
+            <div class="form-group" ng-class="{ 'has-error' : secondFormField.second.$invalid }">
+                <ng-form name="secondFormField">
+                    <label for="second">Втор број:</label>
+                    <input id="second" type="text" class="form-control" name="second" ng-model="second" required>
+                </ng-form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-disabled="testmioaGetSumForm.$invalid" ng-click="testmioaSum(first, second)"><i class="fa fa-save"></i> Испрати</button>
+                <a class="btn btn-warning" href="#/testmioa/testmioagetsum" ui-sref="testmioagetsumindex">Откажи</a>
+            </div>
+        </div>
+
+        <div ng-show="show" class="col-lg-9">
+
+            <div class="form-group">
+                <ng-form name="respFormField">
+                    <label for="resp">СУМА НА БРОЕВИТЕ:</label>
+                    <input id="resp" type="text" class="form-control" name="resp" ng-model="resp">
+                </ng-form>
+            </div>
+        </div>
+    </div>
+</form>

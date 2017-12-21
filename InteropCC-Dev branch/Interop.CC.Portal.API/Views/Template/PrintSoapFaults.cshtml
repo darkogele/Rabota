@@ -1,0 +1,44 @@
+﻿@*@{
+        Layout = null;
+    }
+    @inherits System.Web.Mvc.WebViewPage*@
+@model List<Interop.CC.Models.DTO.SoapFaultExcelDTO>
+    <head>
+        <style type="text/css">
+            table, tr, td {
+                border: 1px solid gray;
+                padding: 5px;
+                border-collapse: collapse;
+            }
+
+            th {
+                border: 2px solid black;
+                padding: 5px;
+                border-collapse: collapse;
+            }
+        </style>
+    </head>
+    <table class="table-striped">
+        <thead style="display: table-row-group">
+            <tr id="row1">
+                <th>Трансакција</th>
+                <th>Причина</th>
+                <th>Дата на настанување</th>
+                <th>Дата на креирање</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var soapfault in Model)
+            {
+                <tr>
+                    <td>@soapfault.TransactionId</td>
+                    <td>@soapfault.Reason</td>
+                    <td>@soapfault.DateOccured</td>
+                    <td>@soapfault.DateCreated</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+

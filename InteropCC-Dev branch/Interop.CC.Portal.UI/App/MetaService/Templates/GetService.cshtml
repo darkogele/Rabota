@@ -1,0 +1,41 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+
+
+<h2>Податоци за сервис</h2>
+
+<form name="getServiceForm" ng-controller="MetaServiceCtrl">
+
+    <div class="container">
+        <div class="col-lg-3">
+
+
+            <div class="form-group" ng-class="{ 'has-error' : providerform.provider.$invalid }">
+                <ng-form name="providerform">
+                    <label for="provider">Код за провајдер:</label>
+                    <input id="provider" type="text" class="form-control" name="provider" ng-model="provider" required>
+                </ng-form>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' :serviceform.service.$invalid }">
+                <ng-form name="serviceform">
+                    <label for="service">Код за сервис:</label>
+                    <input id="service" type="text" class="form-control" name="service" ng-model="service" required>
+                </ng-form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" ng-disabled="getServiceForm.$invalid" ng-click="showWsdl(provider,service)"><i class="fa fa-save"></i> Испрати</button>
+                <a class="btn btn-warning" ui-sref="home">Откажи</a>
+            </div>
+
+            <div class="form-group">
+                <ng-form name="wsdlform">
+                    <label for="wsdl">WSDL:</label>
+                    <textarea id="wsdl" type="text" class="form-control" style="width:450%; height: 500px" name="wsdl" ng-model="wsdlservice" readonly></textarea>
+                </ng-form>
+            </div>
+
+        </div>
+    </div>
+</form>

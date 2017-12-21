@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AdapterServices", "AdapterServices", "{50278EC1-BD3C-4991-AC96-1E7DD15B330A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterServiceCRM", "AdapterServiceCRM\AdapterServiceCRM.csproj", "{F0B2E4E1-FAE7-4385-ACBE-1A4C876C1EB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterServiceCRM.Host", "AdapterServiceCRM.Host\AdapterServiceCRM.Host.csproj", "{66BCC630-7D74-4046-AE22-488982B1A609}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRRMTest", "CRRMTest\CRRMTest.csproj", "{07BCC27C-0C5C-4188-82EE-2B4DF755461E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{66BCC630-7D74-4046-AE22-488982B1A609} = {66BCC630-7D74-4046-AE22-488982B1A609}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.11.21.108:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AdapterServiceCRM\\AdapterServiceCRM.csproj
+		SccProjectTopLevelParentUniqueName1 = CRRM.sln
+		SccProjectName1 = AdapterServiceCRM
+		SccLocalPath1 = AdapterServiceCRM
+		SccProjectUniqueName2 = AdapterServiceCRM.Host\\AdapterServiceCRM.Host.csproj
+		SccProjectTopLevelParentUniqueName2 = CRRM.sln
+		SccProjectName2 = AdapterServiceCRM.Host
+		SccLocalPath2 = AdapterServiceCRM.Host
+		SccProjectUniqueName3 = CRRMTest\\CRRMTest.csproj
+		SccProjectName3 = CRRMTest
+		SccLocalPath3 = CRRMTest
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0B2E4E1-FAE7-4385-ACBE-1A4C876C1EB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0B2E4E1-FAE7-4385-ACBE-1A4C876C1EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0B2E4E1-FAE7-4385-ACBE-1A4C876C1EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0B2E4E1-FAE7-4385-ACBE-1A4C876C1EB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66BCC630-7D74-4046-AE22-488982B1A609}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66BCC630-7D74-4046-AE22-488982B1A609}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66BCC630-7D74-4046-AE22-488982B1A609}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66BCC630-7D74-4046-AE22-488982B1A609}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07BCC27C-0C5C-4188-82EE-2B4DF755461E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07BCC27C-0C5C-4188-82EE-2B4DF755461E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07BCC27C-0C5C-4188-82EE-2B4DF755461E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07BCC27C-0C5C-4188-82EE-2B4DF755461E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F0B2E4E1-FAE7-4385-ACBE-1A4C876C1EB7} = {50278EC1-BD3C-4991-AC96-1E7DD15B330A}
+		{66BCC630-7D74-4046-AE22-488982B1A609} = {50278EC1-BD3C-4991-AC96-1E7DD15B330A}
+	EndGlobalSection
+EndGlobal

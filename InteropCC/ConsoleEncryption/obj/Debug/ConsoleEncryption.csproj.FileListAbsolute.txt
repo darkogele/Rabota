@@ -1,0 +1,13 @@
+D:\Work\InteropCC\ConsoleEncryption\bin\Debug\ConsoleEncryption.exe.config
+D:\Work\InteropCC\ConsoleEncryption\bin\Debug\ConsoleEncryption.exe
+D:\Work\InteropCC\ConsoleEncryption\bin\Debug\ConsoleEncryption.pdb
+D:\Work\InteropCC\ConsoleEncryption\bin\Debug\Interop.CC.Encryption.dll
+D:\Work\InteropCC\ConsoleEncryption\bin\Debug\Interop.CC.CrossCutting.dll
+D:\Work\InteropCC\ConsoleEncryption\bin\Debug\NLog.dll
+D:\Work\InteropCC\ConsoleEncryption\bin\Debug\Interop.CC.Encryption.pdb
+D:\Work\InteropCC\ConsoleEncryption\bin\Debug\Interop.CC.CrossCutting.pdb
+D:\Work\InteropCC\ConsoleEncryption\bin\Debug\NLog.xml
+D:\Work\InteropCC\ConsoleEncryption\obj\Debug\ConsoleEncryption.csprojResolveAssemblyReference.cache
+D:\Work\InteropCC\ConsoleEncryption\obj\Debug\ConsoleEncryption.exe
+D:\Work\InteropCC\ConsoleEncryption\obj\Debug\ConsoleEncryption.pdb
+D:\Work\InteropCC\ConsoleEncryption\bin\Debug\NLog.config

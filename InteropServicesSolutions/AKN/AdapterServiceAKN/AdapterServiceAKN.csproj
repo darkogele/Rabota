@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6398C0F7-36AE-408F-A3E6-6F8A1CE9064A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AdapterServiceAKN</RootNamespace>
+    <AssemblyName>AdapterServiceAKN</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Renci.SshNet">
+      <HintPath>..\packages\SSH.NET.2014.4.6-beta2\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AKNCPlanDoc.cs" />
+    <Compile Include="AKNDataForIFDoc.cs" />
+    <Compile Include="AKNDocOutput.cs" />
+    <Compile Include="AKNMunicipalityService.cs" />
+    <Compile Include="AKNPListDoc.cs" />
+    <Compile Include="AKNService.cs" />
+    <Compile Include="IAKNCPlanDoc.cs" />
+    <Compile Include="IAKNDataForIFDoc.cs" />
+    <Compile Include="IAKNMunicipality.cs" />
+    <Compile Include="IAKNPListDoc.cs" />
+    <Compile Include="IAKNService.cs" />
+    <Compile Include="ImotenListDTO.cs" />
+    <Compile Include="MunicipalityDTO.cs" />
+    <Compile Include="ParcelaDTO.cs" />
+    <Compile Include="AKNCPlanDocProduction.cs" />
+    <Compile Include="AKNDataForIFDocProduction.cs" />
+    <Compile Include="AKNPListDocProduction.cs" />
+    <Compile Include="IAKNCPlanDocProduction.cs" />
+    <Compile Include="IAKNDataForIFDocProduction.cs" />
+    <Compile Include="IAKNPListDocProduction.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\AKNDocsServiceProduction\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNNewOriginal\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNOriginalDocSvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNOriginalService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Service References\AKNDocsServiceProduction\AdapterServiceAKN.AKNDocsServiceProduction.documentInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceProduction\AdapterServiceAKN.AKNDocsServiceProduction.generateDocumentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceProduction\AdapterServiceAKN.AKNDocsServiceProduction.getPayedReqResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceProduction\AdapterServiceAKN.AKNDocsServiceProduction.getPlistInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceProduction\AdapterServiceAKN.AKNDocsServiceProduction.getTestResultResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceProduction\AdapterServiceAKN.AKNDocsServiceProduction.insLiteUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceProduction\AdapterServiceAKN.AKNDocsServiceProduction.insNewProcedureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceProduction\AdapterServiceAKN.AKNDocsServiceProduction.insOISDUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceProduction\AdapterServiceAKN.AKNDocsServiceProduction.payedReq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceProduction\AdapterServiceAKN.AKNDocsServiceProduction.plistInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceProduction\AdapterServiceAKN.AKNDocsServiceProduction.printMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceProduction\IntegracijaWS1.wsdl" />
+    <None Include="Service References\AKNDocsServiceProduction\IntegracijaWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNNewOriginal\AdapterServiceAKN.AKNNewOriginal.ATRparceli.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNNewOriginal\AdapterServiceAKN.AKNNewOriginal.dzgr.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNNewOriginal\AdapterServiceAKN.AKNNewOriginal.katopstini.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNNewOriginal\AdapterServiceAKN.AKNNewOriginal.opstini.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNNewOriginal\AdapterServiceAKN.AKNNewOriginal.ReturnImotenList_3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNNewOriginal\AdapterServiceAKN.AKNNewOriginal.ReturnKatOps_2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNNewOriginal\AdapterServiceAKN.AKNNewOriginal.ReturnOps_1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNNewOriginal\AdapterServiceAKN.AKNNewOriginal.ReturnParcela_7Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNNewOriginal\SERCICE987654321.wsdl" />
+    <None Include="Service References\AKNOriginalDocSvc\AdapterServiceAKN.AKNOriginalDocSvc.documentInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNOriginalDocSvc\AdapterServiceAKN.AKNOriginalDocSvc.generateDocumentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNOriginalDocSvc\AdapterServiceAKN.AKNOriginalDocSvc.getPayedReqResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNOriginalDocSvc\AdapterServiceAKN.AKNOriginalDocSvc.getPlistInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNOriginalDocSvc\AdapterServiceAKN.AKNOriginalDocSvc.getTestResultResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNOriginalDocSvc\AdapterServiceAKN.AKNOriginalDocSvc.insLiteUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNOriginalDocSvc\AdapterServiceAKN.AKNOriginalDocSvc.insNewProcedureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNOriginalDocSvc\AdapterServiceAKN.AKNOriginalDocSvc.insOISDUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNOriginalDocSvc\AdapterServiceAKN.AKNOriginalDocSvc.payedReq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNOriginalDocSvc\AdapterServiceAKN.AKNOriginalDocSvc.plistInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNOriginalDocSvc\AdapterServiceAKN.AKNOriginalDocSvc.printMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNOriginalDocSvc\IntegracijaWS.wsdl" />
+    <None Include="Service References\AKNOriginalDocSvc\IntegracijaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNOriginalService\AdapterServiceAKN.AKNOriginalService.ATRparceli.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNOriginalService\AdapterServiceAKN.AKNOriginalService.dzgr.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNOriginalService\AdapterServiceAKN.AKNOriginalService.ulici.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNOriginalService\SERCICE987654321.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AKNDocsServiceProduction\" />
+    <WCFMetadataStorage Include="Service References\AKNNewOriginal\" />
+    <WCFMetadataStorage Include="Service References\AKNOriginalDocSvc\" />
+    <WCFMetadataStorage Include="Service References\AKNOriginalService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNOriginalService\SERCICE987654321.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNOriginalService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNOriginalService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNOriginalService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNOriginalDocSvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNOriginalDocSvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNOriginalDocSvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNNewOriginal\SERCICE987654321.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNNewOriginal\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNNewOriginal\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNNewOriginal\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNDocsServiceProduction\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNDocsServiceProduction\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNDocsServiceProduction\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Production\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

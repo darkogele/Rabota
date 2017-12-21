@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{07BCC27C-0C5C-4188-82EE-2B4DF755461E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CRRMTest</RootNamespace>
+    <AssemblyName>CRRMTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\InteropDeploy\CRRMTest\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F6951236313CFAE830F1E0E0E1F81C61674085DD</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CRRMTest_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AdapterListOfChangesTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AdapterListOfChanges\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AdapterListOfSubjectsTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AdapterListOfSubjects\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AdapterTSFull\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CRM\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CRM_orig\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CURM_TEST\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\webreference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRRMTest_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AdapterListOfChangesTest\ListOfChangesCUTest.wsdl" />
+    <None Include="Service References\AdapterListOfChangesTest\ListOfChangesCUTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdapterListOfChangesTest\ListOfChangesCUTest1.wsdl" />
+    <None Include="Service References\AdapterListOfChangesTest\ListOfChangesCUTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdapterListOfChanges\ListOfChangesCU.wsdl" />
+    <None Include="Service References\AdapterListOfChanges\ListOfChangesCU.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdapterListOfChanges\ListOfChangesCU1.wsdl" />
+    <None Include="Service References\AdapterListOfChanges\ListOfChangesCU1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdapterListOfSubjectsTest\ListOfSubjectsCUTest.wsdl" />
+    <None Include="Service References\AdapterListOfSubjectsTest\ListOfSubjectsCUTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdapterListOfSubjectsTest\ListOfSubjectsCUTest1.wsdl" />
+    <None Include="Service References\AdapterListOfSubjectsTest\ListOfSubjectsCUTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdapterListOfSubjects\ListOfSubjectsCU.wsdl" />
+    <None Include="Service References\AdapterListOfSubjects\ListOfSubjectsCU.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdapterListOfSubjects\ListOfSubjectsCU1.wsdl" />
+    <None Include="Service References\AdapterListOfSubjects\ListOfSubjectsCU1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdapterTSFull\AdapterServiceCRM.wsdl" />
+    <None Include="Service References\AdapterTSFull\AdapterServiceCRM.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdapterTSFull\AdapterServiceCRM1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdapterTSFull\CRMService.wsdl" />
+    <None Include="Service References\CRM\AdapterServiceCRM_TS_CURM.wsdl" />
+    <None Include="Service References\CRM\AdapterServiceCRM_TS_CURM.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRM\AdapterServiceCRM_TS_CURM1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRM\CRM_TS_CURM.wsdl" />
+    <None Include="Service References\CRM_orig\CRRMTest.CRM_orig.ProcessRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CRM_orig\CRRMTest.CRM_orig.ProcessSignedRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CRM_orig\CRRMTest.CRM_orig.XmlSoapHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CRM_orig\XmlWebService.wsdl" />
+    <None Include="Service References\CURM_TEST\Test_CRM_TS_CURM.wsdl" />
+    <None Include="Service References\CURM_TEST\Test_CRM_TS_CURM.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURM_TEST\Test_CRM_TS_CURM1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CURM_TEST\Test_TS_CURM.wsdl" />
+    <None Include="Web References\webreference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\webreference\XmlWebService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AdapterListOfChangesTest\" />
+    <WCFMetadataStorage Include="Service References\AdapterListOfChanges\" />
+    <WCFMetadataStorage Include="Service References\AdapterListOfSubjectsTest\" />
+    <WCFMetadataStorage Include="Service References\AdapterListOfSubjects\" />
+    <WCFMetadataStorage Include="Service References\AdapterTSFull\" />
+    <WCFMetadataStorage Include="Service References\CRM\" />
+    <WCFMetadataStorage Include="Service References\CRM_orig\" />
+    <WCFMetadataStorage Include="Service References\CURM_TEST\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRM\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRM\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRM\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRM_orig\XmlWebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRM_orig\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRM_orig\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRM_orig\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://e-test.crm.com.mk/XWSS/XmlWebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\webreference\</RelPath>
+      <UpdateFromURL>https://e-test.crm.com.mk/XWSS/XmlWebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CRRMTest_webreference_XmlWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\webreference\XmlWebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CURM_TEST\Test_CRM_TS_CURM.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CURM_TEST\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CURM_TEST\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CURM_TEST\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRM\AdapterServiceCRM_TS_CURM.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterListOfSubjects\ListOfSubjectsCU.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterListOfSubjects\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterListOfSubjects\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterListOfSubjects\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterTSFull\AdapterServiceCRM.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterTSFull\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterTSFull\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterTSFull\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterListOfChanges\ListOfChangesCU.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterListOfChanges\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterListOfChanges\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterListOfChanges\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterListOfSubjectsTest\ListOfSubjectsCUTest.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterListOfSubjectsTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterListOfSubjectsTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterListOfSubjectsTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterListOfChangesTest\ListOfChangesCUTest.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterListOfChangesTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterListOfChangesTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterListOfChangesTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f8131d21-b224-43d4-be78-162ca5b7f3a1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/FPIOMServicesTest.Host/DataForEnsurersTest.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataForEnsurersTest.xsd" MetadataType="Schema" ID="1c756fa6-bc43-43fb-a977-f16831428b81" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/DataForEnsurersTest.svc?xsd=xsd2" />
+    <MetadataFile FileName="DataForEnsurersTest1.xsd" MetadataType="Schema" ID="4ebcad49-c096-4f44-87c8-bcb8cec0c230" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/DataForEnsurersTest.svc?xsd=xsd1" />
+    <MetadataFile FileName="DataForEnsurersTest2.xsd" MetadataType="Schema" ID="48656db2-6ee8-481d-9c8c-86abc0032ac9" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/DataForEnsurersTest.svc?xsd=xsd0" />
+    <MetadataFile FileName="DataForEnsurersTest.wsdl" MetadataType="Wsdl" ID="cc83d18f-1af8-480e-b77a-b020896cfcda" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/DataForEnsurersTest.svc?wsdl" />
+    <MetadataFile FileName="DataForEnsurersTest1.wsdl" MetadataType="Wsdl" ID="32275bdf-33c0-4a78-b4f1-1a2950b7c2fa" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/DataForEnsurersTest.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="DataForEnsurersTest.disco" MetadataType="Disco" ID="85f29ac5-2d8c-46b7-b6a0-d8b21dc5a4ca" SourceId="1" SourceUrl="http://localhost/FPIOMServicesTest.Host/DataForEnsurersTest.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

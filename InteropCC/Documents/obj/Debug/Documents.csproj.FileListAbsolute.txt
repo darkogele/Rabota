@@ -1,0 +1,5 @@
+D:\Work\InteropCC\Documents\bin\Debug\Documents.dll
+D:\Work\InteropCC\Documents\bin\Debug\Documents.pdb
+D:\Work\InteropCC\Documents\obj\Debug\Documents.dll
+D:\Work\InteropCC\Documents\obj\Debug\Documents.pdb
+D:\Work\InteropCC\Documents\obj\Debug\Documents.csprojResolveAssemblyReference.cache

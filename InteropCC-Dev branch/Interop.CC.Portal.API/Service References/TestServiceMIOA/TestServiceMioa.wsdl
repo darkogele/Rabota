@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://interop.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TestServiceMioa" targetNamespace="http://interop.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost/TestServiceMIOASite/ServiceMioa.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://interop.org/Imports">
+      <xsd:import schemaLocation="http://localhost/TestServiceMIOASite/ServiceMioa.svc?xsd=xsd0" namespace="http://interop.org/" />
+      <xsd:import schemaLocation="http://localhost/TestServiceMIOASite/ServiceMioa.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITestServiceMioa_GetFullName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFullName" />
+  </wsdl:message>
+  <wsdl:message name="ITestServiceMioa_GetFullName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFullNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITestServiceMioa_SumOfNums_InputMessage">
+    <wsdl:part name="parameters" element="tns:SumOfNums" />
+  </wsdl:message>
+  <wsdl:message name="ITestServiceMioa_SumOfNums_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SumOfNumsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITestServiceMioa">
+    <wsdl:operation name="GetFullName">
+      <wsdl:input wsaw:Action="http://interop.org/ITestServiceMioa/GetFullName" message="tns:ITestServiceMioa_GetFullName_InputMessage" />
+      <wsdl:output wsaw:Action="http://interop.org/ITestServiceMioa/GetFullNameResponse" message="tns:ITestServiceMioa_GetFullName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SumOfNums">
+      <wsdl:input wsaw:Action="http://interop.org/ITestServiceMioa/SumOfNums" message="tns:ITestServiceMioa_SumOfNums_InputMessage" />
+      <wsdl:output wsaw:Action="http://interop.org/ITestServiceMioa/SumOfNumsResponse" message="tns:ITestServiceMioa_SumOfNums_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="TestServiceMioa">
+    <wsdl:port name="WSHttpBinding_ITestServiceMioa" binding="i0:WSHttpBinding_ITestServiceMioa">
+      <soap12:address location="http://localhost/TestServiceMIOASite/ServiceMioa.svc/ws" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost/TestServiceMIOASite/ServiceMioa.svc/ws</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_ITestServiceMioa" binding="i0:BasicHttpBinding_ITestServiceMioa">
+      <soap:address location="http://localhost/TestServiceMIOASite/ServiceMioa.svc/basic" />
+    </wsdl:port>
+    <wsdl:port name="CustomBinding_ITestServiceMioa" binding="i0:CustomBinding_ITestServiceMioa">
+      <soap12:address location="http://localhost/TestServiceMIOASite/ServiceMioa.svc/custom" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

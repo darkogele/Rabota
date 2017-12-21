@@ -1,0 +1,94 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<div class="col-lg-5 col-lg-offset-3">
+    <form name="createParticipantForm" enctype="multipart/form-data" ng-controller="CreateParticipantCtrl">
+        <h2 class="text-center">Креирај учесник</h2>
+        <hr />
+        @* Code *@
+        <div class="form-group" ng-class="{ 'has-error' : participantCodeFormField.code.$invalid }">
+            <ng-form name="participantCodeFormField">
+                <label for="participantCode">Код:</label>
+                <input id="participantCode" type="text" class="form-control" name="code" ng-model="participant.code" required>
+            </ng-form>
+        </div>
+        @* Name *@
+        <div class="form-group" ng-class="{ 'has-error' : participantNameFormField.name.$invalid }">
+            <ng-form name="participantNameFormField">
+                <label for="participantName">Назив:</label>
+                <input id="participantName" type="text" class="form-control" name="name" ng-model="participant.name" required>
+            </ng-form>
+        </div>
+        @* Uri *@
+        <div class="form-group" ng-class="{ 'has-error' : participantUriFormField.uri.$invalid }">
+            <ng-form name="participantUriFormField">
+                <label for="participantUri">Uri:</label>
+                <input id="participantUri" type="text" class="form-control" name="uri" ng-model="participant.uri" required>
+            </ng-form>
+        </div>
+
+        @* System Type Participant
+            <div class="form-group" ng-class="{ 'has-error' : participantSysTypeFormField.systype.$invalid }">
+                <ng-form name="participantSysTypeFormField">
+                    <label>Надворешен учесник</label>
+                    <p>
+                        <input id="participantSysType" type="radio" ng-model="participant.isExternal" name="systype" ng-value="true" ng-change="changedExternal()" required>
+                        <span for="participantSysType"> Да</span>
+                    </p>
+                    <p>
+                        <input id="participantSysType" type="radio" ng-model="participant.isExternal" name="systype" ng-value="false" ng-change="changedExternal()" required>
+                        <span for="participantSysType"> Не</span>
+                    </p>
+                </ng-form>
+                <div ng-show="showExternal">
+                    <label for="externalCodeDropdown">Код на екстерен: </label>
+                    <select id="externalCodeDropdown" class="form-control" name="externalCodeDropdown" ng-model="externalCodeDropdown" ng-options="value for value in externalList">
+                        <option value="" selected="selected">----</option>
+                    </select>
+                </div>
+            </div>
+            <br /> *@
+        @* Active Participant *@
+        <div class="form-group" ng-class="{ 'has-error' : participantActiveFormField.activeForm.$invalid }">
+            <ng-form name="participantActiveFormField">
+                <label>Активен учесник</label>
+                <p>
+                    <input id="participantActiveForm" type="radio" ng-model="participant.isActive" name="activeForm" ng-value="true" ng-checked="true">
+                    <span for="participantActiveForm"> Да</span>
+                </p>
+                <p>
+                    <input id="participantActiveForm" type="radio" ng-model="participant.isActive" name="activeForm" ng-value="false">
+                    <span for="participantActiveForm"> Не</span>
+                </p>
+            </ng-form>
+        </div>
+
+        @* Input Certificate *@
+        <ng-form name="certificateForm">
+            <div class="form-group" ng-class="{ 'has-error' : participantCertificateFormField.certificate.$invalid }" style="display: inline-block;">
+                <ng-form name="participantCertificateFormField">
+                    <label>Избери сертификат</label>
+                    <span class="btn btn-default">
+                        <input type="file" id="participantCertificate" file-model="myFile" name="certificate" ng-model="myFile" required />
+                    </span>
+                </ng-form>
+            </div>
+            <div style="display: inline-block;" class="form-group" ng-class="{ 'has-error' : participantPasswordFormField.password.$invalid }">
+                <a ng-click="uploadFile()" class="btn btn-primary" ng-disabled="certificateForm.$invalid"> Прикачи</a>
+            </div>
+        </ng-form>
+
+        @* Public Key *@
+        <div class="form-group" ng-class="{ 'has-error' : participantPublicKeyFormField.publickey.$invalid }">
+            <ng-form name="participantPublicKeyFormField">
+                <label for="participantPublicKey">Јавен клуч: {{name}}</label>
+                <textarea id="participantPublicKey" class="form-control" name="publickey" ng-model="participant.publicKey" readonly required></textarea>
+            </ng-form>
+        </div>
+        <br />
+
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" ng-disabled="createParticipantForm.$invalid" ng-click="saveParticipant(participant)"><i class="fa fa-save"></i> Зачувај</button>
+            <a class="btn btn-warning" ui-sref="participants({pageIndex:1,itemsPerPage:10,sortDir:'asc',sortCol:'code'})">Откажи</a>
+        </div>
+    </form>
+</div>

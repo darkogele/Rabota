@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7c6e1fa0-7df7-4739-9510-b3facbccd306" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AdapterServiceAKN.Host/AKNCPlanDoc.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AKNCPlanDoc.xsd" MetadataType="Schema" ID="639edfea-3132-425f-9c40-a918bdda5516" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNCPlanDoc.svc?xsd=xsd2" />
+    <MetadataFile FileName="AKNCPlanDoc.wsdl" MetadataType="Wsdl" ID="bd65f819-f616-4cc8-9a56-a85d58bddb64" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNCPlanDoc.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="AKNCPlanDoc.disco" MetadataType="Disco" ID="2f544c12-9457-4f82-937e-8f65778045a6" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNCPlanDoc.svc?disco" />
+    <MetadataFile FileName="AKNCPlanDoc1.xsd" MetadataType="Schema" ID="6e8aac83-c442-4947-b0a0-c53860de5cf3" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNCPlanDoc.svc?xsd=xsd1" />
+    <MetadataFile FileName="AKNCPlanDoc2.xsd" MetadataType="Schema" ID="7435e60a-bdc1-4117-bdbf-8e6e258aefe9" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNCPlanDoc.svc?xsd=xsd0" />
+    <MetadataFile FileName="AKNCPlanDoc1.wsdl" MetadataType="Wsdl" ID="658fcbdd-7c90-46d0-9915-6eb2345a2d89" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNCPlanDoc.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

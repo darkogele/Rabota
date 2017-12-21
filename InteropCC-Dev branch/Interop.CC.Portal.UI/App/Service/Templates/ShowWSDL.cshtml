@@ -1,0 +1,15 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+  
+
+<div class="panel panel-primary">
+    <div class="panel-heading" style="font-size:large">
+        <h4><i></i><b>WSDL за сервис: {{serviceName}}  </b></h4>
+    </div>
+        <textarea rows="25" cols="40" class="form-control" ng-model="wsdl" readonly></textarea>
+</div>
+        <button class="btn btn-default" ng-click="back()" style="width:80px">
+            <i class="glyphicon glyphicon-chevron-left"></i>Назад
+        </button>
+
+

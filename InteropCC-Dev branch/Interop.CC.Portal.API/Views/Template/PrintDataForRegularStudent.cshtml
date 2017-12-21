@@ -1,0 +1,152 @@
+﻿@model Interop.CC.Models.DTO.Institutions.DataForRegularStudentDTO
+<head>
+    <style type="text/css">
+        table, tr, td {
+            border: 1px solid gray;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+
+        th {
+            border: 2px solid black;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<div style="width: 100%;">
+
+    <div style="float: left; width: 70%;">
+        <img src="@Server.MapPath("~/Views/Template/grbMak.jpg")" style="float: left" alt="MIOA logo" />
+        <label>Република Македонија</label>
+        <h4 style="font-size:.6em;">Министерство за информатичко општество и администрација</h4>
+    </div>
+    <div style="float: right; width: 30%; font-size: .6em">
+        <a style="margin-left: 80px;" href="http://www.interoperabilnost.gov.mk">www.interoperabilnost.gov.mk</a>
+
+        <table class="table-striped" style="margin-top: 20px;">
+            <thead style="display: table-row-group">
+
+            </thead>
+            <tbody style="font-size: .6em">
+                <tr>
+                    <td>Име на услугата:</td>
+                    <td>@Model.ServiceName</td>
+                </tr>
+                <tr>
+                    <td>Услугата ја користи:</td>
+                    <td>@Model.ConsumerName</td>
+                </tr>
+                <tr>
+                    <td>Услугата ја нуди:</td>
+                    <td>@Model.ProviderName</td>
+                </tr>
+                <tr>
+                    <td>Време на повик до услугата:</td>
+                    <td>@Model.ServiceCalledTime.ToString("dd.MM.yyyy HH:mm")</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div style="height: 70px; width: 100%; float: left"></div>
+
+<table class="table-striped">
+    <thead style="display: table-row-group">
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>Општина:</td>
+            <td>@Model.Municipality</td>
+        </tr>
+        <tr>
+            <td>Училиште:</td>
+            <td>@Model.School</td>
+        </tr>
+        <tr>
+            <td>Клас:</td>
+            <td>@Model.SchoolClass</td>
+        </tr>
+        <tr>
+            <td>Учебна година:</td>
+            <td>@Model.SchoolYear</td>
+        </tr>
+        <tr>
+            <td>Оделение:</td>
+            <td>@Model.Grade</td>
+        </tr>
+        <tr>
+            <td>Насока:</td>
+            <td>@Model.Profession</td>
+        </tr>
+        <tr>
+            <td>Профил:</td>
+            <td>@Model.Profile</td>
+        </tr>
+        <tr>
+            <td>Програма:</td>
+            <td>@Model.ProgramAssociation</td>
+        </tr>
+
+        <tr>
+            <td>Јазик:</td>
+            <td>@Model.LanguageEducation</td>
+        </tr>
+        <tr>
+            <td>Име и презиме:</td>
+            <td>@Model.FullName</td>
+        </tr>
+        <tr>
+            <td>Татково име:</td>
+            <td>@Model.FatherName</td>
+        </tr>
+        <tr>
+            <td>Датум на раѓање:</td>
+            <td>@Model.DateOfBirth</td>
+        </tr>
+        <tr>
+            <td>Место на раѓање:</td>
+            <td>@Model.PlaceOfBirth</td>
+        </tr>
+        <tr>
+            <td>Единствен матичен број:</td>
+            <td>@Model.Embg</td>
+        </tr>
+        <tr>
+            <td>Етничка припадност:</td>
+            <td>@Model.Ethnicity</td>
+        </tr>
+        <tr>
+            <td>Мајчин јазик:</td>
+            <td>@Model.NativeLanguage</td>
+        </tr>
+
+        <tr>
+            <td>Место:</td>
+            <td>@Model.Place</td>
+        </tr>
+        <tr>
+            <td>Адреса:</td>
+            <td>@Model.Address</td>
+        </tr>
+        <tr>
+            <td>Телефон:</td>
+            <td>@Model.Phone</td>
+        </tr>
+        <tr>
+            <td>Мобилен:</td>
+            <td>@Model.Mobile</td>
+        </tr>
+        <tr>
+            <td>Статус на класот:</td>
+            <td>@Model.SchoolClassStatus</td>
+        </tr>
+        <tr>
+            <td>Статус на училиштето:</td>
+            <td>@Model.SchoolStatus</td>
+        </tr>
+
+    </tbody>
+</table>

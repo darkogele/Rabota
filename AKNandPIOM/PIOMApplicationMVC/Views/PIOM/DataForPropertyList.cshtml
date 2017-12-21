@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "CadastralParcel";
+}
+
+<h2>Имотен лист</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.Label("Корисничко име")
+        </th>
+        <td>
+            @Html.TextBox("username")
+        </td>
+    <tr>
+    <tr>
+        <th>
+            @Html.Label("Лозинка")
+        </th>
+        <td>
+            @Html.TextBox("password")
+        </td>
+    </tr>
+    <tr>
+        <th>
+            @Html.Label("Катастарска општина")
+        </th>
+        <td>
+            @Html.TextBox("cMunic")
+        </td>
+    </tr>
+    <tr>
+        <th>
+            @Html.Label("Општина")
+        </th>
+        <td>
+            @Html.TextBox("munic")
+        </td>
+    </tr>
+    <tr>
+        <th>
+            @Html.Label("Број на имотен лист")
+        </th>
+        <td>
+            @Html.TextBox("pList")
+        </td>
+    </tr>
+</table>
+
+@Html.ActionLink("Пребарај",""

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="91bf29ea-d71f-48c1-baa0-5f75f9226226" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/MONServicesTest.Host/StatusForRegularStudentTest.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="StatusForRegularStudentTest.disco" MetadataType="Disco" ID="916f9ab6-0814-4ee1-8653-2808699361c8" SourceId="1" SourceUrl="http://localhost/MONServicesTest.Host/StatusForRegularStudentTest.svc?disco" />
+    <MetadataFile FileName="StatusForRegularStudentTest.xsd" MetadataType="Schema" ID="acddd1c1-9f3c-4f9c-b315-6152a8a87be4" SourceId="1" SourceUrl="http://localhost/MONServicesTest.Host/StatusForRegularStudentTest.svc?xsd=xsd2" />
+    <MetadataFile FileName="StatusForRegularStudentTest1.xsd" MetadataType="Schema" ID="2180fe7a-97ea-44ec-860e-63f274ac47f8" SourceId="1" SourceUrl="http://localhost/MONServicesTest.Host/StatusForRegularStudentTest.svc?xsd=xsd0" />
+    <MetadataFile FileName="StatusForRegularStudentTest2.xsd" MetadataType="Schema" ID="19027644-a789-442b-ab3a-0421d677fbf9" SourceId="1" SourceUrl="http://localhost/MONServicesTest.Host/StatusForRegularStudentTest.svc?xsd=xsd1" />
+    <MetadataFile FileName="SRegStudentTest.wsdl" MetadataType="Wsdl" ID="d3f5f5de-8da4-4357-8164-5283e76e0771" SourceId="1" SourceUrl="http://localhost/MONServicesTest.Host/StatusForRegularStudentTest.svc?wsdl" />
+    <MetadataFile FileName="StatusForRegularStudentTest.wsdl" MetadataType="Wsdl" ID="31901add-42c4-4fbb-9f8f-f66e2ae3766a" SourceId="1" SourceUrl="http://localhost/MONServicesTest.Host/StatusForRegularStudentTest.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

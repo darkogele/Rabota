@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="40b8fb2c-c4e1-41fb-b9e9-f567ae0265e1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AKNServicesProd.Host/CadastrialParcel.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CadastrialParcel.wsdl" MetadataType="Wsdl" ID="d3f2a235-c776-46b8-830c-a7979ca492d8" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/CadastrialParcel.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="CadastrialParcel.disco" MetadataType="Disco" ID="cb261602-7d16-4a02-acb0-6fa27a797680" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/CadastrialParcel.svc?disco" />
+    <MetadataFile FileName="CadastrialParcel.xsd" MetadataType="Schema" ID="68dab060-3f50-4f15-957a-1eba43614a0f" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/CadastrialParcel.svc?xsd=xsd0" />
+    <MetadataFile FileName="CadastrialParcel1.xsd" MetadataType="Schema" ID="2ed80682-66e2-4060-85f5-d2f39a599879" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/CadastrialParcel.svc?xsd=xsd2" />
+    <MetadataFile FileName="CadastrialParcel2.xsd" MetadataType="Schema" ID="3407b819-20c4-4dad-8327-8024470d2e1e" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/CadastrialParcel.svc?xsd=xsd1" />
+    <MetadataFile FileName="CadastrialParcel1.wsdl" MetadataType="Wsdl" ID="3026899d-fe05-4400-a86e-28cf74b764e2" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/CadastrialParcel.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

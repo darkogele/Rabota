@@ -1,0 +1,26 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<div class="col-lg-5 col-lg-offset-3">
+    <form name="createBusForm" ng-controller="CreateBusCtrl">
+        <h2 class="text-center">Креирај екстерен бас</h2>
+        <hr />
+        @* Code *@
+        <div class="form-group" ng-class="{ 'has-error' : busCodeFormField.code.$invalid }">
+            <ng-form name="busCodeFormField">
+                <label for="busCode">Код:</label>
+                <input id="busCode" type="text" class="form-control" name="code" ng-model="bus.code" required>
+            </ng-form>
+        </div>
+        @* Uri *@
+        <div class="form-group" ng-class="{ 'has-error' : busUrlFormField.url.$invalid }">
+            <ng-form name="busUrlFormField">
+                <label for="busUrl">Url:</label>
+                <input id="busUrl" type="text" class="form-control" name="url" ng-model="bus.url" required>
+            </ng-form>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" ng-disabled="createBusForm.$invalid" ng-click="saveBus(bus)"><i class="fa fa-save"></i> Зачувај</button>
+            <a class="btn btn-warning" ui-sref="buses({pageIndex:1,itemsPerPage:10})">Откажи</a>
+        </div>
+    </form>
+</div>

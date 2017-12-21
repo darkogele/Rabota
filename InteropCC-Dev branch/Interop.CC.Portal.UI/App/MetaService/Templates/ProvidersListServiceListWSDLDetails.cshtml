@@ -1,0 +1,20 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>WSDL за сервис '{{providerService}}' на провајдер '{{providerCode}}'</h2>
+<form name="ProvidersListForm">
+    <div class="table">
+        <hr>
+        <div class="col-sm-12">
+            <div class="form-group">
+                <ng-form name="wsdlform">
+                    <textarea id="wsdl" type="text" class="form-control" style="width:100%; height: 500px" name="wsdl" ng-model="wsdlservice" readonly></textarea>
+                </ng-form>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-default" ng-click="downloadWsdl(providerCode, providerService)"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во WSDL формат</a>
+        <a class="btn btn-warning" ng-click="showWsdl(providerService)">Назад во сервиси</a>
+        <a class="btn btn-warning" ng-click="showProviders()">Назад во провајдери</a>
+    </div>
+</form>

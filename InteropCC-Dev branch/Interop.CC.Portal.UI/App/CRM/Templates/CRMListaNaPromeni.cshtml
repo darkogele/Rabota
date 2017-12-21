@@ -1,0 +1,48 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+<style>
+
+</style>
+<h2>Листа на промени - Централен Регистар на Република Македонија</h2>
+
+<form name="crmListaNaPromeni" ng-controller="CrmCtrl">
+
+    <div class="container">
+        <div class="row">
+            @*<div class="col-sm-6">
+                <div class="radio">
+                    <label><input type="radio" name="listaNaPromeni" ng-model="opt" value="Nula">Сите субјекти запишани во Трговскиот регистар и регистарот на други правни лица</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="listaNaPromeni" ng-model="opt" value="Eden">Листа на субјекти - економски оператори</label>
+                </div>
+            </div>*@
+            <div class="col-sm-4">
+                <p class="input-group">
+                    <input type="text"
+                           placeholder="Од"
+                           class="form-control"
+                           datepicker-popup="dd.MM.yyyy"
+                           ng-disabled="true"
+                           datepicker-append-to-body="true"
+                           ng-model="fromDate"
+                           is-open="status1.opened"
+                           max-date="maxFromDate"
+                           min-date="minFromDate"
+                           current-text="Денес"
+                           clear-text="Исчисти"
+                           close-text="Затвори"
+                           ng-click="status1.opened = true"
+                           show-button-bar="false" />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open1($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </p>
+            </div>
+            </div>
+            <hr />
+            <div class="row">
+                <button type="submit" class="btn btn-primary" ng-click="crmListaPromeni()"><i class="fa fa-save"></i> Испрати</button>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,6 @@
+D:\Work\InteropCS\Interop.CS.Encryption\bin\Debug\Interop.CS.Encryption.dll
+D:\Work\InteropCS\Interop.CS.Encryption\bin\Debug\Interop.CS.Encryption.pdb
+D:\Work\InteropCS\Interop.CS.Encryption\obj\Debug\Interop.CS.Encryption.csproj.CoreCompileInputs.cache
+D:\Work\InteropCS\Interop.CS.Encryption\obj\Debug\Interop.CS.Encryption.dll
+D:\Work\InteropCS\Interop.CS.Encryption\obj\Debug\Interop.CS.Encryption.pdb
+D:\Work\InteropCS\Interop.CS.Encryption\obj\Debug\Interop.CS.Encryption.csprojResolveAssemblyReference.cache

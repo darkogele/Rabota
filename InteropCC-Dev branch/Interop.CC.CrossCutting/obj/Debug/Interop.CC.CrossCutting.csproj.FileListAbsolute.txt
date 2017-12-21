@@ -1,0 +1,16 @@
+D:\Work\InteropCC-Dev branch\Interop.CC.CrossCutting\bin\Debug\NLog.config
+D:\Work\InteropCC-Dev branch\Interop.CC.CrossCutting\bin\Debug\Interop.CC.CrossCutting.dll.config
+D:\Work\InteropCC-Dev branch\Interop.CC.CrossCutting\bin\Debug\Interop.CC.CrossCutting.dll
+D:\Work\InteropCC-Dev branch\Interop.CC.CrossCutting\bin\Debug\Interop.CC.CrossCutting.pdb
+D:\Work\InteropCC-Dev branch\Interop.CC.CrossCutting\bin\Debug\Newtonsoft.Json.dll
+D:\Work\InteropCC-Dev branch\Interop.CC.CrossCutting\bin\Debug\NLog.dll
+D:\Work\InteropCC-Dev branch\Interop.CC.CrossCutting\bin\Debug\NLog.Extended.dll
+D:\Work\InteropCC-Dev branch\Interop.CC.CrossCutting\bin\Debug\System.Net.Http.Formatting.dll
+D:\Work\InteropCC-Dev branch\Interop.CC.CrossCutting\bin\Debug\Newtonsoft.Json.xml
+D:\Work\InteropCC-Dev branch\Interop.CC.CrossCutting\bin\Debug\NLog.xml
+D:\Work\InteropCC-Dev branch\Interop.CC.CrossCutting\bin\Debug\NLog.Extended.xml
+D:\Work\InteropCC-Dev branch\Interop.CC.CrossCutting\bin\Debug\System.Net.Http.Formatting.xml
+D:\Work\InteropCC-Dev branch\Interop.CC.CrossCutting\obj\Debug\Interop.CC.CrossCutting.csprojResolveAssemblyReference.cache
+D:\Work\InteropCC-Dev branch\Interop.CC.CrossCutting\obj\Debug\Interop.CC.CrossCutting.csproj.CoreCompileInputs.cache
+D:\Work\InteropCC-Dev branch\Interop.CC.CrossCutting\obj\Debug\Interop.CC.CrossCutting.dll
+D:\Work\InteropCC-Dev branch\Interop.CC.CrossCutting\obj\Debug\Interop.CC.CrossCutting.pdb

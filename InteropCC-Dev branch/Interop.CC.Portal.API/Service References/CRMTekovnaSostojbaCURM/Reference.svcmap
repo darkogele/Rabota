@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b3c2cd16-dec6-46cd-b027-082631c75751" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/CRRMServicesProd.Host/CRM_TS_CURM.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CRM_TS_CURM.wsdl" MetadataType="Wsdl" ID="8c7bd570-aea2-4215-9a32-1b0db44e5341" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/CRM_TS_CURM.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="CRM_TS_CURM1.wsdl" MetadataType="Wsdl" ID="802c7c35-f06d-49a5-9ff4-7079f15a28fd" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/CRM_TS_CURM.svc?wsdl" />
+    <MetadataFile FileName="CRM_TS_CURM.xsd" MetadataType="Schema" ID="c01c3779-c2ca-423e-a02c-c9db34424df3" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/CRM_TS_CURM.svc?xsd=xsd0" />
+    <MetadataFile FileName="CRM_TS_CURM.disco" MetadataType="Disco" ID="9421c16d-4591-4f3c-a81c-4e1e1edd3079" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/CRM_TS_CURM.svc?disco" />
+    <MetadataFile FileName="CRM_TS_CURM1.xsd" MetadataType="Schema" ID="18420148-367d-4102-989f-b17dc9b26d91" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/CRM_TS_CURM.svc?xsd=xsd1" />
+    <MetadataFile FileName="CRM_TS_CURM2.xsd" MetadataType="Schema" ID="39abe8c2-d7c0-4ed1-aab1-83ee57e75e5f" SourceId="1" SourceUrl="http://localhost/CRRMServicesProd.Host/CRM_TS_CURM.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

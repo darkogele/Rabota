@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteropServices.MVR", "InteropServices.MVR\InteropServices.MVR.csproj", "{5420FBF0-5D24-49F7-B907-30D4A7B4A7AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteropServices.MVR.Host", "InteropServices.MVR.Host\InteropServices.MVR.Host.csproj", "{EA073919-77BB-46BC-BB38-0AC8AE06887A}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.11.21.108:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = InteropServices.MVR.Host\\InteropServices.MVR.Host.csproj
+		SccProjectName1 = InteropServices.MVR.Host
+		SccLocalPath1 = InteropServices.MVR.Host
+		SccProjectUniqueName2 = InteropServices.MVR\\InteropServices.MVR.csproj
+		SccProjectName2 = InteropServices.MVR
+		SccLocalPath2 = InteropServices.MVR
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5420FBF0-5D24-49F7-B907-30D4A7B4A7AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5420FBF0-5D24-49F7-B907-30D4A7B4A7AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5420FBF0-5D24-49F7-B907-30D4A7B4A7AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5420FBF0-5D24-49F7-B907-30D4A7B4A7AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA073919-77BB-46BC-BB38-0AC8AE06887A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA073919-77BB-46BC-BB38-0AC8AE06887A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA073919-77BB-46BC-BB38-0AC8AE06887A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA073919-77BB-46BC-BB38-0AC8AE06887A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

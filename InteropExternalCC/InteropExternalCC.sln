@@ -1,0 +1,128 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.ExternalCC.CrossCutting", "Interop.ExternalCC.CrossCutting\Interop.ExternalCC.CrossCutting.csproj", "{9E696DD5-2905-4ABD-B56F-E94E53FF8D30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.ExternalCC.ExternalHandler", "Interop.ExternalCC.ExternalHandler\Interop.ExternalCC.ExternalHandler.csproj", "{B0169639-FA7B-4581-8D3E-0BEDC0FD9946}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.ExternalCC.HandlersHelper", "Interop.ExternalCC.HandlersHelper\Interop.ExternalCC.HandlersHelper.csproj", "{1B38C769-9448-418C-B5C2-6327E12E2566}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.ExternalCC.InternalHandler", "Interop.ExternalCC.InternalHandler\Interop.ExternalCC.InternalHandler.csproj", "{AA8C5F9A-8BDA-4349-9C08-465944A23F36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.ExternalCC.IntegrationTests", "IntegrationTests\Interop.ExternalCC.IntegrationTests.csproj", "{131F81F1-B32D-4633-A512-D2977EB0AFAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MetaService", "MetaService", "{72446131-2C1D-40BF-B783-1CF6A99F3CAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.ExternalCC.MetaService", "MetaService\Interop.ExternalCC.MetaService.csproj", "{5CF6905E-AFBC-4C90-95CA-B5B665BA3C01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.ExternalCC.Resources", "Interop.ExternalCC.Resources\Interop.ExternalCC.Resources.csproj", "{78E70E7E-75AE-4155-849F-BADBC3D40759}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientConsumer", "..\InteropCC\ClientConsumer\ClientConsumer.csproj", "{331311BA-0BB1-4AB6-9DA9-FACFDAFD1049}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1E46AE3A-E6F0-465E-AE4D-1AC2BF9510C0}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalCCConsoleTestRequests", "ExternalCCConsoleTestRequests\ExternalCCConsoleTestRequests.csproj", "{48EE4E9C-D5DF-44D8-AFA9-D4990E4FB3A5}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.11.21.108:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Interop.ExternalCC.CrossCutting\\Interop.ExternalCC.CrossCutting.csproj
+		SccProjectName1 = Interop.ExternalCC.CrossCutting
+		SccLocalPath1 = Interop.ExternalCC.CrossCutting
+		SccProjectUniqueName2 = Interop.ExternalCC.Resources\\Interop.ExternalCC.Resources.csproj
+		SccProjectName2 = Interop.ExternalCC.Resources
+		SccLocalPath2 = Interop.ExternalCC.Resources
+		SccProjectUniqueName3 = Interop.ExternalCC.HandlersHelper\\Interop.ExternalCC.HandlersHelper.csproj
+		SccProjectName3 = Interop.ExternalCC.HandlersHelper
+		SccLocalPath3 = Interop.ExternalCC.HandlersHelper
+		SccProjectUniqueName4 = Interop.ExternalCC.InternalHandler\\Interop.ExternalCC.InternalHandler.csproj
+		SccProjectName4 = Interop.ExternalCC.InternalHandler
+		SccLocalPath4 = Interop.ExternalCC.InternalHandler
+		SccProjectUniqueName5 = MetaService\\Interop.ExternalCC.MetaService.csproj
+		SccProjectTopLevelParentUniqueName5 = InteropExternalCC.sln
+		SccProjectName5 = MetaService
+		SccLocalPath5 = MetaService
+		SccProjectUniqueName6 = Interop.ExternalCC.ExternalHandler\\Interop.ExternalCC.ExternalHandler.csproj
+		SccProjectName6 = Interop.ExternalCC.ExternalHandler
+		SccLocalPath6 = Interop.ExternalCC.ExternalHandler
+		SccProjectUniqueName7 = IntegrationTests\\Interop.ExternalCC.IntegrationTests.csproj
+		SccProjectName7 = IntegrationTests
+		SccLocalPath7 = IntegrationTests
+		SccProjectUniqueName8 = ExternalCCConsoleTestRequests\\ExternalCCConsoleTestRequests.csproj
+		SccProjectName8 = ExternalCCConsoleTestRequests
+		SccLocalPath8 = ExternalCCConsoleTestRequests
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E696DD5-2905-4ABD-B56F-E94E53FF8D30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E696DD5-2905-4ABD-B56F-E94E53FF8D30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E696DD5-2905-4ABD-B56F-E94E53FF8D30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E696DD5-2905-4ABD-B56F-E94E53FF8D30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0169639-FA7B-4581-8D3E-0BEDC0FD9946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0169639-FA7B-4581-8D3E-0BEDC0FD9946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0169639-FA7B-4581-8D3E-0BEDC0FD9946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0169639-FA7B-4581-8D3E-0BEDC0FD9946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B38C769-9448-418C-B5C2-6327E12E2566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B38C769-9448-418C-B5C2-6327E12E2566}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B38C769-9448-418C-B5C2-6327E12E2566}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B38C769-9448-418C-B5C2-6327E12E2566}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA8C5F9A-8BDA-4349-9C08-465944A23F36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA8C5F9A-8BDA-4349-9C08-465944A23F36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA8C5F9A-8BDA-4349-9C08-465944A23F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA8C5F9A-8BDA-4349-9C08-465944A23F36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{131F81F1-B32D-4633-A512-D2977EB0AFAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{131F81F1-B32D-4633-A512-D2977EB0AFAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{131F81F1-B32D-4633-A512-D2977EB0AFAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{131F81F1-B32D-4633-A512-D2977EB0AFAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CF6905E-AFBC-4C90-95CA-B5B665BA3C01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CF6905E-AFBC-4C90-95CA-B5B665BA3C01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CF6905E-AFBC-4C90-95CA-B5B665BA3C01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CF6905E-AFBC-4C90-95CA-B5B665BA3C01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78E70E7E-75AE-4155-849F-BADBC3D40759}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78E70E7E-75AE-4155-849F-BADBC3D40759}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78E70E7E-75AE-4155-849F-BADBC3D40759}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78E70E7E-75AE-4155-849F-BADBC3D40759}.Release|Any CPU.Build.0 = Release|Any CPU
+		{331311BA-0BB1-4AB6-9DA9-FACFDAFD1049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{331311BA-0BB1-4AB6-9DA9-FACFDAFD1049}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{331311BA-0BB1-4AB6-9DA9-FACFDAFD1049}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{331311BA-0BB1-4AB6-9DA9-FACFDAFD1049}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48EE4E9C-D5DF-44D8-AFA9-D4990E4FB3A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48EE4E9C-D5DF-44D8-AFA9-D4990E4FB3A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48EE4E9C-D5DF-44D8-AFA9-D4990E4FB3A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48EE4E9C-D5DF-44D8-AFA9-D4990E4FB3A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5CF6905E-AFBC-4C90-95CA-B5B665BA3C01} = {72446131-2C1D-40BF-B783-1CF6A99F3CAE}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.11.21.108:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Interop.ExternalCC.CrossCutting\\Interop.ExternalCC.CrossCutting.csproj
+		SccProjectName1 = Interop.ExternalCC.CrossCutting
+		SccLocalPath1 = Interop.ExternalCC.CrossCutting
+		SccProjectUniqueName3 = Interop.ExternalCC.ExternalHandler\\Interop.ExternalCC.ExternalHandler.csproj
+		SccProjectName3 = Interop.ExternalCC.ExternalHandler
+		SccLocalPath3 = Interop.ExternalCC.ExternalHandler
+		SccProjectUniqueName4 = Interop.ExternalCC.HandlersHelper\\Interop.ExternalCC.HandlersHelper.csproj
+		SccProjectName4 = Interop.ExternalCC.HandlersHelper
+		SccLocalPath4 = Interop.ExternalCC.HandlersHelper
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,146 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>Податоци за извршен увоз - Царинска Управа на Република Македонија</h2>
+
+<form name="curmDataForExecutedImportForm" ng-controller="CurmCtrl">
+
+    <div class="container">
+        <div class="col-lg-3">
+            <div class="form-group" ng-class="{ 'has-error' : edbFormField.edb.$invalid }">
+                <ng-form name="edbFormField">
+                    <label for="edb">ЕДБ:</label>
+                    <input id="edb" type="text" class="form-control" name="edb" ng-model="edb" only-digits required>
+                </ng-form>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : amountOfImportFromFormField.amountOfImportFrom.$invalid }">
+                <ng-form name="amountOfImportFromFormField">
+                    <label for="amountOfImportFrom">Вредност на увоз од:</label>
+                    <input id="amountOfImportFrom" type="text" class="form-control" name="amountOfImportFrom" ng-model="amountOfImportFrom">
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : amountOfImportToFormField.amountOfImportTo.$invalid }">
+                <ng-form name="amountOfImportToFormField">
+                    <label for="amountOfImportTo">Вредност на увоз до:</label>
+                    <input id="amountOfImportTo" type="text" class="form-control" name="amountOfImportTo" ng-model="amountOfImportTo">
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : amountOfImportTaxFromFormField.amountOfImportTaxFrom.$invalid }">
+                <ng-form name="amountOfImportTaxFromFormField">
+                    <label for="amountOfImportTaxFrom">Вредност на данок на увоз од:</label>
+                    <input id="amountOfImportTaxFrom" type="text" class="form-control" name="amountOfImportTaxFrom" ng-model="amountOfImportTaxFrom">
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : amountOfImportTaxToFormField.amountOfImportTaxTo.$invalid }">
+                <ng-form name="amountOfImportTaxToFormField">
+                    <label for="amountOfImportTaxTo">Вредност на данок на увоз до:</label>
+                    <input id="amountOfImportTaxTo" type="text" class="form-control" name="amountOfImportTaxTo" ng-model="amountOfImportTaxTo">
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : monthOfImportFromFormField.monthOfImportFrom.$invalid }">
+                <ng-form name="monthOfImportFromFormField">
+                    <label for="monthOfImportFrom">Месец на увоз од:</label>
+                    @*<input id="monthOfImportFrom" type="text" class="form-control" name="monthOfImportFrom" ng-model="monthOfImportFrom">*@
+                    <p class="input-group">
+                        <input type="text" class="form-control" datepicker-popup="{{format1}}"
+                               ng-model="monthOfImportFrom" is-open="status2.opened" ng-click="status2.opened = true" datepicker-append-to-body="true" show-weeks="false" datepicker-mode="'month'" max-mode="month"
+                               datepicker-options="dateOptions1" ng-disabled="true" current-text="Денес"
+                               clear-text="Исчисти"
+                               close-text="Затвори" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open2($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </p>
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : monthOfImportToFormField.monthOfImportTo.$invalid }">
+                <ng-form name="monthOfImportToFormField">
+                    <label for="monthOfImportTo">Месец на увоз до:</label>
+                    @*<input id="monthOfImportTo" type="text" class="form-control" name="monthOfImportTo" ng-model="monthOfImportTo">*@
+                    <p class="input-group">
+                        <input type="text" class="form-control" datepicker-popup="{{format1}}"
+                               ng-model="monthOfImportTo" is-open="status3.opened" ng-click="status3.opened = true" datepicker-append-to-body="true" show-weeks="false" datepicker-mode="'month'" max-mode="month"
+                               datepicker-options="dateOptions1" ng-disabled="true" current-text="Денес"
+                               clear-text="Исчисти"
+                               close-text="Затвори" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open3($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </p>
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : yearOfImportFromFormField.yearOfImportFrom.$invalid }">
+                <ng-form name="yearOfImportFromFormField">
+                    <label for="yearOfImportFrom">Година на увоз од:</label>
+                    @*<input id="yearOfImportFrom" type="text" class="form-control" name="yearOfImportFrom" ng-model="yearOfImportFrom">*@
+                    <p class="input-group">
+                        <input type="text" class="form-control" datepicker-popup="{{format}}"
+                               ng-model="yearOfImportFrom" is-open="status.opened" ng-click="status.opened = true" datepicker-append-to-body="true" show-weeks="false" datepicker-mode="'year'"
+                               datepicker-options="dateOptions" ng-disabled="true" current-text="Денес"
+                               clear-text="Исчисти"
+                               close-text="Затвори" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </p>
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : yearOfImportToFormField.yearOfImportTo.$invalid }">
+                <ng-form name="yearOfImportToFormField">
+                    <label for="yearOfImportTo">Година на увоз до:</label>
+                    @*<input id="yearOfImportTo" type="text" class="form-control" name="yearOfImportTo" ng-model="yearOfImportTo">*@
+                    <p class="input-group">
+                        <input type="text" class="form-control" datepicker-popup="{{format}}"
+                               ng-model="yearOfImportTo" is-open="status1.opened" ng-click="status1.opened = true" datepicker-append-to-body="true" show-weeks="false" datepicker-mode="'year'"
+                               datepicker-options="dateOptions" ng-disabled="true" current-text="Денес"
+                               clear-text="Исчисти"
+                               close-text="Затвори" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open1($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </p>
+                </ng-form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-disabled="curmDataForExecutedImportForm.$invalid" ng-click="curmDataForExecutedImport(edb, amountOfImportFrom, amountOfImportTo, amountOfImportTaxFrom, amountOfImportTaxTo, monthOfImportFrom, monthOfImportTo, yearOfImportFrom, yearOfImportTo)"><i class="fa fa-save"></i> Испрати</button>
+                <a class="btn btn-warning" href="#/curm/curmdataforexecutedimport" ui-sref="curmdataforexecutedimportindex">Откажи</a>
+            </div>
+        </div>
+
+        <div ng-show="show" class="col-lg-9">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <button ng-show="!expandLoad" ng-click="expandedLoad()">+</button>
+                            <button ng-show="expandLoad" ng-click="expandedLoad()">-</button>
+                            Извршен увоз
+                        </th>
+                    </tr>
+                    <tr ng-show="expandLoad">
+                        <th>ЕДБ</th>
+                        <th>Вредност</th>
+                        <th>Вредност на данок</th>
+                        <th>Месец</th>
+                        <th>Година</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="executedImport in executedImportList" ng-show="expandLoad">
+                        <td>{{executedImport.edb}}</td>
+                        <td>{{executedImport.importAmount}}</td>
+                        <td>{{executedImport.importTaxAmount}}</td>
+                        <td>{{executedImport.importMonth}}</td>
+                        <td>{{executedImport.importYear}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row text-center">
+                <a class="btn btn-default" ng-click="DataForImportXML()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во XML формат</a>
+                <a class="btn btn-default" ng-click="DataForImportPDF()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во PDF формат</a>
+            </div>
+        </div>
+    </div>
+</form>

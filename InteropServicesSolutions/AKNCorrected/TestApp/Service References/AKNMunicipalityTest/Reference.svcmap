@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7fab2b38-9d3f-426a-a393-33587cf4de6b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AKNServicesTest.Host/AKNMunicipalityTest.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AKNMunicipalityTest.wsdl" MetadataType="Wsdl" ID="baa92de6-0e32-4869-b01b-d50ef7e1ab15" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/AKNMunicipalityTest.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="AKNMunicipalityTest.xsd" MetadataType="Schema" ID="54833936-3011-4447-b222-388bec97b835" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/AKNMunicipalityTest.svc?xsd=xsd0" />
+    <MetadataFile FileName="AKNMunicipalityTest1.xsd" MetadataType="Schema" ID="207cbcf0-8399-4d17-ae19-198e64f3e8da" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/AKNMunicipalityTest.svc?xsd=xsd2" />
+    <MetadataFile FileName="AKNMunicipalityTest.disco" MetadataType="Disco" ID="57bf24fd-fbfb-49f6-bd47-ba27c7876f79" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/AKNMunicipalityTest.svc?disco" />
+    <MetadataFile FileName="AKNMunicipalityTest2.xsd" MetadataType="Schema" ID="c3d694a0-eb77-49bb-9666-cfee5a2dea2d" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/AKNMunicipalityTest.svc?xsd=xsd1" />
+    <MetadataFile FileName="AKNMunicipalityService.wsdl" MetadataType="Wsdl" ID="07a0243b-0848-462a-bee1-26f647971e33" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/AKNMunicipalityTest.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

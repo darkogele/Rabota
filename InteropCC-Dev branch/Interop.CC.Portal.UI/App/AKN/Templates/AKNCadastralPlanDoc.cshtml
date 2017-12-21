@@ -1,0 +1,50 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>Копија од катастарски план - Агенција за катастар на недвижности</h2>
+
+<form name="akncadastralplandocForm" ng-model="akncadastralplandocForm">
+
+    <div class="container">
+        <div class="col-lg-3">
+            <div class="form-group" ng-class="{ 'has-error' : opstinaFormField.opstina.$invalid }">
+                <ng-form name="opstinaFormField">
+                    <label for="opstina">Општина:</label>
+                    <select id="opstina" class="form-control" name="userRole" ng-model="opstina" ng-change="changeMunicipality(opstina.value)" required autofocus ng-options="mun as mun.name for mun in municipalities | orderBy:'name' track by mun.value" ng-class="{'my-has-error':!(opstina)}"></select>
+                </ng-form>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : katastarskaOpstinaFormField.katastarskaOpstina.$invalid }">
+                <ng-form name="katastarskaOpstinaFormField">
+                    <label for="katastarskaOpstina">Катастарска Општина:</label>
+                    @*<input id="cadastralMunicipality" type="text" class="form-control" name="cadastralMunicipality" ng-model="cadastralMunicipality" required>*@
+                    <select id="katastarskaOpstina" class="form-control" name="userRole" ng-model="katastarskaOpstina" required autofocus ng-options="cadMun as cadMun.name for cadMun in cadastralMunicipalities | orderBy:'name' track by cadMun.value" ng-class="{'my-has-error':!(katastarskaOpstina)}"></select>
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : showEMBFormField.showEMB.$invalid }">
+                <ng-form name="showEMBFormField">
+                    <label for="showEMB">Дали сакате единствениот матичен број да биде прикажан во документот?</label>
+                    <select id="showEMB" ng-model="showEMB"
+                            ng-options="o.v as o.n for o in [{ n: 'Не', v: false }, { n: 'Да', v: true }]" required ng-class="{'my-has-error':showEMB==undefined}"></select>
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : brImotenListFormField.brImotenList.$invalid }">
+                <ng-form name="brImotenListFormField">
+                    <label for="brImotenList">Број на имотен лист:</label>
+                    <input id="brImotenList" type="text" class="form-control" name="brImotenList" ng-model="brImotenList">
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : brParcelaFormField.brParcela.$invalid }">
+                <ng-form name="brParcelaFormField">
+                    <label for="brParcela">Број на парцела:</label>
+                    <input id="brParcela" type="text" class="form-control" name="brParcela" ng-model="brParcela" ng-class="{'my-has-error':!(brParcela)}">
+                </ng-form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-disabled="!validateFields()" ng-click="aknCadastralPlanDoc(opstina.value, katastarskaOpstina.value, showEMB, brImotenList, brParcela)"><i class="fa fa-save"></i> Преземи</button>
+                @*<a class="btn btn-warning" ui-sref="ujpgetouavrm">Откажи</a>*@
+            </div>
+        </div>
+    </div>
+
+</form>

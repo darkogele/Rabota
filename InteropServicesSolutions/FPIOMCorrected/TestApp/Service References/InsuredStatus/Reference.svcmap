@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="65e7e261-70c0-420b-9130-6b1ad3793191" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/FPIOMServicesProd.Host/InsuredStatus.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="InsuredStatus.xsd" MetadataType="Schema" ID="a74e0e20-df6b-465a-8acc-a3c973e09068" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/InsuredStatus.svc?xsd=xsd0" />
+    <MetadataFile FileName="InsuredStatus.wsdl" MetadataType="Wsdl" ID="beb9b513-5a19-4d1a-89fe-67af7cd60ef8" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/InsuredStatus.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="InsuredStatus1.xsd" MetadataType="Schema" ID="607f46fc-9227-4239-b6ea-f25da3cc016e" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/InsuredStatus.svc?xsd=xsd1" />
+    <MetadataFile FileName="InsuredStatus1.wsdl" MetadataType="Wsdl" ID="823d7859-7a64-4b3e-80b0-fe84c17d0a4a" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/InsuredStatus.svc?wsdl" />
+    <MetadataFile FileName="InsuredStatus.disco" MetadataType="Disco" ID="ed6abed4-4048-46eb-88d1-a6ae1091cd52" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/InsuredStatus.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Интероперабилност</h1>
+    <p class="lead">Симулација на повикување на сервис на институција А од портал на институција Б.</p>
+</div>
+
+<div class="row">
+    <div ng-controller="InstitutionACtrl" class="col-md-4">
+        <form name="propertyListForm">
+            <h2>Симулација</h2>
+            <p>Повикување на сервис Имотен лист од Институција Б.</p>
+            <button type="submit" class="btn btn-primary" ng-disabled="!requestFinished" ng-click="getPropertyList()"><i class="fa fa-save"></i>Повикај сервис Имотен лист</button>
+            <p style="padding-top: 15px; color: crimson" ng-show="result.status === 200">{{result.data}}</p>
+            <p style="padding-top: 15px; color: crimson" ng-show="errorStatus === 500">{{errorMsg}}</p>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Contracts.DataAccessLibrary.DataForExecutedImport" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Contracts.DataAccessLibrary.DataForExecutedImport" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ExecutedImportInput">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AmountOfImportFrom" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="AmountOfImportTaxFrom" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="AmountOfImportTaxTo" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="AmountOfImportTo" nillable="true" type="xs:double" />
+      <xs:element name="EDB" type="xs:long" />
+      <xs:element minOccurs="0" name="MonthOfImportFrom" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MonthOfImportTo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="YearOfImportFrom" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="YearOfImportTo" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExecutedImportInput" nillable="true" type="tns:ExecutedImportInput" />
+</xs:schema>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://interop.org" elementFormDefault="qualified" targetNamespace="http://interop.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/UJPServicesProd.Host/DataForEMB.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Contracts.Models.DataFor_EDB_EMB" />
+  <xs:element name="GetEMB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="emb" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEMBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Contracts.Models.DataFor_EDB_EMB" minOccurs="0" name="GetEMBResult" nillable="true" type="q1:ArrayOfEDB_EMB_Output" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

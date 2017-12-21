@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7abd5f48-5090-4b5c-acce-989d22fc10f5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/UJPServicesTest.Host/DataForEDBTest.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataForEDBTest.xsd" MetadataType="Schema" ID="b341254f-ea51-4b65-8114-94bd52256000" SourceId="1" SourceUrl="http://localhost/UJPServicesTest.Host/DataForEDBTest.svc?xsd=xsd2" />
+    <MetadataFile FileName="DataForEDBTest1.xsd" MetadataType="Schema" ID="11eee837-ebba-4d33-93b3-d88c79f35cff" SourceId="1" SourceUrl="http://localhost/UJPServicesTest.Host/DataForEDBTest.svc?xsd=xsd3" />
+    <MetadataFile FileName="DataForEDBTest2.xsd" MetadataType="Schema" ID="2d9ac4c1-45e5-4cb7-bb69-be2674151d4d" SourceId="1" SourceUrl="http://localhost/UJPServicesTest.Host/DataForEDBTest.svc?xsd=xsd0" />
+    <MetadataFile FileName="DataForEDBTest.wsdl" MetadataType="Wsdl" ID="091fe31b-38b5-470e-a2a7-2301ae3586f0" SourceId="1" SourceUrl="http://localhost/UJPServicesTest.Host/DataForEDBTest.svc?wsdl" />
+    <MetadataFile FileName="DataForEDBTest1.wsdl" MetadataType="Wsdl" ID="0cdd7b2e-e515-4951-b40d-227fb1f613fb" SourceId="1" SourceUrl="http://localhost/UJPServicesTest.Host/DataForEDBTest.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="DataForEDBTest.disco" MetadataType="Disco" ID="e8b902e9-8246-4391-a2f1-0bf0cb10f524" SourceId="1" SourceUrl="http://localhost/UJPServicesTest.Host/DataForEDBTest.svc?disco" />
+    <MetadataFile FileName="DataForEDBTest3.xsd" MetadataType="Schema" ID="bac48137-be8a-4326-8d6a-1540c09086c3" SourceId="1" SourceUrl="http://localhost/UJPServicesTest.Host/DataForEDBTest.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

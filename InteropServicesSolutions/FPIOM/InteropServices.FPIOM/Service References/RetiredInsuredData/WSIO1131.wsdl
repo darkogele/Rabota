@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://interoperab_db2_nova/WSIO113.wsdl" xmlns:ns1="http://interoperab_db2_nova/WSIO113.xsd" name="WSIO113" targetNamespace="http://interoperab_db2_nova/WSIO113.wsdl" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://interoperab_db2_nova/WSIO113.xsd" />
+  </types>
+  <message name="proveriDostapnost0Request" />
+  <message name="proveriDostapnost0Response">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="penzioner1s1Request">
+    <part name="vString" type="xsd:string" />
+  </message>
+  <message name="penzioner1s1Response">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="osigurenik1s2Request">
+    <part name="vString" type="xsd:string" />
+  </message>
+  <message name="osigurenik1s2Response">
+    <part name="return" type="xsd:string" />
+  </message>
+  <portType name="WSIO113PortType">
+    <operation name="proveriDostapnost">
+      <input name="proveriDostapnost0Request" message="tns:proveriDostapnost0Request" />
+      <output name="proveriDostapnost0Response" message="tns:proveriDostapnost0Response" />
+    </operation>
+    <operation name="penzioner1s">
+      <input name="penzioner1s1Request" message="tns:penzioner1s1Request" />
+      <output name="penzioner1s1Response" message="tns:penzioner1s1Response" />
+    </operation>
+    <operation name="osigurenik1s">
+      <input name="osigurenik1s2Request" message="tns:osigurenik1s2Request" />
+      <output name="osigurenik1s2Response" message="tns:osigurenik1s2Response" />
+    </operation>
+  </portType>
+  <binding name="WSIO113Binding" type="tns:WSIO113PortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <operation name="proveriDostapnost">
+      <soap:operation soapAction="" style="rpc" />
+      <input name="proveriDostapnost0Request">
+        <soap:body use="encoded" namespace="WSIO113" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output name="proveriDostapnost0Response">
+        <soap:body use="encoded" namespace="WSIO113" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="penzioner1s">
+      <soap:operation soapAction="" style="rpc" />
+      <input name="penzioner1s1Request">
+        <soap:body use="encoded" namespace="WSIO113" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output name="penzioner1s1Response">
+        <soap:body use="encoded" namespace="WSIO113" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="osigurenik1s">
+      <soap:operation soapAction="" style="rpc" />
+      <input name="osigurenik1s2Request">
+        <soap:body use="encoded" namespace="WSIO113" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output name="osigurenik1s2Response">
+        <soap:body use="encoded" namespace="WSIO113" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WSIO113">
+    <port name="WSIO113Port" binding="tns:WSIO113Binding">
+      <soap:address location="http://mapasserver.piom.com.mk/PIOM_IO/WSIO113" />
+    </port>
+  </service>
+</definitions>

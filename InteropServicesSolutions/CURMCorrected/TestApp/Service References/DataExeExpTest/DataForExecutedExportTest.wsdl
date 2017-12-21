@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://interop.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://interop.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://interop.org/Imports">
+      <xsd:import schemaLocation="http://localhost/CURMServicesTest.Host/DataForExecutedExportTest.svc?xsd=xsd0" namespace="http://interop.org/" />
+      <xsd:import schemaLocation="http://localhost/CURMServicesTest.Host/DataForExecutedExportTest.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Contracts.DataAccessLibrary" />
+      <xsd:import schemaLocation="http://localhost/CURMServicesTest.Host/DataForExecutedExportTest.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/CURMServicesTest.Host/DataForExecutedExportTest.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Contracts.DataAccessLibrary.DataForExecutedExport" />
+      <xsd:import schemaLocation="http://localhost/CURMServicesTest.Host/DataForExecutedExportTest.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Contracts.Models.DataForExecutedExport" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDataExeExp_GetDataExeExp_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataExeExp" />
+  </wsdl:message>
+  <wsdl:message name="IDataExeExp_GetDataExeExp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataExeExpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataExeExp_GetDataExeExp_InteropFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Contracts.DataAccessLibrary" name="detail" element="q1:InteropFault" />
+  </wsdl:message>
+  <wsdl:portType name="IDataExeExp">
+    <wsdl:operation name="GetDataExeExp">
+      <wsdl:input wsaw:Action="http://interop.org/IDataExeExp/GetDataExeExp" message="tns:IDataExeExp_GetDataExeExp_InputMessage" />
+      <wsdl:output wsaw:Action="http://interop.org/IDataExeExp/GetDataExeExpResponse" message="tns:IDataExeExp_GetDataExeExp_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://interop.org/IDataExeExp/GetDataExeExpInteropFaultFault" name="InteropFaultFault" message="tns:IDataExeExp_GetDataExeExp_InteropFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CSMetaService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/Interop.CS.MetaServiceSite/CSMetaService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/Interop.CS.MetaServiceSite/CSMetaService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/Interop.CS.MetaServiceSite/CSMetaService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Interop.CS.Models.Models" />
+      <xsd:import schemaLocation="http://localhost/Interop.CS.MetaServiceSite/CSMetaService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Interop.CS.MetaService.Models" />
+      <xsd:import schemaLocation="http://localhost/Interop.CS.MetaServiceSite/CSMetaService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Web.Mvc" />
+      <xsd:import schemaLocation="http://localhost/Interop.CS.MetaServiceSite/CSMetaService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICSMetaService_RegisterService_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterService" />
+  </wsdl:message>
+  <wsdl:message name="ICSMetaService_RegisterService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICSMetaService_UnRegisterService_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnRegisterService" />
+  </wsdl:message>
+  <wsdl:message name="ICSMetaService_UnRegisterService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnRegisterServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICSMetaService_GetProviders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProviders" />
+  </wsdl:message>
+  <wsdl:message name="ICSMetaService_GetProviders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProvidersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICSMetaService_GetServices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServices" />
+  </wsdl:message>
+  <wsdl:message name="ICSMetaService_GetServices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICSMetaService_GetService_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetService" />
+  </wsdl:message>
+  <wsdl:message name="ICSMetaService_GetService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICSMetaService_ListConsumers_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListConsumers" />
+  </wsdl:message>
+  <wsdl:message name="ICSMetaService_ListConsumers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListConsumersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICSMetaService_GetServiceRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceRoles" />
+  </wsdl:message>
+  <wsdl:message name="ICSMetaService_GetServiceRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceRolesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICSMetaService">
+    <wsdl:operation name="RegisterService">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICSMetaService/RegisterService" message="tns:ICSMetaService_RegisterService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICSMetaService/RegisterServiceResponse" message="tns:ICSMetaService_RegisterService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnRegisterService">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICSMetaService/UnRegisterService" message="tns:ICSMetaService_UnRegisterService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICSMetaService/UnRegisterServiceResponse" message="tns:ICSMetaService_UnRegisterService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProviders">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICSMetaService/GetProviders" message="tns:ICSMetaService_GetProviders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICSMetaService/GetProvidersResponse" message="tns:ICSMetaService_GetProviders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServices">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICSMetaService/GetServices" message="tns:ICSMetaService_GetServices_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICSMetaService/GetServicesResponse" message="tns:ICSMetaService_GetServices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetService">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICSMetaService/GetService" message="tns:ICSMetaService_GetService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICSMetaService/GetServiceResponse" message="tns:ICSMetaService_GetService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListConsumers">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICSMetaService/ListConsumers" message="tns:ICSMetaService_ListConsumers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICSMetaService/ListConsumersResponse" message="tns:ICSMetaService_ListConsumers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICSMetaService/GetServiceRoles" message="tns:ICSMetaService_GetServiceRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICSMetaService/GetServiceRolesResponse" message="tns:ICSMetaService_GetServiceRoles_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICSMetaService" type="tns:ICSMetaService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegisterService">
+      <soap:operation soapAction="http://tempuri.org/ICSMetaService/RegisterService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnRegisterService">
+      <soap:operation soapAction="http://tempuri.org/ICSMetaService/UnRegisterService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProviders">
+      <soap:operation soapAction="http://tempuri.org/ICSMetaService/GetProviders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServices">
+      <soap:operation soapAction="http://tempuri.org/ICSMetaService/GetServices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetService">
+      <soap:operation soapAction="http://tempuri.org/ICSMetaService/GetService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListConsumers">
+      <soap:operation soapAction="http://tempuri.org/ICSMetaService/ListConsumers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceRoles">
+      <soap:operation soapAction="http://tempuri.org/ICSMetaService/GetServiceRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CSMetaService">
+    <wsdl:port name="BasicHttpBinding_ICSMetaService" binding="tns:BasicHttpBinding_ICSMetaService">
+      <soap:address location="http://localhost/Interop.CS.MetaServiceSite/CSMetaService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,10 @@
+D:\Work\InteropServicesSolutions\AKNCorrected\TestApp\bin\Debug\TestApp.exe.config
+D:\Work\InteropServicesSolutions\AKNCorrected\TestApp\bin\Debug\TestApp.exe
+D:\Work\InteropServicesSolutions\AKNCorrected\TestApp\bin\Debug\TestApp.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\TestApp\bin\Debug\Contracts.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\TestApp\bin\Debug\Contracts.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\TestApp\obj\Debug\TestApp.exe
+D:\Work\InteropServicesSolutions\AKNCorrected\TestApp\obj\Debug\TestApp.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\TestApp\obj\Debug\TestApp.csprojResolveAssemblyReference.cache
+D:\Work\InteropServicesSolutions\AKNCorrected\TestApp\bin\Debug\Contracts.dll.config
+D:\Work\InteropServicesSolutions\AKNCorrected\TestApp\obj\Debug\TestApp.csproj.CoreCompileInputs.cache

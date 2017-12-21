@@ -1,0 +1,7 @@
+D:\Work\RefatoredInteropHandlers\HttpHandler\ReadWsdlFile\bin\Debug\File\PropertyListTest.wsdl
+D:\Work\RefatoredInteropHandlers\HttpHandler\ReadWsdlFile\bin\Debug\ReadWsdlFile.exe.config
+D:\Work\RefatoredInteropHandlers\HttpHandler\ReadWsdlFile\bin\Debug\ReadWsdlFile.exe
+D:\Work\RefatoredInteropHandlers\HttpHandler\ReadWsdlFile\bin\Debug\ReadWsdlFile.pdb
+D:\Work\RefatoredInteropHandlers\HttpHandler\ReadWsdlFile\obj\Debug\ReadWsdlFile.csproj.CoreCompileInputs.cache
+D:\Work\RefatoredInteropHandlers\HttpHandler\ReadWsdlFile\obj\Debug\ReadWsdlFile.exe
+D:\Work\RefatoredInteropHandlers\HttpHandler\ReadWsdlFile\obj\Debug\ReadWsdlFile.pdb

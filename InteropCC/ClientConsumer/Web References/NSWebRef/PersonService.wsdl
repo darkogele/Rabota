@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://institution.interop.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://institution.interop.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service for person info</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://institution.interop.org/">
+      <s:element name="GetFullName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFullNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFullNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPerson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPersonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPersonResult" type="tns:Person" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Person">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SurName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TestString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetFullNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFullName" />
+  </wsdl:message>
+  <wsdl:message name="GetFullNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFullNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPerson" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestStringSoapIn">
+    <wsdl:part name="parameters" element="tns:TestString" />
+  </wsdl:message>
+  <wsdl:message name="TestStringSoapOut">
+    <wsdl:part name="parameters" element="tns:TestStringResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PersonServiceSoap">
+    <wsdl:operation name="GetFullName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get fullname of person</wsdl:documentation>
+      <wsdl:input message="tns:GetFullNameSoapIn" />
+      <wsdl:output message="tns:GetFullNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPerson">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get person by id</wsdl:documentation>
+      <wsdl:input message="tns:GetPersonSoapIn" />
+      <wsdl:output message="tns:GetPersonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestString">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get string by string</wsdl:documentation>
+      <wsdl:input message="tns:TestStringSoapIn" />
+      <wsdl:output message="tns:TestStringSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PersonServiceSoap" type="tns:PersonServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFullName">
+      <soap:operation soapAction="http://institution.interop.org/GetFullName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPerson">
+      <soap:operation soapAction="http://institution.interop.org/GetPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestString">
+      <soap:operation soapAction="http://institution.interop.org/TestString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PersonServiceSoap12" type="tns:PersonServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFullName">
+      <soap12:operation soapAction="http://institution.interop.org/GetFullName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPerson">
+      <soap12:operation soapAction="http://institution.interop.org/GetPerson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestString">
+      <soap12:operation soapAction="http://institution.interop.org/TestString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PersonService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Service for person info</wsdl:documentation>
+    <wsdl:port name="PersonServiceSoap" binding="tns:PersonServiceSoap">
+      <soap:address location="http://webservice.interop.st/PersonService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PersonServiceSoap12" binding="tns:PersonServiceSoap12">
+      <soap12:address location="http://webservice.interop.st/PersonService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

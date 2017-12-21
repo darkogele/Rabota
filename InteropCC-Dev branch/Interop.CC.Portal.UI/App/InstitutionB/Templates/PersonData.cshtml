@@ -1,0 +1,54 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>Податоци за присутни - Институција Б</h2>
+
+<form name="peopleDataForm" ng-controller="InstitutionBCtrl">
+
+    <div class="container" style="margin-top: 20px;">
+        <div class="col-lg-3">
+            <div class="form-group" ng-class="{ 'has-error' : peopleDataFormFieldvalidation.showData.$invalid }">
+                <ng-form name="peopleDataFormFieldvalidation">
+                    <label for="name">Прикажи податоци за присутни:</label>
+                    <label>
+                        <input type="radio" name="showData" ng-model="showData" ng-value="true" required> Да
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="showData" ng-model="showData" ng-value="false" required> Не
+                    </label>
+                </ng-form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-disabled="peopleDataForm.$invalid" ng-click="getPeopleData(showData)"><i class="fa fa-save"></i> Испрати</button>
+                <a class="btn btn-warning" href="#/institutionB/institutionBPeopleData" ui-sref="peopledataindex">Откажи</a>
+            </div>
+        </div>
+        <div ng-show="show" class="col-lg-9">
+            <table class="GridViewStyle" cellspacing="0" rules="all" border="1" style="border-collapse:collapse;width: 100%">
+
+
+                <tr class="HeaderStyle">
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Age</th>
+                    <th>Date of birth</th>
+                    <th>Marriage status</th>
+                    <th>Work status</th>
+                </tr>
+
+                <tbody>
+                    <tr class="RowStyle" ng-repeat="person in people">
+                        <td>{{person.name}}</td>
+                        <td>{{person.surname}}</td>
+                        <td>{{person.age}}</td>
+                        <td>{{person.dateOfBirth | date:'dd.MM.yyyy'}}</td>
+                        <td>{{person.marriageStatus}}</td>
+                        <td>{{person.workStatus}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</form>     

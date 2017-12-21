@@ -1,0 +1,52 @@
+﻿@*@{
+        Layout = null;
+    }
+    @inherits System.Web.Mvc.WebViewPage*@
+@model List<Interop.CS.Models.Models.MessageLogStatisticToDisplayInDocs>
+<head>
+    <style type="text/css">
+        table, tr, td {
+            border: 1px solid gray;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+
+        th {
+            border: 2px solid black;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<div class="panel tableMessageLogsInfo">
+    @foreach (var messageLog in Model)
+    {
+        foreach (var services in messageLog.ListServices)
+        {
+            <div class="panel-heading">
+                <div>Сервис: @services.ServiceName </div>
+                <div>Вкупен број на повикувања: @services.TotalCalledTimes </div>
+            </div>
+            
+            <hr />
+            <div>
+                Детали за повикување на сервисот од институции
+            </div>
+            <br />
+            foreach (var consumer in services.ListConsumers)
+            {
+                <div>Институција: @consumer.ConsumerName</div>
+                foreach (var provider in consumer.ListProviders)
+                {
+                    <div>вкупно: @provider.Count</div>
+                    <div>успешни: @provider.SuccesfullCalls, неуспешни: @provider.UnSuccesfullCalls</div>
+                    <div>настанати грешки на страната на: @provider.PointOfError  </div>
+                }
+                <hr />
+            }
+        }
+
+    }
+</div>
+

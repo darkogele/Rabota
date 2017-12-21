@@ -1,0 +1,187 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>Одобрение за градба - Министерство за Транспорт и Врски</h2>
+
+<form name="mztvDataForConstructionPermitForm" ng-controller="MztvCtrl">
+
+    <div class="container">
+        <div class="col-lg-3">
+            <div class="form-group" ng-class="{ 'has-error' : archiveNumberFormField.archiveNumber.$invalid }">
+                <ng-form name="archiveNumberFormField">
+                    <label for="archiveNumber">Архивски број:</label>
+                    <input id="archiveNumber" type="text" class="form-control" name="archiveNumber" ng-model="archiveNumber" required>
+                </ng-form>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : constructionTypeIdFormField.constructionTypeId.$invalid }">
+                <ng-form name="constructionTypeIdFormField">
+                    <label for="constructionTypeId">Идентификационен број на тип на градба:</label>
+                    <input id="constructionTypeId" type="text" class="form-control" name="constructionTypeId" ng-model="constructionTypeId" required>
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : municipalityIdFormField.municipalityId.$invalid }">
+                <ng-form name="municipalityIdFormField">
+                    <label for="municipalityId">Идентификационен број на општина:</label>
+                    <input id="municipalityId" type="text" class="form-control" name="municipalityId" ng-model="municipalityId" required>
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : sendDateFormField.sendDate.$invalid }">
+                <ng-form name="sendDateFormField">
+                    <label for="sendDate">Датум на праќање:</label>
+                    
+                    <input type="text"
+                           placeholder="Од"
+                           class="form-control"
+                           datepicker-popup="M.d.yyyy"
+                           ng-disabled="true"
+                           datepicker-append-to-body="true"
+                           ng-model="fromDate"
+                           is-open="status1.opened"
+                           max-date="maxFromDateTime"
+                           current-text="Денес"
+                           clear-text="Исчисти"
+                           close-text="Затвори"
+                           ng-click="status1.opened = true" />
+                        @*<input id="sendDate" type="text" class="form-control" name="sendDate" ng-model="sendDate">*@
+                </ng-form>
+            </div>
+            @*<div class="form-group" ng-class="{ 'has-error' : getDocumentsFormField.getDocuments.$invalid }">
+                <ng-form name="getDocumentsFormField">
+                    <label for="getDocuments">Преземи документ(y/n):</label>
+                    <input id="getDocuments" type="text" class="form-control" name="getDocuments" ng-model="getDocuments">
+                </ng-form>
+            </div>*@
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-disabled="mztvDataForConstructionPermitForm.$invalid" ng-click="mztvDataForConstructionPermit(archiveNumber, constructionTypeId, municipalityId, sendDate, getDocuments)"><i class="fa fa-save"></i> Испрати</button>
+                <a class="btn btn-warning" href="#/mztv/mztvdataforconstructionpermit" ui-sref="mztvdataforconstructionpermitindex">Откажи</a>
+            </div>
+        </div>
+
+        <div ng-show="show" class="col-lg-9">
+
+            <div class="form-group">
+                <ng-form name="archiveDateFormField">
+                    <label for="archiveDate">Датум на архивирање: </label>
+                    <input id="archiveDate" type="text" class="form-control" name="archiveDate" ng-model="archiveDate">
+                </ng-form>
+            </div>
+
+            <div class="form-group">
+                <ng-form name="constructionAddressFormField">
+                    <label for="constructionAddress">Адреса на градба: </label>
+                    <input id="constructionAddress" type="text" class="form-control" name="constructionAddress" ng-model="constructionAddress">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="constructionDescriptionFormField">
+                    <label for="constructionDescription">Опис на градба: </label>
+                    <input id="constructionDescription" type="text" class="form-control" name="constructionDescription" ng-model="constructionDescription">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="constructionTypeNameFormField">
+                    <label for="constructionTypeName">Тип на градба: </label>
+                    <input id="constructionTypeName" type="text" class="form-control" name="constructionTypeName" ng-model="constructionTypeName">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="effectDateFormField">
+                    <label for="effectDate">Ефективно од: </label>
+                    <input id="effectDate" type="text" class="form-control" name="effectDate" ng-model="effectDate">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="sendDateFormField">
+                    <label for="sendDate">Пратено на: </label>
+                    <input id="sendDate" type="text" class="form-control" name="sendDate" ng-model="sendDate">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="statusFormField">
+                    <label for="status">Статус: </label>
+                    <input id="status" type="text" class="form-control" name="status" ng-model="status">
+                </ng-form>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <button ng-show="!expandOwner" ng-click="expandedOwner()">+</button>
+                            <button ng-show="expandOwner" ng-click="expandedOwner()">-</button>
+                            Инвеститори
+                        </th>
+                    </tr>
+                    <tr ng-show="expandOwner">
+                        <th>Име</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="investor in investors" ng-show="expandOwner">
+                        <td>{{investor}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <button ng-show="!expandLoad" ng-click="expandedLoad()">+</button>
+                            <button ng-show="expandLoad" ng-click="expandedLoad()">-</button>
+                            Општини
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="municipalitie in municipalities" ng-show="expandLoad">
+                        <td>{{municipalitie.municipalityName}}</td>
+                        <td>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <button ng-show="!expandOps" ng-click="expandedOps()">+</button>
+                                            <button ng-show="expandOps" ng-click="expandedOps()">-</button>
+                                            Катастарски Општини
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="cat in municipalitie.cadastreMunicipalities" ng-show="expandOps">
+                                        <td>{{cat.ko}}</td>
+                                        <td>{{cat.kp}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            @*<table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <button ng-show="!expandObject" ng-click="expandedObject()">+</button>
+                                <button ng-show="expandObject" ng-click="expandedObject()">-</button>
+                                Листа на документи
+                            </th>
+                        </tr>
+                        <tr ng-show="expandObject">
+                            <th>Низа од бајти</th>
+                            <th>Име</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-show="expandObject" ng-repeat="document in documents">
+                            <td>{{document.contentBytes}}</td>
+                            <td>{{document.fileName}}</td>
+                        </tr>
+                    </tbody>
+                </table>*@
+            <div class="row text-center">
+                <a class="btn btn-default" ng-click="dataForConstructionPermitXML()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во XML формат</a>
+                <a class="btn btn-default" ng-click="dataForConstructionPermitPDF()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во PDF формат</a>
+            </div>
+        </div>
+    </div>
+</form>

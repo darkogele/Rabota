@@ -1,0 +1,13 @@
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN\bin\Debug\TSAdapterAKN.dll.config
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN\bin\Debug\TSAdapterAKN.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN\bin\Debug\TSAdapterAKN.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN\bin\Debug\Contracts.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN\bin\Debug\Helpers.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN\bin\Debug\Contracts.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN\bin\Debug\Helpers.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN\obj\Debug\TSAdapterAKN.csprojResolveAssemblyReference.cache
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN\obj\Debug\XsdGeneratedCode\GeneratedXsdTypes.cs
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN\obj\Debug\TSAdapterAKN.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN\obj\Debug\TSAdapterAKN.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN\bin\Debug\Contracts.dll.config
+D:\Work\InteropServicesSolutions\AKNCorrected\TSAdapterAKN\obj\Debug\TSAdapterAKN.csproj.CoreCompileInputs.cache

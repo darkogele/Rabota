@@ -1,0 +1,13 @@
+D:\Work\InteropServicesSolutions\AKNCorrected\Implementations\bin\Debug\Implementations.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\Implementations\bin\Debug\Implementations.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\Implementations\bin\Debug\Contracts.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\Implementations\bin\Debug\Helpers.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\Implementations\bin\Debug\Renci.SshNet.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\Implementations\bin\Debug\Contracts.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\Implementations\bin\Debug\Helpers.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\Implementations\bin\Debug\Renci.SshNet.xml
+D:\Work\InteropServicesSolutions\AKNCorrected\Implementations\obj\Debug\Implementations.csprojResolveAssemblyReference.cache
+D:\Work\InteropServicesSolutions\AKNCorrected\Implementations\obj\Debug\Implementations.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\Implementations\obj\Debug\Implementations.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\Implementations\bin\Debug\Contracts.dll.config
+D:\Work\InteropServicesSolutions\AKNCorrected\Implementations\obj\Debug\Implementations.csproj.CoreCompileInputs.cache

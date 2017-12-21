@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://interop.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PropertyListTest" targetNamespace="http://interop.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://interop.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/Contracts.DTO_s.AKNService" />
+      <xs:element name="GetPropertyList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="opstina" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="katastarskaOpstina" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="brImotenList" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPropertyListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Contracts.DTO_s.AKNService" minOccurs="0" name="GetPropertyListResult" nillable="true" type="q1:dzgr" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Contracts.DTO_s.AKNService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Contracts.DTO_s.AKNService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="dzgr">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="data" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ilist" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="kops" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="nizobj" nillable="true" type="tns:ArrayOfObjects" />
+          <xs:element minOccurs="0" name="nizpar" nillable="true" type="tns:ArrayOfParcel" />
+          <xs:element minOccurs="0" name="nizsop" nillable="true" type="tns:ArrayOfOwner" />
+          <xs:element minOccurs="0" name="niztov" nillable="true" type="tns:ArrayOfLoads" />
+          <xs:element minOccurs="0" name="ops" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="dzgr" nillable="true" type="tns:dzgr" />
+      <xs:complexType name="ArrayOfObjects">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Objects" nillable="true" type="tns:Objects" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfObjects" nillable="true" type="tns:ArrayOfObjects" />
+      <xs:complexType name="Objects">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="broj" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="godinagradba" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="kat" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="mesto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="namena" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="objekt" type="xs:int" />
+          <xs:element minOccurs="0" name="osnov" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="povrsina" type="xs:long" />
+          <xs:element minOccurs="0" name="pravo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="stan" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="vlez" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Objects" nillable="true" type="tns:Objects" />
+      <xs:complexType name="ArrayOfParcel">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Parcel" nillable="true" type="tns:Parcel" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfParcel" nillable="true" type="tns:ArrayOfParcel" />
+      <xs:complexType name="Parcel">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="broj_del" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="klasa" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="kultura" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="mesto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="objekt" type="xs:int" />
+          <xs:element minOccurs="0" name="povrsina" type="xs:long" />
+          <xs:element minOccurs="0" name="pravo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Parcel" nillable="true" type="tns:Parcel" />
+      <xs:complexType name="ArrayOfOwner">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Owner" nillable="true" type="tns:Owner" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfOwner" nillable="true" type="tns:ArrayOfOwner" />
+      <xs:complexType name="Owner">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="broj" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="del" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="embg" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="mesto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ulica" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Owner" nillable="true" type="tns:Owner" />
+      <xs:complexType name="ArrayOfLoads">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Loads" nillable="true" type="tns:Loads" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfLoads" nillable="true" type="tns:ArrayOfLoads" />
+      <xs:complexType name="Loads">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Loads" nillable="true" type="tns:Loads" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IPropertyList_GetPropertyList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPropertyList" />
+  </wsdl:message>
+  <wsdl:message name="IPropertyList_GetPropertyList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPropertyListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPropertyList">
+    <wsdl:operation name="GetPropertyList">
+      <wsdl:input wsaw:Action="http://interop.org/IPropertyList/GetPropertyList" message="tns:IPropertyList_GetPropertyList_InputMessage" />
+      <wsdl:output wsaw:Action="http://interop.org/IPropertyList/GetPropertyListResponse" message="tns:IPropertyList_GetPropertyList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CustomBinding_IPropertyList" type="tns:IPropertyList">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPropertyList">
+      <soap12:operation soapAction="http://interop.org/IPropertyList/GetPropertyList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PropertyListTest">
+    <wsdl:port name="CustomBinding_IPropertyList" binding="tns:CustomBinding_IPropertyList">
+      <soap12:address location="http://externalHandler-crrmtest/MIM1$$AKN/PropertyListTest" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

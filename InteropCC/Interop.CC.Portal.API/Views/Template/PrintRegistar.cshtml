@@ -1,0 +1,323 @@
+﻿@model Interop.CC.Models.DTO.Institutions.ExciseBondsOutputDTO
+
+<head>
+    <style type="text/css">
+        table, tr, td {
+            border: 1px solid gray;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+
+        th {
+            border: 2px solid black;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<div style="width: 100%;">
+
+    <div style="float: left; width: 70%;">
+        <img src="@Server.MapPath("~/Views/Template/grbMak.jpg")" style="float: left" alt="MIOA logo" />
+        <label>Република Македонија</label>
+        <h4 style="font-size:.6em;">Министерство за информатичко општество и администрација</h4>
+    </div>
+    <div style="float: right; width: 30%; font-size: .6em">
+        <a style="margin-left: 80px;" href="http://www.interoperabilnost.gov.mk">www.interoperabilnost.gov.mk</a>
+
+        <table class="table-striped" style="margin-top: 20px;">
+            <thead style="display: table-row-group">
+
+            </thead>
+            <tbody style="font-size: .6em">
+                <tr>
+                    <td>Име на услугата:</td>
+                    <td>@Model.ServiceName</td>
+                </tr>
+                <tr>
+                    <td>Услугата ја користи:</td>
+                    <td>@Model.ConsumerName</td>
+                </tr>
+                <tr>
+                    <td>Услугата ја нуди:</td>
+                    <td>@Model.ProviderName</td>
+                </tr>
+                <tr>
+                    <td>Време на повик до услугата:</td>
+                    <td>@Model.ServiceCalledTime.ToString("dd.MM.yyyy HH:mm")</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div style="height: 70px; width: 100%; float: left"></div>
+
+<table class="table-striped">
+    <caption>Акцизни обврзници</caption>
+    <thead style="display: table-row-group">
+        <tr id="row1">
+            <th>Идентификационен број</th>
+            <th>ЕДБ</th>
+            <th>Назив</th>
+            <th>Вид на одобрение</th>
+            <th>Број на одобрение</th>
+            <th>Датум на одобрение</th>
+            <th>Претходно одобрение</th>
+            <th>Следно одобрение</th>
+            <th>ЕМБГ на одговорно лице</th>
+            <th>Назив на одговорно лице</th>
+            <th>ЕМБГ на полномошник</th>
+            <th>Назив на полномошник</th>
+        </tr>
+        
+    </thead>
+    <tbody>
+
+        <tr>
+            
+            @foreach (var akciza in Model.ExciseBonds)
+            {
+                <td>@akciza.Id</td>
+                <td>@akciza.Edb</td>
+                <td>@akciza.Name</td>
+                <td>@akciza.Vid_odobrenie</td>
+                <td>@akciza.Broj_odobrenie</td>
+                <td>@akciza.Datum_odobrenie</td>
+                <td>@akciza.Prethodno_odobrenie</td>
+                <td>@akciza.Sledno_odobrenie</td>
+                <td>@akciza.Embg_odgovorno_lice</td>
+                <td>@akciza.Naziv_odgovorno_lice</td>
+                <td>@akciza.Embg_polnomosnik</td>
+                <td>@akciza.Naziv_polnomosnik</td>
+                <tr></tr>
+
+
+            }
+        </tr>
+
+
+    </tbody>
+</table>
+
+<br/>
+
+<table class="table-striped">
+    <caption>Акцизни добра</caption>
+    <thead style="display: table-row-group">
+        <tr id="row1">
+            <th>Идентификационен број</th>
+            <th>Број на одобрение</th>
+            <th>Ставка</th>
+            <th>Вид</th>
+            <th>Производ</th>
+            <th>Тарифа</th>
+            <th>Количина</th>
+            <th>Мерка</th>
+            <th>За производство</th>
+            <th>За складирање</th>
+        </tr>
+
+    </thead>
+    <tbody>
+
+
+
+        @foreach (var good in Model.ExciseGoods)
+        {
+            <tr>
+                <td>@good.Id</td>
+                <td>@good.Broj_odobrenie</td>
+                <td>@good.Stavka</td>
+                <td>@good.Vid</td>
+                <td>@good.Proizvod</td>
+                <td>@good.Tarifa</td>
+                <td>@good.Kolicina</td>
+                <td>@good.Opis_merka</td>
+                <td>@good.Za_proizvodstvo</td>
+                <td>@good.Za_skladiranje</td>
+                
+                
+               
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+<br />
+
+
+<table class="table-striped">
+    <caption> Акцизни простори </caption>
+
+  @*  <thead style="display: table-row-group">*@
+    <tbody>
+   
+      
+        <tr id="row1">
+            <th>Идентификационен број</th>
+            
+            @foreach (var prostor in Model.ExciseSpaces)
+            {
+                    <td>@prostor.Id</td>
+            }
+        </tr>
+        <tr>
+            <th>Број на одобрение</th>
+            @foreach (var prostor in Model.ExciseSpaces)
+            {
+                <td>@prostor.Broj_odobrenie</td>
+            }
+        </tr>
+        <tr>
+            <th>Ставка</th>
+            @foreach (var prostor in Model.ExciseSpaces)
+            {
+                <td>@prostor.Stavka</td>
+            }
+        </tr>
+        <tr>
+            <th>Општина</th>
+            @foreach (var prostor in Model.ExciseSpaces)
+            {
+                <td>@prostor.Opstina</td>
+            }
+        </tr>
+        <tr>
+
+            <th>Назив на општина</th>
+            @foreach (var prostor in Model.ExciseSpaces)
+            {
+                <td>@prostor.Naziv_opstina</td>
+            }
+        </tr>
+        <tr>
+            <th>Место</th>
+            @foreach (var prostor in Model.ExciseSpaces)
+            {
+                <td>@prostor.Mesto</td>
+            }
+        </tr>
+        <tr>
+            <th>Назив на Место</th>
+            @foreach (var prostor in Model.ExciseSpaces)
+            {
+                <td>@prostor.Naziv_mesto</td>
+            }
+        </tr>
+        <tr>
+            <th>Назив на улица</th>
+            @foreach (var prostor in Model.ExciseSpaces)
+            {
+                <td>@prostor.Naziv_ulica</td>
+            }
+        </tr>
+        <tr>
+            <th>Улица број</th>
+            @foreach (var prostor in Model.ExciseSpaces)
+            {
+                <td>@prostor.Ulica_broj</td>
+            }
+        </tr>
+        <tr>
+            <th>За производство</th>
+            @foreach (var prostor in Model.ExciseSpaces)
+            {
+                <td>@prostor.Za_proizvodstvo</td>
+            }
+        </tr>
+        <tr>
+            <th>За складирање</th>
+            @foreach (var prostor in Model.ExciseSpaces)
+            {
+                <td>@prostor.Za_skladiranje</td>
+            }
+        </tr>
+        <tr>
+            <th>ЕМБГ на одговорно лице</th>
+            @foreach (var prostor in Model.ExciseSpaces)
+            {
+                <td>@prostor.Embg_odgovorno_lice</td>
+            }
+        </tr>
+        <tr>
+            <th>Назив на одговорно лице</th>
+            @foreach (var prostor in Model.ExciseSpaces)
+            {
+                <td>@prostor.Naziv_odgovorno_lice</td>
+            }
+        </tr>
+        <tr>
+            <th>Забелешка</th>
+            @foreach (var prostor in Model.ExciseSpaces)
+            {
+                <td>@prostor.Zabeleska</td>
+            }
+        </tr>
+        <tr>
+            <th>Статус</th>
+            @foreach (var prostor in Model.ExciseSpaces)
+            {
+                <td>@prostor.Status</td>
+            }
+        </tr>
+        <tr>
+            <th>Статус датум</th>
+            @foreach (var prostor in Model.ExciseSpaces)
+            {
+                <td>@prostor.Status_datum</td>
+            }
+        </tr>
+
+                    @*<th>Број на одобрение</th>
+                    <th>Ставка</th>
+                    <th>Општина</th>
+                    <th>Назив на општина</th>
+                    <th>Место</th>
+                    <th>Назив на Место</th>
+                    <th>Назив на улица</th>
+                    <th>Улица број</th>
+                    <th>За производство</th>
+                    <th>За складирање</th>
+                    <th>ЕМБГ на одговорно лице</th>
+                    <th>Назив на одговорно лице</th>
+                    <th>Забелешка</th>
+                    <th>Статус</th>
+                    <th>Статус датум</th>*@
+                
+    @*</thead>*@
+
+@*<tbody>
+
+    
+    @foreach (var prostor in Model.ExciseSpaces)
+    {
+    <tr>
+        <td>@prostor.Id</td>
+        <td>@prostor.Broj_odobrenie</td>
+        <td>@prostor.Stavka</td>
+        <td>@prostor.Opstina</td>
+        <td>@prostor.Naziv_opstina</td>
+        <td>@prostor.Mesto</td>
+        <td>@prostor.Naziv_mesto</td>
+        <td>@prostor.Naziv_ulica</td>
+        <td>@prostor.Ulica_broj</td>
+        <td>@prostor.Za_proizvodstvo</td>
+        <td>@prostor.Za_skladiranje</td>
+        <td>@prostor.Embg_odgovorno_lice</td>
+        <td>@prostor.Naziv_odgovorno_lice</td>
+        <td>@prostor.Zabeleska</td>
+        <td>@prostor.Status</td>
+        <td>@prostor.Status_datum</td>
+
+    </tr>
+
+    }    
+        </tbody>*@
+    
+    
+    </table>
+
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7f087b3d-1c95-4997-ab86-5945a4cc8156" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/CURMServicesProd.Host/SingleCustDoc.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SingleCustDoc.xsd" MetadataType="Schema" ID="92071fc1-efdd-46bc-9001-199ba5e97e7c" SourceId="1" SourceUrl="http://localhost/CURMServicesProd.Host/SingleCustDoc.svc?xsd=xsd1" />
+    <MetadataFile FileName="SingleCustDoc.wsdl" MetadataType="Wsdl" ID="c8e7fc38-db04-41db-9e7a-c4a211caa117" SourceId="1" SourceUrl="http://localhost/CURMServicesProd.Host/SingleCustDoc.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SingleCustDoc1.wsdl" MetadataType="Wsdl" ID="58d69092-1a5e-462f-9234-4686ebf438b0" SourceId="1" SourceUrl="http://localhost/CURMServicesProd.Host/SingleCustDoc.svc?wsdl" />
+    <MetadataFile FileName="SingleCustDoc.disco" MetadataType="Disco" ID="b39cebd0-b3e4-4e98-a32b-75229c13dc74" SourceId="1" SourceUrl="http://localhost/CURMServicesProd.Host/SingleCustDoc.svc?disco" />
+    <MetadataFile FileName="SingleCustDoc1.xsd" MetadataType="Schema" ID="55e55a04-4d25-42dd-97e1-35fc33419c81" SourceId="1" SourceUrl="http://localhost/CURMServicesProd.Host/SingleCustDoc.svc?xsd=xsd2" />
+    <MetadataFile FileName="SingleCustDoc2.xsd" MetadataType="Schema" ID="064d729e-2128-41e3-a96d-1a5ddf8c0d2a" SourceId="1" SourceUrl="http://localhost/CURMServicesProd.Host/SingleCustDoc.svc?xsd=xsd3" />
+    <MetadataFile FileName="SingleCustDoc3.xsd" MetadataType="Schema" ID="c24717c1-5a50-4c0c-8ca2-4ed3c7af56a5" SourceId="1" SourceUrl="http://localhost/CURMServicesProd.Host/SingleCustDoc.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

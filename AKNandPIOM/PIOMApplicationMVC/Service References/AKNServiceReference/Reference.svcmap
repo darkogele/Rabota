@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="49fc4da3-d2ed-4f36-89a6-229eb30a8098" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AdapterServiceAKN.Host/AdapterServiceAKN.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AdapterServiceAKN.xsd" MetadataType="Schema" ID="b97bd73a-644f-43ea-b4b3-8128f84ae69f" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AdapterServiceAKN.svc?xsd=xsd3" />
+    <MetadataFile FileName="AdapterServiceAKN1.xsd" MetadataType="Schema" ID="332d3881-6e2c-40fa-a8f1-508d82be48d7" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AdapterServiceAKN.svc?xsd=xsd4" />
+    <MetadataFile FileName="AKNService.wsdl" MetadataType="Wsdl" ID="5ca55b83-ee46-41eb-ade3-cdb5222f2c13" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AdapterServiceAKN.svc?wsdl" />
+    <MetadataFile FileName="AdapterServiceAKN2.xsd" MetadataType="Schema" ID="725a316c-0d9c-47b1-9374-8ad6d6ff8093" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AdapterServiceAKN.svc?xsd=xsd1" />
+    <MetadataFile FileName="AdapterServiceAKN3.xsd" MetadataType="Schema" ID="833ed24d-9a28-4bdb-a963-6adaea8ec951" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AdapterServiceAKN.svc?xsd=xsd0" />
+    <MetadataFile FileName="AdapterServiceAKN.disco" MetadataType="Disco" ID="5fa26a2d-94a9-47f4-816f-17767d83849f" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AdapterServiceAKN.svc?disco" />
+    <MetadataFile FileName="AdapterServiceAKN4.xsd" MetadataType="Schema" ID="cb09d7ee-bd9c-429b-a6d5-3e19cd050bdd" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AdapterServiceAKN.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

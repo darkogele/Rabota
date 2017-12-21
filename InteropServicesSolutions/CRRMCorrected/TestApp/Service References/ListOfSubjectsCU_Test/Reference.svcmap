@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="41219507-d30f-4e60-87ef-93e9bb336b3e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/CRRMServicesTest.Host/ListOfSubjectsCUTest.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ListOfSubjectsCUTest.wsdl" MetadataType="Wsdl" ID="5d6d052f-bd32-4817-8547-f35be79f964c" SourceId="1" SourceUrl="http://localhost/CRRMServicesTest.Host/ListOfSubjectsCUTest.svc?wsdl" />
+    <MetadataFile FileName="ListOfSubjectsCUTest.xsd" MetadataType="Schema" ID="dc92a134-ab83-457e-a5c1-1942ddc6367b" SourceId="1" SourceUrl="http://localhost/CRRMServicesTest.Host/ListOfSubjectsCUTest.svc?xsd=xsd0" />
+    <MetadataFile FileName="ListOfSubjectsCUTest1.xsd" MetadataType="Schema" ID="5ecc0ce0-cfa3-4acd-9202-bcd93abe2c85" SourceId="1" SourceUrl="http://localhost/CRRMServicesTest.Host/ListOfSubjectsCUTest.svc?xsd=xsd2" />
+    <MetadataFile FileName="ListOfSubjectsCUTest2.xsd" MetadataType="Schema" ID="f584145f-dee1-4bdd-9f5c-60ce5878682d" SourceId="1" SourceUrl="http://localhost/CRRMServicesTest.Host/ListOfSubjectsCUTest.svc?xsd=xsd1" />
+    <MetadataFile FileName="ListOfSubjectsCUTest1.wsdl" MetadataType="Wsdl" ID="802e0155-35ef-4b0c-a085-01bf3250e129" SourceId="1" SourceUrl="http://localhost/CRRMServicesTest.Host/ListOfSubjectsCUTest.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ListOfSubjectsCUTest.disco" MetadataType="Disco" ID="da544661-631f-466d-aa6d-d2e812a4e044" SourceId="1" SourceUrl="http://localhost/CRRMServicesTest.Host/ListOfSubjectsCUTest.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

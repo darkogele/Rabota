@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4c6952f3-15c6-4b48-9c24-ea590b32c051" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/TSAdapterAKN.Host/TSAKNTest.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TSAKNTest.xsd" MetadataType="Schema" ID="77d8b2fe-24a9-428b-a0f8-2501b04b7f29" SourceId="1" SourceUrl="http://localhost/TSAdapterAKN.Host/TSAKNTest.svc?xsd=xsd1" />
+    <MetadataFile FileName="TSAKNTest.wsdl" MetadataType="Wsdl" ID="a4b0d770-7ae8-4571-bc92-6fd3a5d5004c" SourceId="1" SourceUrl="http://localhost/TSAdapterAKN.Host/TSAKNTest.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="TSAKNTest1.wsdl" MetadataType="Wsdl" ID="68b02ff5-c015-4f80-8b48-677b12f1e2eb" SourceId="1" SourceUrl="http://localhost/TSAdapterAKN.Host/TSAKNTest.svc?wsdl" />
+    <MetadataFile FileName="TSAKNTest1.xsd" MetadataType="Schema" ID="07ec807d-671c-4acc-99ae-c686ff8bd1eb" SourceId="1" SourceUrl="http://localhost/TSAdapterAKN.Host/TSAKNTest.svc?xsd=xsd0" />
+    <MetadataFile FileName="TSAKNTest.disco" MetadataType="Disco" ID="d57a66e5-d786-4c39-9b3b-403015729ab5" SourceId="1" SourceUrl="http://localhost/TSAdapterAKN.Host/TSAKNTest.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

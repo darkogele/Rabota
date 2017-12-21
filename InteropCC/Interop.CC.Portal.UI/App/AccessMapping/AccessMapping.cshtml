@@ -1,0 +1,126 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<div>
+    <h2><i class="fa fa-list-alt"></i> Пристапна листа</h2>
+    <div class="table">
+        <hr ng-if="authentication.isAuth && (getUserPermission('SuperAdmin') || getUserPermission('Admin'))">
+        <div ng-if="authentication.isAuth && (getUserPermission('SuperAdmin') || getUserPermission('Admin'))" class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-3">
+                    <a ui-sref="createaccessmapping()" class="btn btn-primary col-lg-6 col-md-2 col-sm-2 col-xs-6"><i class="fa fa-plus"></i> Креирај</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        @*<div class="row">
+            <div class="col-lg-12 col-md-12 hidden-sm hidden-xs">
+                <form name="searchAccessMappingForm">
+                    <div class="col-lg-3 col-md-3 col-sm-2">
+                        <select class="form-control" ng-model="filterConsumer" ng-options="key as value for (key , value) in consumersList">
+                            <option value="" disabled>Одбери Корисник</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-2">
+                <select class="form-control pull-left" ng-model="filterService" ng-options="key as value for (key , value) in servicesList">
+                    <option value="" disabled>Одбери Сервис</option>
+                </select>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <select class="form-control pull-left" ng-model="filterActivity">
+                    <option value="" disabled>Одбери активност...</option>
+                    <option value="0">Неактивен...</option>
+                    <option value="1">Активен...</option>
+                </select>
+            </div>
+        </div>*@
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="table-responsive" ng-show="totalItems != 0">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th ng-click="sortType = 'providerCode'; sortReverse = !sortReverse" style="cursor:pointer;">
+                                <u>
+                                    Провајдер
+                                </u>
+                                <span ng-show="sortType == 'providerCode' && !sortReverse" class="fa fa-caret-down"></span>
+                                <span ng-show="sortType == 'providerCode' && sortReverse" class="fa fa-caret-up"></span>
+                            </th>
+                            @*<th ng-click="sortType = 'providerBusCode'; sortReverse = !sortReverse" style="cursor:pointer;">
+                                <u>
+                                    Бас на Провајдер
+                                </u>
+                                <span ng-show="sortType == 'providerBusCode' && !sortReverse" class="fa fa-caret-down"></span>
+                                <span ng-show="sortType == 'providerBusCode' && sortReverse" class="fa fa-caret-up"></span>
+                            </th>*@
+                            <th ng-click="sortType = 'consumerCode'; sortReverse = !sortReverse" style="cursor:pointer;">
+                                <u>
+                                    Корисник
+                                </u>
+                                <span ng-show="sortType == 'consumerCode' && !sortReverse" class="fa fa-caret-down"></span>
+                                <span ng-show="sortType == 'consumerCode' && sortReverse" class="fa fa-caret-up"></span>
+                            </th>
+                            @*<th ng-click="sortType = 'consumerBusCode'; sortReverse = !sortReverse" style="cursor:pointer;">
+                                <u>
+                                    Бас на Корисник
+                                </u>
+                                <span ng-show="sortType == 'consumerBusCode' && !sortReverse" class="fa fa-caret-down"></span>
+                                <span ng-show="sortType == 'consumerBusCode' && sortReverse" class="fa fa-caret-up"></span>
+                            </th>*@
+                            <th ng-click="sortType = 'serviceCode'; sortReverse = !sortReverse" style="cursor:pointer;">
+                                <u>
+                                    Сервис
+                                </u>
+                                <span ng-show="sortType == 'serviceCode' && !sortReverse" class="fa fa-caret-down"></span>
+                                <span ng-show="sortType == 'serviceCode' && sortReverse" class="fa fa-caret-up"></span>
+                            </th>
+                            <th>Метод</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="accessMapping in accessMappings | orderBy : sortType : sortReverse" ng-class="{selected: accessMapping.providerCode === selectedProvider && accessMapping.consumerCode === selectedConsumer && accessMapping.serviceCode === selectedService && accessMapping.methodCode === selectedMethod}" ng-click="setSelectedRow(accessMapping.providerCode, accessMapping.consumerCode, accessMapping.serviceCode, accessMapping.methodCode)">
+                            <td>{{accessMapping.providerName}}</td>
+                            @*<td>{{accessMapping.providerBusCode}}</td>*@
+                            <td>{{accessMapping.consumerName}}</td>
+                            @*<td>{{accessMapping.consumerBusCode}}</td>*@
+                            <td>{{accessMapping.serviceName}}</td>
+                            <td>{{accessMapping.methodCode}}</td>
+                            <td ng-if="authentication.isAuth && (getUserPermission('SuperAdmin') || getUserPermission('Admin'))">
+                                <button class="btn btn-success btn-sm" ng-show="!accessMapping.isActive" ng-click-confirm-message="Дали сакате да го активирате записот во пристапната листа?" ng-click-confirm="$parent.activate(accessMapping.providerCode, accessMapping.providerName, accessMapping.consumerCode, accessMapping.consumerName, accessMapping.serviceCode, accessMapping.serviceName, accessMapping.methodCode, accessMapping.providerBusCode, accessMapping.consumerBusCode, true)"><i class="fa fa-power-off"></i> Активирај </button>
+                                <button class="btn btn-danger btn-sm" ng-show="accessMapping.isActive" ng-click-confirm-message="Дали сакате да го деактивирате записот во пристапната листа?" ng-click-confirm="$parent.activate(accessMapping.providerCode, accessMapping.providerName, accessMapping.consumerCode, accessMapping.consumerName, accessMapping.serviceCode, accessMapping.serviceName, accessMapping.methodCode, accessMapping.providerBusCode, accessMapping.consumerBusCode, false)"><i class="fa fa-power-off"></i> Деактивирај </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="pull-left">
+            <div previous-text="Претходна" next-text="Следна" pagination total-items="totalItems" items-per-page="pageSize" max-size="10" ng-show="totalItems != 0" ng-model="currentPage" rotate="false" num-pages="numPages" class="pagination-sm" ng-change="pageChangeHandler(currentPage)"></div>
+        </div>
+        <div class="pull-left">
+            <select class="form-control" ng-show="totalItems != 0" name="participantsPerPage" ng-model="itemsPerPage" ng-change="pageSizeChanged(itemsPerPage)" style="margin: 18px 30px;">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="7">7</option>
+                <option value="10" selected="selected">10</option>
+            </select>
+        </div>
+        <div ng-show="totalItems != 0" class="pull-right">
+            <strong>Вкупен број на записи: {{totalItems}}</strong>
+        </div>
+    </div>
+    <div class="col-md-12 alert alert-warning" ng-show="totalItems == 0">
+        <strong>Нема податоци</strong>
+    </div>
+</div>
+
+
+
+

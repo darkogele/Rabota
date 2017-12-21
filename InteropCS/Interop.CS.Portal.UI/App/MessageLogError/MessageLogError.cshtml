@@ -1,0 +1,20 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<form name="messageLogErrorForm">
+    <div class="container">
+        <br />
+        <div class="col-lg-3">
+            <button type="submit" class="btn btn-primary" ng-click="createMessageLogForResponse()"><i class="fa fa-search"></i> Креирај во MessageLog</button>
+        </div>
+        <div class="col-lg-3">
+            <button type="submit" class="btn btn-primary" ng-click="createMessageLogStatistic()"><i class="fa fa-search"></i> Креирај во MessageLogStatistic</button>
+        </div>
+        <br /><br /><br />
+        <div class="row">
+            <div class="col-lg-12" ng-show="transactions.length">
+                <label class="clearfix">Искреирани се логови во 'Статистика' за следниве трансакции:  </label><br /><br />
+                <p class="input-group" ng-repeat="transaction in transactions">{{transaction}}</p>
+            </div>
+        </div>
+    </div>
+</form>

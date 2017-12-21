@@ -1,0 +1,136 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<div class="col-lg-5 col-lg-offset-3">
+    <form name="service.form">
+        <h2 class="text-center">Измени сервис</h2>
+        <hr />
+        <div class="row">
+            <div class="form-group" ng-class="{ 'has-error' : itemNumberFormField.itemNumber.$invalid }">
+                <label class="clearfix">Реден број</label>
+                <ng-form name="itemNumberFormField">
+                    <input type="text" class="form-control" name="itemNumber" data-ng-model="ser.itemNumber" required autofocus />
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : dateReceivedFormField.dateReceived.$invalid }">
+                <ng-form name="dateReceivedFormField">
+                    <label for="dateReceived">Датум на прием:</label>
+
+                    <input type="text"
+                           placeholder="Од"
+                           class="form-control"
+                           datepicker-popup="M.d.yyyy"
+                           ng-disabled="false"
+                           datepicker-append-to-body="true"
+                           data-ng-model="ser.dateReceived"
+                           is-open="status1.opened"
+                           max-date="maxFromDateTime"
+                           current-text="Денес"
+                           clear-text="Исчисти"
+                           close-text="Затвори"
+                           ng-click="status1.opened = true" />
+                    @*<input id="sendDate" type="text" class="form-control" name="sendDate" ng-model="sendDate">*@
+                </ng-form>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : applicantNameAddressFormField.applicantNameAddress.$invalid }">
+                <label class="clearfix">Назив и седиште на подносител</label>
+                <ng-form name="applicantNameAddressFormField">
+                    <input type="text" class="form-control" name="applicantNameAddress" data-ng-model="ser.applicantNameAddress" />
+                </ng-form>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : administrativeServiceNameFormField.administrativeServiceName.$invalid }">
+                <label class="clearfix">Назив на Административната Услуга</label>
+                <ng-form name="administrativeServiceNameFormField">
+                    <input type="text" class="form-control" name="administrativeServiceName" data-ng-model="ser.administrativeServiceName" />
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : administrativeServiceDescFormField.administrativeServiceDesc.$invalid }">
+                <label class="clearfix">Опис на Административната Услуга</label>
+                <ng-form name="administrativeServiceDescFormField">
+                    <input type="text" class="form-control" name="administrativeServiceDesc" data-ng-model="ser.administrativeServiceDesc" />
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : legislationForAdminServiceFormField.legislationForAdminService.$invalid }">
+                <label class="clearfix">Правна регулатива за услугата</label>
+                <ng-form name="legislationForAdminServiceFormField">
+                    <input type="text" class="form-control" name="legislationForAdminService" data-ng-model="ser.legislationForAdminService" />
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : legislationForAdminServicePaymentFormField.legislationForAdminServicePayment.$invalid }">
+                <label class="clearfix">Правна регулатива за надоместокот за услугата</label>
+                <ng-form name="legislationForAdminServicePaymentFormField">
+                    <input type="text" class="form-control" name="legislationForAdminServicePayment" data-ng-model="ser.legislationForAdminServicePayment" />
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : adminServicePaymentAmountFormField.adminServicePaymentAmount.$invalid }">
+                <label class="clearfix">Висина на надоместокот за услугата</label>
+                <ng-form name="adminServicePaymentAmountFormField">
+                    <input type="text" class="form-control" name="adminServicePaymentAmount" data-ng-model="ser.adminServicePaymentAmount" />
+                </ng-form>
+            </div>
+           
+
+            <div class="form-group" ng-class="{ 'has-error' : adminServiceSubmissionLeagalDeadlineFormField.adminServiceSubmissionLeagalDeadline.$invalid }">
+                <label class="clearfix">Законски рок за доставување на услугата</label>
+                <ng-form name="adminServiceSubmissionLeagalDeadlineFormField">
+                    <input type="text" class="form-control" name="adminServiceSubmissionLeagalDeadline" data-ng-model="ser.adminServiceSubmissionLeagalDeadline" />
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : deliveringSpecialFormDataFormField.deliveringSpecialFormData.$invalid }">
+                <label class="clearfix">Податок за потребата од посебен образец</label>
+                <ng-form name="deliveringSpecialFormDataFormField">
+                    <input type="text" class="form-control" name="deliveringSpecialFormData" data-ng-model="ser.deliveringSpecialFormData" />
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : previousSubmittedDocDependencyDataFormField.previousSubmittedDocDependencyData.$invalid }">
+                <label class="clearfix">Податок за зависност од претходно доставен документ</label>
+                <ng-form name="previousSubmittedDocDependencyDataFormField">
+                    <input type="text" class="form-control" name="previousSubmittedDocDependencyData" data-ng-model="ser.previousSubmittedDocDependencyData" />
+                </ng-form>
+            </div>
+
+
+
+            <div class="form-group" ng-class="{ 'has-error' : electronicDBTypeVersionFormField.electronicDBTypeVersion.$invalid }">
+                <label class="clearfix">Тип и верзија на база на податоци</label>
+                <ng-form name="electronicDBTypeVersionFormField">
+                    <input type="text" class="form-control" name="electronicDBTypeVersion" data-ng-model="ser.electronicDBTypeVersion" />
+                </ng-form>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : authorizedPersonDataFormField.authorizedPersonData.$invalid }">
+                <label class="clearfix">Податоци за овластеното лице</label>
+                <ng-form name="authorizedPersonDataFormField">
+                    <input type="text" class="form-control" name="authorizedPersonData" data-ng-model="ser.authorizedPersonData" />
+                </ng-form>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : noteFormField.note.$invalid }">
+                <label class="clearfix">Забелешка</label>
+                <ng-form name="noteFormField">
+                    <input type="text" class="form-control" name="note" data-ng-model="ser.note" />
+                </ng-form>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : optionalField1FormField.optionalField1.$invalid }">
+                <label class="clearfix">Опционална колона 1</label>
+                <ng-form name="optionalField1FormField">
+                    <input type="text" class="form-control" name="optionalField1" data-ng-model="ser.optionalField1" />
+                </ng-form>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : optionalField2FormField.optionalField2.$invalid }">
+                <label class="clearfix">Опционална колона 2</label>
+                <ng-form name="optionalField2FormField">
+                    <input type="text" class="form-control" name="optionalField2" data-ng-model="ser.optionalField2" />
+                </ng-form>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button ng-click="savee(ser)" type="submit" class="btn btn-primary" ng-disabled="service.form.$invalid"><i class="fa fa-save" /> Зачувај</button>
+            <button type="submit" class="btn btn-warning" ui-sref="adminservices({pageIndex:1,itemsPerPage:10, sortDir:'asc', sortCol:'ItemNumber'})">Откажи</button>
+        </div>
+    </form>
+</div>

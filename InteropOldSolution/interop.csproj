@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: D:\interop_test_code\interop_test_code\interop.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6FAE95AB-8F24-4774-9EC9-88D42A02ADB7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>interop</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL" />
+    <Reference Include="itextsharp, Version=4.1.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca" />
+    <Reference Include="Microsoft.BizTalk.ExplorerOM, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="StringProtection, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="InteropClassLibrary">
+      <HintPath>lib\InteropClassLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="pdfTabela.cs" />
+    <Compile Include="pdfReport.cs" />
+    <Compile Include="Alert.cs" />
+    <Compile Include="CustomDataTable.cs" />
+    <Compile Include="interop\HelpServisiMBCUPrebaruvanje.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help_obicen_korisnik.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help_pocetna.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help_institucii_obicen.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Izvestaj.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\HelpServisiMBAKNPrebaruvanje.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\HelpServisiImotenListPrebaruvanje.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\HelpServisiDrzavjanstvoPrebaruvanje.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\DataClasses1DataContext.cs" />
+    <Compile Include="interop\BASIS.cs" />
+    <Compile Include="interop\WEBSERVICESBASIS.cs" />
+    <Compile Include="interop\INSTITUTION.cs" />
+    <Compile Include="interop\LOG.cs" />
+    <Compile Include="interop\PARAM.cs" />
+    <Compile Include="interop\PERMISSION.cs" />
+    <Compile Include="interop\REPORT.cs" />
+    <Compile Include="interop\WEBSERVICE.cs" />
+    <Compile Include="interop\CERTIFICATE.cs" />
+    <Compile Include="interop\DOCUMENTSTRUCTURE.cs" />
+    <Compile Include="interop\TempUser.cs" />
+    <Compile Include="interop\APP_SETTING.cs" />
+    <Compile Include="interop\USER.cs" />
+    <Compile Include="interop\Help_FAQ_korisnik.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\HelpServisiPodatociZaParceliPrebaruvanje.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\DataClassesBAMDataContext.cs" />
+    <Compile Include="interop\bam_UniversalServiceControlProduction_Completed.cs" />
+    <Compile Include="interop\WorningPageInterop.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\_Default.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\index.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Login.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help_servisi_obicen.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\OdbienPristap.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\HelpServisiSuper.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\HelpPrebarajInstitucija.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\HelpInstituciiOpsto.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\HelpPromeniInstitucija.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\HelpOsnovServisi.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\HelpNovAdmin.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\HelpPrebarajServis.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\HelpSuperProfile.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\HelpPrebarajAdmin.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\HelpNovServis.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\HelpNovaInstitucija.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\HelpInstitucii.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\HelpPromeniServis.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\HelpOsnovBaranje1.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\HelpPromeniOsnov.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\HelpSuperPrivilegii.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\Help_pocetna_super.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\HelpSuperLogovi.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\HelpAdministratori.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\HelpPromeniAdmin.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\HelpPrebarajOsnov.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\HelpNovOsnov.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\superadmin\HelpServisLogovi.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\super\HelpServisiDrzavjanstvoPrebaruvanje.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\super\HelpServisiPodatociZaParceliPrebaruvanje.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\super\HelpServisiMBAKNPrebaruvanje.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\super\HelpServisiMBCUPrebaruvanje.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\super\HelpServisiImotenListPrebaruvanje.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\admin\Help_Pocetna_Admin.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\admin\HelpServisiImotenListPrebaruvanje.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\admin\HelpServisLogovi.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\admin\HelpServisiMBAKNPrebaruvanje.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\admin\Help_Admin_Profile.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\admin\HelpAdminInstitucii.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\admin\HelpAdminPrivilegii.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\admin\HelpAdminLogovi.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\admin\HelpServisiMBCUPrebaruvanje.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\admin\HelpServisiPodatociZaParceliPrebaruvanje.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\admin\HelpServisiPocetna.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\admin\HelpServisiDrzavjanstvoPrebaruvanje.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\admin\korisnici\HelpPromenaKorisnici.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\admin\korisnici\HelpKorisnici.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\admin\korisnici\HelpPrebaruvanjeKorisnici.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\Help\admin\korisnici\HelpNoviKorisnici.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\UserPanel\servisi.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\UserPanel\facs.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\UserPanel\searchresultu.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\UserPanel\indexu.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\UserPanel\userprofile.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\UserPanel\GradComparerByName.cs" />
+    <Compile Include="interop\UserPanel\wsusage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\UserPanel\KatOpstini.cs" />
+    <Compile Include="interop\UserPanel\KatGradovi.cs" />
+    <Compile Include="interop\LocalAdminPanel\searchresultl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\LocalAdminPanel\wsusagel.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\LocalAdminPanel\instinfol.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\LocalAdminPanel\permissionsl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\LocalAdminPanel\indexl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\LocalAdminPanel\WebServicesLog.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\LocalAdminPanel\localuserprofile.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\LocalAdminPanel\Filebrouws.cs" />
+    <Compile Include="interop\LocalAdminPanel\ServisInst.cs" />
+    <Compile Include="interop\LocalAdminPanel\wsl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\LocalAdminPanel\usersl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\LocalAdminPanel\logl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\LocalAdminPanel\GradComparerByName.cs" />
+    <Compile Include="interop\LocalAdminPanel\KatOpstini.cs" />
+    <Compile Include="interop\AdminPanel\GradComparerByName.cs" />
+    <Compile Include="interop\AdminPanel\wsusagea.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\AdminPanel\KatOpstini.cs" />
+    <Compile Include="interop\AdminPanel\Akteri.cs" />
+    <Compile Include="interop\AdminPanel\instinfoa.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\AdminPanel\institutions.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\AdminPanel\ws.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\AdminPanel\WebServicesLog.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\AdminPanel\Filebrouws.cs" />
+    <Compile Include="interop\AdminPanel\ServisInst.cs" />
+    <Compile Include="interop\AdminPanel\permissionsbasis.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\AdminPanel\searchresulta.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\AdminPanel\permissions.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\AdminPanel\wsbasis.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\AdminPanel\indexa.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\AdminPanel\users.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\AdminPanel\log.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\AdminPanel\adminprofile.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\IndexForm\instinfo.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="interop\WebServiceUJP_EDB\UJPBizTalkApplicationEDB_Orchestration_1_UJP_EDB_R.cs" />
+    <Compile Include="interop\WebServiceUJP_EDB\EDB.cs" />
+    <Compile Include="interop\WebServiceUJP_EDB\TransInformacijaStrukturaVremenskaMarka.cs" />
+    <Compile Include="interop\WebServiceUJP_EDB\TransInformacijaStruktura.cs" />
+    <Compile Include="interop\WebServiceUJP_EDB\TeloDokOsnovniPodatociDokumentOpis.cs" />
+    <Compile Include="interop\WebServiceUJP_EDB\TeloDokOsnovniPodatoci.cs" />
+    <Compile Include="interop\WebServiceUJP_EDB\Telo.cs" />
+    <Compile Include="interop\WebServiceUJP_EDB\TransOsnovniPodatociStruktura.cs" />
+    <Compile Include="interop\WebServiceUJP_EDB\GetPodatociByEDBResponse.cs" />
+    <Compile Include="interop\WebServiceUJP_EDB\GetDataByEDBRequest.cs" />
+    <Compile Include="interop\WebServiceUJP_EDB\GetDataByEDBResponse.cs" />
+    <Compile Include="interop\WebServiceUJP_EDB\1UJPBizTalkApplicationEDB_Orchestration_1_UJP_EDB_R.cs" />
+    <Compile Include="interop\WebServiceUJP_EDB\2UJPBizTalkApplicationEDB_Orchestration_1_UJP_EDB_R.cs" />
+    <Compile Include="interop\WebServiceAKNParceli\Module_1_AKNParceliOrchestration_WCF_PARCELI_REQRE.cs" />
+    <Compile Include="interop\WebServiceAKNParceli\ParceliSchema.cs" />
+    <Compile Include="interop\WebServiceAKNParceli\atributiparcela.cs" />
+    <Compile Include="interop\WebServiceAKNParceli\ATRparceli.cs" />
+    <Compile Include="interop\WebServiceAKNParceli\GetPodatociStrukturaParcelaResponse.cs" />
+    <Compile Include="interop\WebServiceAKNParceli\Operation_RequestRequest.cs" />
+    <Compile Include="interop\WebServiceAKNParceli\Operation_RequestResponse.cs" />
+    <Compile Include="interop\WebServiceAKNParceli\1Module_1_AKNParceliOrchestration_WCF_PARCELI_REQRE.cs" />
+    <Compile Include="interop\WebServiceAKNParceli\2Module_1_AKNParceliOrchestration_WCF_PARCELI_REQRE.cs" />
+    <Compile Include="interop\WebServiceCR_AKN\Module_1_CRBizTalkOrchestrationAKN_RECEIVE_REQRESP.cs" />
+    <Compile Include="interop\WebServiceCR_AKN\EMBS.cs" />
+    <Compile Include="interop\WebServiceCR_AKN\CrmResponseCrmResultItemsCrmResultItem.cs" />
+    <Compile Include="interop\WebServiceCR_AKN\CrmResponseCrmResultItems.cs" />
+    <Compile Include="interop\WebServiceCR_AKN\CrmResponse.cs" />
+    <Compile Include="interop\WebServiceCR_AKN\VratiCRMRezultatiAKNResponse.cs" />
+    <Compile Include="interop\WebServiceCR_AKN\Operation_RequestRequest.cs" />
+    <Compile Include="interop\WebServiceCR_AKN\Operation_RequestResponse.cs" />
+    <Compile Include="interop\WebServiceCR_AKN\1Module_1_CRBizTalkOrchestrationAKN_RECEIVE_REQRESP.cs" />
+    <Compile Include="interop\WebServiceCR_AKN\2Module_1_CRBizTalkOrchestrationAKN_RECEIVE_REQRESP.cs" />
+    <Compile Include="interop\WebServiceCR_CU\Module_1_CRBizTalkOrchestrationCU_WCF_CR_CU_RECEIV.cs" />
+    <Compile Include="interop\WebServiceCR_CU\EMBS.cs" />
+    <Compile Include="interop\WebServiceCR_CU\CrmResponseCrmResultItemsCrmResultItem.cs" />
+    <Compile Include="interop\WebServiceCR_CU\CrmResponseCrmResultItems.cs" />
+    <Compile Include="interop\WebServiceCR_CU\CrmResponse.cs" />
+    <Compile Include="interop\WebServiceCR_CU\VratiCRMRezultatiCUResponse.cs" />
+    <Compile Include="interop\WebServiceCR_CU\Operation_RequestRequest.cs" />
+    <Compile Include="interop\WebServiceCR_CU\Operation_RequestResponse.cs" />
+    <Compile Include="interop\WebServiceCR_CU\1Module_1_CRBizTalkOrchestrationCU_WCF_CR_CU_RECEIV.cs" />
+    <Compile Include="interop\WebServiceCR_CU\2Module_1_CRBizTalkOrchestrationCU_WCF_CR_CU_RECEIV.cs" />
+    <Compile Include="interop\WebServiceUJP_NAZIV\UJPBizTalkApplicationNazivi_Orchestration_1_UJP_NA.cs" />
+    <Compile Include="interop\WebServiceUJP_NAZIV\FirmiNaziv.cs" />
+    <Compile Include="interop\WebServiceUJP_NAZIV\TransInformacijaStrukturaVremenskaMarka.cs" />
+    <Compile Include="interop\WebServiceUJP_NAZIV\TransInformacijaStruktura.cs" />
+    <Compile Include="interop\WebServiceUJP_NAZIV\DokFirmiNazivStrukturaNazivEdb.cs" />
+    <Compile Include="interop\WebServiceUJP_NAZIV\DokumentOpisStruktura.cs" />
+    <Compile Include="interop\WebServiceUJP_NAZIV\TeloDokFirmiNaziv.cs" />
+    <Compile Include="interop\WebServiceUJP_NAZIV\Telo.cs" />
+    <Compile Include="interop\WebServiceUJP_NAZIV\TransFirmiNaziviStruktura.cs" />
+    <Compile Include="interop\WebServiceUJP_NAZIV\GetPodatociFirmiNaziviByNazivResponse.cs" />
+    <Compile Include="interop\WebServiceUJP_NAZIV\GetFirmiNazivRequest.cs" />
+    <Compile Include="interop\WebServiceUJP_NAZIV\GetFirmiNazivResponse.cs" />
+    <Compile Include="interop\WebServiceUJP_NAZIV\1UJPBizTalkApplicationNazivi_Orchestration_1_UJP_NA.cs" />
+    <Compile Include="interop\WebServiceUJP_NAZIV\2UJPBizTalkApplicationNazivi_Orchestration_1_UJP_NA.cs" />
+    <Compile Include="interop\WebServiceAKN\AKNBizTalkApplication_AKNBizTalkOrchestration_RECE.cs" />
+    <Compile Include="interop\WebServiceAKN\ImotenListSchema.cs" />
+    <Compile Include="interop\WebServiceAKN\tovari.cs" />
+    <Compile Include="interop\WebServiceAKN\sopstvenici.cs" />
+    <Compile Include="interop\WebServiceAKN\parceli.cs" />
+    <Compile Include="interop\WebServiceAKN\objekti.cs" />
+    <Compile Include="interop\WebServiceAKN\dzgr.cs" />
+    <Compile Include="interop\WebServiceAKN\GetImotenListResponse.cs" />
+    <Compile Include="interop\WebServiceAKN\GetImotenListRequest.cs" />
+    <Compile Include="interop\WebServiceAKN\GetImotenListResponse1.cs" />
+    <Compile Include="interop\WebServiceAKN\1AKNBizTalkApplication_AKNBizTalkOrchestration_RECE.cs" />
+    <Compile Include="interop\WebServiceAKN\2AKNBizTalkApplication_AKNBizTalkOrchestration_RECE.cs" />
+    <Compile Include="interop\WebServiceAKNOpstiniDataSets\opstini.cs" />
+    <Compile Include="interop\WebServiceAKNOpstiniDataSets\opstina.cs" />
+    <Compile Include="interop\WebServiceAKNOpstiniDataSets\katopstini.cs" />
+    <Compile Include="interop\WebServiceAKNOpstiniDataSets\katopstina.cs" />
+    <Compile Include="interop\WebServiceAKNOpstiniDataSets\IWCFServiceAKNDataSets.cs" />
+    <Compile Include="interop\WebServiceAKNOpstiniDataSets\IWCFServiceAKNDataSetsChannel.cs" />
+    <Compile Include="interop\WebServiceAKNOpstiniDataSets\WCFServiceAKNDataSetsClient.cs" />
+    <Compile Include="interop\WSSendEmail\Service1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="interop\WSSendEmail\SendMailCompletedEventHandler.cs" />
+    <Compile Include="interop\WSSendEmail\SendMailCompletedEventArgs.cs" />
+    <Compile Include="interop\WebServiceCR_UJP\Module_1_CRBizTalkOrchestrationUJP_RECEIVE_REQRESP.cs" />
+    <Compile Include="interop\WebServiceCR_UJP\EMBS.cs" />
+    <Compile Include="interop\WebServiceCR_UJP\CrmResponseCrmResultItemsCrmResultItem.cs" />
+    <Compile Include="interop\WebServiceCR_UJP\CrmResponseCrmResultItems.cs" />
+    <Compile Include="interop\WebServiceCR_UJP\CrmResponse.cs" />
+    <Compile Include="interop\WebServiceCR_UJP\VratiCRMRezultatiUJPResponse.cs" />
+    <Compile Include="interop\WebServiceCR_UJP\GetDataByEMBSRequest.cs" />
+    <Compile Include="interop\WebServiceCR_UJP\GetDataByEMBSResponse.cs" />
+    <Compile Include="interop\WebServiceCR_UJP\1Module_1_CRBizTalkOrchestrationUJP_RECEIVE_REQRESP.cs" />
+    <Compile Include="interop\WebServiceCR_UJP\2Module_1_CRBizTalkOrchestrationUJP_RECEIVE_REQRESP.cs" />
+    <Compile Include="interop\Properties\Settings.cs" />
+    <Compile Include="MVRCallCenter\Crypto.cs" />
+    <Compile Include="MVRCallCenter\Transcription.cs" />
+    <Compile Include="FaultMessageMVR\MVRFultMessage.cs" />
+    <Compile Include="FaultMessageMVR\NewDataSet.cs" />
+    <Compile Include="infoPoraka\WebMsgBox.cs" />
+    <Compile Include="FaultMessageUJP\FaultMessageUJP.cs" />
+    <Compile Include="FaultMessageUJP\NewDataSet.cs" />
+    <Compile Include="FaultMessageCU\FaultMessageCU.cs" />
+    <Compile Include="FaultMessageCU\NewDataSet.cs" />
+    <Compile Include="FaultMessageAKN\FaultMessageAKN.cs" />
+    <Compile Include="FaultMessageAKN\NewDataSet.cs" />
+    <Compile Include="WebApplicationInterop\InteropDAL.cs" />
+    <Compile Include="WebApplicationInterop\SearchObjects.cs" />
+    <Compile Include="WebApplicationInterop\InstitutionsDAL.cs" />
+    <Compile Include="WebApplicationInterop\LOGDAL.cs" />
+    <Compile Include="WebApplicationInterop\ParamsDAL.cs" />
+    <Compile Include="WebApplicationInterop\PermissionsDAL.cs" />
+    <Compile Include="WebApplicationInterop\UsersDAL.cs" />
+    <Compile Include="WebApplicationInterop\ReportsDAL.cs" />
+    <Compile Include="WebApplicationInterop\WebservicesDAL.cs" />
+    <Compile Include="WebApplicationInterop\DocumentStructureDAL.cs" />
+    <Compile Include="WebApplicationInterop\BasisDAL.cs" />
+    <Compile Include="WebApplicationInterop\CertificatesDAL.cs" />
+    <Compile Include="WebApplicationInterop\WSBasisDAL.cs" />
+    <Compile Include="WebApplicationInterop\HelpClassUsers.cs" />
+    <Compile Include="WebApplicationInterop\HelpClassWebServices.cs" />
+    <Compile Include="WebApplicationInterop\HelpClassLogs.cs" />
+    <Compile Include="WebApplicationInterop\SearchLog.cs" />
+    <Compile Include="WebApplicationInterop\ComputedTransaction.cs" />
+    <Compile Include="WebApplicationInterop\Opstini.cs" />
+    <Compile Include="WebApplicationInterop\KatOpstini.cs" />
+    <Compile Include="WebApplicationInterop\Transcription.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="abb3eb26-ca67-4cc4-974a-aeea588a0fa2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/TestServiceMIOASite/ServiceMioa.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceMioa.wsdl" MetadataType="Wsdl" ID="5d6227ad-a416-47b5-b8b4-dd71cca4454d" SourceId="1" SourceUrl="http://localhost/TestServiceMIOASite/ServiceMioa.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="TestServiceMioa.wsdl" MetadataType="Wsdl" ID="efe11050-fbad-4c84-ada4-7776a3dde883" SourceId="1" SourceUrl="http://localhost/TestServiceMIOASite/ServiceMioa.svc?wsdl" />
+    <MetadataFile FileName="ServiceMioa.disco" MetadataType="Disco" ID="95f5c908-9bc1-459e-afc0-ad45ceb9898e" SourceId="1" SourceUrl="http://localhost/TestServiceMIOASite/ServiceMioa.svc?disco" />
+    <MetadataFile FileName="ServiceMioa.xsd" MetadataType="Schema" ID="901182b4-251d-445e-bb7d-a770cb6dd297" SourceId="1" SourceUrl="http://localhost/TestServiceMIOASite/ServiceMioa.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceMioa1.xsd" MetadataType="Schema" ID="06914659-1f6b-4514-955b-b99a3c1357f8" SourceId="1" SourceUrl="http://localhost/TestServiceMIOASite/ServiceMioa.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

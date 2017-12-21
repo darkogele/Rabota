@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1a737274-0ffc-48b2-9eac-f7920897c3cc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AKNServicesTest.Host/AKNDataForIFDocTest.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AKNDataForIFDocTest.disco" MetadataType="Disco" ID="b450cae0-fa03-41fd-b5c6-a1f77b327442" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/AKNDataForIFDocTest.svc?disco" />
+    <MetadataFile FileName="AKNDataForIFDocTest.xsd" MetadataType="Schema" ID="d9ffdeab-22cb-4ab6-94b3-9c81ff57e85f" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/AKNDataForIFDocTest.svc?xsd=xsd2" />
+    <MetadataFile FileName="AKNDataForIFDocTest1.xsd" MetadataType="Schema" ID="8ad9e07e-b542-4959-bb23-6e95ad4f26ad" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/AKNDataForIFDocTest.svc?xsd=xsd1" />
+    <MetadataFile FileName="AKNDataForIFDocTest2.xsd" MetadataType="Schema" ID="6fa57d0f-62a8-4a87-8b6c-fb7e1a8b5a45" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/AKNDataForIFDocTest.svc?xsd=xsd0" />
+    <MetadataFile FileName="AKNDataForIFDoc.wsdl" MetadataType="Wsdl" ID="b09ee5bf-dbf1-4c1a-b2a1-db400e77bc55" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/AKNDataForIFDocTest.svc?wsdl" />
+    <MetadataFile FileName="AKNDataForIFDocTest.wsdl" MetadataType="Wsdl" ID="e1bbeac4-85df-41be-a7f0-78e74de18793" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/AKNDataForIFDocTest.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

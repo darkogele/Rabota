@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Implementations.Implementations.CRM_TS_UJP.CRM_TS_UJP" %>

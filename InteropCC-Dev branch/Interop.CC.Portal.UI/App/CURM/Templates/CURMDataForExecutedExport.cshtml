@@ -1,0 +1,132 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>Податоци за извршен извоз - Царинска Управа на Република Македонија</h2>
+
+<form name="curmDataForExecutedExportForm" ng-controller="CurmCtrl">
+
+    <div class="container">
+        <div class="col-lg-3">
+            <div class="form-group" ng-class="{ 'has-error' : edbFormField.edb.$invalid }">
+                <ng-form name="edbFormField">
+                    <label for="edb">ЕДБ:</label>
+                    <input id="edb" type="text" class="form-control" name="edb" ng-model="edb" only-digits required>
+                </ng-form>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : amountOfExportFromFormField.amountOfExportFrom.$invalid }">
+                <ng-form name="amountOfExportFromFormField">
+                    <label for="amountOfExportFrom">Вредност на извоз од:</label>
+                    <input id="amountOfExportFrom" type="text" class="form-control" name="amountOfExportFrom" ng-model="amountOfExportFrom">
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : amountOfExportToFormField.amountOfExportTo.$invalid }">
+                <ng-form name="amountOfExportToFormField">
+                    <label for="amountOfExportTo">Вредност на извоз до:</label>
+                    <input id="amountOfExportTo" type="text" class="form-control" name="amountOfExportTo" ng-model="amountOfExportTo">
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : monthOfExportFromFormField.monthOfExportFrom.$invalid }">
+                <ng-form name="monthOfExportFromFormField">
+                    <label for="monthOfExportFrom">Месец на извоз од:</label>
+                    @*<input id="monthOfExportFrom" type="text" class="form-control" name="monthOfExportFrom" ng-model="monthOfExportFrom">*@
+                    <p class="input-group">
+                        <input type="text" class="form-control" datepicker-popup="{{format1}}"
+                               ng-model="monthOfExportFrom" is-open="status2.opened" ng-click="status2.opened = true" datepicker-append-to-body="true" show-weeks="false" datepicker-mode="'month'"
+                               datepicker-options="dateOptions1" ng-disabled="true" current-text="Денес"
+                               clear-text="Исчисти"
+                               close-text="Затвори" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open2($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </p>
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : monthOfExportToFormField.monthOfExportTo.$invalid }">
+                <ng-form name="monthOfExportToFormField">
+                    <label for="monthOfExportTo">Месец на извоз до:</label>
+                    @*<input id="monthOfExportTo" type="text" class="form-control" name="monthOfExportTo" ng-model="monthOfExportTo">*@
+                    <p class="input-group">
+                        <input type="text" class="form-control" datepicker-popup="{{format1}}"
+                               ng-model="monthOfExportTo" is-open="status3.opened" ng-click="status3.opened = true" datepicker-append-to-body="true" show-weeks="false" datepicker-mode="'month'"
+                               datepicker-options="dateOptions1" ng-disabled="true" current-text="Денес"
+                               clear-text="Исчисти"
+                               close-text="Затвори" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open3($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </p>
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : yearOfExportFromFormField.yearOfExportFrom.$invalid }">
+                <ng-form name="yearOfExportFromFormField">
+                    <label for="yearOfExportFrom">Година на извоз од:</label>
+                    @*<input id="yearOfExportFrom" type="text" class="form-control" name="yearOfExportFrom" ng-model="yearOfExportFrom">*@
+                    <p class="input-group">
+                        <input type="text" class="form-control" datepicker-popup="{{format}}"
+                               ng-model="yearOfExportFrom" is-open="status.opened" ng-click="status.opened = true" datepicker-append-to-body="true" show-weeks="false" datepicker-mode="'year'"
+                               datepicker-options="dateOptions" ng-disabled="true" current-text="Денес"
+                               clear-text="Исчисти"
+                               close-text="Затвори" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </p>
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : yearOfExportToFormField.yearOfExportTo.$invalid }">
+                <ng-form name="yearOfExportToFormField">
+                    <label for="yearOfExportTo">Година на извоз до:</label>
+                    @*<input id="yearOfExportTo" type="text" class="form-control" name="yearOfExportTo" ng-model="yearOfExportTo">*@
+                    <p class="input-group">
+                        <input type="text" class="form-control" datepicker-popup="{{format}}"
+                               ng-model="yearOfExportTo" is-open="status1.opened" ng-click="status1.opened = true" datepicker-append-to-body="true" show-weeks="false" datepicker-mode="'year'"
+                               datepicker-options="dateOptions" ng-disabled="true" current-text="Денес"
+                               clear-text="Исчисти"
+                               close-text="Затвори" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open1($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </p>
+                </ng-form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-disabled="curmDataForExecutedExportForm.$invalid" ng-click="curmDataForExecutedExport(edb, amountOfExportFrom, amountOfExportTo, monthOfExportFrom, monthOfExportTo, yearOfExportFrom, yearOfExportTo)"><i class="fa fa-save"></i> Испрати</button>
+                <a class="btn btn-warning" href="#/curm/curmdataforexecutedexport" ui-sref="curmdataforexecutedexportindex">Откажи</a>
+            </div>
+        </div>
+
+        <div ng-show="show" class="col-lg-9">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <button ng-show="!expandOps" ng-click="expandedOps()">+</button>
+                            <button ng-show="expandOps" ng-click="expandedOps()">-</button>
+                            Извршен извоз
+                        </th>
+                    </tr>
+                    <tr ng-show="expandOps">
+                        <th>ЕДБ</th>
+                        <th>Вредност</th>
+                        <th>Месец</th>
+                        <th>Година</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="executedExport in executedExportList" ng-show="expandOps">
+                        <td>{{executedExport.edb}}</td>
+                        <td>{{executedExport.exportAmount}}</td>
+                        <td>{{executedExport.exportMonth}}</td>
+                        <td>{{executedExport.exportYear}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row text-center">
+                <a class="btn btn-default" ng-click="DataForExportXML()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во XML формат</a>
+                <a class="btn btn-default" ng-click="DataForExportPDF()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во PDF формат</a>
+            </div>
+        </div>
+    </div>
+</form>

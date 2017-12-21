@@ -1,0 +1,104 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{2CF3FF98-7480-4076-86BD-C1F71D5C6C08}"
+	ProjectSection(ProjectDependencies) = postProject
+		{86CDE024-DF15-4040-AB21-C9D920F7A9A3} = {86CDE024-DF15-4040-AB21-C9D920F7A9A3}
+		{5EDC9832-AB72-427D-BAD0-1336ED396A17} = {5EDC9832-AB72-427D-BAD0-1336ED396A17}
+		{FB6EDC73-E5E6-49A7-A90A-392D6E7EA4AE} = {FB6EDC73-E5E6-49A7-A90A-392D6E7EA4AE}
+		{3E5E47C7-FC05-431B-A6D0-F9FD3B0E3EEA} = {3E5E47C7-FC05-431B-A6D0-F9FD3B0E3EEA}
+		{D480DECC-449B-43A5-9D1F-0D57BDEEA71A} = {D480DECC-449B-43A5-9D1F-0D57BDEEA71A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Implementations", "Implementations\Implementations.csproj", "{3E5E47C7-FC05-431B-A6D0-F9FD3B0E3EEA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5EDC9832-AB72-427D-BAD0-1336ED396A17} = {5EDC9832-AB72-427D-BAD0-1336ED396A17}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Implementations.Test", "Implementations.Test\Implementations.Test.csproj", "{86CDE024-DF15-4040-AB21-C9D920F7A9A3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5EDC9832-AB72-427D-BAD0-1336ED396A17} = {5EDC9832-AB72-427D-BAD0-1336ED396A17}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MONServicesProd.Host", "MONServicesProd.Host\MONServicesProd.Host.csproj", "{D480DECC-449B-43A5-9D1F-0D57BDEEA71A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3E5E47C7-FC05-431B-A6D0-F9FD3B0E3EEA} = {3E5E47C7-FC05-431B-A6D0-F9FD3B0E3EEA}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{5EDC9832-AB72-427D-BAD0-1336ED396A17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MONServicesTest.Host", "MONServicesTest.Host\MONServicesTest.Host.csproj", "{FB6EDC73-E5E6-49A7-A90A-392D6E7EA4AE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{86CDE024-DF15-4040-AB21-C9D920F7A9A3} = {86CDE024-DF15-4040-AB21-C9D920F7A9A3}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OriginalService", "OriginalService\OriginalService.csproj", "{ADE3C2B2-3383-4755-927B-72830B60CDC9}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.11.21.108:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = TestApp\\TestApp.csproj
+		SccProjectName1 = TestApp
+		SccLocalPath1 = TestApp
+		SccProjectUniqueName2 = Implementations\\Implementations.csproj
+		SccProjectName2 = Implementations
+		SccLocalPath2 = Implementations
+		SccProjectUniqueName3 = Implementations.Test\\Implementations.Test.csproj
+		SccProjectName3 = Implementations.Test
+		SccLocalPath3 = Implementations.Test
+		SccProjectUniqueName4 = MONServicesProd.Host\\MONServicesProd.Host.csproj
+		SccProjectName4 = MONServicesProd.Host
+		SccLocalPath4 = MONServicesProd.Host
+		SccProjectUniqueName5 = Contracts\\Contracts.csproj
+		SccProjectName5 = Contracts
+		SccLocalPath5 = Contracts
+		SccProjectUniqueName6 = MONServicesTest.Host\\MONServicesTest.Host.csproj
+		SccProjectName6 = MONServicesTest.Host
+		SccLocalPath6 = MONServicesTest.Host
+		SccProjectUniqueName7 = OriginalService\\OriginalService.csproj
+		SccProjectName7 = OriginalService
+		SccLocalPath7 = OriginalService
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CF3FF98-7480-4076-86BD-C1F71D5C6C08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CF3FF98-7480-4076-86BD-C1F71D5C6C08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CF3FF98-7480-4076-86BD-C1F71D5C6C08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CF3FF98-7480-4076-86BD-C1F71D5C6C08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E5E47C7-FC05-431B-A6D0-F9FD3B0E3EEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E5E47C7-FC05-431B-A6D0-F9FD3B0E3EEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E5E47C7-FC05-431B-A6D0-F9FD3B0E3EEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E5E47C7-FC05-431B-A6D0-F9FD3B0E3EEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86CDE024-DF15-4040-AB21-C9D920F7A9A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86CDE024-DF15-4040-AB21-C9D920F7A9A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86CDE024-DF15-4040-AB21-C9D920F7A9A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86CDE024-DF15-4040-AB21-C9D920F7A9A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D480DECC-449B-43A5-9D1F-0D57BDEEA71A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D480DECC-449B-43A5-9D1F-0D57BDEEA71A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D480DECC-449B-43A5-9D1F-0D57BDEEA71A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D480DECC-449B-43A5-9D1F-0D57BDEEA71A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EDC9832-AB72-427D-BAD0-1336ED396A17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EDC9832-AB72-427D-BAD0-1336ED396A17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EDC9832-AB72-427D-BAD0-1336ED396A17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EDC9832-AB72-427D-BAD0-1336ED396A17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB6EDC73-E5E6-49A7-A90A-392D6E7EA4AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB6EDC73-E5E6-49A7-A90A-392D6E7EA4AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB6EDC73-E5E6-49A7-A90A-392D6E7EA4AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB6EDC73-E5E6-49A7-A90A-392D6E7EA4AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADE3C2B2-3383-4755-927B-72830B60CDC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADE3C2B2-3383-4755-927B-72830B60CDC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADE3C2B2-3383-4755-927B-72830B60CDC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADE3C2B2-3383-4755-927B-72830B60CDC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

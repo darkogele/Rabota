@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="49df51d7-104d-43bb-b9ed-0b928736d960" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/UJPServicesProd.Host/DataForEDB.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataForEDB.wsdl" MetadataType="Wsdl" ID="10bdb68c-1c6a-429a-a27a-ea6695876019" SourceId="1" SourceUrl="http://localhost/UJPServicesProd.Host/DataForEDB.svc?wsdl" />
+    <MetadataFile FileName="DataForEDB.disco" MetadataType="Disco" ID="f37543af-94b8-4ae9-a2d7-f61093207e19" SourceId="1" SourceUrl="http://localhost/UJPServicesProd.Host/DataForEDB.svc?disco" />
+    <MetadataFile FileName="DataForEDB.xsd" MetadataType="Schema" ID="18fe5b55-97f8-4e5c-8143-16af8c031b72" SourceId="1" SourceUrl="http://localhost/UJPServicesProd.Host/DataForEDB.svc?xsd=xsd1" />
+    <MetadataFile FileName="DataForEDB1.xsd" MetadataType="Schema" ID="96d15841-0db6-4735-abd6-a1026c39e549" SourceId="1" SourceUrl="http://localhost/UJPServicesProd.Host/DataForEDB.svc?xsd=xsd0" />
+    <MetadataFile FileName="DataForEDB2.xsd" MetadataType="Schema" ID="4cf4ec32-49c6-46cd-8e35-3cffdde0b31f" SourceId="1" SourceUrl="http://localhost/UJPServicesProd.Host/DataForEDB.svc?xsd=xsd3" />
+    <MetadataFile FileName="DataForEDB3.xsd" MetadataType="Schema" ID="7bd758f7-2ad1-44a8-8a23-735c9730ab70" SourceId="1" SourceUrl="http://localhost/UJPServicesProd.Host/DataForEDB.svc?xsd=xsd2" />
+    <MetadataFile FileName="DataForEDB1.wsdl" MetadataType="Wsdl" ID="452b52ca-66ce-493f-bda1-a9cd336bd28a" SourceId="1" SourceUrl="http://localhost/UJPServicesProd.Host/DataForEDB.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,172 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>Податоци за редовен ученик - Министерство за Образование и Наука</h2>
+
+<form name="monDataForRegularStudentForm" ng-controller="MonCtrl">
+
+    <div class="container">
+        <div class="col-lg-3">
+
+            @* EMBG *@
+            <div class="form-group" ng-class="{ 'has-error' : embgFormFieldvalidation.embg.$invalid }">
+                <ng-form name="embgFormFieldvalidation">
+                    <label for="embg">ЕМБГ:</label>
+                    <input id="embg" type="text" class="form-control" name="embg" ng-minlength="13" ng-maxlength="13" ng-model="embg" only-digits required>
+                    <br />
+                    <p style="color:red;font-size: 12px;" ng-show="((embgFormFieldvalidation.embg.$error.minlength ||
+                        embgFormFieldvalidation.embg.$error.maxlength))">
+                        ЕМБГ мора да содржи точно 13 цифри!
+                    </p>
+                </ng-form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-disabled="monDataForRegularStudentForm.$invalid" ng-click="monDataForRegularStudent(embg)"><i class="fa fa-save"></i> Испрати</button>
+                <a class="btn btn-warning" href="#/mon/mondataforregularstudent" ui-sref="mondataforregularstudentindex">Откажи</a>
+            </div>
+        </div>
+
+        <div ng-show="show" class="col-lg-9">
+            
+            <div class="row text-center">
+                <a class="btn btn-default" ng-click="dataForRegularStudentXml()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во XML формат</a>
+                <a class="btn btn-default" ng-click="dataForRegularStudentPdf()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во PDF формат</a>
+            </div>
+
+            <div class="form-group">
+                <ng-form name="municipalityFormField">
+                    <label for="municipality">Општина:</label>
+                    <input id="municipality" type="text" class="form-control" name="municipality" ng-model="municipality">
+                </ng-form>
+            </div>
+
+            <div class="form-group">
+                <ng-form name="schoolFormField">
+                    <label for="school">Училиште:</label>
+                    <input id="school" type="text" class="form-control" name="school" ng-model="school">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="schoolClassFormField">
+                    <label for="schoolClass">Клас:</label>
+                    <input id="schoolClass" type="text" class="form-control" name="schoolClass" ng-model="schoolClass">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="schoolYearFormField">
+                    <label for="schoolYear">Учебна година:</label>
+                    <input id="schoolYear" type="text" class="form-control" name="schoolYear" ng-model="schoolYear">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="gradeFormField">
+                    <label for="grade">Оделение:</label>
+                    <input id="grade" type="text" class="form-control" name="grade" ng-model="grade">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="professionFormField">
+                    <label for="profession">Насока:</label>
+                    <input id="profession" type="text" class="form-control" name="profession" ng-model="profession">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="profileField">
+                    <label for="profile">Профил:</label>
+                    <input id="profile" type="text" class="form-control" name="profile" ng-model="profile">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="programAssociationFormField">
+                    <label for="programAssociation">Програма:</label>
+                    <input id="programAssociation" type="text" class="form-control" name="programAssociation" ng-model="programAssociation">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="languageEducationFormField">
+                    <label for="languageEducation">Јазик:</label>
+                    <input id="languageEducation" type="text" class="form-control" name="languageEducation" ng-model="languageEducation">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="fullNameFormField">
+                    <label for="fullName">Име и презиме:</label>
+                    <input id="fullName" type="text" class="form-control" name="fullName" ng-model="fullName">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="fatherNameFormField">
+                    <label for="fatherName">Татково име:</label>
+                    <input id="fatherName" type="text" class="form-control" name="fatherName" ng-model="fatherName">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="dateOfBirthFormField">
+                    <label for="dateOfBirth">Датум на раѓање:</label>
+                    <input id="dateOfBirth" type="text" class="form-control" name="dateOfBirth" ng-model="dateOfBirth">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="placeOfBirthFormField">
+                    <label for="placeOfBirth">Место на раѓање:</label>
+                    <input id="placeOfBirth" type="text" class="form-control" name="placeOfBirth" ng-model="placeOfBirth">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="embgFormField">
+                    <label for="embg">Единствен матичен број:</label>
+                    <input id="embg" type="text" class="form-control" name="embg" ng-model="embg">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="ethnicityFormField">
+                    <label for="ethnicity">Етничка припадност:</label>
+                    <input id="ethnicity" type="text" class="form-control" name="ethnicity" ng-model="ethnicity">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="nativeLanguageFormField">
+                    <label for="nativeLanguage">Мајчин јазик:</label>
+                    <input id="nativeLanguage" type="text" class="form-control" name="nativeLanguage" ng-model="nativeLanguage">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="placeFormField">
+                    <label for="place">Место:</label>
+                    <input id="place" type="text" class="form-control" name="place" ng-model="place">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="addressFormField">
+                    <label for="address">Адреса:</label>
+                    <input id="address" type="text" class="form-control" name="address" ng-model="address">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="phoneFormField">
+                    <label for="phone">Телефон:</label>
+                    <input id="phone" type="text" class="form-control" name="phone" ng-model="phone">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="mobileFormField">
+                    <label for="mobile">Мобилен:</label>
+                    <input id="mobile" type="text" class="form-control" name="mobile" ng-model="mobile">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="schoolClassStatusFormField">
+                    <label for="schoolClassStatus">Статус на класот:</label>
+                    <input id="schoolClassStatus" type="text" class="form-control" name="schoolClassStatus" ng-model="schoolClassStatus">
+                </ng-form>
+            </div>
+            <div class="form-group">
+                <ng-form name="schoolStatusFormField">
+                    <label for="schoolStatus">Статус на училиштето:</label>
+                    <input id="schoolStatus" type="text" class="form-control" name="schoolStatus" ng-model="schoolStatus">
+                </ng-form>
+            </div>
+
+        </div>
+    </div>
+</form>

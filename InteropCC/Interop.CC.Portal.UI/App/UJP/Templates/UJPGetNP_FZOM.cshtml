@@ -1,0 +1,41 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>НП ФЗОМ</h2>
+
+<form name="ujpgetnpfzomForm" ng-controller="UjpCtrl">
+
+    <div class="container">
+        <div class="col-lg-3">
+            <div class="form-group" ng-class="{ 'has-error' : ujpFormField.ujpDate.$invalid }">
+                <ng-form name="ujpFormField">
+                    <label for="ujp">Датум:</label>
+                    <div class="">
+                        <p class="input-group">
+                            <input type="text"
+                                   placeholder="Одбери"
+                                   class="form-control"
+                                   datepicker-popup="M.d.yyyy"
+                                   ng-disabled="true"
+                                   datepicker-append-to-body="true"
+                                   ng-model="date"
+                                   is-open="status1.opened"
+                                   current-text="Денес"
+                                   clear-text="Исчисти"
+                                   close-text="Затвори"
+                                   ng-click="status1.opened = true"
+                                   required />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="open1($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+                        </p>
+                    </div>
+                </ng-form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-disabled="ujpgetnpfzomForm.$invalid" ng-click="ujpgetnpfzom(date, 'np', 'fzom')"><i class="fa fa-save"></i> Преземи</button>
+                @*<a class="btn btn-warning" ui-sref="ujpgetouavrm">Откажи</a>*@
+            </div>
+        </div>
+    </div>
+
+</form>

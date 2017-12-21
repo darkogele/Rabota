@@ -1,0 +1,5 @@
+D:\Work\RefatoredInteropHandlers\HttpHandler\Exceptions\bin\Debug\Exceptions.dll
+D:\Work\RefatoredInteropHandlers\HttpHandler\Exceptions\bin\Debug\Exceptions.pdb
+D:\Work\RefatoredInteropHandlers\HttpHandler\Exceptions\obj\Debug\Exceptions.csproj.CoreCompileInputs.cache
+D:\Work\RefatoredInteropHandlers\HttpHandler\Exceptions\obj\Debug\Exceptions.dll
+D:\Work\RefatoredInteropHandlers\HttpHandler\Exceptions\obj\Debug\Exceptions.pdb

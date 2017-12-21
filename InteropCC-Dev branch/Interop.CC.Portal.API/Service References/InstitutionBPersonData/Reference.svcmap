@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="41ab953e-fb40-442c-97af-c62e34814c89" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/EvalServicePersonData/EvalPersonData.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EvalPersonData.xsd" MetadataType="Schema" ID="c9afb17d-5773-441d-a432-64808762ceb2" SourceId="1" SourceUrl="http://localhost/EvalServicePersonData/EvalPersonData.svc?xsd=xsd2" />
+    <MetadataFile FileName="EvalPersonData1.xsd" MetadataType="Schema" ID="fb90eb9f-d13b-4073-aea3-4281ed8e0667" SourceId="1" SourceUrl="http://localhost/EvalServicePersonData/EvalPersonData.svc?xsd=xsd1" />
+    <MetadataFile FileName="EvalPersonData2.xsd" MetadataType="Schema" ID="172d8c87-05fa-4f24-8eba-31018af60ea3" SourceId="1" SourceUrl="http://localhost/EvalServicePersonData/EvalPersonData.svc?xsd=xsd0" />
+    <MetadataFile FileName="PersonData.wsdl" MetadataType="Wsdl" ID="5c359e57-a276-4087-b8c6-17c297a4ee1f" SourceId="1" SourceUrl="http://localhost/EvalServicePersonData/EvalPersonData.svc?wsdl" />
+    <MetadataFile FileName="EvalPersonData.wsdl" MetadataType="Wsdl" ID="d9adee85-15d1-487d-9c91-348c31c1b4f6" SourceId="1" SourceUrl="http://localhost/EvalServicePersonData/EvalPersonData.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="EvalPersonData.disco" MetadataType="Disco" ID="211e8ac3-1545-4f6d-9345-1c15b2e447af" SourceId="1" SourceUrl="http://localhost/EvalServicePersonData/EvalPersonData.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

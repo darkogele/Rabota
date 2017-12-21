@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="954af269-d2e1-4698-83db-8b7e30f820a6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AdapterServiceCRM.Host/Test_CRM_TS_CURM.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Test_CRM_TS_CURM.wsdl" MetadataType="Wsdl" ID="e219d973-614e-4e1d-b44b-9f6603f280e3" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/Test_CRM_TS_CURM.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="Test_CRM_TS_CURM.xsd" MetadataType="Schema" ID="a2702381-3df4-436a-8704-5730e39ecf8b" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/Test_CRM_TS_CURM.svc?xsd=xsd0" />
+    <MetadataFile FileName="Test_TS_CURM.wsdl" MetadataType="Wsdl" ID="d3bcf011-2d90-421f-b834-d624f49ce8fb" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/Test_CRM_TS_CURM.svc?wsdl" />
+    <MetadataFile FileName="Test_CRM_TS_CURM1.xsd" MetadataType="Schema" ID="619b6a29-8306-42f7-828e-1b7363ee66ad" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/Test_CRM_TS_CURM.svc?xsd=xsd1" />
+    <MetadataFile FileName="Test_CRM_TS_CURM.disco" MetadataType="Disco" ID="895e07b8-47af-4017-bcdd-07e9c1836aac" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/Test_CRM_TS_CURM.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

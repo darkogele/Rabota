@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://kibs.com.mk/wsTSATest" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://kibs.com.mk/wsTSATest" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://kibs.com.mk/wsTSATest">
+      <s:element name="funGenerateTS_Bytes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bytHash" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="funGenerateTS_BytesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="funGenerateTS_BytesResult" type="tns:TSResponse_Bytes" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TSResponse_Bytes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="strFailureInfo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="bytTSToken" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="strCenaUsluga" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="funGenerateTS_String">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strBase64Hash" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="funGenerateTS_StringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="funGenerateTS_StringResult" type="tns:TSResponse_String" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TSResponse_String">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="strFailureInfo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strBase64TSToken" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strCenaUsluga" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="funCheckTS_Bytes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bytTSToken" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="funCheckTS_BytesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="funCheckTS_BytesResult" type="tns:TSCheck_Bytes" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TSCheck_Bytes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="strSignatureIntegrity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strTSACertSubject" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strTSACertValidFromTo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strCertificateStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strUTCTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strHashAlgorithm" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="bytHashMessage" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="strFailureInfo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strCenaUsluga" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="funCheckTS_String">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strBase64TSToken" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="funCheckTS_StringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="funCheckTS_StringResult" type="tns:TSCheck_String" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TSCheck_String">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="strSignatureIntegrity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strTSACertSubject" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strTSACertValidFromTo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strCertificateStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strUTCTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strHashAlgorithm" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strBase64HashMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strFailureInfo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strCenaUsluga" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="funGenerateTS_BytesSoapIn">
+    <wsdl:part name="parameters" element="tns:funGenerateTS_Bytes" />
+  </wsdl:message>
+  <wsdl:message name="funGenerateTS_BytesSoapOut">
+    <wsdl:part name="parameters" element="tns:funGenerateTS_BytesResponse" />
+  </wsdl:message>
+  <wsdl:message name="funGenerateTS_StringSoapIn">
+    <wsdl:part name="parameters" element="tns:funGenerateTS_String" />
+  </wsdl:message>
+  <wsdl:message name="funGenerateTS_StringSoapOut">
+    <wsdl:part name="parameters" element="tns:funGenerateTS_StringResponse" />
+  </wsdl:message>
+  <wsdl:message name="funCheckTS_BytesSoapIn">
+    <wsdl:part name="parameters" element="tns:funCheckTS_Bytes" />
+  </wsdl:message>
+  <wsdl:message name="funCheckTS_BytesSoapOut">
+    <wsdl:part name="parameters" element="tns:funCheckTS_BytesResponse" />
+  </wsdl:message>
+  <wsdl:message name="funCheckTS_StringSoapIn">
+    <wsdl:part name="parameters" element="tns:funCheckTS_String" />
+  </wsdl:message>
+  <wsdl:message name="funCheckTS_StringSoapOut">
+    <wsdl:part name="parameters" element="tns:funCheckTS_StringResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsTSATestSoap">
+    <wsdl:operation name="funGenerateTS_Bytes">
+      <wsdl:input message="tns:funGenerateTS_BytesSoapIn" />
+      <wsdl:output message="tns:funGenerateTS_BytesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="funGenerateTS_String">
+      <wsdl:input message="tns:funGenerateTS_StringSoapIn" />
+      <wsdl:output message="tns:funGenerateTS_StringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="funCheckTS_Bytes">
+      <wsdl:input message="tns:funCheckTS_BytesSoapIn" />
+      <wsdl:output message="tns:funCheckTS_BytesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="funCheckTS_String">
+      <wsdl:input message="tns:funCheckTS_StringSoapIn" />
+      <wsdl:output message="tns:funCheckTS_StringSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsTSATestSoap" type="tns:wsTSATestSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="funGenerateTS_Bytes">
+      <soap:operation soapAction="http://kibs.com.mk/wsTSATest/funGenerateTS_Bytes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="funGenerateTS_String">
+      <soap:operation soapAction="http://kibs.com.mk/wsTSATest/funGenerateTS_String" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="funCheckTS_Bytes">
+      <soap:operation soapAction="http://kibs.com.mk/wsTSATest/funCheckTS_Bytes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="funCheckTS_String">
+      <soap:operation soapAction="http://kibs.com.mk/wsTSATest/funCheckTS_String" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsTSATestSoap12" type="tns:wsTSATestSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="funGenerateTS_Bytes">
+      <soap12:operation soapAction="http://kibs.com.mk/wsTSATest/funGenerateTS_Bytes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="funGenerateTS_String">
+      <soap12:operation soapAction="http://kibs.com.mk/wsTSATest/funGenerateTS_String" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="funCheckTS_Bytes">
+      <soap12:operation soapAction="http://kibs.com.mk/wsTSATest/funCheckTS_Bytes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="funCheckTS_String">
+      <soap12:operation soapAction="http://kibs.com.mk/wsTSATest/funCheckTS_String" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsTSATest">
+    <wsdl:port name="wsTSATestSoap" binding="tns:wsTSATestSoap">
+      <soap:address location="https://wstsatest.kibs.mk/wsTSATest.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsTSATestSoap12" binding="tns:wsTSATestSoap12">
+      <soap12:address location="https://wstsatest.kibs.mk/wsTSATest.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

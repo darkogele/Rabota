@@ -1,0 +1,42 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+         
+<h2>Листа на сервиси</h2>
+     
+<div class="col-lg-12 col-md-12 visible-lg visible-md">
+        <form class="ng-pristine ng-valid" name="searchMessageLogForm">
+            <div class="col-lg-3 col-md-3"><input type="text" class="form-control" id="providerId" placeholder="Провајдер" ng-model="filterprovider"></div>
+            <div class="col-lg-2 col-md-2"><a class="btn btn-primary col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0" ng-click="getServicesList(filterprovider)"><i class="fa fa-search"></i> Барај</a></div>
+            
+
+        </form>
+    </div>
+
+  
+
+    <form name="ServicesList">
+
+        <div class="row" ng-if="services.length">
+
+
+            <div class="col-sm-12">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="col-lg-4 col-md-4 col-sm-4 col-xs-4 ">Име</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="service in services">
+                                <td class="col-lg-4 col-md-4 col-sm-4 col-xs-4 ">{{service}}</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        
+        </div>
+
+</form>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="51f7da83-4825-448b-95f8-c00e864268b9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AKNServicesTest.Host/PropertyListTest.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PropertyListTest.xsd" MetadataType="Schema" ID="90d040bd-70b5-4f36-8d76-60a5c6d61ad7" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/PropertyListTest.svc?xsd=xsd2" />
+    <MetadataFile FileName="PropertyListTest.wsdl" MetadataType="Wsdl" ID="d751f486-8aa0-4586-91fe-a223529a100b" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/PropertyListTest.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="PropertyListTest1.xsd" MetadataType="Schema" ID="c65ddf52-44c2-4a34-8115-f07de165ef47" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/PropertyListTest.svc?xsd=xsd0" />
+    <MetadataFile FileName="PropertyListTest.disco" MetadataType="Disco" ID="d32b63ec-af81-4889-8f30-07e2a4182c43" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/PropertyListTest.svc?disco" />
+    <MetadataFile FileName="PropertyListTest2.xsd" MetadataType="Schema" ID="33fee1b0-89eb-4402-8298-298f7fd74d77" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/PropertyListTest.svc?xsd=xsd1" />
+    <MetadataFile FileName="PropertyListTest1.wsdl" MetadataType="Wsdl" ID="f385d715-403c-40e3-9ef2-ecce46fbe7fe" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/PropertyListTest.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,177 @@
+﻿@{
+    Layout = null;
+}
+@*@model string*@
+
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title ng-bind="pageTitle + ' | Интероп КС'"></title>
+
+    @*<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">*@
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    @*<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">*@
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
+    @*<link data-require="ng-table" data-semver="0.3.0" rel="stylesheet" href="http://bazalt-cms.com/assets/ng-table/0.3.0/ng-table.css" />*@
+    <link href="~/Content/ngTable.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/ngToast.css" rel="stylesheet" />
+    <link href="~/Content/ngProgress.css" rel="stylesheet" />
+
+    <link rel="icon" type="image/png" href="~/favicon.ico" />
+
+</head>
+
+<body ng-controller="MainCtrl">
+
+    <div loader class="pull-left loader">
+        <div class="loaderContent">
+            <div>
+            </div>
+        </div>
+    </div>
+    <toast></toast>
+    <div id="MainContent">
+        <div class="dropdown pull-right">
+            <button class="btn btn-default disabled">
+                <i class="fa fa-2x fa-clipboard"></i>
+                <span> @ViewBag.CertSubject</span>
+            </button>
+            <button data-toggle="dropdown" class="dropdown-toggle btn btn-default">
+                <i class="fa fa-2x fa-user"></i>
+                <span ng-if="authentication.isAuth"> {{authentication.userName}} </span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                @*<li ng-if="authentication.isAuth" class="divider"></li>*@
+                <li ng-if="authentication.isAuth" role="menuitem">
+                    <a href="" ng-click="logOut()">Одјави се</a>
+                </li>
+                <li ng-if="!authentication.isAuth" role="menuitem">
+                    <a ui-sref="login">Најави се</a>
+                </li>
+                <li ng-if="authentication.isAuth && authentication.permision" role="menuitem">
+                    <a ui-sref="editcurrentuserinter()">Мој профил</a>
+                </li>
+                @*<li ng-if="authentication.isAuth && authentication.permision" role="menuitem">
+                    <a ui-sref="register">Регистрирај корисник</a>
+                </li>*@
+            </ul>
+        </div>
+        @*<div ng-show="loading" class="loaderdiv">
+                <div>
+                    Се вчитува...
+                </div>
+            </div>*@
+        <h3 class="enviroment">@ViewBag.InstitutionName <small>(@ViewBag.EnviromentName)</small></h3>
+
+        <nav class="navbar navbar-default @ViewBag.CssClassBackColor" role="navigation">
+            <div class="navbar-header pull-left">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @*<a class="navbar-brand" href="#"></a>*@
+            </div>
+            
+            <div class="pull-left collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul id="mainNav" class="nav navbar-nav">
+                    <li ng-class="{active: $state.includes('home')}"><a ui-sref="home" style="color: black"><i class="fa fa-home"></i> Почетна</a></li>
+                    <li ng-if="authentication.isAuth" ng-class="{active: $state.includes('participants') || $state.includes('editparticipant') || $state.includes('createparticipant')}"><a ui-sref="participants({pageIndex:1,itemsPerPage:10,sortDir:'asc',sortCol:'code'})" style="color: black"><i class="fa fa-university"></i> Учесници</a></li>
+                    @*<li ng-if="authentication.isAuth" ng-class="{active: $state.includes('buses') || $state.includes('createbus')}"><a ui-sref="buses({pageIndex:1,itemsPerPage:10})" style="color: black"><i class="fa fa-connectdevelop"></i> Екстерни басови</a></li>*@
+                    <li ng-if="authentication.isAuth" ng-class="{active: $state.includes('services')}"><a ui-sref="services({pageIndex:1,itemsPerPage:10})" style="color: black"><i class="fa fa-cogs"></i> Сервиси</a></li>
+                    <li ng-if="authentication.isAuth" ng-class="{active: $state.includes('accessmappings') || $state.includes('createaccessmapping')}"><a ui-sref="accessmappings({pageIndex:1,itemsPerPage:10})" style="color: black"><i class="fa fa-list-alt"></i> Пристапна листа</a></li>
+                    @*<li ng-if="authentication.isAuth" ng-class="{active: $state.includes('messagelogs')}"><a ui-sref="messagelogs({pageIndex:1,itemsPerPage:10, sortDir:'asc', sortCol:'TransactionId'})" style="color: black"><i class="fa fa-envelope"></i> Логови</a></li>*@
+                    @*<li ng-if="authentication.isAuth" ng-class="{active: $state.includes('soapfault')}"><a ui-sref="soapfault({pageIndex:1,itemsPerPage:5, sortDir:'asc', sortCol:'TransactionId'})" style="color: black"> <i class="fa fa-exclamation-triangle"></i> Грешки</a></li>*@
+                    <li ng-if="authentication.isAuth" ng-class="{active: $state.includes('statistics')}"><a ui-sref="statistics({pageIndex:1,itemsPerPage:10, sortDir:'desc', sortCol:'CreateDate'})" style="color: black"><i class="fa fa-bar-chart"></i> Статистика</a></li>
+                    <li ng-if="authentication.isAuth && authentication.permision && authentication.userName == 'KorvusAdmin'" ng-class="{active: $state.includes('uncreatedstatistics')}"><a ui-sref="uncreatedstatistics" style="color: black"> <i class="fa fa-user"></i> Неискреирани логови</a></li>
+                    <li ng-if="authentication.isAuth && authentication.permision" ng-class="{active: $state.includes('users')}"><a ui-sref="users({pageIndex:1,itemsPerPage:10, sortDir:'asc', sortCol:'UserName'})" style="color: black"> <i class="fa fa-user"></i> Корисници</a></li>
+                    @*<li ng-if="authentication.isAuth && authentication.permision" ng-class="{active: $state.includes('adminrecords')}"><a ui-sref="adminrecords({pageIndex:1,itemsPerPage:10, sortDir:'asc', sortCol:'ItemNumber'})" style="color: black"> <i class="fa fa-user"></i> Евиденција бази</a></li>*@
+                    @*<li ng-if="authentication.isAuth && authentication.permision" ng-class="{active: $state.includes('adminservices')}"><a ui-sref="adminservices({pageIndex:1,itemsPerPage:10, sortDir:'asc', sortCol:'ItemNumber'})" style="color: black"> <i class="fa fa-user"></i> Евиденција услуги</a></li>*@
+                    <li ng-if="authentication.isAuth && authentication.permision && authentication.userName == 'KorvusAdmin'" ng-class="{active: $state.includes('messagelogerror')}"><a ui-sref="messagelogerror" style="color: black"> <i class="fa fa-user"></i> Неправилни логови</a></li>
+                    <li ng-if="authentication.isAuth && authentication.permision && authentication.userName == 'KorvusAdmin'" class="dropdown modulesNav" >
+                        <a style="color: black" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="fa fa-user"></i> Модули <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li ng-if="authentication.isAuth && authentication.permision" ng-class="{active: $state.includes('adminrecords')}"><a ui-sref="adminrecords({pageIndex:1,itemsPerPage:10, sortDir:'asc', sortCol:'ItemNumber'})" style="color: black"> <i class="fa fa-user"></i> Евиденција бази</a></li>
+                            <li ng-if="authentication.isAuth && authentication.permision" ng-class="{active: $state.includes('adminservices')}"><a ui-sref="adminservices({pageIndex:1,itemsPerPage:10, sortDir:'asc', sortCol:'ItemNumber'})" style="color: black"> <i class="fa fa-user"></i> Евиденција услуги</a></li>
+                        </ul>                                                                                              
+                    </li>
+                </ul>
+            </div>
+            
+        </nav>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12">
+
+                    <div ui-view></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<script src="~/Scripts/jquery-2.1.1.min.js"></script>*@
+    <script src="~/Scripts/jquery-2.1.4.js"></script>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/i18n/angular-locale_mk-mk.js"></script>
+    <script src="~/Scripts/angular-uiRouter.js"></script>
+    <script src="~/Scripts/angular-animate.js"></script>
+    <script src="~/Scripts/angular-sanitize.js"></script>
+    <script src="~/Scripts/app/angular-local-storage.min.js"></script>
+    @*<script data-require="ng-table" data-semver="0.3.0" src="http://bazalt-cms.com/assets/ng-table/0.3.0/ng-table.js"></script>*@
+    <script src="~/Scripts/app/ngTable.js"></script>
+    <script src="~/Scripts/angular-ui/ui-bootstrap.js"></script>
+    <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/app/ui.event.js"></script>
+    <script src="~/Scripts/app/ClickConfirm.js"></script>
+    <script src="~/Scripts/app/paging.js"></script>
+    @*<script src="~/Scripts/app/Kinetic.js"></script>*@
+    @*<script src="https://cdn.rawgit.com/Luegg/angularjs-scroll-glue/v2.0.2/src/scrollglue.js"></script>*@
+    <script src="~/Scripts/app/luegg.directives.js"></script>
+
+    <script src="~/Scripts/ngToast/ngToast.js"></script>
+    @*<script src="~/Scripts/ngToast/provider.js"></script>
+    <script src="~/Scripts/ngToast/module.js"></script>
+    <script src="~/Scripts/ngToast/directives.js"></script>*@
+    <script src="~/Scripts/ngProgress/ngProgress.js"></script>
+    <script>
+        //var token=@Html.Raw(Model);
+        var app = angular.module("app",
+            ['ui.router', 'ngAnimate', 'ui.bootstrap', 'Home', 'Service', 'AccessMapping', 'Participant', 'Buses', 'MessageLog', 'Statistics', 'UncreatedStatistics', 'MessageLogError', 'SoapFault', 'Security', 'Login', 'Register', 'UsersInterop', 'MIOAAdminRecords', 'MIOAAdminServices', 'ui.event', 'angularUtils.directives.dirPagination', 'ngClickConfirmModule', 'luegg.directives', 'ngToast', 'ngProgress', 'LocalStorageModule', 'ForgotPassword']);
+        app.constant('appBaseUrl', '@ViewBag.BaseUrl');
+        app.constant('apiUri', '@ViewBag.ApiUrl');
+        app.constant('baseApiUri', '@ViewBag.BaseApiUrl');
+        app.constant('publicKey', '@ViewBag.PublicKey');
+        app.constant('clientId', '@ViewBag.ClientId');
+        //app.constant('responseToken', token);
+        //app.constant('clientId', 'ngAuthApp');
+
+    </script>
+
+    @*angularJS core interceptor*@
+    <script src="~/App/app.js"></script>
+    @*angularJS modules*@
+    <script src="~/App/Home/Home.js"></script>
+    <script src="~/App/Process/Process.js"></script>
+    <script src="~/App/User/User.js"></script>
+    <script src="~/App/MessageLog/MessageLog.js"></script>
+    <script src="~/App/Participant/Participant.js"></script>
+    <script src="~/App/Buses/Buses.js"></script>
+    <script src="~/App/AccessMapping/AccessMapping.js"></script>
+    <script src="~/App/Service/Service.js"></script>
+    <script src="~/App/SoapFault/SoapFault.js"></script>
+    <script src="~/App/Statistics/Statistics.js"></script>
+    <script src="~/App/Security/Security.js"></script>
+    <script src="~/App/register/register.js"></script>
+    <script src="~/App/Login/Login.js"></script>
+    <script src="~/App/UsersInterop/Users.js"></script>
+    <script src="~/App/MIOAAdminRecords/MIOAAdminRecords.js"></script>
+    <script src="~/App/MIOAAdminServices/MIOAAdminServices.js"></script>
+    <script src="~/App/UncreatedStatistics/UncreatedStatistics.js"></script>
+    <script src="~/App/MessageLogError/MessageLogError.js"></script>
+    <script src="~/App/ForgotPassword/ForgotPassword.js"></script>
+</body>
+</html>

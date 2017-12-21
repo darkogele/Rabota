@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="21093a66-fc99-4a30-b70d-116eb6997179" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AdapterServiceCRM.Host/Test_CRM_TS_UJP.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Test_CRM_TS_UJP.xsd" MetadataType="Schema" ID="8a657e5a-e9b6-4034-aef7-60ef8b8a3a8d" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/Test_CRM_TS_UJP.svc?xsd=xsd1" />
+    <MetadataFile FileName="Test_TS_UJP.wsdl" MetadataType="Wsdl" ID="a8ba7925-28b5-483c-aab9-3fdf01c78824" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/Test_CRM_TS_UJP.svc?wsdl" />
+    <MetadataFile FileName="Test_CRM_TS_UJP.wsdl" MetadataType="Wsdl" ID="f17902c9-e3d2-44b2-b6f6-514c7f406455" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/Test_CRM_TS_UJP.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="Test_CRM_TS_UJP1.xsd" MetadataType="Schema" ID="a46c65b1-0004-483c-ba56-f5289d7ee764" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/Test_CRM_TS_UJP.svc?xsd=xsd0" />
+    <MetadataFile FileName="Test_CRM_TS_UJP.disco" MetadataType="Disco" ID="9e640429-df10-4c65-b2d7-38dec176e6fe" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/Test_CRM_TS_UJP.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

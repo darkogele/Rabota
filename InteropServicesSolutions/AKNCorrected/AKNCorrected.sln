@@ -1,0 +1,108 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{293E60DB-7044-4BDE-B807-BA4059D6CE76}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EA56A184-533E-4C0F-82BD-E477F4436B92} = {EA56A184-533E-4C0F-82BD-E477F4436B92}
+		{4D7392AE-9D95-44A0-AED1-4CD6CD0AAEAC} = {4D7392AE-9D95-44A0-AED1-4CD6CD0AAEAC}
+		{A4C4E5B6-4D3C-4CFD-AABD-C5CD9E052B6D} = {A4C4E5B6-4D3C-4CFD-AABD-C5CD9E052B6D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{751887C9-DE40-4D16-ADAC-91A40E17E3B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Implementations", "Implementations\Implementations.csproj", "{A64E1F7E-B38D-4662-BAA4-CC6F423D2710}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Implementations.Test", "Implementations.Test\Implementations.Test.csproj", "{C8F47148-0164-4363-AB35-A7DEF6BF0CD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AKNServicesProd.Host", "AKNServicesProd.Host\AKNServicesProd.Host.csproj", "{EA56A184-533E-4C0F-82BD-E477F4436B92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AKNServicesTest.Host", "AKNServicesTest.Host\AKNServicesTest.Host.csproj", "{4D7392AE-9D95-44A0-AED1-4CD6CD0AAEAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSAdapterAKN.Host", "TSAdapterAKN.Host\TSAdapterAKN.Host.csproj", "{A4C4E5B6-4D3C-4CFD-AABD-C5CD9E052B6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSAdapterAKN", "TSAdapterAKN\TSAdapterAKN.csproj", "{BC0D7BD9-74F1-4F94-9CAD-E35B9A558912}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.csproj", "{3C29DABF-A778-444C-82F3-C0CC99B32B88}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 10
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.11.21.108:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AKNServicesProd.Host\\AKNServicesProd.Host.csproj
+		SccProjectName1 = AKNServicesProd.Host
+		SccLocalPath1 = AKNServicesProd.Host
+		SccProjectUniqueName2 = AKNServicesTest.Host\\AKNServicesTest.Host.csproj
+		SccProjectName2 = AKNServicesTest.Host
+		SccLocalPath2 = AKNServicesTest.Host
+		SccProjectUniqueName3 = Contracts\\Contracts.csproj
+		SccProjectName3 = Contracts
+		SccLocalPath3 = Contracts
+		SccProjectUniqueName4 = Implementations.Test\\Implementations.Test.csproj
+		SccProjectName4 = Implementations.Test
+		SccLocalPath4 = Implementations.Test
+		SccProjectUniqueName5 = Implementations\\Implementations.csproj
+		SccProjectName5 = Implementations
+		SccLocalPath5 = Implementations
+		SccProjectUniqueName6 = TestApp\\TestApp.csproj
+		SccProjectName6 = TestApp
+		SccLocalPath6 = TestApp
+		SccProjectUniqueName7 = TSAdapterAKN.Host\\TSAdapterAKN.Host.csproj
+		SccProjectName7 = TSAdapterAKN.Host
+		SccLocalPath7 = TSAdapterAKN.Host
+		SccProjectUniqueName8 = TSAdapterAKN\\TSAdapterAKN.csproj
+		SccProjectName8 = TSAdapterAKN
+		SccLocalPath8 = TSAdapterAKN
+		SccProjectUniqueName9 = Helpers\\Helpers.csproj
+		SccProjectName9 = Helpers
+		SccLocalPath9 = Helpers
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{293E60DB-7044-4BDE-B807-BA4059D6CE76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{293E60DB-7044-4BDE-B807-BA4059D6CE76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{293E60DB-7044-4BDE-B807-BA4059D6CE76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{293E60DB-7044-4BDE-B807-BA4059D6CE76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{751887C9-DE40-4D16-ADAC-91A40E17E3B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{751887C9-DE40-4D16-ADAC-91A40E17E3B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{751887C9-DE40-4D16-ADAC-91A40E17E3B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{751887C9-DE40-4D16-ADAC-91A40E17E3B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A64E1F7E-B38D-4662-BAA4-CC6F423D2710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A64E1F7E-B38D-4662-BAA4-CC6F423D2710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A64E1F7E-B38D-4662-BAA4-CC6F423D2710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A64E1F7E-B38D-4662-BAA4-CC6F423D2710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8F47148-0164-4363-AB35-A7DEF6BF0CD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8F47148-0164-4363-AB35-A7DEF6BF0CD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8F47148-0164-4363-AB35-A7DEF6BF0CD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8F47148-0164-4363-AB35-A7DEF6BF0CD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA56A184-533E-4C0F-82BD-E477F4436B92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA56A184-533E-4C0F-82BD-E477F4436B92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA56A184-533E-4C0F-82BD-E477F4436B92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA56A184-533E-4C0F-82BD-E477F4436B92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D7392AE-9D95-44A0-AED1-4CD6CD0AAEAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D7392AE-9D95-44A0-AED1-4CD6CD0AAEAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D7392AE-9D95-44A0-AED1-4CD6CD0AAEAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D7392AE-9D95-44A0-AED1-4CD6CD0AAEAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4C4E5B6-4D3C-4CFD-AABD-C5CD9E052B6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4C4E5B6-4D3C-4CFD-AABD-C5CD9E052B6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4C4E5B6-4D3C-4CFD-AABD-C5CD9E052B6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4C4E5B6-4D3C-4CFD-AABD-C5CD9E052B6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC0D7BD9-74F1-4F94-9CAD-E35B9A558912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC0D7BD9-74F1-4F94-9CAD-E35B9A558912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC0D7BD9-74F1-4F94-9CAD-E35B9A558912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC0D7BD9-74F1-4F94-9CAD-E35B9A558912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C29DABF-A778-444C-82F3-C0CC99B32B88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C29DABF-A778-444C-82F3-C0CC99B32B88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C29DABF-A778-444C-82F3-C0CC99B32B88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C29DABF-A778-444C-82F3-C0CC99B32B88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

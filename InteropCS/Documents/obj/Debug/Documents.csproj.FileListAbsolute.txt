@@ -1,0 +1,6 @@
+D:\Work\InteropCS\Documents\bin\Debug\Documents.dll
+D:\Work\InteropCS\Documents\bin\Debug\Documents.pdb
+D:\Work\InteropCS\Documents\obj\Debug\Documents.csproj.CoreCompileInputs.cache
+D:\Work\InteropCS\Documents\obj\Debug\Documents.dll
+D:\Work\InteropCS\Documents\obj\Debug\Documents.pdb
+D:\Work\InteropCS\Documents\obj\Debug\Documents.csprojResolveAssemblyReference.cache

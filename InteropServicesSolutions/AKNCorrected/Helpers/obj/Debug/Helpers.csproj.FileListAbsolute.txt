@@ -1,0 +1,9 @@
+D:\Work\InteropServicesSolutions\AKNCorrected\Helpers\bin\Debug\Helpers.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\Helpers\bin\Debug\Helpers.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\Helpers\bin\Debug\Contracts.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\Helpers\bin\Debug\Contracts.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\Helpers\obj\Debug\Helpers.csprojResolveAssemblyReference.cache
+D:\Work\InteropServicesSolutions\AKNCorrected\Helpers\obj\Debug\Helpers.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\Helpers\obj\Debug\Helpers.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\Helpers\bin\Debug\Contracts.dll.config
+D:\Work\InteropServicesSolutions\AKNCorrected\Helpers\obj\Debug\Helpers.csproj.CoreCompileInputs.cache

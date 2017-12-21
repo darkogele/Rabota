@@ -1,0 +1,16 @@
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesTest.Host\bin\AKNServicesTest.Host.dll.config
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesTest.Host\bin\AKNServicesTest.Host.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesTest.Host\bin\AKNServicesTest.Host.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesTest.Host\bin\Contracts.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesTest.Host\bin\Implementations.Test.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesTest.Host\bin\Renci.SshNet.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesTest.Host\bin\Helpers.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesTest.Host\bin\Contracts.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesTest.Host\bin\Contracts.dll.config
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesTest.Host\bin\Implementations.Test.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesTest.Host\bin\Renci.SshNet.xml
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesTest.Host\bin\Helpers.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesTest.Host\obj\Debug\AKNServicesTest.Host.csprojResolveAssemblyReference.cache
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesTest.Host\obj\Debug\AKNServicesTest.Host.csproj.CoreCompileInputs.cache
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesTest.Host\obj\Debug\AKNServicesTest.Host.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\AKNServicesTest.Host\obj\Debug\AKNServicesTest.Host.pdb

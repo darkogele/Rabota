@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="17357db6-7e16-4f88-af59-9fb8ce2f3080" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/MockService/MockServiceTest.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MockServiceTest.disco" MetadataType="Disco" ID="6239e370-7ad3-4815-ba76-9567ea11a056" SourceId="1" SourceUrl="http://localhost/MockService/MockServiceTest.svc?disco" />
+    <MetadataFile FileName="MockServiceTest.wsdl" MetadataType="Wsdl" ID="281ffcfe-cf2e-44e5-9278-915778599de5" SourceId="1" SourceUrl="http://localhost/MockService/MockServiceTest.svc?wsdl" />
+    <MetadataFile FileName="MockServiceTest.xsd" MetadataType="Schema" ID="c1782cb4-dcb9-4465-a897-d4b837e5fc9c" SourceId="1" SourceUrl="http://localhost/MockService/MockServiceTest.svc?xsd=xsd1" />
+    <MetadataFile FileName="MockServiceTest1.xsd" MetadataType="Schema" ID="008608f4-d2ea-4a56-948a-5fffe2860749" SourceId="1" SourceUrl="http://localhost/MockService/MockServiceTest.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

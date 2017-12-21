@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ad4f2fc1-dc92-4185-b818-a27a6c61041a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AKNServicesProd.Host/PropertyList.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PropertyList.wsdl" MetadataType="Wsdl" ID="6af1bad8-3752-4b8f-9e4c-a8e3dbe10c26" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/PropertyList.svc?wsdl" />
+    <MetadataFile FileName="PropertyList.xsd" MetadataType="Schema" ID="44870dfe-4273-4b8e-9705-7c1ad5591137" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/PropertyList.svc?xsd=xsd1" />
+    <MetadataFile FileName="PropertyList1.wsdl" MetadataType="Wsdl" ID="9cfec3a9-df4e-48dd-99df-2d37efb91e6a" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/PropertyList.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="PropertyList1.xsd" MetadataType="Schema" ID="d651cf03-bc08-4590-a2d2-fbc4255a2237" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/PropertyList.svc?xsd=xsd0" />
+    <MetadataFile FileName="PropertyList.disco" MetadataType="Disco" ID="93482bf4-6c4b-4bf6-b56e-0af2f7648c1d" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/PropertyList.svc?disco" />
+    <MetadataFile FileName="PropertyList2.xsd" MetadataType="Schema" ID="49221b04-ec77-4d1d-873e-89dafb736123" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/PropertyList.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

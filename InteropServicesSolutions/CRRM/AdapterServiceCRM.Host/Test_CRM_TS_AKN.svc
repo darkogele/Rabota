@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="AdapterServiceCRM.Test_TS_AKN"  %>

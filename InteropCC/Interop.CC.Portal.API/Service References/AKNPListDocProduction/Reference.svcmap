@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a8cea989-dcd3-47a8-a29c-4ba340bf371b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AdapterServiceAKN.Host/AKNPListDocProduction.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AKNPListDocProduction.xsd" MetadataType="Schema" ID="9ac9f594-0a65-4ba5-8a49-1bd982157064" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNPListDocProduction.svc?xsd=xsd0" />
+    <MetadataFile FileName="AKNPListDocProduction1.xsd" MetadataType="Schema" ID="bce6d01a-1870-49f5-9f82-581105bd2097" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNPListDocProduction.svc?xsd=xsd1" />
+    <MetadataFile FileName="AKNPListDocProduction2.xsd" MetadataType="Schema" ID="d467f491-4863-457b-81ed-dd2b3795489c" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNPListDocProduction.svc?xsd=xsd2" />
+    <MetadataFile FileName="AKNPListDocProduction.wsdl" MetadataType="Wsdl" ID="9a30105c-b425-4854-a85b-de57daa0ca1a" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNPListDocProduction.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="AKNPListDocProduction.disco" MetadataType="Disco" ID="0ce83eb6-b242-47c7-a4a3-25013af686f1" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNPListDocProduction.svc?disco" />
+    <MetadataFile FileName="AKNPListDocProduction1.wsdl" MetadataType="Wsdl" ID="338f6a10-f3e0-472d-8575-7b83a12065d5" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNPListDocProduction.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

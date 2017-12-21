@@ -1,0 +1,28 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<div>
+    <h2>Users</h2>
+</div>
+
+<div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div ui-view="leftContentRow1"></div>
+            <p ng-model="testApi"></p>
+        </div>
+
+        <div class="col-sm-6">
+            <div ui-view="rightContentRow1"></div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div ui-view="leftContentRow2">
+
+            </div>
+        </div>
+    </div>
+
+</div>

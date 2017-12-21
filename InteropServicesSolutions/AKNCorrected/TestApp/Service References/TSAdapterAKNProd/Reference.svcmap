@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="58ca4387-b507-42b5-a534-c6630acd2a28" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/TSAdapterAKN.Host/TSAKNProd.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TSAKNProd.wsdl" MetadataType="Wsdl" ID="30f2afaf-d6b1-4ea8-ad3c-b44125151824" SourceId="1" SourceUrl="http://localhost/TSAdapterAKN.Host/TSAKNProd.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="TSAKNProd1.wsdl" MetadataType="Wsdl" ID="8f2d30f1-20cc-4f10-9c07-5a2ccfe216b2" SourceId="1" SourceUrl="http://localhost/TSAdapterAKN.Host/TSAKNProd.svc?wsdl" />
+    <MetadataFile FileName="TSAKNProd.xsd" MetadataType="Schema" ID="3241bed4-5b7f-4850-b540-dd5bf1d1d1ac" SourceId="1" SourceUrl="http://localhost/TSAdapterAKN.Host/TSAKNProd.svc?xsd=xsd1" />
+    <MetadataFile FileName="TSAKNProd1.xsd" MetadataType="Schema" ID="405134f9-2bdf-40d3-a131-9a19876f637f" SourceId="1" SourceUrl="http://localhost/TSAdapterAKN.Host/TSAKNProd.svc?xsd=xsd0" />
+    <MetadataFile FileName="TSAKNProd.disco" MetadataType="Disco" ID="7490ae34-e2a6-41d4-9561-caad0338943d" SourceId="1" SourceUrl="http://localhost/TSAdapterAKN.Host/TSAKNProd.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

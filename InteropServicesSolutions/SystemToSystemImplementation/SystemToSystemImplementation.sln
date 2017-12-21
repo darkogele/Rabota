@@ -1,0 +1,112 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TekovnaSostojbaSitePodatociNotCorrected", "SystemToSystemImplementation\TekovnaSostojbaSitePodatociNotCorrected.csproj", "{68E0D1BA-FA90-4C44-BB34-853E08E34B27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImotenListTestCorrected", "ImotenListCorrected\ImotenListTestCorrected.csproj", "{3DC2EE06-AFF8-40D7-B770-34EA4131618B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParcelaTestCorrected", "ParcelaCorrected\ParcelaTestCorrected.csproj", "{9C50DF4E-0BF0-487F-875E-D7B7B6085EFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImotenListDocumentTestCorrected", "ImotenListDocumentTest\ImotenListDocumentTestCorrected.csproj", "{70DDDCF6-16D6-43F5-BD06-8006B1FEE40E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KopijaParcelaDocumentTestCorrected", "KopijaParcelaDocumentTest\KopijaParcelaDocumentTestCorrected.csproj", "{54544212-C716-4954-B5ED-68B9C179613D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PodatociInfraDocumentTestCorrected", "PodatociInfraDocumentTestCorrected\PodatociInfraDocumentTestCorrected.csproj", "{2D0AEECF-7294-443F-832F-806794DE9465}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TekovnaSostojbaSitePodatociTestCorrected", "TekovnaSostojbaSitePodatociTestCorrected\TekovnaSostojbaSitePodatociTestCorrected.csproj", "{044503F0-F968-4437-9EEA-292002E565A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TekovnaSostojbaCURMTestCorrected", "TekovnaSostojbaCURMTestCorrected\TekovnaSostojbaCURMTestCorrected.csproj", "{EAA4B5B2-0341-4563-8C10-57D68564CAA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TekovnaSostojbaUJPTestCorrected", "TekovnaSostojbaUJPTestCorrected\TekovnaSostojbaUJPTestCorrected.csproj", "{3428945D-3AA4-49EE-A7BB-D2D5D0D811EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TekovnaSostojbaAKNTestCorrected", "TekovnaSostojbaAKNTestCorrected\TekovnaSostojbaAKNTestCorrected.csproj", "{5E5C542D-C399-4154-B737-3798D8075B0A}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 11
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.11.21.108:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ImotenListCorrected\\ImotenListTestCorrected.csproj
+		SccProjectName1 = ImotenListCorrected
+		SccLocalPath1 = ImotenListCorrected
+		SccProjectUniqueName2 = ImotenListDocumentTest\\ImotenListDocumentTestCorrected.csproj
+		SccProjectName2 = ImotenListDocumentTest
+		SccLocalPath2 = ImotenListDocumentTest
+		SccProjectUniqueName3 = KopijaParcelaDocumentTest\\KopijaParcelaDocumentTestCorrected.csproj
+		SccProjectName3 = KopijaParcelaDocumentTest
+		SccLocalPath3 = KopijaParcelaDocumentTest
+		SccProjectUniqueName4 = ParcelaCorrected\\ParcelaTestCorrected.csproj
+		SccProjectName4 = ParcelaCorrected
+		SccLocalPath4 = ParcelaCorrected
+		SccProjectUniqueName5 = PodatociInfraDocumentTestCorrected\\PodatociInfraDocumentTestCorrected.csproj
+		SccProjectName5 = PodatociInfraDocumentTestCorrected
+		SccLocalPath5 = PodatociInfraDocumentTestCorrected
+		SccProjectUniqueName6 = SystemToSystemImplementation\\TekovnaSostojbaSitePodatociNotCorrected.csproj
+		SccProjectName6 = SystemToSystemImplementation
+		SccLocalPath6 = SystemToSystemImplementation
+		SccProjectUniqueName7 = TekovnaSostojbaAKNTestCorrected\\TekovnaSostojbaAKNTestCorrected.csproj
+		SccProjectName7 = TekovnaSostojbaAKNTestCorrected
+		SccLocalPath7 = TekovnaSostojbaAKNTestCorrected
+		SccProjectUniqueName8 = TekovnaSostojbaCURMTestCorrected\\TekovnaSostojbaCURMTestCorrected.csproj
+		SccProjectName8 = TekovnaSostojbaCURMTestCorrected
+		SccLocalPath8 = TekovnaSostojbaCURMTestCorrected
+		SccProjectUniqueName9 = TekovnaSostojbaSitePodatociTestCorrected\\TekovnaSostojbaSitePodatociTestCorrected.csproj
+		SccProjectName9 = TekovnaSostojbaSitePodatociTestCorrected
+		SccLocalPath9 = TekovnaSostojbaSitePodatociTestCorrected
+		SccProjectUniqueName10 = TekovnaSostojbaUJPTestCorrected\\TekovnaSostojbaUJPTestCorrected.csproj
+		SccProjectName10 = TekovnaSostojbaUJPTestCorrected
+		SccLocalPath10 = TekovnaSostojbaUJPTestCorrected
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68E0D1BA-FA90-4C44-BB34-853E08E34B27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68E0D1BA-FA90-4C44-BB34-853E08E34B27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68E0D1BA-FA90-4C44-BB34-853E08E34B27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68E0D1BA-FA90-4C44-BB34-853E08E34B27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DC2EE06-AFF8-40D7-B770-34EA4131618B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DC2EE06-AFF8-40D7-B770-34EA4131618B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DC2EE06-AFF8-40D7-B770-34EA4131618B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DC2EE06-AFF8-40D7-B770-34EA4131618B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C50DF4E-0BF0-487F-875E-D7B7B6085EFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C50DF4E-0BF0-487F-875E-D7B7B6085EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C50DF4E-0BF0-487F-875E-D7B7B6085EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C50DF4E-0BF0-487F-875E-D7B7B6085EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70DDDCF6-16D6-43F5-BD06-8006B1FEE40E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70DDDCF6-16D6-43F5-BD06-8006B1FEE40E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70DDDCF6-16D6-43F5-BD06-8006B1FEE40E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70DDDCF6-16D6-43F5-BD06-8006B1FEE40E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54544212-C716-4954-B5ED-68B9C179613D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54544212-C716-4954-B5ED-68B9C179613D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54544212-C716-4954-B5ED-68B9C179613D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54544212-C716-4954-B5ED-68B9C179613D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D0AEECF-7294-443F-832F-806794DE9465}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D0AEECF-7294-443F-832F-806794DE9465}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D0AEECF-7294-443F-832F-806794DE9465}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D0AEECF-7294-443F-832F-806794DE9465}.Release|Any CPU.Build.0 = Release|Any CPU
+		{044503F0-F968-4437-9EEA-292002E565A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{044503F0-F968-4437-9EEA-292002E565A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{044503F0-F968-4437-9EEA-292002E565A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{044503F0-F968-4437-9EEA-292002E565A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAA4B5B2-0341-4563-8C10-57D68564CAA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAA4B5B2-0341-4563-8C10-57D68564CAA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAA4B5B2-0341-4563-8C10-57D68564CAA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAA4B5B2-0341-4563-8C10-57D68564CAA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3428945D-3AA4-49EE-A7BB-D2D5D0D811EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3428945D-3AA4-49EE-A7BB-D2D5D0D811EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3428945D-3AA4-49EE-A7BB-D2D5D0D811EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3428945D-3AA4-49EE-A7BB-D2D5D0D811EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E5C542D-C399-4154-B737-3798D8075B0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E5C542D-C399-4154-B737-3798D8075B0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E5C542D-C399-4154-B737-3798D8075B0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E5C542D-C399-4154-B737-3798D8075B0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

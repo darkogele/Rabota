@@ -1,0 +1,32 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>Листа на сервиси за провајдер '{{providerCode}}'</h2>
+
+<form name="ProvidersListForm">
+    <div class="table">
+        <hr>
+        <div class="text-danger" ng-if="service.length == 0">Во моментов нема активни сервиси.</div>
+        <div class="col-sm-12" ng-if="service.length > 0">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            @*<th>Провајдер</th>*@
+                            <th class="col-lg-10">Име на сервис</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="ser in service">
+                            @*<td>{{providerCode}}</td>*@
+                            <td>{{ser.text}}</td>
+                            <td class="text-center"><a ng-click="showWsdl(ser.value, providerCode)" button class="btn btn-info btn-xs"><i class="fa fa-info"></i> Детали за WSDL </a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a class="btn btn-warning" ng-click="showProviders()">Назад</a>
+        </div>
+    </div>
+</form>

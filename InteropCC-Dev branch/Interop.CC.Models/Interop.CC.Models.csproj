@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5808CF1-8263-4F3B-84BA-BAB317628CFE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Interop.CC.Models</RootNamespace>
+    <AssemblyName>Interop.CC.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'AKN|AnyCPU'">
+    <OutputPath>bin\AKN\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PIOM|AnyCPU'">
+    <OutputPath>bin\PIOM\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac.Integration.WebApi, Version=3.4.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.WebApi2.3.4.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.5840.25917, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.6\lib\net40\System.Linq.Dynamic.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTO\AccessMappingModelDTO.cs" />
+    <Compile Include="DTO\ApplicationUser.cs" />
+    <Compile Include="DTO\ChangePasswordModelDTO.cs" />
+    <Compile Include="DTO\Institutions\AnnualRevenuesFZOOutputDTO.cs" />
+    <Compile Include="DTO\Institutions\AnnualRevenuesKKKSOutputDTO.cs" />
+    <Compile Include="DTO\Institutions\AnnualRevenuesMONOutputDTO.cs" />
+    <Compile Include="DTO\Institutions\AnnualRevenuesMTSPOutputDTO.cs" />
+    <Compile Include="DTO\Institutions\BasicPrintInfoDTO.cs" />
+    <Compile Include="DTO\Institutions\CadastralParcelDTO.cs" />
+    <Compile Include="DTO\Institutions\DataForConstructionPermitDTO.cs" />
+    <Compile Include="DTO\Institutions\DataForEmployeeDTO.cs" />
+    <Compile Include="DTO\Institutions\DataForExecutedExportDTO.cs" />
+    <Compile Include="DTO\Institutions\DataForExecutedImportDTO.cs" />
+    <Compile Include="DTO\Institutions\DataForPropertyListDTO.cs" />
+    <Compile Include="DTO\Institutions\DataForRegularStudentDTO.cs" />
+    <Compile Include="DTO\Institutions\EDB_EMB_OutputDTO.cs" />
+    <Compile Include="DTO\Institutions\ExciseBondsOutputDTO.cs" />
+    <Compile Include="DTO\Institutions\InstitutionBPersonDataDTO.cs" />
+    <Compile Include="DTO\Institutions\ListaNaPromeniDTO.cs" />
+    <Compile Include="DTO\Institutions\MunicipalityDTO.cs" />
+    <Compile Include="DTO\Institutions\SingleCustomsDocumentDTO.cs" />
+    <Compile Include="DTO\Institutions\TekovnaSostojbaAKNDTO.cs" />
+    <Compile Include="DTO\Institutions\TekovnaSostojbaCURMDTO.cs" />
+    <Compile Include="DTO\Institutions\TekovnaSostojbaCURMProducDTO.cs" />
+    <Compile Include="DTO\Institutions\TekovnaSostojbaDTO.cs" />
+    <Compile Include="DTO\Institutions\TekovnaSostojbaUJPDTO.cs" />
+    <Compile Include="DTO\Institutions\YearsOfWorkExperienceDTO.cs" />
+    <Compile Include="DTO\ManagerUserViewModel.cs" />
+    <Compile Include="DTO\MessageLogDetails.cs" />
+    <Compile Include="DTO\MessageLogExcelDTO.cs" />
+    <Compile Include="DTO\MessageLogDTO.cs" />
+    <Compile Include="DTO\MessageLogPairsViewModel.cs" />
+    <Compile Include="DTO\MessageLogPairsViewModelDetails.cs" />
+    <Compile Include="DTO\ServiceDTO.cs" />
+    <Compile Include="DTO\SoapFaultExcelDTO.cs" />
+    <Compile Include="DTO\UpdateUserViewModel.cs" />
+    <Compile Include="Exceptions\DuplicateMessageLogException.cs" />
+    <Compile Include="Exceptions\DuplicateServiceException.cs" />
+    <Compile Include="Exceptions\DuplicateUserException.cs" />
+    <Compile Include="Exceptions\InvalidCertException.cs" />
+    <Compile Include="Exceptions\InvalidCertificate.cs" />
+    <Compile Include="Exceptions\NotFoundMessageLogTransactionIdException.cs" />
+    <Compile Include="Exceptions\NotFoundPublicKeyException.cs" />
+    <Compile Include="Exceptions\NotFoundServiceException.cs" />
+    <Compile Include="Exceptions\NotFoundMessageLogException.cs" />
+    <Compile Include="Helper\Helper.cs" />
+    <Compile Include="Helper\LinqExtensions.cs" />
+    <Compile Include="Helper\PhotoMultipartFormDataStreamProvider.cs" />
+    <Compile Include="Helper\CustomUserValidator.cs" />
+    <Compile Include="IInteropContext.cs" />
+    <Compile Include="InteropContext.cs" />
+    <Compile Include="Mappers\RefreshTokenMapper.cs" />
+    <Compile Include="Mappers\ClientMapper.cs" />
+    <Compile Include="Mappers\MessageLogMapper.cs" />
+    <Compile Include="Mappers\ProvidersMapper.cs" />
+    <Compile Include="Mappers\ServiceMapper.cs" />
+    <Compile Include="Mappers\SoapFaultMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Migrations\201507030653497_InitialNewNameDb.cs" />
+    <Compile Include="Migrations\201507030653497_InitialNewNameDb.Designer.cs">
+      <DependentUpon>201507030653497_InitialNewNameDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508181251257_AddedProvidersTable.cs" />
+    <Compile Include="Migrations\201508181251257_AddedProvidersTable.designer.cs">
+      <DependentUpon>201508181251257_AddedProvidersTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508201106321_CodeRenamed.cs" />
+    <Compile Include="Migrations\201508201106321_CodeRenamed.Designer.cs">
+      <DependentUpon>201508201106321_CodeRenamed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508271144120_SoapFaultAdded.cs" />
+    <Compile Include="Migrations\201508271144120_SoapFaultAdded.Designer.cs">
+      <DependentUpon>201508271144120_SoapFaultAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509150831291_RemoveIdentityFromRefreshTokenId.cs" />
+    <Compile Include="Migrations\201509150831291_RemoveIdentityFromRefreshTokenId.Designer.cs">
+      <DependentUpon>201509150831291_RemoveIdentityFromRefreshTokenId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510291046029_AddServiceMethodColumnInMessageLogs.cs" />
+    <Compile Include="Migrations\201510291046029_AddServiceMethodColumnInMessageLogs.Designer.cs">
+      <DependentUpon>201510291046029_AddServiceMethodColumnInMessageLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511091446518_Identity-Users.cs" />
+    <Compile Include="Migrations\201511091446518_Identity-Users.Designer.cs">
+      <DependentUpon>201511091446518_Identity-Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511101448045_AddPublicKeyToIdentityUsers.cs" />
+    <Compile Include="Migrations\201511101448045_AddPublicKeyToIdentityUsers.Designer.cs">
+      <DependentUpon>201511101448045_AddPublicKeyToIdentityUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511201144345_AddedTokenTimestamp.cs" />
+    <Compile Include="Migrations\201511201144345_AddedTokenTimestamp.Designer.cs">
+      <DependentUpon>201511201144345_AddedTokenTimestamp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="DTO\UserModelDTO.cs" />
+    <Compile Include="Models\AccessMapping.cs" />
+    <Compile Include="FaultModels\AccessMappingFaultModel.cs" />
+    <Compile Include="Models\Client.cs" />
+    <Compile Include="DTO\Institutions\DataForRetiredDTO.cs" />
+    <Compile Include="Models\CreateAccessMappingResult.cs" />
+    <Compile Include="Models\IdentityRoleModel.cs" />
+    <Compile Include="Models\MessageLog.cs" />
+    <Compile Include="Helper\PagedCollection.cs" />
+    <Compile Include="Models\Provider.cs" />
+    <Compile Include="Models\RefreshToken.cs" />
+    <Compile Include="Models\RoleViewModel.cs" />
+    <Compile Include="Models\Service.cs" />
+    <Compile Include="Models\RegisterBindingModel.cs" />
+    <Compile Include="Models\SoapFault.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\StatisticLogsFaults.cs" />
+    <Compile Include="Models\UserViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryContracts\IAuthRepository.cs" />
+    <Compile Include="RepositoryContracts\IProvidersRepository.cs" />
+    <Compile Include="RepositoryContracts\ISoapFaultRepository.cs" />
+    <Compile Include="Repository\AuthRepository.cs" />
+    <Compile Include="RepositoryContracts\IServiceRepository.cs" />
+    <Compile Include="RepositoryContracts\IMessageLogsRepository.cs" />
+    <Compile Include="Repository\ProvidersRepository.cs" />
+    <Compile Include="Repository\ServiceRepository.cs" />
+    <Compile Include="Repository\MessageLogsRepository.cs" />
+    <Compile Include="Repository\SoapFaultRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UoW\IUnitOfWork.cs" />
+    <Compile Include="UoW\UnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InteropCC.Resources\InteropCC.Resources.csproj">
+      <Project>{35b8dea9-4214-4675-a533-203fd7b1dd9c}</Project>
+      <Name>InteropCC.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201507030653497_InitialNewNameDb.resx">
+      <DependentUpon>201507030653497_InitialNewNameDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508181251257_AddedProvidersTable.resx">
+      <DependentUpon>201508181251257_AddedProvidersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508201106321_CodeRenamed.resx">
+      <DependentUpon>201508201106321_CodeRenamed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508271144120_SoapFaultAdded.resx">
+      <DependentUpon>201508271144120_SoapFaultAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509150831291_RemoveIdentityFromRefreshTokenId.resx">
+      <DependentUpon>201509150831291_RemoveIdentityFromRefreshTokenId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510291046029_AddServiceMethodColumnInMessageLogs.resx">
+      <DependentUpon>201510291046029_AddServiceMethodColumnInMessageLogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511091446518_Identity-Users.resx">
+      <DependentUpon>201511091446518_Identity-Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511101448045_AddPublicKeyToIdentityUsers.resx">
+      <DependentUpon>201511101448045_AddPublicKeyToIdentityUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511201144345_AddedTokenTimestamp.resx">
+      <DependentUpon>201511201144345_AddedTokenTimestamp.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Browsers\" />
+    <Folder Include="Rotativa\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

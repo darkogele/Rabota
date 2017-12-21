@@ -1,0 +1,8 @@
+D:\Work\RefatoredInteropHandlers\HttpHandler\CrossCutting\bin\Debug\NLog.config
+D:\Work\RefatoredInteropHandlers\HttpHandler\CrossCutting\bin\Debug\CrossCutting.dll
+D:\Work\RefatoredInteropHandlers\HttpHandler\CrossCutting\bin\Debug\CrossCutting.pdb
+D:\Work\RefatoredInteropHandlers\HttpHandler\CrossCutting\bin\Debug\NLog.dll
+D:\Work\RefatoredInteropHandlers\HttpHandler\CrossCutting\bin\Debug\NLog.xml
+D:\Work\RefatoredInteropHandlers\HttpHandler\CrossCutting\obj\Debug\CrossCutting.csproj.CoreCompileInputs.cache
+D:\Work\RefatoredInteropHandlers\HttpHandler\CrossCutting\obj\Debug\CrossCutting.dll
+D:\Work\RefatoredInteropHandlers\HttpHandler\CrossCutting\obj\Debug\CrossCutting.pdb

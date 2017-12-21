@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{81B43EA7-938A-4AEC-99AA-708F291E9DC9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestApp</RootNamespace>
+    <AssemblyName>TestApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasicPrintInfoDTO.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\DataForEnsurersTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DataForEnsurers\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DataForRetiredTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DataForRetired\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\InsuredStatusTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\InsuredStatus\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RetiredStatusTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RetiredStatus\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\YearsOfWorkExperienceTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\YearsOfWorkExperience\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="YearsOfWorkExperienceDTO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Service References\DataForEnsurersTest\DataForEnsurersTest.wsdl" />
+    <None Include="Service References\DataForEnsurersTest\DataForEnsurersTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataForEnsurersTest\DataForEnsurersTest1.wsdl" />
+    <None Include="Service References\DataForEnsurersTest\DataForEnsurersTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataForEnsurersTest\DataForEnsurersTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataForEnsurers\DataForEnsurers.wsdl" />
+    <None Include="Service References\DataForEnsurers\DataForEnsurers.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataForEnsurers\DataForEnsurers1.wsdl" />
+    <None Include="Service References\DataForEnsurers\DataForEnsurers1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataForEnsurers\DataForEnsurers2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataForRetiredTest\DataForRetiredTest.wsdl" />
+    <None Include="Service References\DataForRetiredTest\DataForRetiredTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataForRetiredTest\DataForRetiredTest1.wsdl" />
+    <None Include="Service References\DataForRetiredTest\DataForRetiredTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataForRetiredTest\DataForRetiredTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataForRetired\DataForRetired.wsdl" />
+    <None Include="Service References\DataForRetired\DataForRetired.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataForRetired\DataForRetired1.wsdl" />
+    <None Include="Service References\DataForRetired\DataForRetired1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataForRetired\DataForRetired2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InsuredStatusTest\InsuredStatusTest.wsdl" />
+    <None Include="Service References\InsuredStatusTest\InsuredStatusTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InsuredStatusTest\InsuredStatusTest1.wsdl" />
+    <None Include="Service References\InsuredStatusTest\InsuredStatusTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InsuredStatusTest\InsuredStatusTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InsuredStatus\InsuredStatus.wsdl" />
+    <None Include="Service References\InsuredStatus\InsuredStatus.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InsuredStatus\InsuredStatus1.wsdl" />
+    <None Include="Service References\InsuredStatus\InsuredStatus1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RetiredStatusTest\RetiredStatusTest.wsdl" />
+    <None Include="Service References\RetiredStatusTest\RetiredStatusTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RetiredStatusTest\RetiredStatusTest1.wsdl" />
+    <None Include="Service References\RetiredStatusTest\RetiredStatusTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RetiredStatusTest\RetiredStatusTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RetiredStatus\RetiredStatus.wsdl" />
+    <None Include="Service References\RetiredStatus\RetiredStatus.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RetiredStatus\RetiredStatus1.wsdl" />
+    <None Include="Service References\RetiredStatus\RetiredStatus1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\YearsOfWorkExperienceTest\TestApp.YearsOfWorkExperienceTest.YearsOfWorkExperienceOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\YearsOfWorkExperienceTest\YearsOfWorkExperienceTest.wsdl" />
+    <None Include="Service References\YearsOfWorkExperienceTest\YearsOfWorkExperienceTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\YearsOfWorkExperienceTest\YearsOfWorkExperienceTest1.wsdl" />
+    <None Include="Service References\YearsOfWorkExperienceTest\YearsOfWorkExperienceTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\YearsOfWorkExperienceTest\YearsOfWorkExperienceTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\YearsOfWorkExperienceTest\YearsOfWorkExperienceTest3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\YearsOfWorkExperience\TestApp.YearsOfWorkExperience.YearsOfWorkExperienceOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\YearsOfWorkExperience\YearsOfWorkExperience.wsdl" />
+    <None Include="Service References\YearsOfWorkExperience\YearsOfWorkExperience.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\YearsOfWorkExperience\YearsOfWorkExperience1.wsdl" />
+    <None Include="Service References\YearsOfWorkExperience\YearsOfWorkExperience1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\YearsOfWorkExperience\YearsOfWorkExperience2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DataForEnsurersTest\" />
+    <WCFMetadataStorage Include="Service References\DataForEnsurers\" />
+    <WCFMetadataStorage Include="Service References\DataForRetiredTest\" />
+    <WCFMetadataStorage Include="Service References\DataForRetired\" />
+    <WCFMetadataStorage Include="Service References\InsuredStatusTest\" />
+    <WCFMetadataStorage Include="Service References\InsuredStatus\" />
+    <WCFMetadataStorage Include="Service References\RetiredStatusTest\" />
+    <WCFMetadataStorage Include="Service References\RetiredStatus\" />
+    <WCFMetadataStorage Include="Service References\YearsOfWorkExperienceTest\" />
+    <WCFMetadataStorage Include="Service References\YearsOfWorkExperience\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataForEnsurers\DataForEnsurers.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataForEnsurers\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataForEnsurers\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataForEnsurers\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataForRetired\DataForRetired.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataForRetired\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataForRetired\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataForRetired\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InsuredStatus\InsuredStatus.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InsuredStatus\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InsuredStatus\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InsuredStatus\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RetiredStatus\RetiredStatus.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RetiredStatus\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RetiredStatus\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RetiredStatus\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\YearsOfWorkExperience\YearsOfWorkExperience.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\YearsOfWorkExperience\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\YearsOfWorkExperience\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\YearsOfWorkExperience\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataForEnsurersTest\DataForEnsurersTest.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataForEnsurersTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataForEnsurersTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataForEnsurersTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataForRetiredTest\DataForRetiredTest.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataForRetiredTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataForRetiredTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataForRetiredTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InsuredStatusTest\InsuredStatusTest.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InsuredStatusTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InsuredStatusTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InsuredStatusTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RetiredStatusTest\RetiredStatusTest.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RetiredStatusTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RetiredStatusTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RetiredStatusTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\YearsOfWorkExperienceTest\YearsOfWorkExperienceTest.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\YearsOfWorkExperienceTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\YearsOfWorkExperienceTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\YearsOfWorkExperienceTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

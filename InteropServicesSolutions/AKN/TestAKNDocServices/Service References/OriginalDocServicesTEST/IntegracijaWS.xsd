@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://integracija.ekat.igea.si/" targetNamespace="http://integracija.ekat.igea.si/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="generateDocument" type="tns:generateDocument" />
+  <xs:element name="generateDocumentResponse" type="tns:generateDocumentResponse" />
+  <xs:element name="getPayedReq" type="tns:getPayedReq" />
+  <xs:element name="getPayedReqResponse" type="tns:getPayedReqResponse" />
+  <xs:element name="getPlistInfo" type="tns:getPlistInfo" />
+  <xs:element name="getPlistInfoResponse" type="tns:getPlistInfoResponse" />
+  <xs:element name="getTestResult" type="tns:getTestResult" />
+  <xs:element name="getTestResultResponse" type="tns:getTestResultResponse" />
+  <xs:element name="insLiteUser" type="tns:insLiteUser" />
+  <xs:element name="insLiteUserResponse" type="tns:insLiteUserResponse" />
+  <xs:element name="insNewProcedure" type="tns:insNewProcedure" />
+  <xs:element name="insNewProcedureResponse" type="tns:insNewProcedureResponse" />
+  <xs:element name="insOISDUser" type="tns:insOISDUser" />
+  <xs:element name="insOISDUserResponse" type="tns:insOISDUserResponse" />
+  <xs:element name="printMessage" type="tns:printMessage" />
+  <xs:element name="printMessageResponse" type="tns:printMessageResponse" />
+  <xs:complexType name="printMessage">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="printMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insLiteUser">
+    <xs:sequence>
+      <xs:element name="IdErp" type="xs:int" />
+      <xs:element minOccurs="0" name="FirstName" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" type="xs:string" />
+      <xs:element name="TaxNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="Address" type="xs:string" />
+      <xs:element minOccurs="0" name="City" type="xs:string" />
+      <xs:element name="ZIP" type="xs:int" />
+      <xs:element minOccurs="0" name="Telephone" type="xs:string" />
+      <xs:element minOccurs="0" name="eMail" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insLiteUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SifUpo" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPlistInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodDP" type="xs:string" />
+      <xs:element minOccurs="0" name="CodCC" type="xs:string" />
+      <xs:element minOccurs="0" name="IdPlist" type="xs:string" />
+      <xs:element minOccurs="0" name="Parcel" type="xs:string" />
+      <xs:element minOccurs="0" name="UcadStatus" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPlistInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PlistInfo" type="tns:plistInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="plistInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="errid" type="xs:string" />
+      <xs:element minOccurs="0" name="errmsg" type="xs:string" />
+      <xs:element minOccurs="0" name="idPtype" type="xs:string" />
+      <xs:element minOccurs="0" name="info" type="xs:string" />
+      <xs:element minOccurs="0" name="price" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insNewProcedure">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insNewProcedureResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdPtype" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPayedReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateFrom" type="xs:string" />
+      <xs:element minOccurs="0" name="DateTo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPayedReqResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PayedReqs" type="tns:payedReqs" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="payedReqs">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="payedReqs" nillable="true" type="tns:payedReq" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="payedReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="amountSum" type="xs:string" />
+      <xs:element minOccurs="0" name="arhSign" type="xs:string" />
+      <xs:element minOccurs="0" name="codDp" type="xs:int" />
+      <xs:element minOccurs="0" name="endedDate" type="xs:string" />
+      <xs:element minOccurs="0" name="reqArhnumber" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getTestResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getTestResultResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generateDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodDP" type="xs:string" />
+      <xs:element minOccurs="0" name="CodCC" type="xs:string" />
+      <xs:element minOccurs="0" name="IdPlist" type="xs:string" />
+      <xs:element minOccurs="0" name="Parcel" type="xs:string" />
+      <xs:element minOccurs="0" name="EMBGStatus" type="xs:string" />
+      <xs:element minOccurs="0" name="IdPtype" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generateDocumentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GenerateDocument" type="tns:documentInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="documentInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="baseURL" type="xs:string" />
+      <xs:element minOccurs="0" name="errid" type="xs:string" />
+      <xs:element minOccurs="0" name="errmsg" type="xs:string" />
+      <xs:element minOccurs="0" name="fileName" type="xs:string" />
+      <xs:element minOccurs="0" name="filePath" type="xs:string" />
+      <xs:element minOccurs="0" name="fileURL" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insOISDUser">
+    <xs:sequence>
+      <xs:element name="IdErp" type="xs:int" />
+      <xs:element minOccurs="0" name="FirstName" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insOISDUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SifUpo" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

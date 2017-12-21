@@ -1,0 +1,192 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteropServices.AKN", "InteropServices.AKN\InteropServices.AKN.csproj", "{82C6306F-1382-455C-9A70-FCC21435D9CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteropServices.AKN.Host", "InteropServices.AKN.Host\InteropServices.AKN.Host.csproj", "{655C0759-263B-4B26-BA45-713E09F64178}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AKN", "AKN", "{0276A3B4-F49E-4C24-A48B-7C07E727C900}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteropServices.UJP", "InteropServices.UJP\InteropServices.UJP.csproj", "{22FAD73E-1606-4C9F-AFB9-1B74F0505499}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteropServices.UJP.Host", "InteropServices.UJP.Host\InteropServices.UJP.Host.csproj", "{8FE834FC-6E8C-4A3F-9086-654AE1CF3D1F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UJP", "UJP", "{EF3F2461-1726-4CDD-8702-1F0D07D3BEC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteropServices.CRRM", "InteropServices.CRRM\InteropServices.CRRM.csproj", "{BD032813-1100-4C44-93F8-232E6E00C246}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteropServices.CRRM.Host", "InteropServices.CRRM.Host\InteropServices.CRRM.Host.csproj", "{40695625-3EBF-4F10-BC23-FE8BD7E60646}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CRRM", "CRRM", "{5A246EFC-D603-4CDB-98E7-833C3E35E2A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteropServices.CURM", "InteropServices.CURM\InteropServices.CURM.csproj", "{0AB246B5-708E-488D-B21A-61BC68719C49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteropServices.CURM.Host", "InteropServices.CURM.Host\InteropServices.CURM.Host.csproj", "{3E198D84-36FE-47D3-821A-F9BA99A13DCF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CURM", "CURM", "{7C57E2DF-9BC2-4045-9F57-100D839FE7ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteropServices.FPIOM", "InteropServices.FPIOM\InteropServices.FPIOM.csproj", "{84C13C97-1007-434D-A23E-1BD5B0A95FE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteropServices.FPIOM.Host", "InteropServices.FPIOM.Host\InteropServices.FPIOM.Host.csproj", "{A20906E5-82DC-4119-BA9F-65B6D55A1F40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FPIOM", "FPIOM", "{860A1A38-73A0-405F-A06C-42F2D987123B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteropServices.MzTV", "InteropServices.MzTV\InteropServices.MzTV.csproj", "{1F5E26BF-EDDD-4564-AE6F-0682D9E442C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteropServices.MzTV.Host", "InteropServices.MzTV.Host\InteropServices.MzTV.Host.csproj", "{153EDA99-2EA0-45C8-BFFB-44755C5CD9A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MzTV", "MzTV", "{F6B6F097-E419-4537-9795-496D686B87F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteropServices.MON", "InteropServices.MON\InteropServices.MON.csproj", "{EBE3C7A2-EF6C-4C98-BDF0-EABAD704257B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteropServices.MON.Host", "InteropServices.MON.Host\InteropServices.MON.Host.csproj", "{C149E502-65E4-4660-9113-E75B076FA714}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MON", "MON", "{0A07411E-B5F3-4A9A-A844-76A775863956}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 15
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.11.21.108:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = InteropServices.AKN\\InteropServices.AKN.csproj
+		SccProjectTopLevelParentUniqueName1 = InteropServices.sln
+		SccProjectName1 = InteropServices.AKN
+		SccLocalPath1 = InteropServices.AKN
+		SccProjectUniqueName2 = InteropServices.AKN.Host\\InteropServices.AKN.Host.csproj
+		SccProjectTopLevelParentUniqueName2 = InteropServices.sln
+		SccProjectName2 = InteropServices.AKN.Host
+		SccLocalPath2 = InteropServices.AKN.Host
+		SccProjectUniqueName3 = InteropServices.UJP\\InteropServices.UJP.csproj
+		SccProjectTopLevelParentUniqueName3 = InteropServices.sln
+		SccProjectName3 = InteropServices.UJP
+		SccLocalPath3 = InteropServices.UJP
+		SccProjectUniqueName4 = InteropServices.UJP.Host\\InteropServices.UJP.Host.csproj
+		SccProjectTopLevelParentUniqueName4 = InteropServices.sln
+		SccProjectName4 = InteropServices.UJP.Host
+		SccLocalPath4 = InteropServices.UJP.Host
+		SccProjectUniqueName5 = InteropServices.CRRM\\InteropServices.CRRM.csproj
+		SccProjectTopLevelParentUniqueName5 = InteropServices.sln
+		SccProjectName5 = InteropServices.CRRM
+		SccLocalPath5 = InteropServices.CRRM
+		SccProjectUniqueName6 = InteropServices.CRRM.Host\\InteropServices.CRRM.Host.csproj
+		SccProjectTopLevelParentUniqueName6 = InteropServices.sln
+		SccProjectName6 = InteropServices.CRRM.Host
+		SccLocalPath6 = InteropServices.CRRM.Host
+		SccProjectUniqueName7 = InteropServices.CURM\\InteropServices.CURM.csproj
+		SccProjectTopLevelParentUniqueName7 = InteropServices.sln
+		SccProjectName7 = InteropServices.CURM
+		SccLocalPath7 = InteropServices.CURM
+		SccProjectUniqueName8 = InteropServices.CURM.Host\\InteropServices.CURM.Host.csproj
+		SccProjectTopLevelParentUniqueName8 = InteropServices.sln
+		SccProjectName8 = InteropServices.CURM.Host
+		SccLocalPath8 = InteropServices.CURM.Host
+		SccProjectUniqueName9 = InteropServices.FPIOM\\InteropServices.FPIOM.csproj
+		SccProjectTopLevelParentUniqueName9 = InteropServices.sln
+		SccProjectName9 = InteropServices.FPIOM
+		SccLocalPath9 = InteropServices.FPIOM
+		SccProjectUniqueName10 = InteropServices.FPIOM.Host\\InteropServices.FPIOM.Host.csproj
+		SccProjectTopLevelParentUniqueName10 = InteropServices.sln
+		SccProjectName10 = InteropServices.FPIOM.Host
+		SccLocalPath10 = InteropServices.FPIOM.Host
+		SccProjectUniqueName11 = InteropServices.MzTV\\InteropServices.MzTV.csproj
+		SccProjectTopLevelParentUniqueName11 = InteropServices.sln
+		SccProjectName11 = InteropServices.MzTV
+		SccLocalPath11 = InteropServices.MzTV
+		SccProjectUniqueName12 = InteropServices.MzTV.Host\\InteropServices.MzTV.Host.csproj
+		SccProjectTopLevelParentUniqueName12 = InteropServices.sln
+		SccProjectName12 = InteropServices.MzTV.Host
+		SccLocalPath12 = InteropServices.MzTV.Host
+		SccProjectUniqueName13 = InteropServices.MON\\InteropServices.MON.csproj
+		SccProjectTopLevelParentUniqueName13 = InteropServices.sln
+		SccProjectName13 = InteropServices.MON
+		SccLocalPath13 = InteropServices.MON
+		SccProjectUniqueName14 = InteropServices.MON.Host\\InteropServices.MON.Host.csproj
+		SccProjectTopLevelParentUniqueName14 = InteropServices.sln
+		SccProjectName14 = InteropServices.MON.Host
+		SccLocalPath14 = InteropServices.MON.Host
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82C6306F-1382-455C-9A70-FCC21435D9CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82C6306F-1382-455C-9A70-FCC21435D9CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82C6306F-1382-455C-9A70-FCC21435D9CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82C6306F-1382-455C-9A70-FCC21435D9CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{655C0759-263B-4B26-BA45-713E09F64178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{655C0759-263B-4B26-BA45-713E09F64178}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{655C0759-263B-4B26-BA45-713E09F64178}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{655C0759-263B-4B26-BA45-713E09F64178}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22FAD73E-1606-4C9F-AFB9-1B74F0505499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22FAD73E-1606-4C9F-AFB9-1B74F0505499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22FAD73E-1606-4C9F-AFB9-1B74F0505499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22FAD73E-1606-4C9F-AFB9-1B74F0505499}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FE834FC-6E8C-4A3F-9086-654AE1CF3D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FE834FC-6E8C-4A3F-9086-654AE1CF3D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FE834FC-6E8C-4A3F-9086-654AE1CF3D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FE834FC-6E8C-4A3F-9086-654AE1CF3D1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD032813-1100-4C44-93F8-232E6E00C246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD032813-1100-4C44-93F8-232E6E00C246}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD032813-1100-4C44-93F8-232E6E00C246}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD032813-1100-4C44-93F8-232E6E00C246}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40695625-3EBF-4F10-BC23-FE8BD7E60646}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40695625-3EBF-4F10-BC23-FE8BD7E60646}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40695625-3EBF-4F10-BC23-FE8BD7E60646}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40695625-3EBF-4F10-BC23-FE8BD7E60646}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AB246B5-708E-488D-B21A-61BC68719C49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AB246B5-708E-488D-B21A-61BC68719C49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AB246B5-708E-488D-B21A-61BC68719C49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AB246B5-708E-488D-B21A-61BC68719C49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E198D84-36FE-47D3-821A-F9BA99A13DCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E198D84-36FE-47D3-821A-F9BA99A13DCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E198D84-36FE-47D3-821A-F9BA99A13DCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E198D84-36FE-47D3-821A-F9BA99A13DCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84C13C97-1007-434D-A23E-1BD5B0A95FE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84C13C97-1007-434D-A23E-1BD5B0A95FE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84C13C97-1007-434D-A23E-1BD5B0A95FE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84C13C97-1007-434D-A23E-1BD5B0A95FE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A20906E5-82DC-4119-BA9F-65B6D55A1F40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A20906E5-82DC-4119-BA9F-65B6D55A1F40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A20906E5-82DC-4119-BA9F-65B6D55A1F40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A20906E5-82DC-4119-BA9F-65B6D55A1F40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F5E26BF-EDDD-4564-AE6F-0682D9E442C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F5E26BF-EDDD-4564-AE6F-0682D9E442C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F5E26BF-EDDD-4564-AE6F-0682D9E442C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F5E26BF-EDDD-4564-AE6F-0682D9E442C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{153EDA99-2EA0-45C8-BFFB-44755C5CD9A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{153EDA99-2EA0-45C8-BFFB-44755C5CD9A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{153EDA99-2EA0-45C8-BFFB-44755C5CD9A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{153EDA99-2EA0-45C8-BFFB-44755C5CD9A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBE3C7A2-EF6C-4C98-BDF0-EABAD704257B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBE3C7A2-EF6C-4C98-BDF0-EABAD704257B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBE3C7A2-EF6C-4C98-BDF0-EABAD704257B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBE3C7A2-EF6C-4C98-BDF0-EABAD704257B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C149E502-65E4-4660-9113-E75B076FA714}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C149E502-65E4-4660-9113-E75B076FA714}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C149E502-65E4-4660-9113-E75B076FA714}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C149E502-65E4-4660-9113-E75B076FA714}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{82C6306F-1382-455C-9A70-FCC21435D9CF} = {0276A3B4-F49E-4C24-A48B-7C07E727C900}
+		{655C0759-263B-4B26-BA45-713E09F64178} = {0276A3B4-F49E-4C24-A48B-7C07E727C900}
+		{22FAD73E-1606-4C9F-AFB9-1B74F0505499} = {EF3F2461-1726-4CDD-8702-1F0D07D3BEC1}
+		{8FE834FC-6E8C-4A3F-9086-654AE1CF3D1F} = {EF3F2461-1726-4CDD-8702-1F0D07D3BEC1}
+		{BD032813-1100-4C44-93F8-232E6E00C246} = {5A246EFC-D603-4CDB-98E7-833C3E35E2A7}
+		{40695625-3EBF-4F10-BC23-FE8BD7E60646} = {5A246EFC-D603-4CDB-98E7-833C3E35E2A7}
+		{0AB246B5-708E-488D-B21A-61BC68719C49} = {7C57E2DF-9BC2-4045-9F57-100D839FE7ED}
+		{3E198D84-36FE-47D3-821A-F9BA99A13DCF} = {7C57E2DF-9BC2-4045-9F57-100D839FE7ED}
+		{84C13C97-1007-434D-A23E-1BD5B0A95FE0} = {860A1A38-73A0-405F-A06C-42F2D987123B}
+		{A20906E5-82DC-4119-BA9F-65B6D55A1F40} = {860A1A38-73A0-405F-A06C-42F2D987123B}
+		{1F5E26BF-EDDD-4564-AE6F-0682D9E442C4} = {F6B6F097-E419-4537-9795-496D686B87F1}
+		{153EDA99-2EA0-45C8-BFFB-44755C5CD9A4} = {F6B6F097-E419-4537-9795-496D686B87F1}
+		{EBE3C7A2-EF6C-4C98-BDF0-EABAD704257B} = {0A07411E-B5F3-4A9A-A844-76A775863956}
+		{C149E502-65E4-4660-9113-E75B076FA714} = {0A07411E-B5F3-4A9A-A844-76A775863956}
+	EndGlobalSection
+EndGlobal

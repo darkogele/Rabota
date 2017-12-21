@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.katastar.gov.mk/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.katastar.gov.mk/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Macedonian cadastre WEB SERVICE</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.katastar.gov.mk/">
+      <s:element name="ReturnOps_1">
+        <s:complexType />
+      </s:element>
+      <s:element name="ReturnOps_1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReturnOps_1Result" type="tns:opstini" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="opstini">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="nizops" type="tns:ArrayOfOpstina" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfOpstina">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="opstina" type="tns:opstina" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="opstina">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="nazivopstina" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ops" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ReturnKatOps_2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ops" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReturnKatOps_2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReturnKatOps_2Result" type="tns:katopstini" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="katopstini">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="nizkops" type="tns:ArrayOfKatopstina" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfKatopstina">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="katopstina" type="tns:katopstina" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="katopstina">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ops" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="kops" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nazivkatastarskaopstina" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ReturnImotenList_3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="us" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ps" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ops" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kops" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ilist" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReturnImotenList_3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReturnImotenList_3Result" type="tns:dzgr" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="dzgr">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ops" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="kops" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ilist" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="niztov" type="tns:ArrayOfTovari" />
+          <s:element minOccurs="0" maxOccurs="1" name="nizobj" type="tns:ArrayOfObjekti" />
+          <s:element minOccurs="0" maxOccurs="1" name="nizsop" type="tns:ArrayOfSopstvenici" />
+          <s:element minOccurs="0" maxOccurs="1" name="nizpar" type="tns:ArrayOfParceli" />
+          <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTovari">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="tovari" type="tns:tovari" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="tovari">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="text" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfObjekti">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="objekti" type="tns:objekti" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="objekti">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="broj" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="objekt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="vlez" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="kat" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="stan" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="namena" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mesto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="povrsina" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="osnov" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="godinagradba" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pravo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSopstvenici">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="sopstvenici" type="tns:sopstvenici" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="sopstvenici">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="embg" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mesto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ulica" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="broj" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="del" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfParceli">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="parceli" type="tns:parceli" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="parceli">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="broj_del" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="objekt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="mesto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="kultura" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="klasa" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="povrsina" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="pravo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ReturnParcela_7">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="us" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ps" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ops" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kops" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="broj" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReturnParcela_7Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReturnParcela_7Result" type="tns:ATRparceli" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ATRparceli">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="nizpar" type="tns:ArrayOfAtributiparcela" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAtributiparcela">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="atributiparcela" type="tns:atributiparcela" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="atributiparcela">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ops" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="kops" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ilist" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="broj_del" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="objekt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="mesto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="kultura" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="povrsina" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="pravo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ReturnOps_1SoapIn">
+    <wsdl:part name="parameters" element="tns:ReturnOps_1" />
+  </wsdl:message>
+  <wsdl:message name="ReturnOps_1SoapOut">
+    <wsdl:part name="parameters" element="tns:ReturnOps_1Response" />
+  </wsdl:message>
+  <wsdl:message name="ReturnKatOps_2SoapIn">
+    <wsdl:part name="parameters" element="tns:ReturnKatOps_2" />
+  </wsdl:message>
+  <wsdl:message name="ReturnKatOps_2SoapOut">
+    <wsdl:part name="parameters" element="tns:ReturnKatOps_2Response" />
+  </wsdl:message>
+  <wsdl:message name="ReturnImotenList_3SoapIn">
+    <wsdl:part name="parameters" element="tns:ReturnImotenList_3" />
+  </wsdl:message>
+  <wsdl:message name="ReturnImotenList_3SoapOut">
+    <wsdl:part name="parameters" element="tns:ReturnImotenList_3Response" />
+  </wsdl:message>
+  <wsdl:message name="ReturnParcela_7SoapIn">
+    <wsdl:part name="parameters" element="tns:ReturnParcela_7" />
+  </wsdl:message>
+  <wsdl:message name="ReturnParcela_7SoapOut">
+    <wsdl:part name="parameters" element="tns:ReturnParcela_7Response" />
+  </wsdl:message>
+  <wsdl:portType name="Service_MACEDONIAN_CADASTRESoap">
+    <wsdl:operation name="ReturnOps_1">
+      <wsdl:input message="tns:ReturnOps_1SoapIn" />
+      <wsdl:output message="tns:ReturnOps_1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnKatOps_2">
+      <wsdl:input message="tns:ReturnKatOps_2SoapIn" />
+      <wsdl:output message="tns:ReturnKatOps_2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnImotenList_3">
+      <wsdl:input message="tns:ReturnImotenList_3SoapIn" />
+      <wsdl:output message="tns:ReturnImotenList_3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReturnParcela_7">
+      <wsdl:input message="tns:ReturnParcela_7SoapIn" />
+      <wsdl:output message="tns:ReturnParcela_7SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service_MACEDONIAN_CADASTRESoap" type="tns:Service_MACEDONIAN_CADASTRESoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ReturnOps_1">
+      <soap:operation soapAction="http://www.katastar.gov.mk/ReturnOps_1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnKatOps_2">
+      <soap:operation soapAction="http://www.katastar.gov.mk/ReturnKatOps_2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnImotenList_3">
+      <soap:operation soapAction="http://www.katastar.gov.mk/ReturnImotenList_3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnParcela_7">
+      <soap:operation soapAction="http://www.katastar.gov.mk/ReturnParcela_7" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service_MACEDONIAN_CADASTRESoap12" type="tns:Service_MACEDONIAN_CADASTRESoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ReturnOps_1">
+      <soap12:operation soapAction="http://www.katastar.gov.mk/ReturnOps_1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnKatOps_2">
+      <soap12:operation soapAction="http://www.katastar.gov.mk/ReturnKatOps_2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnImotenList_3">
+      <soap12:operation soapAction="http://www.katastar.gov.mk/ReturnImotenList_3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnParcela_7">
+      <soap12:operation soapAction="http://www.katastar.gov.mk/ReturnParcela_7" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service_MACEDONIAN_CADASTRE">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Macedonian cadastre WEB SERVICE</wsdl:documentation>
+    <wsdl:port name="Service_MACEDONIAN_CADASTRESoap" binding="tns:Service_MACEDONIAN_CADASTRESoap">
+      <soap:address location="http://www.katastar.gov.mk/AknServisProfKorisniciMIO/SERCICE987654321.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service_MACEDONIAN_CADASTRESoap12" binding="tns:Service_MACEDONIAN_CADASTRESoap12">
+      <soap12:address location="http://www.katastar.gov.mk/AknServisProfKorisniciMIO/SERCICE987654321.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

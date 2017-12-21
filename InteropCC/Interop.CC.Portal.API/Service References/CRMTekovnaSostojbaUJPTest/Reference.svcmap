@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="482d5386-ee60-4072-8d15-65cbb282d4d1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/CRRMServicesTest.Host/CRM_TS_UJP_Test.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CRM_TS_UJP_Test.wsdl" MetadataType="Wsdl" ID="6884b480-d210-4a5e-b478-cef1dcb31f0a" SourceId="1" SourceUrl="http://localhost/CRRMServicesTest.Host/CRM_TS_UJP_Test.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="CRM_TS_UJP_Test.xsd" MetadataType="Schema" ID="55490060-927f-4382-8d01-00bef8246a1a" SourceId="1" SourceUrl="http://localhost/CRRMServicesTest.Host/CRM_TS_UJP_Test.svc?xsd=xsd0" />
+    <MetadataFile FileName="CRM_TS_UJP_Test1.xsd" MetadataType="Schema" ID="4fb97fe1-e721-41ce-8901-441fac619234" SourceId="1" SourceUrl="http://localhost/CRRMServicesTest.Host/CRM_TS_UJP_Test.svc?xsd=xsd2" />
+    <MetadataFile FileName="CRM_TS_UJP_Test2.xsd" MetadataType="Schema" ID="f807bc71-76a7-4252-8301-c5748b11bd13" SourceId="1" SourceUrl="http://localhost/CRRMServicesTest.Host/CRM_TS_UJP_Test.svc?xsd=xsd1" />
+    <MetadataFile FileName="CRM_TS_UJP_Test1.wsdl" MetadataType="Wsdl" ID="414199b2-7240-444e-9ec2-045a7928e241" SourceId="1" SourceUrl="http://localhost/CRRMServicesTest.Host/CRM_TS_UJP_Test.svc?wsdl" />
+    <MetadataFile FileName="CRM_TS_UJP_Test.disco" MetadataType="Disco" ID="937336e5-b695-4ea7-8535-8e5f1b7eaee0" SourceId="1" SourceUrl="http://localhost/CRRMServicesTest.Host/CRM_TS_UJP_Test.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

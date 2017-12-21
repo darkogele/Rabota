@@ -1,0 +1,97 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+<h2><i class="fa fa-user"></i> Корисници</h2>
+
+<hr ng-if="authentication.isAuth && (getUserPermission('SuperAdmin') || getUserPermission('Admin'))">
+<div ng-if="authentication.isAuth && (getUserPermission('SuperAdmin') || getUserPermission('Admin'))" class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-4">
+            <a ui-sref="register" class="btn btn-primary col-lg-6 col-md-2 col-sm-2 col-xs-6"><i class="fa fa-plus"></i> Креирај корисник</a>
+        </div>
+        <div class="col-lg-3" ng-if="authentication.userName == 'KorvusAdmin'">
+            <button type="submit" class="btn btn-primary col-lg-6 col-md-2 col-sm-2 col-xs-6" ng-click="createAllUserRoles()"><i class="fa fa-plus"></i> Креирај улоги</button>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <form name="searchUserForm">
+            <div class="col-lg-3">
+                <input class="form-control" type="text" placeholder="Корисничко име ..." ng-model="search.user" />
+            </div>
+            <div class="col-lg-3">
+                @*ng-options="value as value for value in userRoles"*@
+                <select class="form-control" ng-model="search.role" >
+                    <option value="" disabled>Одбери улога ...</option>
+                    <option ng-repeat="userRole in userRoles" ng-selected="search.role == userRole" value="{{userRole}}">{{userRole}}</option>
+                </select>
+            </div>
+            <div class="col-lg-3">
+                <div class="col-lg-6">
+                    <button ng-click="filterUsers()" class="btn btn-primary col-lg-12" type="submit"><i class="fa fa-search"></i>Барај</button>
+                </div>
+                <div class="col-lg-6">
+                    <button ng-click="filterClear()" type="submit" class="btn btn-default col-lg-12"><i class="fa fa-eraser"></i> Исчисти</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<hr>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="table-responsive" ng-show="totalSize != 0">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th ng-click="sort('UserName')" style="cursor:pointer;">
+                            <u>
+                                Корисничко име
+                            </u>
+                            <span ng-show="sortCol == 'UserName' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'UserName' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+                        <th ng-click="sort('Email')" style="cursor:pointer;">
+                            <u>
+                                Е-mail
+                            </u>
+                            <span ng-show="sortCol == 'Email' && sortDir=='asc'" class="fa fa-caret-down"></span>
+                            <span ng-show="sortCol == 'Email' && sortDir=='desc'" class="fa fa-caret-up"></span>
+                        </th>
+                        <th>
+                            Улога
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in users" ng-class="{'selected': $index==selectedRow}" ng-click="setClickedRow($index)">
+                        <td>{{user.userName}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.role}}</td>
+                        <td class="text-center"><a ng-click="changeUser(pageIndex,itemsPerPage,sortDir,sortCol,search.user,search.role)" ui-sref="edituserinter({id:user.userId})" ng-disabled="!user.canBeModified || user.userName =='KorvusAdmin'" class="btn btn-xs btn-primary"><i class="fa fa-pencil-square-o"></i> Измени</a></td>
+                        <td class="text-center" ng-if="authentication.isAuth && (getUserPermission('SuperAdmin') || getUserPermission('Admin'))">
+                            <button class="btn btn-danger btn-xs" ng-disabled="!user.canBeModified || user.userName =='KorvusAdmin'" ng-click-confirm-message="Дали сте сигурни дека сакате да избришете корисникот {{user.userName}} ?" ng-click-confirm="$parent.deleteUser(user.userId)"><i class="fa fa-times"></i> Отстрани </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="pull-left">
+            <div previous-text="Претходна" next-text="Следна" pagination total-items="totalSize" ng-show="totalSize != 0" items-per-page="pageSize" ng-model="pageIndex" class="pagination-sm" ng-change="pageChangeHandler(pageIndex)"></div>
+        </div>
+        <div class="pull-left">
+            <select class="form-control" ng-show="totalSize != 0" name="servicesPerPage" ng-model="itemsPerPage" ng-change="pageSizeChanged(itemsPerPage)" style="margin: 18px 30px;"
+                    ng-options="item.itemId as item.itemName for item in itemsPage"></select>
+        </div>
+        <div ng-show="totalSize != 0" class="pull-right">
+            <strong>Вкупен број на записи: {{totalSize}}</strong>
+        </div>
+    </div>
+    <div class="col-md-12 alert alert-warning text-center" ng-show="totalSize == 0">
+        <strong>Нема податоци</strong>
+    </div>
+</div>

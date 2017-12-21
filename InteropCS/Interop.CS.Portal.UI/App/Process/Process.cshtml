@@ -1,0 +1,16 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<div>
+    <h2> Processes</h2>
+    <h4>Navigation between nested views</h4>
+    <p>This is enabled by <b>ui-sref</b> (source reference) enabled by <b>ui-Router</b></p>
+    <a ui-sref=".firstProcess" class="btn btn-primary">First Process</a>
+    <a ui-sref=".secondProcess" class="btn btn-danger">Second Process</a>
+    <a class="btn btn-warning" ng-click="openTestModal()">Test Modal</a>
+</div>
+
+<div ui-view>
+
+</div>
+
+

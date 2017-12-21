@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9b69c390-e14f-43ad-95f8-d39aa5e7b9bd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/CURMServicesTest.Host/DataForExecutedExportTest.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataForExecutedExportTest.xsd" MetadataType="Schema" ID="9daa8541-e862-4ea4-bd68-5c85d7fe1816" SourceId="1" SourceUrl="http://localhost/CURMServicesTest.Host/DataForExecutedExportTest.svc?xsd=xsd4" />
+    <MetadataFile FileName="DataForExecutedExportTest1.xsd" MetadataType="Schema" ID="4c469e74-28cf-4653-99ea-c49ed71d0435" SourceId="1" SourceUrl="http://localhost/CURMServicesTest.Host/DataForExecutedExportTest.svc?xsd=xsd3" />
+    <MetadataFile FileName="DataForExecutedExportTest2.xsd" MetadataType="Schema" ID="6939d780-1f51-4cd3-900a-c91ba23d3e27" SourceId="1" SourceUrl="http://localhost/CURMServicesTest.Host/DataForExecutedExportTest.svc?xsd=xsd2" />
+    <MetadataFile FileName="DataForExecutedExportTest3.xsd" MetadataType="Schema" ID="efe63f0c-aa3c-455c-859b-759e176a70d0" SourceId="1" SourceUrl="http://localhost/CURMServicesTest.Host/DataForExecutedExportTest.svc?xsd=xsd1" />
+    <MetadataFile FileName="DataForExecutedExportTest4.xsd" MetadataType="Schema" ID="1e78ebd1-20b0-44ef-bbef-0a4e33de9a8b" SourceId="1" SourceUrl="http://localhost/CURMServicesTest.Host/DataForExecutedExportTest.svc?xsd=xsd0" />
+    <MetadataFile FileName="DataForExecutedExportTest.wsdl" MetadataType="Wsdl" ID="e13b6d55-9f29-492b-81b9-0b696313aa61" SourceId="1" SourceUrl="http://localhost/CURMServicesTest.Host/DataForExecutedExportTest.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="DataForExecutedExportTest.disco" MetadataType="Disco" ID="475d3375-bbac-4cd6-ac45-896dedfcfe8f" SourceId="1" SourceUrl="http://localhost/CURMServicesTest.Host/DataForExecutedExportTest.svc?disco" />
+    <MetadataFile FileName="DataExeExp_Test.wsdl" MetadataType="Wsdl" ID="2dae6863-114c-452d-9c38-531a1273b000" SourceId="1" SourceUrl="http://localhost/CURMServicesTest.Host/DataForExecutedExportTest.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

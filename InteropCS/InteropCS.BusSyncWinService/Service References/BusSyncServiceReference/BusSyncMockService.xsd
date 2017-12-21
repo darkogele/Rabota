@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:15598/BusSyncMockService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BusSyncMockWCFService.DAL" />
+  <xs:element name="GetParticipants">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParticipantsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BusSyncMockWCFService.DAL" minOccurs="0" name="GetParticipantsResult" nillable="true" type="q1:ArrayOfParticipant" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServices">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BusSyncMockWCFService.DAL" minOccurs="0" name="GetServicesResult" nillable="true" type="q2:ArrayOfService" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="87ad74e7-eff6-4317-9424-110fce066b15" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/CURMServicesTest.Host/SingleCustomsDocumentTest.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SingleCustomsDocumentTest.xsd" MetadataType="Schema" ID="3449c7a6-0cc4-4459-8ba9-2cfe7f96aee6" SourceId="1" SourceUrl="http://localhost/CURMServicesTest.Host/SingleCustomsDocumentTest.svc?xsd=xsd1" />
+    <MetadataFile FileName="SingleCustomsDocumentTest1.xsd" MetadataType="Schema" ID="b4906979-dfe2-4863-bfa4-b3a7cf803a30" SourceId="1" SourceUrl="http://localhost/CURMServicesTest.Host/SingleCustomsDocumentTest.svc?xsd=xsd0" />
+    <MetadataFile FileName="SingleCustDoc_Test.wsdl" MetadataType="Wsdl" ID="b5a5eae9-d355-4623-9966-357a368c1f29" SourceId="1" SourceUrl="http://localhost/CURMServicesTest.Host/SingleCustomsDocumentTest.svc?wsdl" />
+    <MetadataFile FileName="SingleCustomsDocumentTest2.xsd" MetadataType="Schema" ID="a430fc51-adaf-4566-be56-4cd1a0294130" SourceId="1" SourceUrl="http://localhost/CURMServicesTest.Host/SingleCustomsDocumentTest.svc?xsd=xsd2" />
+    <MetadataFile FileName="SingleCustomsDocumentTest.wsdl" MetadataType="Wsdl" ID="d0a4f499-0b01-42e8-bede-d268754f9b08" SourceId="1" SourceUrl="http://localhost/CURMServicesTest.Host/SingleCustomsDocumentTest.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SingleCustomsDocumentTest.disco" MetadataType="Disco" ID="750e6c8d-311a-4b02-8176-61df37ae285e" SourceId="1" SourceUrl="http://localhost/CURMServicesTest.Host/SingleCustomsDocumentTest.svc?disco" />
+    <MetadataFile FileName="SingleCustomsDocumentTest3.xsd" MetadataType="Schema" ID="3cd9d322-a2e9-4c5d-bb28-69d6860d6379" SourceId="1" SourceUrl="http://localhost/CURMServicesTest.Host/SingleCustomsDocumentTest.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

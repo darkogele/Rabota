@@ -1,0 +1,11 @@
+D:\Work\InteropCC\Interop.CC.Encryption\bin\Debug\NLog.config
+D:\Work\InteropCC\Interop.CC.Encryption\bin\Debug\Interop.CC.Encryption.dll.config
+D:\Work\InteropCC\Interop.CC.Encryption\bin\Debug\Interop.CC.Encryption.dll
+D:\Work\InteropCC\Interop.CC.Encryption\bin\Debug\Interop.CC.Encryption.pdb
+D:\Work\InteropCC\Interop.CC.Encryption\bin\Debug\Interop.CC.CrossCutting.dll
+D:\Work\InteropCC\Interop.CC.Encryption\bin\Debug\NLog.dll
+D:\Work\InteropCC\Interop.CC.Encryption\bin\Debug\Interop.CC.CrossCutting.pdb
+D:\Work\InteropCC\Interop.CC.Encryption\bin\Debug\NLog.xml
+D:\Work\InteropCC\Interop.CC.Encryption\obj\Debug\Interop.CC.Encryption.csprojResolveAssemblyReference.cache
+D:\Work\InteropCC\Interop.CC.Encryption\obj\Debug\Interop.CC.Encryption.dll
+D:\Work\InteropCC\Interop.CC.Encryption\obj\Debug\Interop.CC.Encryption.pdb

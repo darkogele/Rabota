@@ -1,0 +1,55 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<div class="col-lg-5 col-lg-offset-3">
+    <form name="accessMappingForm">
+        
+        <h2 class="text-center">Креирај запис во пристапната листа</h2>
+        <p style="text-align: center; font-size: 12px;">(Со креирањето на пристапна листа, овозможувате друг корисник(институција) да ги повикува сервисите кои вие како институција ги имате регистрирано во системот Интероперабилност.)</p>
+        <hr />
+        <label>Корисник</label>
+        <div class="row">
+            <div ng-class="{ 'has-error' : accessMappingForm.consumer.$invalid }" class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                @*<select class="form-control" name="consumer" ng-model="accessMapping.consumerCode" required="">
+                    <option value="" disabled>Одбери институција корисник...</option>
+                    <option ng-repeat="consumer in consumers" value="{{consumer.value}}">{{consumer.text}}</option>
+                </select>*@
+                <select class="form-control" name="consumer" id="consumer"
+                        ng-options="consumer.text for consumer in consumers track by consumer.value"
+                        ng-model="accessMapping.consumerCode" required="">
+                    <option value="" disabled>Одбери институција корисник...</option>
+                </select>
+               @*{{accessMapping.consumerCode.text | json}}*@
+            </div>
+        </div>
+        
+        <label>Сервис</label>
+        <div class="row">
+            <div ng-class="{ 'has-error' : accessMappingForm.service.$invalid }" class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                @*<select id="service" class="form-control" name="service" ng-model="accessMapping.serviceCode" ng-change="getServiceMethods(accessMapping.serviceCode)" required="">
+                    <option value="" disabled>Одбери сервис...</option>
+                    <option ng-repeat="service in services" value="{{service.value}}">{{service.text}}</option>
+                </select>*@
+                <select class="form-control" name="service" id="service"
+                        ng-options="service.text for service in services track by service.value"
+                        ng-model="accessMapping.serviceCode" ng-change="getServiceMethods(accessMapping.serviceCode.value)" required="">
+                    <option value="" disabled>Одбери сервис...</option>
+                </select>
+            </div>
+        </div>
+        
+        <label>Метод</label>
+        <div class="row">
+            <div ng-class="{ 'has-error' : accessMappingForm.method.$invalid }" class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <select id="method" class="form-control" name="method" ng-model="accessMapping.methodCode" required="">
+                    <option value="" disabled>Одбери метод...</option>
+                    <option ng-repeat="method in methods" value="{{method}}">{{method}}</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="modal-footer">
+            <button ng-click="createAccessMapping(accessMapping)" type="submit" class="btn btn-primary" ng-disabled="accessMappingForm.$invalid"><i class="fa fa-save" /> Зачувај</button>
+            <button type="submit" class="btn btn-warning" ui-sref="accessmappings({pageIndex:1, itemsPerPage:10})">Откажи</button>
+        </div>
+    </form>
+</div>

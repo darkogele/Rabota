@@ -1,0 +1,6 @@
+D:\Work\InteropCC\ConsumeAKNService\bin\Debug\ConsumeAKNService.exe.config
+D:\Work\InteropCC\ConsumeAKNService\bin\Debug\ConsumeAKNService.exe
+D:\Work\InteropCC\ConsumeAKNService\bin\Debug\ConsumeAKNService.pdb
+D:\Work\InteropCC\ConsumeAKNService\obj\Debug\ConsumeAKNService.exe
+D:\Work\InteropCC\ConsumeAKNService\obj\Debug\ConsumeAKNService.pdb
+D:\Work\InteropCC\ConsumeAKNService\obj\Debug\ConsumeAKNService.csprojResolveAssemblyReference.cache

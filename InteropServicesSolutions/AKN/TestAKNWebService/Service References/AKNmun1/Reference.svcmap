@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="66ca4f94-4bdb-4848-acb9-a295db16418c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AdapterServiceAKN.Host/AKNMunSvc.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AKNMunicipalityService.wsdl" MetadataType="Wsdl" ID="7d06e667-61de-45b2-aa1f-28561e4946bd" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNMunSvc.svc?wsdl" />
+    <MetadataFile FileName="AKNMunSvc.xsd" MetadataType="Schema" ID="500772dc-3eff-4246-b324-3efb544a535b" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNMunSvc.svc?xsd=xsd0" />
+    <MetadataFile FileName="AKNMunSvc1.xsd" MetadataType="Schema" ID="88dbbffe-8e40-49a9-a934-4f5523f1680d" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNMunSvc.svc?xsd=xsd1" />
+    <MetadataFile FileName="AKNMunSvc2.xsd" MetadataType="Schema" ID="fb69f4db-7b60-4acb-98d4-bb1d08787d95" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNMunSvc.svc?xsd=xsd2" />
+    <MetadataFile FileName="AKNMunSvc.wsdl" MetadataType="Wsdl" ID="2818bba2-5a3b-49f2-96c4-e161b16eeb72" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNMunSvc.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="AKNMunSvc.disco" MetadataType="Disco" ID="8511322f-f7eb-4692-9507-98034b1617b7" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNMunSvc.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

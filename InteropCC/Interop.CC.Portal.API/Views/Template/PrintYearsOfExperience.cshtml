@@ -1,0 +1,272 @@
+﻿ @model Interop.CC.Models.DTO.Institutions.YearsOfWorkExperienceDTO
+
+<head>
+    <style type="text/css">
+        table, tr, td {
+            border: 1px solid gray;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+
+        th {
+            border: 2px solid black;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<div style="width: 100%;">
+
+    <div style="float: left; width: 70%;">
+        <img src="@Server.MapPath("~/Views/Template/grbMak.jpg")" style="float: left" alt="MIOA logo" />
+        <label>Република Македонија</label>
+        <h4 style="font-size:.6em;">Министерство за информатичко општество и администрација</h4>
+    </div>
+    <div style="float: right; width: 30%; font-size: .6em">
+        <a style="margin-left: 80px;" href="http://www.interoperabilnost.gov.mk">www.interoperabilnost.gov.mk</a>
+
+        <table class="table-striped" style="margin-top: 20px;">
+            <thead style="display: table-row-group">
+
+            </thead>
+            <tbody style="font-size: .6em">
+                <tr>
+                    <td>Име на услугата:</td>
+                    <td>@Model.ServiceName</td>
+                </tr>
+                <tr>
+                    <td>Услугата ја користи:</td>
+                    <td>@Model.ConsumerName</td>
+                </tr>
+                <tr>
+                    <td>Услугата ја нуди:</td>
+                    <td>@Model.ProviderName</td>
+                </tr>
+                <tr>
+                    <td>Време на повик до услугата:</td>
+                    <td>@Model.ServiceCalledTime.ToString("dd.MM.yyyy HH:mm")</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div style="height: 70px; width: 100%; float: left"></div>
+
+<table class="table-striped">
+    <caption>Главни податоци</caption>
+    <thead style="display: table-row-group">
+        <tr id="row1">
+            <th>ЕМБГ</th>
+            <th>Име</th>
+            <th>Презиме</th>
+            <th>Пол</th>
+            <th>Дата на раѓање</th>
+        </tr>
+
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>@Model.Embg</td>
+            @foreach (var general in Model.GeneralData)
+            {
+                <td>@general.Name</td>
+                <td>@general.Surname</td>
+                <td>@general.Gender</td>
+                <td>@general.DateOfBirht</td>
+
+
+            }
+        </tr>
+
+
+    </tbody>
+</table>
+<br/>
+<table class="table-striped">
+    <caption>Податоци за осигурување</caption>
+    <thead style="display: table-row-group">
+        <tr id="row1">
+            <th>Регистрациски број на работодавач</th>
+            <th>Име на работодавач</th>
+            <th>Единствен даночен број</th>
+            <th>Единствен матичен број</th>
+            <th>Датум на почнување</th>
+            <th>Датум на завршување</th>
+            <th>Неделни работни саати</th>
+        </tr>
+
+    </thead>
+    <tbody>
+
+       
+
+    @foreach (var insurance in Model.InsuranceData)
+    {
+        <tr>
+            <td>@insurance.CompanyRegistrationNumber</td>
+            <td>@insurance.CompanyName</td>
+            <td>@insurance.EDB</td>
+            <td>@insurance.EMB</td>
+            <td>@insurance.StartData</td>
+            <td>@insurance.EndDate</td>
+            <td>@insurance.WeeklyHours</td>
+        </tr>
+    }
+        
+            
+
+
+    </tbody>
+
+</table>
+<br />
+
+
+<table class="table-striped">
+    <caption> Старо или искуство во странска земја </caption>
+
+    <thead style="display: table-row-group">
+        <tr id="row1">
+            <th>ПС</th>
+            <th>Година</th>
+            <th>Земја</th>
+            <th>Период од</th>
+            <th>Период до</th>
+            <th>Траење на работно искуство</th>
+            <th>Тип на работно искуство</th>
+            <th>Степен на раст на работно искуство</th>
+            <th>Работно искуство</th>
+        </tr>
+
+    </thead>
+@if (Model.OldAndForegnExperience.Count() > 0)
+{
+    <tbody>
+
+            @foreach (var foreign in Model.OldAndForegnExperience)
+            {
+                <tr>
+                    <td>@foreign.PS</td>
+                    <td>@foreign.Year</td>
+                    <td>@foreign.Country</td>
+                    <td>@foreign.PeriodFrom</td>
+                    <td>@foreign.PeriodTo</td>
+                    <td>@foreign.DurationWorkExperience</td>
+                    <td>@foreign.TypeOfWorkExperience</td>
+                    <td>@foreign.DegreeOfIncreaseOfWorkExperience</td>
+                    <td>@foreign.WorkExperience</td>
+                </tr>
+            }
+    </tbody>
+        }
+else
+{
+    
+       @*<caption>NEMA PODATOCI</caption>*@
+
+}
+</table>
+<br />
+<table class="table-striped">
+    <caption> М4 образец </caption>
+    
+    
+    <thead style="display: table-row-group">
+        <tr id="row1">
+            <th>Тип на документ</th>
+            <th>Година</th>
+            <th>Регистрациски број</th>
+            <th>Период од</th>
+            <th>Период до</th>
+            <th>Траење на работно искуство</th>
+            <th>Работни саати</th>
+            <th>Плата</th>
+            <th>Година боледување</th>
+            <th>Ефективно траење</th>
+            <th>Степен на раст</th>
+            <th>Месеци</th>
+        </tr>
+
+    </thead>
+    
+    
+    <tbody>
+
+        
+
+            @foreach (var m4 in Model.M4)
+            {
+                <tr>
+                    <td>@m4.TypeOfForm</td>
+                    <td>@m4.Year</td>
+                    <td>@m4.RegistrationNumber</td>
+                    <td>@m4.PeriodFrom</td>
+                    <td>@m4.PeriodTo</td>
+                    <td>@m4.DurationWorkExperience</td>
+                    <td>@m4.WorkingHours</td>
+                    <td>@m4.Salary</td>
+                    <td>@m4.YearOfSickLeave</td>
+                    <td>@m4.EffectiveDuration</td>
+                    <td>@m4.DegreeOfIncrease</td>
+                    <td>@m4.Meseci</td>
+                </tr>
+            }
+                
+
+    </tbody>
+    
+</table>
+
+<br />
+
+<table class="table-striped">
+    <caption>Невалиден М4 образец </caption>
+
+
+    <thead style="display: table-row-group">
+        <tr id="row1">
+            <th>Тип на документ</th>
+            <th>Година</th>
+            <th>Регистрациски број</th>
+            <th>Период од</th>
+            <th>Период до</th>
+            <th>Траење на работно искуство</th>
+            <th>Работни саати</th>
+            <th>Плата</th>
+            <th>Година боледување</th>
+            <th>Ефективно траење</th>
+            <th>Степен на раст</th>
+        </tr>
+
+    </thead>
+
+
+    <tbody>
+
+        
+
+            @foreach (var inm4 in Model.InvalidM4)
+            {
+                <tr>
+                    <td>@inm4.TypeOfForm</td>
+                    <td>@inm4.Year</td>
+                    <td>@inm4.RegistrationNumber</td>
+                    <td>@inm4.PeriodFrom</td>
+                    <td>@inm4.PeriodTo</td>
+                    <td>@inm4.DurationWorkExperience</td>
+                    <td>@inm4.WorkingHours</td>
+                    <td>@inm4.Salary</td>
+                    <td>@inm4.YearOfSickLeave</td>
+                    <td>@inm4.EffectiveDuration</td>
+                    <td>@inm4.DegreeOfIncrease</td>
+                </tr>
+            }
+                
+
+    </tbody>
+
+</table>
+
+

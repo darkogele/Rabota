@@ -1,0 +1,7 @@
+D:\Work\InteropServicesSolutions\AKNCorrected\Contracts\bin\Debug\Contracts.dll.config
+D:\Work\InteropServicesSolutions\AKNCorrected\Contracts\bin\Debug\Contracts.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\Contracts\bin\Debug\Contracts.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\Contracts\obj\Debug\Contracts.dll
+D:\Work\InteropServicesSolutions\AKNCorrected\Contracts\obj\Debug\Contracts.pdb
+D:\Work\InteropServicesSolutions\AKNCorrected\Contracts\obj\Debug\Contracts.csprojResolveAssemblyReference.cache
+D:\Work\InteropServicesSolutions\AKNCorrected\Contracts\obj\Debug\Contracts.csproj.CoreCompileInputs.cache

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c7a63abe-2c8b-4bca-a3e1-c44a90fd7942" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AdapterServiceAKN.Host/AKNDataForIFDoc.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AKNDataForIFDoc.wsdl" MetadataType="Wsdl" ID="d6d90aa6-f7ca-40ed-82d9-60d8ae7971f3" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNDataForIFDoc.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="AKNDataForIFDoc.disco" MetadataType="Disco" ID="087a2e18-1a17-4f35-b37b-4b31f953cb4b" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNDataForIFDoc.svc?disco" />
+    <MetadataFile FileName="AKNDataForIFDoc1.wsdl" MetadataType="Wsdl" ID="60bd314c-9a54-4da8-8565-fb9bd3116837" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNDataForIFDoc.svc?wsdl" />
+    <MetadataFile FileName="AKNDataForIFDoc.xsd" MetadataType="Schema" ID="5a2e26fa-4d55-4d88-aaf4-ac1266957c02" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNDataForIFDoc.svc?xsd=xsd1" />
+    <MetadataFile FileName="AKNDataForIFDoc1.xsd" MetadataType="Schema" ID="a17527b3-8429-46c3-8e06-e7d39b54028a" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNDataForIFDoc.svc?xsd=xsd0" />
+    <MetadataFile FileName="AKNDataForIFDoc2.xsd" MetadataType="Schema" ID="bde0508d-ba03-4c9f-a76c-1fcef0ac3698" SourceId="1" SourceUrl="http://localhost/AdapterServiceAKN.Host/AKNDataForIFDoc.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

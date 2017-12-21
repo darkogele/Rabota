@@ -1,0 +1,65 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<div class="col-lg-5 col-lg-offset-3">
+    <form name="signUpForm" role="form" ng-controller="registerController">
+        <h2 class="text-center">Регистрација</h2>
+        <hr/>
+        <div class="form-group" ng-class="{ 'has-error' : usernameFormField.username.$invalid }">
+            <label>Корисничко име</label>
+            <ng-form name="usernameFormField">
+                <input type="text" class="form-control" name="username" data-ng-model="registration.userName" required autofocus />
+            </ng-form>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : emailFormField.email.$invalid }">
+            <label>Е-mail</label>
+            <ng-form name="emailFormField">
+                <input type="email" class="form-control" name="email" data-ng-model="registration.email" required autofocus />
+            </ng-form>
+        </div>
+        <div class="form-group">
+            <label class="clearfix">Улога</label>
+            <select class="form-control"
+                    ng-model="registration.userRole"
+                    name="roleforuser"
+                    ng-required="true"
+                    ng-class="{ 'has-error' : signUpForm.roleforuser.$invalid }">
+                <option value="" disabled>Одбери улога</option>
+                <option ng-repeat="role in userRoles" value="{{role.name}}" ng-show="role.isAvailableForSelecting">{{role.name}}</option>
+            </select>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : passwordFormField.password.$invalid }">
+            <label>Лозинка</label>
+            <ng-form name="passwordFormField">
+                <input type="password" class="form-control" name="password" data-ng-model="registration.password" required />
+            </ng-form>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : confirmPasswordFormField.ConfirmPassword.$invalid }">
+            <label>Потврди лозинка</label>
+            <ng-form name="confirmPasswordFormField">
+                <input type="password" class="form-control" name="ConfirmPassword" data-ng-model="registration.confirmPassword" required />
+            </ng-form>
+        </div>
+
+        <label class="form-group">Одбери сертификат</label>
+        <div class="form-inline" ng-class="{ 'has-error' : certFormField.cert.$invalid }">
+            <ng-form name="certFormField">
+                <input class="form-group" type="file" file-model="registration.myFile" name="cert" ng-model="registration.myFile" required />
+                <a ng-click="uploadFile()" class="btn btn-primary form-group" ng-disabled="certFormField.$invalid"> Прикачи</a>
+            </ng-form>
+        </div>
+        <br />
+
+        <div class="form-group" ng-class="{ 'has-error' : publicKeyFormField.publickey.$invalid }">
+            <label>Јавен клуч</label>
+            <ng-form name="publicKeyFormField">
+                <textarea disabled="disabled" class="form-control" style="resize: vertical;" name="publicKey" data-ng-model="registration.publicKey" required autofocus></textarea>
+            </ng-form>
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn btn-primary pull-left" type="submit" ng-disabled="signUpForm.$invalid" data-ng-click="signUp()">Регистрирај</button>
+            <button type="submit" class="btn btn-warning pull-left" ui-sref="users({pageIndex:1,itemsPerPage:10})">Откажи</button>
+            @*<a class="btn btn-info pull-right" ui-sref="login"><< Најава</a>*@
+        </div>
+    </form>
+</div>

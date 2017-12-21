@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7f506f31-6a70-4efb-a245-ec906e678dd4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AKNServicesTest.Host/CadastrialParcelTest.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CadastrialParcelTest.wsdl" MetadataType="Wsdl" ID="71b4e958-806e-4142-bf39-9e5061db6f18" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/CadastrialParcelTest.svc?wsdl" />
+    <MetadataFile FileName="CadastrialParcelTest.disco" MetadataType="Disco" ID="fcf9a9c1-3e47-43f2-ab76-56d40c82b7db" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/CadastrialParcelTest.svc?disco" />
+    <MetadataFile FileName="CadastrialParcelTest.xsd" MetadataType="Schema" ID="97da1df5-6c13-4021-b0dd-fd912752ed0e" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/CadastrialParcelTest.svc?xsd=xsd2" />
+    <MetadataFile FileName="CadastrialParcelTest1.xsd" MetadataType="Schema" ID="41061203-1102-4e52-bfd2-507623022a85" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/CadastrialParcelTest.svc?xsd=xsd0" />
+    <MetadataFile FileName="CadastrialParcelTest1.wsdl" MetadataType="Wsdl" ID="fb4d71b6-faf9-415b-9d6a-309c6a40d480" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/CadastrialParcelTest.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="CadastrialParcelTest2.xsd" MetadataType="Schema" ID="896b2a30-5128-417b-8ba7-3bdd45790410" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/CadastrialParcelTest.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c7ecd903-6687-4b9f-8cb8-84918ae84250" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Interop.CS.MetaServiceSite/CSMetaService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CSMetaService.xsd" MetadataType="Schema" ID="5c917a1d-dbca-4351-870b-9045ea0039d9" SourceId="1" SourceUrl="http://localhost/Interop.CS.MetaServiceSite/CSMetaService.svc?xsd=xsd5" />
+    <MetadataFile FileName="CSMetaService1.xsd" MetadataType="Schema" ID="bda13830-8d9a-492e-8d52-5cbd62f66454" SourceId="1" SourceUrl="http://localhost/Interop.CS.MetaServiceSite/CSMetaService.svc?xsd=xsd4" />
+    <MetadataFile FileName="CSMetaService2.xsd" MetadataType="Schema" ID="8f20feb2-758d-4f33-b393-313b48738ae4" SourceId="1" SourceUrl="http://localhost/Interop.CS.MetaServiceSite/CSMetaService.svc?xsd=xsd3" />
+    <MetadataFile FileName="CSMetaService3.xsd" MetadataType="Schema" ID="d975a9f2-6f62-4780-97e0-96e8fbc412b9" SourceId="1" SourceUrl="http://localhost/Interop.CS.MetaServiceSite/CSMetaService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CSMetaService4.xsd" MetadataType="Schema" ID="261c3670-3e38-4b83-a185-2d383117d0ae" SourceId="1" SourceUrl="http://localhost/Interop.CS.MetaServiceSite/CSMetaService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CSMetaService5.xsd" MetadataType="Schema" ID="00f6e676-958d-4397-a8ba-3cee305123ed" SourceId="1" SourceUrl="http://localhost/Interop.CS.MetaServiceSite/CSMetaService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CSMetaService.disco" MetadataType="Disco" ID="27096add-4c95-4e19-8364-0c0add2a9ba1" SourceId="1" SourceUrl="http://localhost/Interop.CS.MetaServiceSite/CSMetaService.svc?disco" />
+    <MetadataFile FileName="CSMetaService.wsdl" MetadataType="Wsdl" ID="0e02e295-2c31-4ca3-8f05-39786f3df835" SourceId="1" SourceUrl="http://localhost/Interop.CS.MetaServiceSite/CSMetaService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

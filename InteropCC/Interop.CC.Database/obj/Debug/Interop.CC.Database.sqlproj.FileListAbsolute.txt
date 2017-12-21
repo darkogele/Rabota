@@ -1,0 +1,9 @@
+D:\Work\InteropCC\Interop.CC.Database\bin\Debug\Interop.CC.Database.dacpac
+D:\Work\InteropCC\Interop.CC.Database\bin\Debug\Interop.CC.Database.dll
+D:\Work\InteropCC\Interop.CC.Database\bin\Debug\Interop.CC.Database.pdb
+D:\Work\InteropCC\Interop.CC.Database\obj\Debug\Interop.CC.Database.dll
+D:\Work\InteropCC\Interop.CC.Database\obj\Debug\Interop.CC.Database.pdb
+D:\Work\InteropCC\Interop.CC.Database\obj\Debug\Model.xml
+D:\Work\InteropCC\Interop.CC.Database\obj\Debug\refactor.xml
+D:\Work\InteropCC\Interop.CC.Database\obj\Debug\postdeploy.sql
+D:\Work\InteropCC\Interop.CC.Database\obj\Debug\predeploy.sql

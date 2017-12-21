@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Interop.CS.MetaServiceSite/CSMetaService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Interop.CS.Models.Models" />
+  <xs:import schemaLocation="http://localhost/Interop.CS.MetaServiceSite/CSMetaService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Interop.CS.MetaService.Models" />
+  <xs:import schemaLocation="http://localhost/Interop.CS.MetaServiceSite/CSMetaService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="RegisterService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Interop.CS.Models.Models" minOccurs="0" name="service" nillable="true" type="q1:CSService" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterServiceResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnRegisterService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="serviceId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnRegisterServiceResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProviders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="consumerId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProvidersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Interop.CS.MetaService.Models" minOccurs="0" name="GetProvidersResult" nillable="true" type="q2:ArrayOfProviderCSDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="providerId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="consumerId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetServicesResult" nillable="true" type="q3:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="providerId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="consumerId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serviceId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="callType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetServiceResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListConsumers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="providerId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serviceId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListConsumersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ListConsumersResult" nillable="true" type="q4:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

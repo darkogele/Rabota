@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ed737405-eb04-49c3-9df8-7944bac721c6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AKNServicesTest.Host/TSTest.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TSTest.wsdl" MetadataType="Wsdl" ID="3741c911-3c56-4d28-af09-7b18d04a9c8a" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/TSTest.svc?wsdl" />
+    <MetadataFile FileName="TSTest.xsd" MetadataType="Schema" ID="fafd5c65-bf62-4931-a2b6-5afaaa504056" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/TSTest.svc?xsd=xsd1" />
+    <MetadataFile FileName="TSTest.disco" MetadataType="Disco" ID="9e8d5581-3f1a-4204-bb3a-fd4ffa85eb11" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/TSTest.svc?disco" />
+    <MetadataFile FileName="TSTest1.wsdl" MetadataType="Wsdl" ID="3ab4f816-2683-4c45-b2f2-cb779dc2ba37" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/TSTest.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="TSTest1.xsd" MetadataType="Schema" ID="1018bba7-284d-414e-94cf-dbedcb716dd8" SourceId="1" SourceUrl="http://localhost/AKNServicesTest.Host/TSTest.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

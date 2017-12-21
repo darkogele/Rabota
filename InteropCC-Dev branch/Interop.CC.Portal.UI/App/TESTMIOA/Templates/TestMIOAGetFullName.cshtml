@@ -1,0 +1,41 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>Цело име</h2>
+
+<form name="testmioaGetFullNameForm" ng-controller="TestmioaCtrl">
+
+    <div class="container">
+        <div class="col-lg-3">
+
+            @* firstName *@
+            <div class="form-group" ng-class="{ 'has-error' : firstNameFormField.firstName.$invalid }">
+                <ng-form name="firstNameFormField">
+                    <label for="firstName">Име:</label>
+                    <input id="firstName" type="text" class="form-control" name="firstName" ng-model="firstName" required>
+                </ng-form>
+            </div>
+            @* lastName *@
+            <div class="form-group" ng-class="{ 'has-error' : lastNameFormField.lastName.$invalid }">
+                <ng-form name="lastNameFormField">
+                    <label for="lastName">Презиме:</label>
+                    <input id="lastName" type="text" class="form-control" name="lastName" ng-model="lastName" required>
+                </ng-form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-disabled="testmioaGetFullNameForm.$invalid" ng-click="testmioaFullName(firstName, lastName)"><i class="fa fa-save"></i> Испрати</button>
+                <a class="btn btn-warning" href="#/testmioa/testmioagetfullname" ui-sref="testmioagetfullnameindex">Откажи</a>
+            </div>
+        </div>
+
+        <div ng-show="show" class="col-lg-9">
+
+            <div class="form-group">
+                <ng-form name="respFormField">
+                    <label for="resp">ЦЕЛО ИМЕ:</label>
+                    <input id="resp" type="text" class="form-control" name="resp" ng-model="resp">
+                </ng-form>
+            </div>
+        </div>
+    </div>
+</form>

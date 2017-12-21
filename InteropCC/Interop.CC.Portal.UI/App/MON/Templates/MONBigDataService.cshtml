@@ -1,0 +1,31 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>Тестирање на голем сет податоци - Министерство за Образование и Наука</h2>
+
+<form name="monDataForRegularStudentForm" ng-controller="MonCtrl">
+
+    <div class="container" style="margin-top: 20px;">
+        @*<div class="col-lg-2">
+            <ng-form name="bigDataFormPdf">
+                <button type="submit" class="btn btn-primary" ng-click="bigData('pdf')"><i class="fa fa-save"></i> Испрати 97 MB</button>
+            </ng-form>
+        </div>*@
+
+
+        <div class="form-group">
+            <ng-form name="bigDataFormDoc">
+                <button type="submit" id="sendOneMb" class="btn btn-primary" style="margin-left: 10px;" ng-click="bigData('doc', '1')"><i class="fa fa-save"></i> Испрати 1 MB</button>
+                <button type="submit" id="sendTwoMb" class="btn btn-primary" style="margin-left: 10px;" ng-click="bigData('doc', '2')"><i class="fa fa-save"></i> Испрати 2 MB</button>
+                <button type="submit" id="sendThreeMb" class="btn btn-primary" style="margin-left: 10px;" ng-click="bigData('doc', '3')"><i class="fa fa-save"></i> Испрати 3 MB</button>
+                <button type="submit" id="sendFourMb" class="btn btn-primary" style="margin-left: 10px;" ng-click="bigData('doc', '4')"><i class="fa fa-save"></i> Испрати 4 MB</button>
+                <button type="submit" id="sendFiveMb" class="btn btn-primary" style="margin-left: 10px;" ng-click="bigData('doc', '5')"><i class="fa fa-save"></i> Испрати 5 MB</button>
+                <button type="submit" id="sendSixMb" class="btn btn-primary" style="margin-left: 10px;" ng-click="bigData('doc', '6')"><i class="fa fa-save"></i> Испрати 6 MB</button>
+                <button type="submit" id="sendEightMb" class="btn btn-primary" style="margin-left: 10px;" ng-click="bigData('doc', '8')"><i class="fa fa-save"></i> Испрати 8 MB</button>
+                <button type="submit" id="sendTenMb" class="btn btn-primary" style="margin-left: 10px; margin-top: 10px;" ng-click="bigData('doc', '10')"><i class="fa fa-save"></i> Испрати 10 MB</button>
+                
+                <p ng-show="hasResult" style="margin-top: 20px; color:red">Документот е успешно вратен.</p>
+            </ng-form>
+        </div>
+
+    </div>
+</form>     

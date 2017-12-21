@@ -1,0 +1,7 @@
+D:\Work\InteropCC\InteropCC.Resources\bin\Debug\InteropCC.Resources.dll
+D:\Work\InteropCC\InteropCC.Resources\bin\Debug\InteropCC.Resources.pdb
+D:\Work\InteropCC\InteropCC.Resources\obj\Debug\InteropCC.Resources.Resources.resources
+D:\Work\InteropCC\InteropCC.Resources\obj\Debug\InteropCC.Resources.csproj.GenerateResource.Cache
+D:\Work\InteropCC\InteropCC.Resources\obj\Debug\InteropCC.Resources.dll
+D:\Work\InteropCC\InteropCC.Resources\obj\Debug\InteropCC.Resources.pdb
+D:\Work\InteropCC\InteropCC.Resources\obj\Debug\InteropCC.Resources.csprojResolveAssemblyReference.cache

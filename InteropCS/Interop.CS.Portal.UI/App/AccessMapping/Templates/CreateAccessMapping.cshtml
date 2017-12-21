@@ -1,0 +1,207 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<div class="col-lg-5 col-lg-offset-3">
+    <form name="accessMapping.form">
+        <h2 class="text-center">Креирај запис во пристапната листа</h2>
+        <hr />
+        <label>Корисник</label>
+        <div class="row">
+            <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <select class="form-control"
+                        ng-change="changeConsumerParticipant(accessMapping.consumer)"
+                        @*ng-init="extints = [{ 'value':'internal','name': 'Интерен' },{ 'value':'external','name':'Екстерен' }];"*@
+                        ng-model="accessMapping.consumer"
+                        name="InternalExternal"
+                        @*ng-options="extint.value as extint.name for extint in extints"*@
+                        ng-required=true
+                        ng-class="{ 'has-error' : accessMapping.form.InternalExternal.$invalid }">
+                    <option value="" selected disabled>Одбери тип на корисник</option>
+                    <option value="internal" name="Интерен">Интерен</option>
+                    <option ng-show="accessMapping.provider!='external'" value="external" name="Екстерен">Екстерен</option>
+                </select>
+            </div>
+
+            <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                
+                <select class="form-control"
+                        ng-change="changeConsumerBus(accessMapping.consumerBusddl)"
+                        ng-show="accessMapping.consumer=='external'"
+                        ng-model="accessMapping.consumerBusddl"
+                        name="consumerBus"
+                        ng-options="bus as bus for bus in consumerBuses "
+                        ng-required="ShowTxtForConsumer==true"
+                        ng-class="{ 'has-error' : accessMapping.form.consumerBus.$invalid }">
+                    <option value="" selected disabled>Одбери екстерен бас за корисник</option>
+                </select>
+                @*participant as participant for participant in participantsConsumer*@
+                @*participant as participant.name for participant in participantsConsumer track by participant.code*@
+                <select class="form-control"
+                        ng-show="accessMapping.consumer=='internal'"
+                        ng-model="accessMapping.consumerParticipantddl"
+                        name="consumer"
+                        ng-options="participant as participant.name for participant in participantsConsumer track by participant.code"
+                        ng-required="ShowTxtForConsumer==true"
+                        ng-class="{ 'has-error' : accessMapping.form.consumer.$invalid }">
+                    <option value="" selected disabled>Одбери корисник</option>
+                </select>
+                <br />
+                @*participant as participant for participant in extParticipantsConsumer*@
+                <select class="form-control"
+                        ng-show="accessMapping.consumer=='external'"
+                        ng-model="accessMapping.extConsumerParticipantddl"
+                        name="consumerext"
+                        ng-options="participant as participant.name for participant in extParticipantsConsumer track by participant.code"
+                        ng-required="ShowTxtForConsumer==true"
+                        ng-class="{ 'has-error' : accessMapping.form.consumerext.$invalid }">
+                    <option value="" selected disabled>Одбери корисник</option>
+                </select>
+            </div>
+
+            @*<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <input class="form-control"
+                           type="text"
+                           placeholder="Внеси код на корисник"
+                           ng-show="accessMapping.consumer=='external' && accessMapping.consumerBusddl.length"
+                           ng-model="accessMapping.consumerCodetxt"
+                           name="textConsumer"
+                           ng-required="ShowTxtForConsumer==true" />
+                </div>
+            </div>*@
+        </div>
+
+        <br />
+        <label>Провајдер</label>
+        <div class="row">
+            <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <select class="form-control"
+                        ng-change="changeProviderParticipant(accessMapping.provider)"
+                        @*ng-init="extints = [{ 'value':'internal','name': 'Интерен' },{ 'value':'external','name':'Екстерен' }];"*@
+                        ng-model="accessMapping.provider"
+                        name="ExternalInternal"
+                        @*ng-options="extint.value as extint.name for extint in extints"*@
+                        ng-required=true
+                        ng-class="{ 'has-error' : accessMapping.form.ExternalInternal.$invalid }">
+                    <option value="" selected disabled>Одбери тип на провајдер</option>
+                    <option value="internal" name="Интерен">Интерен</option>
+                    <option ng-show="accessMapping.consumer!='external'" value="external" name="Екстерен">Екстерен</option>
+                </select>
+            </div>
+
+            <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <select class="form-control"
+                        ng-change="changeProviderBus(accessMapping.providerBusddl)"
+                        ng-show="accessMapping.provider=='external'"
+                        ng-model="accessMapping.providerBusddl"
+                        name="providerBus"
+                        ng-options="bus as bus for bus in providerBuses "
+                        ng-required="ShowTxtForProvider==true"
+                        ng-class="{ 'has-error' : accessMapping.form.providerBus.$invalid }">
+                    <option value="" selected disabled>Одбери екстерен бас за провајдер</option>
+                </select>
+                @*participant as participant for participant in participantsProvider*@
+                <select class="form-control"
+                        ng-show="accessMapping.provider=='internal'"
+                        ng-change="ServicesListforProvider(accessMapping.partiCode.code)"
+                        ng-model="accessMapping.partiCode"
+                        name="provider"
+                        ng-options="participant as participant.name for participant in participantsProvider track by participant.code"
+                        ng-required="ShowTxtForProvider==true"
+                        ng-class="{ 'has-error' : accessMapping.form.provider.$invalid }">
+                    <option value="" selected disabled>Одбери провајдер</option>
+                </select>
+                <br />
+                @*participant as participant for participant in extParticipantsProvider*@
+                <select class="form-control"
+                        ng-show="accessMapping.provider=='external'"
+                        ng-change="ServicesListforProvider(accessMapping.extPartiCode.code)"
+                        ng-model="accessMapping.extPartiCode"
+                        name="providerext"
+                        ng-options="participant as participant.name for participant in extParticipantsProvider track by participant.code"
+                        ng-required="ShowTxtForProvider==true"
+                        ng-class="{ 'has-error' : accessMapping.form.providerext.$invalid }">
+                    <option value="" selected disabled>Одбери провајдер</option>
+                </select>
+            </div>
+
+            @*<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                <input class="form-control"
+                       type="text"
+                       placeholder="Внеси код на провајдер"
+                       ng-show="accessMapping.provider=='external' && accessMapping.providerBusddl.length"
+                       ng-model="accessMapping.providerCodetxt"
+                       name="textProvider"
+                       ng-required="ShowTxtForProvider==true" />
+            </div>*@
+        </div>
+        <br />
+        @*<label ng-show="ShowTxtForProvider==true">Сервис</label>*@
+        <label ng-show="(accessMapping.consumerParticipantddl.code.length || accessMapping.extConsumerParticipantddl.code.length) &&
+               (accessMapping.partiCode.code.length || accessMapping.extPartiCode.code.length)">Сервис</label>
+        <div class="row" ng-show="(accessMapping.consumerParticipantddl.code.length || accessMapping.extConsumerParticipantddl.code.length) &&
+               (accessMapping.partiCode.code.length || accessMapping.extPartiCode.code.length)">
+            <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                @**@
+                <select class="form-control"
+                        ng-show="showServicesforProvider==true && accessMapping.provider=='internal'"
+                        ng-change="MethodsListForService(accessMapping.partiCode.code, accessMapping.providerServicesddl)"
+                        ng-model="accessMapping.providerServicesddl"
+                        name="services"
+                        ng-options="service.code as service.name for service in services "
+                        ng-required="showServicesforProvider==true"
+                        ng-class="{ 'has-error' : accessMapping.form.services.$invalid }">
+                    <option value="" selected disabled>Одбери сервис</option>
+                </select>
+            </div>
+            <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <select class="form-control"
+                        ng-show="showServicesforProvider==true && accessMapping.provider=='external'"
+                        ng-change="MethodsListForService(accessMapping.extPartiCode.code, accessMapping.providerServicesddl)"
+                        ng-model="accessMapping.providerServicesddl"
+                        name="servicesext"
+                        ng-options="service.code as service.name for service in services "
+                        ng-required="showServicesforProvider==true"
+                        ng-class="{ 'has-error' : accessMapping.form.servicesext.$invalid }">
+                    <option value="" selected disabled>Одбери сервис</option>
+                </select>
+                @*<input class="form-control"
+                       type="text"
+                       placeholder="Внеси сервисен код"
+                       ng-show="ShowTxtForService==true"
+                       ng-model="accessMapping.serviceCodetxt"
+                       name="textService"
+                       ng-required="ShowTxtForService==true" />*@
+            </div>
+        </div>
+        <br />
+        @*<label ng-show="ShowTxtForService==true">Метод</label>*@
+        <label ng-show="accessMapping.providerServicesddl.length || accessMapping.serviceCodetxt.length">Метод</label>
+        <div class="row" ng-show="accessMapping.providerServicesddl.length || accessMapping.serviceCodetxt.length">
+            <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <select class="form-control"
+                        ng-show="showMethodsForService==true"
+                        ng-model="accessMapping.serviceMethodsddl"
+                        name="methods"
+                        ng-options="method for method in methods "
+                        ng-required="showMethodsForService==true"
+                        ng-class="{ 'has-error' : accessMapping.form.methods.$invalid }">
+                    <option value="" selected disabled>Одбери метод</option>
+                </select>
+            </div>
+            @*<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <input class="form-control"
+                       type="text"
+                       placeholder="Внеси метод"
+                       ng-show="ShowTxtForMethod==true"
+                       ng-model="accessMapping.methodtxt"
+                       name="textMethod"
+                       ng-required="ShowTxtForMethod==true" />
+            </div>*@
+        </div>
+        <div class="modal-footer">
+            <button ng-click="accessMapping.Save(accessMapping)" type="submit" class="btn btn-primary" ng-disabled="accessMapping.form.$invalid"><i class="fa fa-save" /> Зачувај</button>
+            <button type="submit" class="btn btn-warning" ui-sref="accessmappings({pageIndex:1, itemsPerPage:10})">Откажи</button>
+        </div>
+    </form>
+</div>

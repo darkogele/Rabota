@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bf3aa624-136a-404b-bfae-cb7a51f04bc9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:15598/BusSyncMockService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BusSyncMockService.wsdl" MetadataType="Wsdl" ID="45135c4c-4f67-4e05-917a-6497562d5f37" SourceId="1" SourceUrl="http://localhost:15598/BusSyncMockService.svc?wsdl" />
+    <MetadataFile FileName="BusSyncMockService.disco" MetadataType="Disco" ID="57d20471-1e53-4174-a283-ef73f5e2d229" SourceId="1" SourceUrl="http://localhost:15598/BusSyncMockService.svc?disco" />
+    <MetadataFile FileName="BusSyncMockService.xsd" MetadataType="Schema" ID="9628c792-c2c6-4c0b-9d0b-1ce152b8cd92" SourceId="1" SourceUrl="http://localhost:15598/BusSyncMockService.svc?xsd=xsd0" />
+    <MetadataFile FileName="BusSyncMockService1.xsd" MetadataType="Schema" ID="7b126d7a-e775-41c0-b023-2e9e4488a6a6" SourceId="1" SourceUrl="http://localhost:15598/BusSyncMockService.svc?xsd=xsd1" />
+    <MetadataFile FileName="BusSyncMockService2.xsd" MetadataType="Schema" ID="a2333b43-62ca-41ab-996e-dd5884904899" SourceId="1" SourceUrl="http://localhost:15598/BusSyncMockService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

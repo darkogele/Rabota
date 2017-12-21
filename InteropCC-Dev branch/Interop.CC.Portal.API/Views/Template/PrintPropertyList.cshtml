@@ -1,0 +1,293 @@
+﻿@model Interop.CC.Models.DTO.Institutions.DataForPropertyListDTO
+
+<head>
+    <style type="text/css">
+        table, tr, td {
+            border: 1px solid gray;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+
+        th {
+            border: 2px solid black;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+
+        .HeaderStyle, .PagerStyle {
+            border: 2px solid #999999 !important;
+            background-position: top;
+            background-repeat: repeat-x;
+            background-color: #06B4C0;
+        }
+
+        .RowStyle td, .AltRowStyle td, .SelectedRowStyle td, .EditRowStyle td {
+            border: solid 1px #91a7b4;
+            border-right-color: #bcbcbc;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .GridViewStyle {
+            font-family: Arial, Sans-Serif;
+            font-size: small;
+            table-layout: auto;
+            border-collapse: collapse;
+            border: 1px solid #CCCCCC;
+            overflow: auto;
+        }
+
+        .RowStyle td {
+            background-color: #f7f7f7;
+        }
+
+        .AltRowStyle td {
+            background-color: #E1E1E1;
+            background-position: 0 -80px;
+            background-repeat: repeat-x;
+        }
+
+        .PagerStyle table {
+            text-align: center;
+            margin: auto;
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+    </style>
+</head>
+<div style="width:100%; height: 100%">
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <h1>
+        Извештај за имотен лист
+    </h1>
+    <hr width="100%"></hr>
+    <h1 style="text-align: right;">Агенција за катастар на недвижности</h1>
+    <br />
+    <div style="width:800px; margin:0 auto; margin-bottom: 10px">
+        <br /><br /><br />
+        <p style="text-align: right ;">Извештајот е креиран од корисникот @Model.ConsumerName</p>
+        <p style="text-align: right;">Време на поднесено барање @Model.ServiceCalledTime.ToString("dd.MM.yyyy HH:mm")</p>
+    </div>
+    <div></div>
+
+</div>
+<div style="width: 100%;">
+
+    @*<div style="float: left; width: 70%;">
+        <img src="@Server.MapPath("~/Views/Template/grbMak.jpg")" style="float: left" alt="MIOA logo" />
+        <label>Република Македонија</label>
+        <h4 style="font-size:.6em;">Министерство за информатичко општество и администрација</h4>
+    </div>
+    <div style="float: right; width: 30%; font-size: .6em">
+        <a style="margin-left: 80px;" href="http://www.interoperabilnost.gov.mk">www.interoperabilnost.gov.mk</a>
+
+        <table class="table-striped" style="margin-top: 20px;">
+            <thead style="display: table-row-group">
+
+            </thead>
+            <tbody style="font-size: .6em">
+                <tr>
+                    <td>Име на услугата:</td>
+                    <td>@Model.ServiceName</td>
+                </tr>
+                <tr>
+                    <td>Услугата ја користи:</td>
+                    <td>@Model.ConsumerName</td>
+                </tr>
+                <tr>
+                    <td>Услугата ја нуди:</td>
+                    <td>@Model.ProviderName</td>
+                </tr>
+                <tr>
+                    <td>Време на повик до услугата:</td>
+                    <td>@Model.ServiceCalledTime.ToString("dd.MM.yyyy HH:mm")</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>*@
+</div>
+
+<div style="height: 70px; width: 100%; float: left"></div>
+
+
+
+<table class="GridViewStyle" cellspacing="0" rules="all" border="1" id="GridViewObjekti" style="border-collapse:collapse;width: 100%">
+    
+    <tbody>
+
+        <tr class="RowStyle">
+
+            @foreach (var load in Model.LoadsList)
+            {
+               
+                <td>@load.Text</td>
+
+            }
+        </tr>
+
+
+    </tbody>
+</table>
+<br />
+@if (Model.ObjectsList.Any())
+{
+    <h3>
+        <span>Објекти</span>
+    </h3>
+    <table class="GridViewStyle" cellspacing="0" rules="all" border="1" id="GridViewObjekti" style="border-collapse: collapse; width: 100%">
+    
+        <thead class="HeaderStyle">
+            <tr id="row1">
+                <th>Бр.парцела</th>
+                <th>Објект</th>
+                <th>Намена</th>
+                <th>Површина во м2</th>
+                <th>Место</th>
+                <th>Влез</th>
+                <th>Кат</th>
+                <th>Стан</th>
+                <th>Год.на градба</th>
+                <th>Основ на градба</th>
+                <th>Право</th>
+            </tr>
+
+        </thead>
+    
+        <tbody>
+
+            <tr class="RowStyle">
+
+                @foreach (var obj in Model.ObjectsList)
+                {
+
+                    <td>@obj.Number</td>
+                    <td>@obj.Object</td>
+                    <td>@obj.Purpose</td>
+                    <td>@obj.Grounds</td>
+                    <td>@obj.Location</td>
+                    <td>@obj.Entry</td>
+                    <td>@obj.Floor</td>
+                    <td>@obj.Apartment</td>
+                    <td>@obj.YearBuilt</td>
+                    <td>@obj.OsnovGradba</td>
+                    <td>@obj.Pravo</td>
+
+                    <tr></tr>
+                }
+
+            </tr>
+
+
+        </tbody>
+    
+       
+    </table>
+}
+else
+{
+
+    <caption><b>НЕМА ПОДАТОЦИ</b></caption>
+
+}
+<br />
+
+@if (Model.ParcelsList.Any())
+{
+    <h3>
+        <span>Парцели</span>
+    </h3>
+    <table class="GridViewStyle" cellspacing="0" rules="all" border="1" id="GridViewObjekti" style="border-collapse: collapse; width: 100%">
+   
+
+        <thead class="HeaderStyle">
+            <tr id="row1">
+                <th>Бр.парцела</th>
+                <th>Објект</th>
+                <th>Место</th>
+                <th>Намена</th>
+                <th>Класа</th>
+                <th>Површина во м2</th>
+                <th>Право</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            @foreach (var parcel in Model.ParcelsList)
+            {
+                <tr class="RowStyle">
+                    <td>@parcel.PartNumber</td>
+                    <td>@parcel.ObjectParcel</td>
+                    <td>@parcel.Location</td>
+                    <td>@parcel.Culture</td>
+                    <td></td>
+                    <td>@parcel.Grounds</td>
+                    <td>@parcel.Pravo</td>
+
+                </tr>
+            }
+        </tbody>
+    
+       
+    </table>
+}
+else
+{
+
+    <caption><b>НЕМА ПОДАТОЦИ</b></caption>
+
+}
+<br />
+@if (Model.OwnersList.Any())
+{
+    <h3>
+        <span>Сопственици</span>
+    </h3>
+    <table class="GridViewStyle" cellspacing="0" rules="all" border="1" id="GridViewObjekti" style="border-collapse: collapse; width: 100%">
+
+
+        <thead class="HeaderStyle">
+            <tr id="row1">
+                <th>Име и презиме</th>
+                <th>ЕМБГ/ЕМБС</th>
+                <th>Место</th>
+                <th>Улица</th>
+                <th>Број</th>
+                <th>Дел на посед</th>
+                <th>Правен основ на запишување</th>
+
+            </tr>
+
+        </thead>
+   
+        <tbody>
+
+            @foreach (var owner in Model.OwnersList)
+            {
+                <tr class="RowStyle">
+                    <td>@owner.Name</td>
+                    <td>@owner.PersonalNumber</td>
+                    <td>@owner.Location</td>
+                    <td>@owner.Street</td>
+                    <td>@owner.Number</td>
+                    <td>@owner.Part</td>
+                    <td></td>
+
+                </tr>
+            }
+        </tbody>
+   
+    </table>
+}
+else
+{
+
+    <caption><b>НЕМА ПОДАТОЦИ</b></caption>
+
+}

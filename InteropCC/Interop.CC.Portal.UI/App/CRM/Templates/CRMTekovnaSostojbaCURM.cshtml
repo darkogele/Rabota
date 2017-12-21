@@ -1,0 +1,1105 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+<style>
+    .HeaderStyle {
+        border: 2px solid #999999 !important;
+        background-position: top;
+        background-repeat: repeat-x;
+        background-color: #06B4C0;
+    }
+
+    .RowStyle td, .AltRowStyle td, .SelectedRowStyle td, .EditRowStyle td {
+        border: solid 1px #91a7b4;
+        border-right-color: #bcbcbc;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .GridViewStyle {
+        font-family: Arial, Sans-Serif;
+        font-size: small;
+        table-layout: auto;
+        border-collapse: collapse;
+        border: 1px solid #CCCCCC;
+        overflow: auto;
+    }
+
+    .RowStyle td {
+        background-color: #f7f7f7;
+    }
+
+    .AltRowStyle td {
+        background-color: #E1E1E1;
+        background-position: 0 -80px;
+        background-repeat: repeat-x;
+    }
+
+    .PagerStyle table {
+        text-align: center;
+        margin: auto;
+    }
+
+    table {
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+</style>
+<h2>Тековна состојба ЦУРМ- Централен Регистар на Република Македонија</h2>
+
+<form name="crmTekovnaSostojbaCURMForm" ng-controller="CrmCtrl">
+
+    <div class="container">
+        <div class="col-lg-4">
+            @* Username *@
+            <div class="form-group" ng-class="{ 'has-error' : edbFormField.edb.$invalid }">
+                <ng-form name="edbFormField">
+                    <label for="edb">Единствен Матичен Број на Субјектот:</label>
+                    <input id="edb" type="text" class="form-control" name="edb" ng-model="edb" only-digits required>
+                </ng-form>
+            </div>
+            @* Municipality *@
+            @*<label class="form-group">Одбери сертификат</label>
+                <div class="form-inline" ng-class="{ 'has-error' : certFormField.cert.$invalid }">
+                    <ng-form name="certFormField">
+                        <input class="form-group" type="file" file-model="registration.myFile" name="cert" ng-model="registration.myFile" required />
+                        <a ng-click="uploadFile()" class="btn btn-primary form-group" > Прикачи</a>
+                    </ng-form>
+                </div>
+                <br />*@
+            @*<div class="form-group" ng-class="{ 'has-error' : publicKeyFormField.publickey.$invalid }">
+                    <label>Пат до сертификат</label>
+                    <ng-form name="publicKeyFormField">
+                        <textarea disabled="disabled" class="form-control" style="resize: vertical;" name="publicKey" data-ng-model="registration.path" required autofocus></textarea>
+                    </ng-form>
+                </div>*@
+            @*<div class="form-group" ng-class="{ 'has-error' : certPathFormField.certPath.$invalid }">
+                    <ng-form name="certPathFormField">
+                        <label for="certPath">Пат до сертификатот за потпишување:</label>
+                        <input id="certPath" type="text" class="form-control" name="certPath" ng-model="certPath" required>
+                    </ng-form>
+                </div>*@
+            @* Password *@
+            @*<div class="form-group" ng-class="{ 'has-error' : certPasswordFormField.certPassword.$invalid }">
+                    <ng-form name="certPasswordFormField">
+                        <label for="certPassword">Лозинка на сертификатот:</label>
+                        <input id="certPassword" type="password" class="form-control" name="certPassword" ng-model="certPassword" required>
+                    </ng-form>
+                </div>*@
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-disabled="crmTekovnaSostojbaCURMForm.$invalid" ng-click="crmTekovnaSostojbaCURM()"><i class="fa fa-save"></i> Испрати</button>
+                <a class="btn btn-warning" href="#/crm/crmtekovnasostojbacurm" ui-sref="crmtekovnasostojbacurmindex">Откажи</a>
+            </div>
+        </div>
+
+        <div ng-show="show" class="col-lg-9">
+            <h3 style="font-size:1.17em; font-weight:bold">
+                <span> Податоци за субјектот</span>
+            </h3>
+            
+            @*prva so ja ima*@
+            <table class="GridViewStyle" cellspacing="0" rules="all" border="1" id="GridViewListTemplate1" style="font-weight:bold;border-collapse:collapse;width: auto; min-width:500px">
+
+                <tbody>
+                    <tr class="HeaderStyle">
+                        <th scope="col">Наслов на податок</th>
+
+                        <th scope="col">Податок</th>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Информативна порака</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.infoMessage}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Дали субјектот е избришан</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.isleTerminated}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>ЕМБС</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.leid}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Целосно име</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.leFullName}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Целосен назив</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.taxPayerNumber}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>ЕДБ</td>
+                        <td ng-repeat="inf in info">
+                            @*{{inf.leid}}*@
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Кратко име</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.shortName}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Причина за престанок</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.terminationTypeID}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Опис на причина за престанок</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.terminationTypeDesc}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Основ за бришење</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.terminationBasis}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Датум на бришење во ЦР</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.dateDeletedInCR}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Вид на субјект на упис</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.leTypeID}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Опис на вид на субјект на упис</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.leTypeDesc}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Големина на субјектот</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.leSizeID}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Опис на големината на субјектот</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.leSizeDesc}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Општина</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.municipality}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Код на општина</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.municipalityCode}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Место</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.place}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Код на место</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.placeCode}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Улица</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.street}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Код на Улица</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.streetCode}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Број на куќа</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.houseNo}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Број на влез</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.entranceNo}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Број на стан</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.flatNo}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Код на организационен облик</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.organisationTypeCode}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Опис на организационен облик</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.organisationTypeDesc}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Надлежен регистар</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.authorisedRegisterID}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Опис на надлежен регистар</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.authorisedRegister}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Вид на сопственост</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.ownershipTypeID}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Опис на вид на сопственост</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.ownershipTypeDesc}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Евидентирани дејности во надворешен промет</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.isForeignAct}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Општа клаузула за бизнис</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.isActivityNoLicence}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Код на приоритетна дејност</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.coreActivityCode}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Опис на приоритетна дејност</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.coreActivityDesc}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Одобренија, потврди, лиценци и др.</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.licence}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Други дејности</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.foreignActivity}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Електронско сандаче</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.email}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Дополнителни информации</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.additionalInfo}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Индикатор за потврдени податоци од овластеното лице за застапување</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.isDataConfirmed}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Деловен статус на субјектот од Регистарот на годишни сметки/УЈП</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.isaaActive}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Статус од ПКД</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.pkdStatus}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Времетраење</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.actingPeriod}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Статус</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.leStatus}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Статус на мирување од</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.leStatusDateFrom}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Статус на мирување до</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.leStatusDateUntil}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Подрачје на суд</td>
+                        <td ng-repeat="inf in info">
+                            {{inf.courtRegion}}
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <h3 style="font-size:1.17em; font-weight:bold">
+                <span> Податоци за основање</span>
+            </h3>
+            
+            @*cetvrta so ja ima*@
+            <table class="GridViewStyle" cellspacing="0" rules="all" border="1" id="GridViewListTemplate1" style="font-weight:bold;border-collapse:collapse;width: auto; min-width:500px">
+
+                <tbody>
+                    <tr class="HeaderStyle">
+                        <th scope="col">Наслов на податок</th>
+
+                        <th scope="col">Податок</th>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>ЕМБС</td>
+                        <td ng-repeat="found in founding">
+                            {{found.leid}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Датум на основање</td>
+                        <td ng-repeat="found in founding">
+                            {{found.foundingDate}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Потекло на капиталот</td>
+                        <td ng-repeat="found in founding">
+                            {{found.fapitalOriginID}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Опис на потекло на капиталот</td>
+                        <td ng-repeat="found in founding">
+                            {{found.fapitalOriginDesc}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Валута</td>
+                        <td ng-repeat="found in founding">
+                            {{found.fcCode}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Паричен влог</td>
+                        <td ng-repeat="found in founding">
+                            {{found.capitalFC_Cash}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Непаричен влог</td>
+                        <td ng-repeat="found in founding">
+                            {{found.capitalFC_NonCash}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Уплатен дел</td>
+                        <td ng-repeat="found in founding">
+                            {{found.capitalFC_Payd}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Број на издадени акции</td>
+                        <td ng-repeat="found in founding">
+                            {{found.sharesTotal}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Вкупен број на уплатени акции</td>
+                        <td ng-repeat="found in founding">
+                            {{found.sharesPayd}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Вид на акции</td>
+                        <td ng-repeat="found in founding">
+                            {{found.typeOfShares}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Начин на плаќање</td>
+                        <td ng-repeat="found in founding">
+                            {{found.sharesPayment}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Вкупно основна главнина</td>
+                        <td ng-repeat="found in founding">
+                            {{found.capitalFC_Total}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="font-size:1.17em; font-weight:bold">
+
+                <span>Податоци за сопственици</span>
+            </h3>
+            @*treta so ja ima*@
+            <table class="GridViewStyle" ng-repeat="owner in owners" cellspacing="0" rules="all" border="1" id="GridViewListTemplate1" style="font-weight:bold;border-collapse:collapse;width: auto; min-width:500px">
+
+
+                <tbody>
+                    <tr class="HeaderStyle">
+                        <th scope="col">Наслов на податок</th>
+
+                        <th scope="col">Податок</th>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>ЕМБС</td>
+
+                        <td> {{owner.leid}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Забелешка</td>
+
+                        <td> {{owner.note}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Тип на сопственик</td>
+
+                        <td> {{owner.personOrLEID}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Опис на тип на сопственик</td>
+
+                        <td> {{owner.personOrLEDesc}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Матичен број на сопственик</td>
+
+                        <td> {{owner.ownerID}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Тип на сопственик 2</td>
+
+                        <td> {{owner.ownerTypeID}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Опис на тип на сопственик 2</td>
+
+                        <td> {{owner.ownerTypeDesc}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Вид на одговорност</td>
+
+                        <td> {{owner.liabilityID}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Опис на вид на одговорност</td>
+
+                        <td> {{owner.liabilityDesc}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Име</td>
+
+                        <td> {{owner.ownerName}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Презиме</td>
+
+                        <td> {{owner.ownerSurname}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Код на земја</td>
+
+                        <td> {{owner.countryCode}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Земја</td>
+
+                        <td> {{owner.country}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Општина</td>
+
+                        <td> {{owner.municipality}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Место</td>
+
+                        <td> {{owner.place}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Улица</td>
+
+                        <td> {{owner.street}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Број</td>
+
+                        <td> {{owner.houseNo}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Влез</td>
+
+                        <td> {{owner.entranceNo}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Стан</td>
+
+                        <td> {{owner.flatNo}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Електронско сандаче</td>
+
+                        <td> {{owner.email}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Валута</td>
+
+                        <td> {{owner.fcCode}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Паричен влог</td>
+
+                        <td> {{owner.participationFC_Cash}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Непаричен влог</td>
+
+                        <td> {{owner.participationFC_NonCash}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Уплатен дел</td>
+
+                        <td> {{owner.participationFC_Payd}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Вкупен влог</td>
+
+                        <td> {{owner.participationFC_Total}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Статус од ПКД</td>
+
+                        <td> {{owner.pkdStatus}}</td>
+
+                    </tr>
+
+
+                </tbody>
+            </table>
+
+
+
+            <h3 style="font-size:1.17em; font-weight:bold">
+
+                <span>Податоци за актери</span>
+            </h3>
+            
+            @*vtora so ja ima*@
+            <table class="GridViewStyle" ng-repeat="actor in actors" cellspacing="0" rules="all" border="1" id="GridViewListTemplate1" style="font-weight:bold;border-collapse:collapse;width: auto; min-width:500px">
+
+
+
+                <tbody>
+                    <tr class="HeaderStyle">
+                        <th scope="col">Управител</th>
+
+                        <th scope="col"></th>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>ЕМБС</td>
+
+                        <td> {{actor.leid}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Број на подружница</td>
+
+                        <td> {{actor.unitNo}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Тип на овластено лице</td>
+
+                        <td> {{actor.personOrLEID}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Опис на тип на овластено лице</td>
+
+                        <td> {{actor.personOrLEDesc}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Матичен број на овластено лице</td>
+
+                        <td> {{actor.actorID}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Шифра на тип на овластено лице</td>
+
+                        <td> {{actor.actorTypeID}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Опис на тип на овластено лице</td>
+
+                        <td> {{actor.actorTypeDesc}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Име</td>
+
+                        <td> {{actor.actorName}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Презиме</td>
+
+                        <td> {{actor.actorSurname}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Код на земја</td>
+
+                        <td> {{actor.countryCode}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Земја</td>
+
+                        <td> {{actor.country}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Општина</td>
+
+                        <td> {{actor.municipality}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Место</td>
+
+                        <td> {{actor.place}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Улица</td>
+
+                        <td> {{actor.street}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Број</td>
+
+                        <td> {{actor.houseNo}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Влез</td>
+
+                        <td> {{actor.entranceNo}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Стан</td>
+
+                        <td> {{actor.flatNo}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Електронско сандаче</td>
+
+                        <td> {{actor.email}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Овластувања</td>
+
+                        <td> {{actor.description}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Ограничувања</td>
+
+                        <td> {{actor.restrictions}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Тип на овластување</td>
+
+                        <td> {{actor.authorisationTypeID}}</td>
+
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Опис на тип на овластување</td>
+
+                        <td> {{actor.authorisationTypeDesc}}</td>
+
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Статус од ПКД</td>
+
+                        <td> {{actor.pkdStatus}}</td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+            
+            
+            
+            @*<h3 style="font-size:1.17em; font-weight:bold">
+                <span> Податоци за подружница</span>
+            </h3>
+            <table class="GridViewStyle" cellspacing="0" ng-repeat="unit in units" rules="all" border="1" id="GridViewListTemplate1" style="font-weight:bold;border-collapse:collapse;width: auto; min-width:500px">
+                <tbody>
+                    <tr class="HeaderStyle">
+                        <th scope="col">Наслов на податок</th>
+
+                        <th scope="col">Податок</th>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>ЕМБС</td>
+                        <td>
+                            {{unit.leid}}
+                        </td>
+                    </tr>
+
+                    <tr class="AltRowStyle">
+                        <td>Број на подружница</td>
+                        <td>
+                            {{unit.unitNo}}
+                        </td>
+                    </tr>
+
+                    <tr class="RowStyle">
+                        <td>Назив на подружница</td>
+                        <td>
+                            {{unit.unitName}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Тип на подружница</td>
+                        <td>
+                            {{unit.unitTypeID}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Опис на тип на подружница</td>
+                        <td>
+                            {{unit.unitTypeDescr}}
+                        </td>
+                    </tr>
+
+                    <tr class="AltRowStyle">
+                        <td>Опис на подружница</td>
+                        <td>
+                            {{unit.unitDescr}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+
+                        <td>Останати информации</td>
+                        <td>
+                            {{unit.otherInfo}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Код на земја</td>
+                        <td>
+                            {{unit.countryCode}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+
+                        <td>Земја</td>
+                        <td>
+                            {{unit.country}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+
+                        <td>Општина</td>
+                        <td>
+                            {{unit.municipality}}
+                        </td>
+                    </tr>
+
+                    <tr class="RowStyle">
+                        <td>Код на општина</td>
+                        <td>
+                            {{unit.municipalityCode}}
+                        </td>
+                    </tr>
+
+                    <tr class="AltRowStyle">
+                        <td>Место</td>
+                        <td>
+                            {{unit.place}}
+                        </td>
+                    </tr>
+
+                    <tr class="RowStyle">
+                        <td>Код на место</td>
+                        <td>
+                            {{unit.placeCode}}
+                        </td>
+                    </tr>
+
+                    <tr class="AltRowStyle">
+                        <td>Улица</td>
+                        <td ng-repeat="unit in units">
+                            {{unit.street}}
+                        </td>
+                    </tr>
+
+                    <tr class="RowStyle">
+                        <td>Код на Улица</td>
+                        <td>
+                            {{unit.streetCode}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Број</td>
+                        <td>
+                            {{unit.houseNo}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Влез</td>
+                        <td>
+                            {{unit.entranceNo}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Стан</td>
+                        <td>
+                            {{unit.flatNo}}
+                        </td>
+                    </tr>
+
+                    <tr class="RowStyle">
+                        <td>Код на претежна дејност</td>
+                        <td>
+                            {{unit.activityCode}}
+                        </td>
+                    </tr>
+
+                    <tr class="AltRowStyle">
+                        <td>Опис на претежна дејност</td>
+                        <td>
+                            {{unit.activityDesc}}
+                        </td>
+                    </tr>
+
+
+
+                </tbody>
+            </table>
+            
+            <h3 style="font-size:1.17em; font-weight:bold">
+
+                <span ng-show="(activities).length">Активности</span>
+            </h3>
+            <table class="GridViewStyle" ng-repeat="activitie in activities" cellspacing="0" rules="all" border="1" id="GridViewListTemplate1" style="font-weight:bold;border-collapse:collapse;width: auto; min-width:500px">
+
+                <tbody>
+                    <tr class="HeaderStyle">
+                        <th scope="col">Наслов на податок</th>
+
+                        <th scope="col">Податок</th>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>ЕМБС</td>
+
+                        <td> {{activitie.leid}}</td>
+
+                    </tr>
+
+                    <tr class="AltRowStyle">
+                        <td>Код на дејност</td>
+
+                        <td>
+                            {{activitie.activityCode}}
+                        </td>
+
+                    </tr>
+
+                    <tr class="RowStyle">
+                        <td>Опис на дејност</td>
+
+                        <td>
+                            {{activitie.activityDesc}}
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+            
+            
+            <h3 style="font-size:1.17em; font-weight:bold">
+
+                <span ng-show="(membership).length">Членство</span>
+            </h3>
+            <table class="GridViewStyle" ng-repeat="member in membership" cellspacing="0" rules="all" border="1" id="GridViewListTemplate1" style="font-weight:bold;border-collapse:collapse;width: auto; min-width:500px">
+              
+                <tbody>
+                    <tr class="HeaderStyle">
+                        <th scope="col">Наслов на податок</th>
+
+                        <th scope="col">Податок</th>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>ЕМБС</td>
+
+                        <td>
+                            {{member.leid}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>ЕМБС на субјект во кој е членка</td>
+
+                        <td>
+                            {{member.memberOf}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Назив на субјектот во кој е членка</td>
+
+                        <td>
+                            {{member.mainLeidName}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>ЕМБС на членка</td>
+
+                        <td>
+                            {{member.members}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Назив на членка</td>
+
+                        <td>
+                            {{member.membersName}}
+                        </td>
+                    </tr>
+                  
+                </tbody>
+            </table>
+            
+            
+            
+            <h3 style="font-size:1.17em; font-weight:bold">
+
+                <span ng-show="(court).length">Суд</span>
+            </h3>
+            <table class="GridViewStyle" ng-repeat="cour in court" cellspacing="0" rules="all" border="1" id="GridViewListTemplate1" style="font-weight:bold;border-collapse:collapse;width: auto; min-width:500px">
+
+                <tbody>
+                    <tr class="HeaderStyle">
+                        <th scope="col">Наслов на податок</th>
+
+                        <th scope="col">Податок</th>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>ЕМБС</td>
+
+                        <td>
+                            {{cour.leid}}
+                        </td>
+                    </tr>
+                    <tr class="AltRowStyle">
+                        <td>Тип на постапка</td>
+
+                        <td>
+                            {{cour.cpType}}
+                        </td>
+                    </tr>
+                    <tr class="RowStyle">
+                        <td>Фаза на постапка</td>
+
+                        <td>
+                            {{cour.cpStage}}
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>*@
+         
+            <div class="row text-center">
+                <a class="btn btn-default" ng-click="TekovnaSostojbaXML()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во XML формат</a>
+                <a class="btn btn-default" ng-click="TekovnaSostojbaPDF()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во PDF формат</a>
+            </div>
+        </div>
+    </div>
+</form>

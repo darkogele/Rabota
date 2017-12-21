@@ -1,0 +1,127 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AdapterServices", "AdapterServices", "{FC8BF320-D852-4AD6-91C6-A99FC041DE86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterServiceAKN", "AdapterServiceAKN\AdapterServiceAKN.csproj", "{6398C0F7-36AE-408F-A3E6-6F8A1CE9064A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterServiceAKN.Host", "AdapterServiceAKN.Host\AdapterServiceAKN.Host.csproj", "{FF02C63E-480E-4CB6-8440-9BB740999C7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAKNWebService", "TestAKNWebService\TestAKNWebService.csproj", "{85BFE205-3133-4CB8-8D2E-787D79C3987A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A421A612-C5AE-4107-B141-E8F37DECC956} = {A421A612-C5AE-4107-B141-E8F37DECC956}
+		{FF02C63E-480E-4CB6-8440-9BB740999C7B} = {FF02C63E-480E-4CB6-8440-9BB740999C7B}
+		{D0258F71-8388-43B2-967D-76BB995357E0} = {D0258F71-8388-43B2-967D-76BB995357E0}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSAdapterAKN.Host", "TSAdapterAKN.Host\TSAdapterAKN.Host.csproj", "{D0258F71-8388-43B2-967D-76BB995357E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSAdapterAKN", "TSAdapterAKN\TSAdapterAKN.csproj", "{DDDA79FF-53CD-40FD-B076-E1A0EF67D776}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaultAdapterAKN.Host", "FaultAdapterAKN.Host\FaultAdapterAKN.Host.csproj", "{A421A612-C5AE-4107-B141-E8F37DECC956}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaultAdapterAKN", "FaultAdapterAKN\FaultAdapterAKN.csproj", "{EDBAE213-A7B3-4FC1-8E8E-B4BB5CD75296}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAKNAdapterForParcel", "TestAKNAdapterForParcel\TestAKNAdapterForParcel.csproj", "{5EB46EE9-BE31-4C3B-A2C4-0D5C5E7B7984}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAKNDocServices", "TestAKNDocServices\TestAKNDocServices.csproj", "{7C40BE2E-92C2-48E7-AA9D-0F8475C9E7F7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FF02C63E-480E-4CB6-8440-9BB740999C7B} = {FF02C63E-480E-4CB6-8440-9BB740999C7B}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 10
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.11.21.108:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AdapterServiceAKN\\AdapterServiceAKN.csproj
+		SccProjectTopLevelParentUniqueName1 = AKN.sln
+		SccProjectName1 = AdapterServiceAKN
+		SccLocalPath1 = AdapterServiceAKN
+		SccProjectUniqueName2 = AdapterServiceAKN.Host\\AdapterServiceAKN.Host.csproj
+		SccProjectTopLevelParentUniqueName2 = AKN.sln
+		SccProjectName2 = AdapterServiceAKN.Host
+		SccLocalPath2 = AdapterServiceAKN.Host
+		SccProjectUniqueName3 = TestAKNWebService\\TestAKNWebService.csproj
+		SccProjectName3 = TestAKNWebService
+		SccLocalPath3 = TestAKNWebService
+		SccProjectUniqueName4 = TSAdapterAKN.Host\\TSAdapterAKN.Host.csproj
+		SccProjectTopLevelParentUniqueName4 = AKN.sln
+		SccProjectName4 = TSAdapterAKN.Host
+		SccLocalPath4 = TSAdapterAKN.Host
+		SccProjectUniqueName5 = TSAdapterAKN\\TSAdapterAKN.csproj
+		SccProjectTopLevelParentUniqueName5 = AKN.sln
+		SccProjectName5 = TSAdapterAKN
+		SccLocalPath5 = TSAdapterAKN
+		SccProjectUniqueName6 = FaultAdapterAKN.Host\\FaultAdapterAKN.Host.csproj
+		SccProjectTopLevelParentUniqueName6 = AKN.sln
+		SccProjectName6 = FaultAdapterAKN.Host
+		SccLocalPath6 = FaultAdapterAKN.Host
+		SccProjectUniqueName7 = FaultAdapterAKN\\FaultAdapterAKN.csproj
+		SccProjectTopLevelParentUniqueName7 = AKN.sln
+		SccProjectName7 = FaultAdapterAKN
+		SccLocalPath7 = FaultAdapterAKN
+		SccProjectUniqueName8 = TestAKNAdapterForParcel\\TestAKNAdapterForParcel.csproj
+		SccProjectName8 = TestAKNAdapterForParcel
+		SccLocalPath8 = TestAKNAdapterForParcel
+		SccProjectUniqueName9 = TestAKNDocServices\\TestAKNDocServices.csproj
+		SccProjectName9 = TestAKNDocServices
+		SccLocalPath9 = TestAKNDocServices
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6398C0F7-36AE-408F-A3E6-6F8A1CE9064A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6398C0F7-36AE-408F-A3E6-6F8A1CE9064A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6398C0F7-36AE-408F-A3E6-6F8A1CE9064A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6398C0F7-36AE-408F-A3E6-6F8A1CE9064A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF02C63E-480E-4CB6-8440-9BB740999C7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF02C63E-480E-4CB6-8440-9BB740999C7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF02C63E-480E-4CB6-8440-9BB740999C7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF02C63E-480E-4CB6-8440-9BB740999C7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85BFE205-3133-4CB8-8D2E-787D79C3987A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85BFE205-3133-4CB8-8D2E-787D79C3987A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85BFE205-3133-4CB8-8D2E-787D79C3987A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85BFE205-3133-4CB8-8D2E-787D79C3987A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0258F71-8388-43B2-967D-76BB995357E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0258F71-8388-43B2-967D-76BB995357E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0258F71-8388-43B2-967D-76BB995357E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0258F71-8388-43B2-967D-76BB995357E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDDA79FF-53CD-40FD-B076-E1A0EF67D776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDDA79FF-53CD-40FD-B076-E1A0EF67D776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDDA79FF-53CD-40FD-B076-E1A0EF67D776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDDA79FF-53CD-40FD-B076-E1A0EF67D776}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A421A612-C5AE-4107-B141-E8F37DECC956}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A421A612-C5AE-4107-B141-E8F37DECC956}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A421A612-C5AE-4107-B141-E8F37DECC956}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A421A612-C5AE-4107-B141-E8F37DECC956}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDBAE213-A7B3-4FC1-8E8E-B4BB5CD75296}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDBAE213-A7B3-4FC1-8E8E-B4BB5CD75296}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDBAE213-A7B3-4FC1-8E8E-B4BB5CD75296}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDBAE213-A7B3-4FC1-8E8E-B4BB5CD75296}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EB46EE9-BE31-4C3B-A2C4-0D5C5E7B7984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EB46EE9-BE31-4C3B-A2C4-0D5C5E7B7984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EB46EE9-BE31-4C3B-A2C4-0D5C5E7B7984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EB46EE9-BE31-4C3B-A2C4-0D5C5E7B7984}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C40BE2E-92C2-48E7-AA9D-0F8475C9E7F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C40BE2E-92C2-48E7-AA9D-0F8475C9E7F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C40BE2E-92C2-48E7-AA9D-0F8475C9E7F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C40BE2E-92C2-48E7-AA9D-0F8475C9E7F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6398C0F7-36AE-408F-A3E6-6F8A1CE9064A} = {FC8BF320-D852-4AD6-91C6-A99FC041DE86}
+		{FF02C63E-480E-4CB6-8440-9BB740999C7B} = {FC8BF320-D852-4AD6-91C6-A99FC041DE86}
+		{D0258F71-8388-43B2-967D-76BB995357E0} = {FC8BF320-D852-4AD6-91C6-A99FC041DE86}
+		{DDDA79FF-53CD-40FD-B076-E1A0EF67D776} = {FC8BF320-D852-4AD6-91C6-A99FC041DE86}
+		{A421A612-C5AE-4107-B141-E8F37DECC956} = {FC8BF320-D852-4AD6-91C6-A99FC041DE86}
+		{EDBAE213-A7B3-4FC1-8E8E-B4BB5CD75296} = {FC8BF320-D852-4AD6-91C6-A99FC041DE86}
+	EndGlobalSection
+EndGlobal

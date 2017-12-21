@@ -1,0 +1,33 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>Име и презиме - Институција Б</h2>
+
+<form name="nameSurnameForm" ng-controller="InstitutionBCtrl">
+
+    <div class="container" style="margin-top: 20px;">
+        <div class="col-lg-3">
+            <div class="form-group" ng-class="{ 'has-error' : nameSurnameFormFieldvalidation.name.$invalid || nameSurnameFormFieldvalidation.surname.$invalid }">
+                <ng-form name="nameSurnameFormFieldvalidation">
+                    <label for="name">Име:</label>
+                    <input id="name" type="text" class="form-control" name="name" ng-model="name" ng-pattern="/^[a-zA-Z]*$/" required>
+                    <br />
+                    <label for="name">Презиме:</label>
+                    <input id="surname" type="text" class="form-control" name="surname" ng-model="surname" ng-pattern="/^[a-zA-Z]*$/" required>
+                </ng-form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-disabled="nameSurnameForm.$invalid" ng-click="getNameAndSurname(name, surname)"><i class="fa fa-save"></i> Испрати</button>
+                <a class="btn btn-warning" href="#/institutionB/institutionBNameSurname" ui-sref="namesurnameindex">Откажи</a>
+            </div>
+        </div>
+        <div ng-show="show" class="col-lg-9">
+            <div class="form-group">
+                <ng-form name="municipalityFormField">
+                    <label for="result">Име и презиме:</label>
+                    <input id="result" type="text" class="form-control" name="result" ng-model="result" disabled="disabled">
+                </ng-form>
+            </div>
+        </div>
+    </div>
+</form>     

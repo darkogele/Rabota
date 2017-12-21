@@ -1,0 +1,11 @@
+D:\Work\InteropCC\ClientToWCF\bin\Debug\NLog.config
+D:\Work\InteropCC\ClientToWCF\bin\Debug\ClientToWCF.exe.config
+D:\Work\InteropCC\ClientToWCF\bin\Debug\ClientToWCF.exe
+D:\Work\InteropCC\ClientToWCF\bin\Debug\ClientToWCF.pdb
+D:\Work\InteropCC\ClientToWCF\bin\Debug\NLog.dll
+D:\Work\InteropCC\ClientToWCF\bin\Debug\NLog.Extended.dll
+D:\Work\InteropCC\ClientToWCF\bin\Debug\NLog.xml
+D:\Work\InteropCC\ClientToWCF\bin\Debug\NLog.Extended.xml
+D:\Work\InteropCC\ClientToWCF\obj\Debug\ClientToWCF.exe
+D:\Work\InteropCC\ClientToWCF\obj\Debug\ClientToWCF.pdb
+D:\Work\InteropCC\ClientToWCF\obj\Debug\ClientToWCF.csprojResolveAssemblyReference.cache

@@ -1,0 +1,156 @@
+﻿@model Interop.CC.Models.DTO.Institutions.CadastralParcelDTO
+
+<head>
+    <style>
+        .HeaderStyle {
+            border: 2px solid #999999 !important;
+            background-position: top;
+            background-repeat: repeat-x;
+            background-color: #06B4C0;
+        }
+
+        .RowStyle td, .AltRowStyle td, .SelectedRowStyle td, .EditRowStyle td {
+            border: solid 1px #91a7b4;
+            border-right-color: #bcbcbc;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .GridViewStyle {
+            font-family: Arial, Sans-Serif;
+            font-size: small;
+            table-layout: auto;
+            border-collapse: collapse;
+            border: 1px solid #CCCCCC;
+            overflow: auto;
+        }
+
+        .RowStyle td {
+            background-color: #f7f7f7;
+        }
+
+        .AltRowStyle td {
+            background-color: #E1E1E1;
+            background-position: 0 -80px;
+            background-repeat: repeat-x;
+        }
+
+        .PagerStyle table {
+            text-align: center;
+            margin: auto;
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+    </style>
+</head>
+<div style="width:100%; height: 100%">
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <h1>
+        Извештај за катастарска парцела
+    </h1>
+    <hr width="100%"></hr>
+    <h1 style="text-align: right;">Агенција за катастар на недвижности</h1>
+    <br />
+    <div style="width:800px; margin:0 auto; margin-bottom: 10px">
+        <br /><br /><br />
+        <p style="text-align: right ;">Извештајот е креиран од корисникот @Model.ConsumerName</p>
+        <p style="text-align: right;">Време на поднесено барање @Model.ServiceCalledTime.ToString("dd.MM.yyyy HH:mm")</p>
+    </div>
+    <div></div>
+
+</div>
+<div style="width: 100%;">
+    </div>
+
+    @*<div style="float: left; width: 70%;">
+        <img src="@Server.MapPath("~/Views/Template/grbMak.jpg")" style="float: left" alt="MIOA logo" />
+        <label>Република Македонија</label>
+        <h4 style="font-size:.6em;">Министерство за информатичко општество и администрација</h4>
+    </div>*@
+    @*<div style="float: right; width: 30%; font-size: .6em">
+        <a style="margin-left: 80px;" href="http://www.interoperabilnost.gov.mk">www.interoperabilnost.gov.mk</a>
+
+        <table class="table-striped" style="margin-top: 20px;">
+            <thead style="display: table-row-group">
+
+            </thead>
+            <tbody style="font-size: .6em">
+                <tr>
+                    <td>Име на услугата:</td>
+                    <td>@Model.ServiceName</td>
+                </tr>
+                <tr>
+                    <td>Услугата ја користи:</td>
+                    <td>@Model.ConsumerName</td>
+                </tr>
+                <tr>
+                    <td>Услугата ја нуди:</td>
+                    <td>@Model.ProviderName</td>
+                </tr>
+                <tr>
+                    <td>Време на повик до услугата:</td>
+                    <td>@Model.ServiceCalledTime.ToString("dd.MM.yyyy HH:mm")</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>*@
+
+<div style="height: 70px; width: 100%; float: left"></div>
+@if (Model.AttributesList.Any())
+{
+    <table class="GridViewStyle" cellspacing="0" rules="all" border="1" id="GridViewParceli" style="border-collapse: collapse; width: 100%" visi>
+        <caption style="background-color: lightgray; text-align: left"><b>Податоци за парцела</b></caption>
+        <thead style="display: table-row-group">
+            <tr class="HeaderStyle">
+                <th>Број на парцела/дел</th>
+                <th>Имотен лист</th>
+                <th>Катастарска општина</th>
+                <th>Намена</th>
+                <th>Место</th>
+                <th>Објект</th>
+                <th>Општина</th>
+                <th>Површина во м2</th>
+                <th>Право</th>
+            </tr>
+
+        </thead>
+  
+        <tbody>
+
+            <tr class="RowStyle">
+
+                @foreach (var general in Model.AttributesList)
+                {
+                    <td>@general.PartNumber</td>
+                    <td>@general.PropertyList</td>
+                    <td>@general.CadastralMunicipality</td>
+                    <td>@general.Culture</td>
+                    <td>@general.Location</td>
+                    <td>@general.Object</td>
+                    <td>@general.Municipality</td>
+                    <td>@general.Area</td>
+                    <td>@general.Pravo</td>
+
+                    <tr></tr>
+                }
+
+            </tr>
+
+
+        </tbody>
+        
+       
+    </table>
+}
+else
+    {
+
+        <caption><b>НЕМА ПОДАТОЦИ</b></caption>
+
+    }
+<br />

@@ -1,0 +1,678 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{293E60DB-7044-4BDE-B807-BA4059D6CE76}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestApp</RootNamespace>
+    <AssemblyName>TestApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\AKNCPlanDocProduction\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNCPlanDocTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNDataForIFDocProduction\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNDataForIFDocTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNDocsServiceTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNMunicipalityProduction\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNMunicipalityTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNPListDocProduction\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNPListDocTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AKNPopertyListAndCadastrialParcelProduction\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CadastrialParcelTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CadastrialParcel\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PropertyListTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PropertyList\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TSAdapterAKNProd\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TSAdapterAKNTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TSProduction\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TSTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\Contracts.DataAccessLibrary.AKNDocOutput.datasource" />
+    <None Include="Properties\DataSources\Contracts.DTO_s.AKNMunicipalityService.MunicipalityDTO.datasource" />
+    <None Include="Properties\DataSources\Contracts.DTO_s.AKNService.ATRparceli.datasource" />
+    <None Include="Properties\DataSources\Contracts.DTO_s.AKNService.dzgr.datasource" />
+    <None Include="Properties\DataSources\Contracts.DTO_s.ATRparceli.datasource" />
+    <None Include="Properties\DataSources\Contracts.DTO_s.dzgr.datasource" />
+    <None Include="Properties\DataSources\Contracts.DTO_s.MunicipalityDTO.datasource" />
+    <None Include="Service References\AKNCPlanDocProduction\AKNCPlanDocProduction.wsdl" />
+    <None Include="Service References\AKNCPlanDocProduction\AKNCPlanDocProduction.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNCPlanDocProduction\AKNCPlanDocProduction1.wsdl" />
+    <None Include="Service References\AKNCPlanDocProduction\AKNCPlanDocProduction1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNCPlanDocProduction\AKNCPlanDocProduction2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNCPlanDocTest\AKNCPlanDoc.wsdl" />
+    <None Include="Service References\AKNCPlanDocTest\AKNCPlanDocTest.wsdl" />
+    <None Include="Service References\AKNCPlanDocTest\AKNCPlanDocTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNCPlanDocTest\AKNCPlanDocTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNCPlanDocTest\AKNCPlanDocTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNDataForIFDocProduction\AKNDataForIFDocProduction.wsdl" />
+    <None Include="Service References\AKNDataForIFDocProduction\AKNDataForIFDocProduction.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNDataForIFDocProduction\AKNDataForIFDocProduction1.wsdl" />
+    <None Include="Service References\AKNDataForIFDocProduction\AKNDataForIFDocProduction1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNDataForIFDocProduction\AKNDataForIFDocProduction2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNDataForIFDocTest\AKNDataForIFDoc.wsdl" />
+    <None Include="Service References\AKNDataForIFDocTest\AKNDataForIFDocTest.wsdl" />
+    <None Include="Service References\AKNDataForIFDocTest\AKNDataForIFDocTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNDataForIFDocTest\AKNDataForIFDocTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNDataForIFDocTest\AKNDataForIFDocTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNDocsServiceTest\IntegracijaWS.wsdl" />
+    <None Include="Service References\AKNDocsServiceTest\IntegracijaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNDocsServiceTest\TestApp.AKNDocsServiceTest.documentInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceTest\TestApp.AKNDocsServiceTest.generateDocumentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceTest\TestApp.AKNDocsServiceTest.getPayedReqResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceTest\TestApp.AKNDocsServiceTest.getPlistInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceTest\TestApp.AKNDocsServiceTest.getTestResultResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceTest\TestApp.AKNDocsServiceTest.insLiteUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceTest\TestApp.AKNDocsServiceTest.insNewProcedureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceTest\TestApp.AKNDocsServiceTest.insOISDUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceTest\TestApp.AKNDocsServiceTest.payedReq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceTest\TestApp.AKNDocsServiceTest.plistInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceTest\TestApp.AKNDocsServiceTest.printMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceTest\TestApp.AKNDocsServiceTest.promenaKulturaPoOpfatResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNDocsServiceTest\TestApp.AKNDocsServiceTest.shapeInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AKNMunicipalityProduction\AKNMunicipality.wsdl" />
+    <None Include="Service References\AKNMunicipalityProduction\AKNMunicipality.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNMunicipalityProduction\AKNMunicipality1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNMunicipalityProduction\AKNMunicipality2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNMunicipalityProduction\AKNMunicipalityServiceProduction.wsdl" />
+    <None Include="Service References\AKNMunicipalityTest\AKNMunicipalityService.wsdl" />
+    <None Include="Service References\AKNMunicipalityTest\AKNMunicipalityTest.wsdl" />
+    <None Include="Service References\AKNMunicipalityTest\AKNMunicipalityTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNMunicipalityTest\AKNMunicipalityTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNMunicipalityTest\AKNMunicipalityTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPListDocProduction\AKNPListDocProduction.wsdl" />
+    <None Include="Service References\AKNPListDocProduction\AKNPListDocProduction.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPListDocProduction\AKNPListDocProduction1.wsdl" />
+    <None Include="Service References\AKNPListDocProduction\AKNPListDocProduction1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPListDocProduction\AKNPListDocProduction2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPListDocTest\AKNPListDoc.wsdl" />
+    <None Include="Service References\AKNPListDocTest\AKNPListDocTest.wsdl" />
+    <None Include="Service References\AKNPListDocTest\AKNPListDocTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPListDocTest\AKNPListDocTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPListDocTest\AKNPListDocTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPopertyListAndCadastrialParcelProduction\AKNPopertyListAndCadastrialParcelProduction.wsdl" />
+    <None Include="Service References\AKNPopertyListAndCadastrialParcelProduction\AKNPopertyListAndCadastrialParcelProduction.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPopertyListAndCadastrialParcelProduction\AKNPopertyListAndCadastrialParcelProduction1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPopertyListAndCadastrialParcelProduction\AKNPopertyListAndCadastrialParcelProduction2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AKNPopertyListAndCadastrialParcelProduction\AKNService.wsdl" />
+    <None Include="Service References\CadastrialParcelTest\CadastrialParcelTest.wsdl" />
+    <None Include="Service References\CadastrialParcelTest\CadastrialParcelTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CadastrialParcelTest\CadastrialParcelTest1.wsdl" />
+    <None Include="Service References\CadastrialParcelTest\CadastrialParcelTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CadastrialParcelTest\CadastrialParcelTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CadastrialParcel\CadastrialParcel.wsdl" />
+    <None Include="Service References\CadastrialParcel\CadastrialParcel.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CadastrialParcel\CadastrialParcel1.wsdl" />
+    <None Include="Service References\CadastrialParcel\CadastrialParcel1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CadastrialParcel\CadastrialParcel2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PropertyListTest\PropertyListTest.wsdl" />
+    <None Include="Service References\PropertyListTest\PropertyListTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PropertyListTest\PropertyListTest1.wsdl" />
+    <None Include="Service References\PropertyListTest\PropertyListTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PropertyListTest\PropertyListTest2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PropertyList\PropertyList.wsdl" />
+    <None Include="Service References\PropertyList\PropertyList.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PropertyList\PropertyList1.wsdl" />
+    <None Include="Service References\PropertyList\PropertyList1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PropertyList\PropertyList2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TSAdapterAKNProd\TSAKNProd.wsdl" />
+    <None Include="Service References\TSAdapterAKNProd\TSAKNProd.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TSAdapterAKNProd\TSAKNProd1.wsdl" />
+    <None Include="Service References\TSAdapterAKNProd\TSAKNProd1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TSAdapterAKNTest\TSAKNTest.wsdl" />
+    <None Include="Service References\TSAdapterAKNTest\TSAKNTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TSAdapterAKNTest\TSAKNTest1.wsdl" />
+    <None Include="Service References\TSAdapterAKNTest\TSAKNTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TSProduction\TSProduction.wsdl" />
+    <None Include="Service References\TSProduction\TSProduction.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TSProduction\TSProduction1.wsdl" />
+    <None Include="Service References\TSProduction\TSProduction1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TSTest\TSTest.wsdl" />
+    <None Include="Service References\TSTest\TSTest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TSTest\TSTest1.wsdl" />
+    <None Include="Service References\TSTest\TSTest1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Contracts\Contracts.csproj">
+      <Project>{751887c9-de40-4d16-adac-91a40e17e3b5}</Project>
+      <Name>Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AKNCPlanDocProduction\" />
+    <WCFMetadataStorage Include="Service References\AKNCPlanDocTest\" />
+    <WCFMetadataStorage Include="Service References\AKNDataForIFDocProduction\" />
+    <WCFMetadataStorage Include="Service References\AKNDataForIFDocTest\" />
+    <WCFMetadataStorage Include="Service References\AKNDocsServiceTest\" />
+    <WCFMetadataStorage Include="Service References\AKNMunicipalityProduction\" />
+    <WCFMetadataStorage Include="Service References\AKNMunicipalityTest\" />
+    <WCFMetadataStorage Include="Service References\AKNPListDocProduction\" />
+    <WCFMetadataStorage Include="Service References\AKNPListDocTest\" />
+    <WCFMetadataStorage Include="Service References\AKNPopertyListAndCadastrialParcelProduction\" />
+    <WCFMetadataStorage Include="Service References\CadastrialParcelTest\" />
+    <WCFMetadataStorage Include="Service References\CadastrialParcel\" />
+    <WCFMetadataStorage Include="Service References\PropertyListTest\" />
+    <WCFMetadataStorage Include="Service References\PropertyList\" />
+    <WCFMetadataStorage Include="Service References\TSAdapterAKNProd\" />
+    <WCFMetadataStorage Include="Service References\TSAdapterAKNTest\" />
+    <WCFMetadataStorage Include="Service References\TSProduction\" />
+    <WCFMetadataStorage Include="Service References\TSTest\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNCPlanDocProduction\AKNCPlanDocProduction.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNCPlanDocProduction\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNCPlanDocProduction\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNCPlanDocProduction\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNDataForIFDocProduction\AKNDataForIFDocProduction.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNDataForIFDocProduction\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNDataForIFDocProduction\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNDataForIFDocProduction\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNPListDocProduction\AKNPListDocProduction.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNPListDocProduction\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNPListDocProduction\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNPListDocProduction\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNPopertyListAndCadastrialParcelProduction\AKNPopertyListAndCadastrialParcelProduction.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNPopertyListAndCadastrialParcelProduction\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNPopertyListAndCadastrialParcelProduction\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNPopertyListAndCadastrialParcelProduction\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSProduction\TSProduction.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSProduction\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSProduction\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSProduction\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNCPlanDocTest\AKNCPlanDocTest.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNCPlanDocTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNCPlanDocTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNCPlanDocTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNDataForIFDocTest\AKNDataForIFDocTest.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNDataForIFDocTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNDataForIFDocTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNDataForIFDocTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNPListDocTest\AKNPListDocTest.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNPListDocTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNPListDocTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNPListDocTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSTest\TSTest.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNDocsServiceTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNDocsServiceTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNDocsServiceTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PropertyList\PropertyList.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PropertyList\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PropertyList\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PropertyList\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CadastrialParcel\CadastrialParcel.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CadastrialParcel\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CadastrialParcel\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CadastrialParcel\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CadastrialParcelTest\CadastrialParcelTest.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CadastrialParcelTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CadastrialParcelTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CadastrialParcelTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PropertyListTest\PropertyListTest.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PropertyListTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PropertyListTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PropertyListTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSAdapterAKNTest\TSAKNTest.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSAdapterAKNTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSAdapterAKNTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSAdapterAKNTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNMunicipalityTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNMunicipalityTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNMunicipalityTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNMunicipalityTest\AKNMunicipalityTest.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSAdapterAKNProd\TSAKNProd.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSAdapterAKNProd\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSAdapterAKNProd\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TSAdapterAKNProd\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNMunicipalityProduction\AKNMunicipality.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNMunicipalityProduction\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNMunicipalityProduction\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AKNMunicipalityProduction\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

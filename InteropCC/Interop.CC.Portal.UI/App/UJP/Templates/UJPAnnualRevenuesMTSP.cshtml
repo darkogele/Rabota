@@ -1,0 +1,85 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>Годишни приходи МТСП - Управа за јавни приходи</h2>
+
+<form name="ujpAnnualRevenueMTSPForm" ng-controller="UjpCtrl">
+
+    <div class="container">
+        <div class="col-lg-3">
+            <div class="form-group" ng-class="{ 'has-error' : edbFormField.edb.$invalid }">
+                <ng-form name="edbFormField">
+                    <label for="edb">ЕДБ:</label>
+                    <input id="edb" type="text" class="form-control" name="edb" ng-model="edb" only-digits required>
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : yearFormField.year.$invalid }">
+                <ng-form name="yearFormField">
+                    <label for="year">Година:</label>
+                    <input id="year" type="text" class="form-control" name="year" ng-model="year" required>
+                </ng-form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-disabled="ujpAnnualRevenueMTSPForm.$invalid" ng-click="ujpAnnualRevenuesMTSP(edb, year)"><i class="fa fa-save"></i> Испрати</button>
+                <a class="btn btn-warning" href="#/ujp/ujpannualrevenuesmtsp" ui-sref="ujpannualrevenuesmtspindex">Откажи</a>
+            </div>
+        </div>
+
+        <div ng-show="show" class="col-lg-9">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <button ng-show="!expandOps" ng-click="expandedOps()">+</button>
+                            <button ng-show="expandOps" ng-click="expandedOps()">-</button>
+                            Годишни Приходи МТСП
+                        </th>
+                    </tr>
+                    <tr ng-show="expandOps">
+                        <th>ЕДБ</th>
+                        <th>Име на обврзникот</th>
+                        <th>Презиме на обврзникот</th>
+                        <th>Година</th>
+                        <th>Исплатена плата за последни 3 месеци (бруто)</th>
+                        <th>Исплатена плата за последни 3 месеци (нето)</th>
+                        <th>Лични примања (бруто)</th>
+                        <th>Лични примања (нето)</th>
+                        <th>Приходи од самостојна дејност</th>
+                        <th>Приходи од земјоделска дејност</th>
+                        <th>Приходи од имот и имотни права</th>
+                        <th>Приходи од авторски права и права од индустриска сопственост</th>
+                        <th>Приходи од капитал(дивиденди и др.)</th>
+                        <th>Приходи од капитални добивки</th>
+                        <th>Приходи од игри на среќа и наградни игри</th>
+                        <th>Други приходи</th>
+                        <th>Забелешка</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-show="expandOps">
+                        <td>{{annualRevenuesMTSP.edb}}</td>
+                        <td>{{annualRevenuesMTSP.firstName}}</td>
+                        <td>{{annualRevenuesMTSP.lastName}}</td>
+                        <td>{{annualRevenuesMTSP.year}}</td>
+                        <td>{{annualRevenuesMTSP.plata_3m_Bruto}}</td>
+                        <td>{{annualRevenuesMTSP.plata_3m_Neto}}</td>
+                        <td>{{annualRevenuesMTSP.licniprim_Bruto}}</td>
+                        <td>{{annualRevenuesMTSP.licniprim_Neto}}</td>
+                        <td>{{annualRevenuesMTSP.prihodi_Svd}}</td>
+                        <td>{{annualRevenuesMTSP.prihodi_Zem}}</td>
+                        <td>{{annualRevenuesMTSP.prihodi_Imot}}</td>
+                        <td>{{annualRevenuesMTSP.prihodi_Avtor}}</td>
+                        <td>{{annualRevenuesMTSP.prihodi_Kapital}}</td>
+                        <td>{{annualRevenuesMTSP.prihodi_Kapdob}}</td>
+                        <td>{{annualRevenuesMTSP.prihodi_Igri}}</td>
+                        <td>{{annualRevenuesMTSP.prihodi_Drugo}}</td>
+                        <td>{{annualRevenuesMTSP.zabeleska}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row text-center">
+                <a class="btn btn-default" ng-click="MTSPXML()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во XML формат</a>
+                <a class="btn btn-default" ng-click="MTSPPDF()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во PDF формат</a>
+            </div>
+        </div>
+    </div>
+</form>

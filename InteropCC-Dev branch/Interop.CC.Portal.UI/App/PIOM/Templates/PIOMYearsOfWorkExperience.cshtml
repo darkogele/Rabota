@@ -1,0 +1,217 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>Години работен стаж - Фонд за пензиско и инвалидско осигурување</h2>
+
+<form name="piomYearsOfWorkExperienceForm" ng-controller="PiomCtrl">
+
+    <div class="container">
+        <div class="col-lg-3">
+           @* EMBG *@
+            <div class="form-group" ng-class="{ 'has-error' : embgFormFieldvalidation.embg.$invalid }">
+                <ng-form name="embgFormFieldvalidation">
+                    <label for="embg">ЕМБГ:</label>
+                    <input id="embg" type="text" class="form-control" name="embg" ng-minlength="13" ng-maxlength="13" ng-model="embg" only-digits required>
+                    <br />
+                    <p style="color:red;font-size: 12px;" ng-show="((embgFormFieldvalidation.embg.$error.minlength ||
+                        embgFormFieldvalidation.embg.$error.maxlength))">
+                        ЕМБГ мора да содржи точно 13 цифри!
+                    </p>
+                </ng-form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-disabled="piomYearsOfWorkExperienceForm.$invalid" ng-click="piomYearsOfWorkExperience(embg)"><i class="fa fa-save"></i> Испрати</button>
+                <a class="btn btn-warning" href="#/piom/piomyearsofworkexperience" ui-sref="piomyearsofworkexperienceindex">Откажи</a>
+            </div>
+        </div>
+
+        <div ng-show="show" class="col-lg-9">
+
+            <div class="form-group">
+                <ng-form name="embgFormField">
+                    <label for="embg">ЕМБГ: </label>
+                    <input id="embg" type="text" class="form-control" name="embg" ng-model="embg">
+                </ng-form>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <button ng-show="!expandData" ng-click="expandedData()">+</button>
+                            <button ng-show="expandData" ng-click="expandedData()">-</button>
+                            Главни податоци
+                        </th>
+                    </tr>
+                    <tr ng-show="expandData">
+                        <th>Име</th>
+                        <th>Презиме</th>
+                        <th>Пол</th>
+                        <th>Датум на раѓање</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-show="expandData" ng-repeat="data in generalData">
+                        <td>{{data.name}}</td>
+                        <td>{{data.surname}}</td>
+                        <td>{{data.gender}}</td>
+                        <td>{{data.dateOfBirht}}</td>
+                    </tr>
+                </tbody>
+            </table>
+           
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <button ng-show="!expandInsurance" ng-click="expandedInsurance()">+</button>
+                            <button ng-show="expandInsurance" ng-click="expandedInsurance()">-</button>
+                            Податоци за осигурување
+                        </th>
+                    </tr>
+                    <tr ng-show="expandInsurance">
+                        <th>Регистрациски број на работодавач</th>
+                        <th>Име на работодавач</th>
+                        <th>Единствен даночен број</th>
+                        <th>Единствен матичен број</th>
+                        <th>Датум на почнување</th>
+                        <th>Датум на завршување</th>
+                        <th>Неделни работни саати</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-show="expandInsurance" ng-repeat="ins in insuranceData">
+                        <td>{{ins.companyRegistrationNumber}}</td>
+                        <td>{{ins.companyName}}</td>
+                        <td>{{ins.eDB}}</td>
+                        <td>{{ins.eMB}}</td>
+                        <td>{{ins.startData}}</td>
+                        <td>{{ins.endDate}}</td>
+                        <td>{{ins.weeklyHours}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <button ng-show="!expandOld" ng-click="expandedOld()">+</button>
+                            <button ng-show="expandOld" ng-click="expandedOld()">-</button>
+                            Старо или искуство во странска земја
+                        </th>
+                    </tr>
+                    <tr ng-show="expandOld">
+                        <th>Тип на документ</th>
+                        <th>Година</th>
+                        <th>Земја</th>
+                        <th>Период од</th>
+                        <th>Период до</th>
+                        <th>Траење на работно искуство</th>
+                        <th>Тип на работно искуство</th>
+                        <th>Степен на раст на работно искуство</th>
+                        <th>Работно искуство</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="oldList in oldAndForegnExperience" ng-show="expandOld">
+                        <td>{{oldList.pS}}</td>
+                        <td>{{oldList.year}}</td>
+                        <td>{{oldList.country}}</td>
+                        <td>{{oldList.periodFrom}}</td>
+                        <td>{{oldList.periodTo}}</td>
+                        <td>{{oldList.durationWorkExperience}}</td>
+                        <td>{{oldList.typeOfWorkExperience}}</td>
+                        <td>{{oldList.degreeOfIncreaseOfWorkExperience}}</td>
+                        <td>{{oldList.workExperience}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>
+                    <button ng-show="!expandM4" ng-click="expandedM4()">+</button>
+                    <button ng-show="expandM4" ng-click="expandedM4()">-</button>
+                    М4 образец
+                    </th>
+                </tr>
+                <tr ng-show="expandM4">
+                    <th>Тип на документ</th>
+                    <th>Година</th>
+                    <th>Регистрациски број</th>
+                    <th>Период од</th>
+                    <th>Период до</th>
+                    <th>Траење на работно искуство</th>
+                    <th>Работни саати</th>
+                    <th>Плата</th>
+                    <th>Година боледување</th>
+                    <th>Ефективно траење</th>
+                    <th>Степен на раст</th>
+                    <th>Месеци</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="m4 in m4" ng-show="expandM4">
+                        <td>{{m4.typeOfForm}}</td>
+                        <td>{{m4.year}}</td>
+                        <td>{{m4.registrationNumber}}</td>
+                        <td>{{m4.periodFrom}}</td>
+                        <td>{{m4.periodTo}}</td>
+                        <td>{{m4.durationWorkExperience}}</td>
+                        <td>{{m4.workingHours}}</td>
+                        <td>{{m4.salary}}</td>
+                        <td>{{m4.yearOfSickLeave}}</td>
+                        <td>{{m4.effectiveDuration}}</td>
+                        <td>{{m4.degreeOfIncrease}}</td>
+                        <td>{{m4.meseci}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <button ng-show="!expandInvM4" ng-click="expandedInvM4()">+</button>
+                            <button ng-show="expandInvM4" ng-click="expandedInvM4()">-</button>
+                            Невалиден М4 образец
+                        </th>
+                    </tr>
+                    <tr ng-show="expandInvM4">
+                        <th>Тип на документ</th>
+                        <th>Година</th>
+                        <th>Регистрациски број</th>
+                        <th>Период од</th>
+                        <th>Период до</th>
+                        <th>Траење на работно искуство</th>
+                        <th>Работни саати</th>
+                        <th>Плата</th>
+                        <th>Година боледување</th>
+                        <th>Ефективно траење</th>
+                        <th>Степен на раст</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="invm4 in invalidM4" ng-show="expandInvM4">
+                        <td>{{invm4.typeOfForm}}</td>
+                        <td>{{invm4.year}}</td>
+                        <td>{{invm4.registrationNumber}}</td>
+                        <td>{{invm4.periodFrom}}</td>
+                        <td>{{invm4.periodTo}}</td>
+                        <td>{{invm4.durationWorkExperience}}</td>
+                        <td>{{invm4.workingHours}}</td>
+                        <td>{{invm4.salary}}</td>
+                        <td>{{invm4.yearOfSickLeave}}</td>
+                        <td>{{invm4.effectiveDuration}}</td>
+                        <td>{{invm4.degreeOfIncrease}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row text-center">
+                <a class="btn btn-default" ng-click="YearsExperienceXML()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во XML формат</a>
+                <a class="btn btn-default" ng-click="YearsExperiencePDF()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во PDF формат</a>
+            </div>
+        </div>
+    </div>
+</form>

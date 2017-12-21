@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="805599b8-f2a2-445d-bb43-d2a6380d999c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AdapterServiceCRM.Host/AdapterServiceCRM.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AdapterServiceCRM.wsdl" MetadataType="Wsdl" ID="97fee05e-72de-4202-be2e-20b6ab759b49" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/AdapterServiceCRM.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="CRMService.wsdl" MetadataType="Wsdl" ID="e15a3641-f57b-4a90-a2e5-7226cfc8fa4f" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/AdapterServiceCRM.svc?wsdl" />
+    <MetadataFile FileName="AdapterServiceCRM.xsd" MetadataType="Schema" ID="c01d359f-1202-4098-a1e2-da4896359bc4" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/AdapterServiceCRM.svc?xsd=xsd1" />
+    <MetadataFile FileName="AdapterServiceCRM1.xsd" MetadataType="Schema" ID="785b9dac-ab6d-4d3d-ae60-23be6c24da34" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/AdapterServiceCRM.svc?xsd=xsd0" />
+    <MetadataFile FileName="AdapterServiceCRM.disco" MetadataType="Disco" ID="c2761306-42bc-4b8e-86db-8b64bfa5445f" SourceId="1" SourceUrl="http://localhost/AdapterServiceCRM.Host/AdapterServiceCRM.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

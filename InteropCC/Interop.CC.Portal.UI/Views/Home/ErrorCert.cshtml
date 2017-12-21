@@ -1,0 +1,20 @@
+﻿@model Interop.CC.Portal.UI.Models.ErrorModel
+@{
+    Layout = null;
+}
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/font-awesome.css" rel="stylesheet" />
+
+<br />
+<div class="panel panel-default text-center col-lg-6 col-lg-offset-3">
+    <div class="panel-body">
+        <h4>@Model.ErrorText</h4>
+        <hr />
+        <i class="fa fa-2x fa-exclamation-triangle"></i>
+    </div>
+    <div class="panel-footer">
+        <p>Исклучете го пребарувачот и обидете се повторно со валиден сертификат</p>
+    </div>
+</div>
+

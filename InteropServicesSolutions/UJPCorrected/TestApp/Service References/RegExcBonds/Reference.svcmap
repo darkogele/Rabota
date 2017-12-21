@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4b0d320a-3716-4306-a1dc-ca89facb6d18" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/UJPServicesProd.Host/RegExcBonds.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RegExcBonds.xsd" MetadataType="Schema" ID="38e9f8f8-e6ad-4630-9d32-1d079171feb3" SourceId="1" SourceUrl="http://localhost/UJPServicesProd.Host/RegExcBonds.svc?xsd=xsd2" />
+    <MetadataFile FileName="RegExcBonds.wsdl" MetadataType="Wsdl" ID="30a9ddf8-fef4-49c3-b26c-7093d73660a5" SourceId="1" SourceUrl="http://localhost/UJPServicesProd.Host/RegExcBonds.svc?wsdl=wsdl1" />
+    <MetadataFile FileName="RegExcBonds1.xsd" MetadataType="Schema" ID="6ed087cb-df92-4a22-bab1-11fb0264f463" SourceId="1" SourceUrl="http://localhost/UJPServicesProd.Host/RegExcBonds.svc?xsd=xsd0" />
+    <MetadataFile FileName="RegExcBonds2.xsd" MetadataType="Schema" ID="ea020d16-7462-41a8-b570-57bdffada964" SourceId="1" SourceUrl="http://localhost/UJPServicesProd.Host/RegExcBonds.svc?xsd=xsd1" />
+    <MetadataFile FileName="RegExcBonds.disco" MetadataType="Disco" ID="1c23b6d0-322d-453d-bbe6-bbaf2a157b1a" SourceId="1" SourceUrl="http://localhost/UJPServicesProd.Host/RegExcBonds.svc?disco" />
+    <MetadataFile FileName="RegExcBonds3.xsd" MetadataType="Schema" ID="cf817a1c-c795-4aa0-afaf-f87e0e170ae3" SourceId="1" SourceUrl="http://localhost/UJPServicesProd.Host/RegExcBonds.svc?xsd=xsd3" />
+    <MetadataFile FileName="RegExcBonds1.wsdl" MetadataType="Wsdl" ID="79720bf6-4aec-46f8-a3e7-10380948216d" SourceId="1" SourceUrl="http://localhost/UJPServicesProd.Host/RegExcBonds.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="RegExcBonds2.wsdl" MetadataType="Wsdl" ID="a69ff625-09a9-44be-b8d3-502140bc778d" SourceId="1" SourceUrl="http://localhost/UJPServicesProd.Host/RegExcBonds.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

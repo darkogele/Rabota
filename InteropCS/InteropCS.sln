@@ -1,0 +1,231 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.CS.MetaService", "Interop.CS.MetaService\Interop.CS.MetaService.csproj", "{80457886-64AF-4069-BEDD-B4DC7F739C11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.CS.MetaServiceSite", "Interop.CS.MetaServiceSite\Interop.CS.MetaServiceSite.csproj", "{B1424B2F-2031-4608-A826-54FA69FCED69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MetaServices", "MetaServices", "{6664A800-B20C-4C58-ACA5-9FEEBE8A6C5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.CS.Portal.UI", "Interop.CS.Portal.UI\Interop.CS.Portal.UI.csproj", "{C83CCA0D-D045-4658-ACE1-5E8168F4F18C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.CS.Models", "Interop.CS.Models\Interop.CS.Models.csproj", "{4E4B6351-8922-4EE5-910A-5F3FDC79A288}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.CS.Portal.API", "Interop.CS.Portal.API\Interop.CS.Portal.API.csproj", "{681D523E-5D48-4DBB-9586-CB40668E0B70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{AB0CA53E-53CA-4A12-837C-D3CEB34AA865}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.CS.CrossCutting", "Interop.CS.CrossCutting\Interop.CS.CrossCutting.csproj", "{19B8BE48-7993-425D-A2A8-AD13A501F1D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteropCS.Resources", "InteropCS.Resources\InteropCS.Resources.csproj", "{AC29D0C8-AAB1-4E35-B5CA-7097F6FD001D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.CS.Models.Tests", "Interop.CS.Test\Interop.CS.Models.Tests.csproj", "{AB02ED19-FE54-4580-8A0E-E2A41058AD8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.CS.Portal.API.Test", "Interop.CS.Portal.API.Test\Interop.CS.Portal.API.Test.csproj", "{7688E1A9-DE5E-4C05-A5F4-381F28790434}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.CS.NBuilder", "Interop.CS.NBuilder\Interop.CS.NBuilder.csproj", "{95F98D35-6F90-48B7-8122-4FB360A4D741}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documents", "Documents\Documents.csproj", "{AEB302A8-8AFA-40A7-B9E0-ABDC11BEB077}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteropCS.MessageLogStatisticService", "InteropCS.MessageLogStatisticService\InteropCS.MessageLogStatisticService.csproj", "{E2E32574-DE8F-4F83-B4A8-4FA85AAFCF01}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HandlerForAvailability", "HandlerForAvailability", "{9DBFFB8D-4187-4D8C-89DB-E2602AEDC7EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSInternalHandler", "CSInternalHandler\CSInternalHandler.csproj", "{22D84F95-6620-4015-984F-DFB7D05ABEB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSHandlerHelper", "CSHandlerHelper\CSHandlerHelper.csproj", "{A529252B-81F9-4D25-9982-A1CAE8EF0FF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.CS.Encryption", "Interop.CS.Encryption\Interop.CS.Encryption.csproj", "{F2FF7F0B-AC3D-485D-8E32-7DF03E8B6009}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientConsumer", "ClientConsumer\ClientConsumer.csproj", "{4C3B267B-4476-4FB3-8060-256902B5938C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{87EBD608-4232-45E2-8C58-9C481B430905}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "dbInterop", "dbInterop\dbInterop.sqlproj", "{C0195309-358B-46E2-997F-4DBBC72DEC46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteropCS.BusSyncWinService", "InteropCS.BusSyncWinService\InteropCS.BusSyncWinService.csproj", "{4C0DC4C7-BBE7-4269-9A43-758631368D40}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8D339FE7-1F88-47D2-A513-B85E8E7EB261} = {8D339FE7-1F88-47D2-A513-B85E8E7EB261}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusSyncWinService", "BusSyncWinService", "{DA5343F9-A3D3-4BB7-BA75-679987D7EAD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusSyncMockWCFService", "BusSyncMockWCFService\BusSyncMockWCFService.csproj", "{8D339FE7-1F88-47D2-A513-B85E8E7EB261}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80457886-64AF-4069-BEDD-B4DC7F739C11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80457886-64AF-4069-BEDD-B4DC7F739C11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80457886-64AF-4069-BEDD-B4DC7F739C11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80457886-64AF-4069-BEDD-B4DC7F739C11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1424B2F-2031-4608-A826-54FA69FCED69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1424B2F-2031-4608-A826-54FA69FCED69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1424B2F-2031-4608-A826-54FA69FCED69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1424B2F-2031-4608-A826-54FA69FCED69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C83CCA0D-D045-4658-ACE1-5E8168F4F18C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C83CCA0D-D045-4658-ACE1-5E8168F4F18C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C83CCA0D-D045-4658-ACE1-5E8168F4F18C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C83CCA0D-D045-4658-ACE1-5E8168F4F18C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E4B6351-8922-4EE5-910A-5F3FDC79A288}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E4B6351-8922-4EE5-910A-5F3FDC79A288}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E4B6351-8922-4EE5-910A-5F3FDC79A288}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E4B6351-8922-4EE5-910A-5F3FDC79A288}.Release|Any CPU.Build.0 = Release|Any CPU
+		{681D523E-5D48-4DBB-9586-CB40668E0B70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{681D523E-5D48-4DBB-9586-CB40668E0B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{681D523E-5D48-4DBB-9586-CB40668E0B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{681D523E-5D48-4DBB-9586-CB40668E0B70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19B8BE48-7993-425D-A2A8-AD13A501F1D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19B8BE48-7993-425D-A2A8-AD13A501F1D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19B8BE48-7993-425D-A2A8-AD13A501F1D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19B8BE48-7993-425D-A2A8-AD13A501F1D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC29D0C8-AAB1-4E35-B5CA-7097F6FD001D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC29D0C8-AAB1-4E35-B5CA-7097F6FD001D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC29D0C8-AAB1-4E35-B5CA-7097F6FD001D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC29D0C8-AAB1-4E35-B5CA-7097F6FD001D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB02ED19-FE54-4580-8A0E-E2A41058AD8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB02ED19-FE54-4580-8A0E-E2A41058AD8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB02ED19-FE54-4580-8A0E-E2A41058AD8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB02ED19-FE54-4580-8A0E-E2A41058AD8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7688E1A9-DE5E-4C05-A5F4-381F28790434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7688E1A9-DE5E-4C05-A5F4-381F28790434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7688E1A9-DE5E-4C05-A5F4-381F28790434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7688E1A9-DE5E-4C05-A5F4-381F28790434}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95F98D35-6F90-48B7-8122-4FB360A4D741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95F98D35-6F90-48B7-8122-4FB360A4D741}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95F98D35-6F90-48B7-8122-4FB360A4D741}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95F98D35-6F90-48B7-8122-4FB360A4D741}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEB302A8-8AFA-40A7-B9E0-ABDC11BEB077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEB302A8-8AFA-40A7-B9E0-ABDC11BEB077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEB302A8-8AFA-40A7-B9E0-ABDC11BEB077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEB302A8-8AFA-40A7-B9E0-ABDC11BEB077}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2E32574-DE8F-4F83-B4A8-4FA85AAFCF01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2E32574-DE8F-4F83-B4A8-4FA85AAFCF01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2E32574-DE8F-4F83-B4A8-4FA85AAFCF01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2E32574-DE8F-4F83-B4A8-4FA85AAFCF01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22D84F95-6620-4015-984F-DFB7D05ABEB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22D84F95-6620-4015-984F-DFB7D05ABEB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22D84F95-6620-4015-984F-DFB7D05ABEB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22D84F95-6620-4015-984F-DFB7D05ABEB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A529252B-81F9-4D25-9982-A1CAE8EF0FF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A529252B-81F9-4D25-9982-A1CAE8EF0FF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A529252B-81F9-4D25-9982-A1CAE8EF0FF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A529252B-81F9-4D25-9982-A1CAE8EF0FF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2FF7F0B-AC3D-485D-8E32-7DF03E8B6009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2FF7F0B-AC3D-485D-8E32-7DF03E8B6009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2FF7F0B-AC3D-485D-8E32-7DF03E8B6009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2FF7F0B-AC3D-485D-8E32-7DF03E8B6009}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C3B267B-4476-4FB3-8060-256902B5938C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C3B267B-4476-4FB3-8060-256902B5938C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C3B267B-4476-4FB3-8060-256902B5938C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C3B267B-4476-4FB3-8060-256902B5938C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0195309-358B-46E2-997F-4DBBC72DEC46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0195309-358B-46E2-997F-4DBBC72DEC46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0195309-358B-46E2-997F-4DBBC72DEC46}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C0195309-358B-46E2-997F-4DBBC72DEC46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0195309-358B-46E2-997F-4DBBC72DEC46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0195309-358B-46E2-997F-4DBBC72DEC46}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4C0DC4C7-BBE7-4269-9A43-758631368D40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C0DC4C7-BBE7-4269-9A43-758631368D40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C0DC4C7-BBE7-4269-9A43-758631368D40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C0DC4C7-BBE7-4269-9A43-758631368D40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D339FE7-1F88-47D2-A513-B85E8E7EB261}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D339FE7-1F88-47D2-A513-B85E8E7EB261}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D339FE7-1F88-47D2-A513-B85E8E7EB261}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D339FE7-1F88-47D2-A513-B85E8E7EB261}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{80457886-64AF-4069-BEDD-B4DC7F739C11} = {6664A800-B20C-4C58-ACA5-9FEEBE8A6C5D}
+		{B1424B2F-2031-4608-A826-54FA69FCED69} = {6664A800-B20C-4C58-ACA5-9FEEBE8A6C5D}
+		{9DBFFB8D-4187-4D8C-89DB-E2602AEDC7EC} = {6664A800-B20C-4C58-ACA5-9FEEBE8A6C5D}
+		{22D84F95-6620-4015-984F-DFB7D05ABEB3} = {9DBFFB8D-4187-4D8C-89DB-E2602AEDC7EC}
+		{A529252B-81F9-4D25-9982-A1CAE8EF0FF9} = {9DBFFB8D-4187-4D8C-89DB-E2602AEDC7EC}
+		{C0195309-358B-46E2-997F-4DBBC72DEC46} = {87EBD608-4232-45E2-8C58-9C481B430905}
+		{4C0DC4C7-BBE7-4269-9A43-758631368D40} = {DA5343F9-A3D3-4BB7-BA75-679987D7EAD4}
+		{8D339FE7-1F88-47D2-A513-B85E8E7EB261} = {DA5343F9-A3D3-4BB7-BA75-679987D7EAD4}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 20
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.11.21.108:8080/tfs/defaultcollection
+		SccLocalPath0 = InteropCS
+		SccProjectFilePathRelativizedFromConnection0 = ..\\
+		SccProjectUniqueName1 = Interop.CS.MetaService\\Interop.CS.MetaService.csproj
+		SccProjectTopLevelParentUniqueName1 = InteropCS.sln
+		SccProjectName1 = Interop.CS.MetaService
+		SccLocalPath1 = Interop.CS.MetaService
+		SccProjectUniqueName2 = Interop.CS.MetaServiceSite\\Interop.CS.MetaServiceSite.csproj
+		SccProjectTopLevelParentUniqueName2 = InteropCS.sln
+		SccProjectName2 = Interop.CS.MetaServiceSite
+		SccLocalPath2 = Interop.CS.MetaServiceSite
+		SccProjectUniqueName3 = Interop.CS.Portal.UI\\Interop.CS.Portal.UI.csproj
+		SccProjectName3 = Interop.CS.Portal.UI
+		SccLocalPath3 = Interop.CS.Portal.UI
+		SccProjectUniqueName4 = Interop.CS.Models\\Interop.CS.Models.csproj
+		SccProjectName4 = Interop.CS.Models
+		SccLocalPath4 = Interop.CS.Models
+		SccProjectUniqueName5 = Interop.CS.Portal.API\\Interop.CS.Portal.API.csproj
+		SccProjectName5 = Interop.CS.Portal.API
+		SccLocalPath5 = Interop.CS.Portal.API
+		SccProjectUniqueName6 = Interop.CS.CrossCutting\\Interop.CS.CrossCutting.csproj
+		SccProjectName6 = Interop.CS.CrossCutting
+		SccLocalPath6 = Interop.CS.CrossCutting
+		SccProjectUniqueName7 = InteropCS.Resources\\InteropCS.Resources.csproj
+		SccProjectName7 = InteropCS.Resources
+		SccLocalPath7 = InteropCS.Resources
+		SccProjectUniqueName8 = Interop.CS.Test\\Interop.CS.Models.Tests.csproj
+		SccProjectName8 = Interop.CS.Test
+		SccLocalPath8 = Interop.CS.Test
+		SccProjectUniqueName9 = Interop.CS.Portal.API.Test\\Interop.CS.Portal.API.Test.csproj
+		SccProjectName9 = Interop.CS.Portal.API.Test
+		SccLocalPath9 = Interop.CS.Portal.API.Test
+		SccProjectUniqueName10 = Interop.CS.NBuilder\\Interop.CS.NBuilder.csproj
+		SccProjectName10 = Interop.CS.NBuilder
+		SccLocalPath10 = Interop.CS.NBuilder
+		SccProjectUniqueName11 = Documents\\Documents.csproj
+		SccProjectName11 = Documents
+		SccLocalPath11 = Documents
+		SccProjectUniqueName12 = CSInternalHandler\\CSInternalHandler.csproj
+		SccProjectTopLevelParentUniqueName12 = InteropCS.sln
+		SccProjectName12 = CSInternalHandler
+		SccLocalPath12 = CSInternalHandler
+		SccProjectUniqueName13 = CSHandlerHelper\\CSHandlerHelper.csproj
+		SccProjectTopLevelParentUniqueName13 = InteropCS.sln
+		SccProjectName13 = CSHandlerHelper
+		SccLocalPath13 = CSHandlerHelper
+		SccProjectUniqueName14 = Interop.CS.Encryption\\Interop.CS.Encryption.csproj
+		SccProjectName14 = Interop.CS.Encryption
+		SccLocalPath14 = Interop.CS.Encryption
+		SccProjectUniqueName15 = InteropCS.MessageLogStatisticService\\InteropCS.MessageLogStatisticService.csproj
+		SccProjectName15 = InteropCS.MessageLogStatisticService
+		SccLocalPath15 = InteropCS.MessageLogStatisticService
+		SccProjectUniqueName16 = ClientConsumer\\ClientConsumer.csproj
+		SccProjectName16 = ClientConsumer
+		SccLocalPath16 = ClientConsumer
+		SccProjectUniqueName17 = dbInterop\\dbInterop.sqlproj
+		SccProjectTopLevelParentUniqueName17 = InteropCS.sln
+		SccProjectName17 = dbInterop
+		SccLocalPath17 = dbInterop
+		SccProjectUniqueName18 = InteropCS.BusSyncWinService\\InteropCS.BusSyncWinService.csproj
+		SccProjectTopLevelParentUniqueName18 = InteropCS.sln
+		SccProjectName18 = InteropCS.BusSyncWinService
+		SccLocalPath18 = InteropCS.BusSyncWinService
+		SccProjectUniqueName19 = BusSyncMockWCFService\\BusSyncMockWCFService.csproj
+		SccProjectTopLevelParentUniqueName19 = InteropCS.sln
+		SccProjectName19 = BusSyncMockWCFService
+		SccLocalPath19 = BusSyncMockWCFService
+	EndGlobalSection
+EndGlobal

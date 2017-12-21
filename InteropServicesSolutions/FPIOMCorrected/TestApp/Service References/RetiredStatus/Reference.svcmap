@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="af0e2d3d-5f6c-4860-a5fd-0e47c65769ac" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/FPIOMServicesProd.Host/RetiredStatus.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RetiredStatus.xsd" MetadataType="Schema" ID="d8435f8f-a169-4508-b315-1f4d8ba7bb65" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/RetiredStatus.svc?xsd=xsd0" />
+    <MetadataFile FileName="RetiredStatus.wsdl" MetadataType="Wsdl" ID="831ad04a-cc5b-4b23-9955-fefa87e8f5f8" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/RetiredStatus.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="RetiredStatus1.wsdl" MetadataType="Wsdl" ID="b1f14b6e-3639-4ddc-a396-b5030d903e53" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/RetiredStatus.svc?wsdl" />
+    <MetadataFile FileName="RetiredStatus1.xsd" MetadataType="Schema" ID="9d2e97a4-bfb9-4212-b0d3-aa609439d9b4" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/RetiredStatus.svc?xsd=xsd1" />
+    <MetadataFile FileName="RetiredStatus.disco" MetadataType="Disco" ID="5c422e58-29af-4453-be8a-dba9f1866ad5" SourceId="1" SourceUrl="http://localhost/FPIOMServicesProd.Host/RetiredStatus.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

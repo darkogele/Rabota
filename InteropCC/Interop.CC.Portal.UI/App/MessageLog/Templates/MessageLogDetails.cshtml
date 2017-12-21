@@ -1,0 +1,155 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<style>
+    span {
+        word-wrap: break-word;
+    }
+</style>
+<div class="panel panel-primary">
+    <div class="panel-heading" style="font-size:large">
+        <span>Трансакциски број: {{message.request.transactionId}}</span>
+    </div>
+    
+
+    <div class="panel-body">
+        <div class="row text-center">
+            <span ng-if="message.errorMessage.length == 0" class="label label-success">Трансакцијата е успешно извршена.</span>
+            <span ng-if="message.errorMessage.length > 0" class="label label-danger">Трансакцијата не е успешно извршена. Причина: {{message.errorMessage}}</span>
+        </div>
+        <p></p>
+        <div class="row text-center">
+            <div class="panel panel-default col-lg-6 col-md-12 col-sm-12 col-xs-12" ng-class="{'panelRequest': message.request === null}">
+                <div class="panel-heading">
+                    Повик
+                </div>
+                <div class="panel-body">
+
+                    <div class="row">
+                        <b class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Корисник:</b>
+                        <span class="col-lg-9 col-md-9 col-sm-9 col-xs-6">{{message.request.consumerName }}</span>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <b class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Провајдер:</b>
+                        <span class="col-lg-9 col-md-9 col-sm-9 col-xs-6">{{message.request.providerName }}</span>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <b class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Токен за рутирање:</b>
+                        <span class="col-lg-9 col-md-9 col-sm-9 col-xs-6">{{message.request.routingTokenName }}</span>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <b class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Сервис:</b>
+                        <span class="col-lg-9 col-md-9 col-sm-9 col-xs-6">{{message.request.service }}</span>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <b class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Метод:</b>
+                        <span class="col-lg-9 col-md-9 col-sm-9 col-xs-6">{{message.request.serviceMethod }}</span>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <b class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Насока на комуникација:</b>
+                        <span class="col-lg-9 col-md-9 col-sm-9 col-xs-6">{{ message.request.dir }}</span>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <b class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Тип на повик:</b>
+                        <span class="col-lg-9 col-md-9 col-sm-9 col-xs-6">{{ message.request.callType}}</span>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <b class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Статус:</b>
+                        <span class="col-lg-9 col-md-9 col-sm-9 col-xs-6">{{message.request.status }}</span>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <b class="col-lg-3 col-md-3 col-sm-3 col-xs-6">MIME type:</b>
+                        <span class="col-lg-9 col-md-9 col-sm-9 col-xs-6">{{ message.request.mimeType }}</span>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <b class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Временски печат:</b>
+                        <span class="col-lg-9 col-md-9 col-sm-9 col-xs-6">{{ message.request.timestamp | date:'medium'}}</span>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <b class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Дата на креирање:</b>
+                        <span class="col-lg-9 col-md-9 col-sm-9 col-xs-6">{{message.request.createDate | date:'medium'}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default col-lg-6 col-md-12 col-sm-12 col-xs-12" ng-class="{'panelResponse': message.response === null}">
+                <div class="panel-heading">
+                    Одговор
+                </div>
+                <div class="panel-body">
+
+                    <div class="row">
+                        <b class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Корисник:</b>
+                        <span class="col-lg-9 col-md-9 col-sm-9 col-xs-6">{{message.response.consumerName }}</span>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <b class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Провајдер:</b>
+                        <span class="col-lg-9 col-md-9 col-sm-9 col-xs-6">{{message.response.providerName }}</span>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <b class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Токен за рутирање:</b>
+                        <span class="col-lg-9 col-md-9 col-sm-9 col-xs-6">{{message.response.routingTokenName }}</span>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <b class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Сервис:</b>
+                        <span class="col-lg-9 col-md-9 col-sm-9 col-xs-6">{{message.response.service }}</span>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <b class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Метод:</b>
+                        <span class="col-lg-9 col-md-9 col-sm-9 col-xs-6">{{message.response.serviceMethod }}</span>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <b class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Насока на комуникација:</b>
+                        <span class="col-lg-9 col-md-9 col-sm-9 col-xs-6">{{ message.response.dir }}</span>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <b class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Тип на повик:</b>
+                        <span class="col-lg-9 col-md-9 col-sm-9 col-xs-6">{{ message.response.callType}}</span>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <b class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Статус:</b>
+                        <span class="col-lg-9 col-md-9 col-sm-9 col-xs-6">{{message.response.status }}</span>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <b class="col-lg-3 col-md-3 col-sm-3 col-xs-6">MIME type:</b>
+                        <span class="col-lg-9 col-md-9 col-sm-9 col-xs-6">{{ message.response.mimeType }}</span>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <b class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Временски печат:</b>
+                        <span class="col-lg-9 col-md-9 col-sm-9 col-xs-6">{{ message.response.timestamp | date:'medium'}}</span>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <b class="col-lg-3 col-md-3 col-sm-3 col-xs-6">Дата на креирање:</b>
+                        <span class="col-lg-9 col-md-9 col-sm-9 col-xs-6">{{message.response.createDate | date:'medium'}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <a class="btn btn-default"
+           ng-click="handleBackBtnMsgLogDetails()"
+           style="width:80px">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+            Назад
+        </a>
+    </div>
+</div>

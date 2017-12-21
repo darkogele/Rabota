@@ -1,0 +1,65 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>Годишни приходи ФЗО - Управа за јавни приходи</h2>
+
+<form name="ujpAnnualRevenueForm" ng-controller="UjpCtrl">
+
+    <div class="container">
+        <div class="col-lg-3">
+            <div class="form-group" ng-class="{ 'has-error' : edbFormField.edb.$invalid }">
+                <ng-form name="edbFormField">
+                    <label for="edb">ЕДБ:</label>
+                    <input id="edb" type="text" class="form-control" name="edb" ng-model="edb" only-digits required>
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : yearFormField.year.$invalid }">
+                <ng-form name="yearFormField">
+                    <label for="year">Година:</label>
+                    <input id="year" type="text" class="form-control" name="year" ng-model="year" required>
+                </ng-form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-disabled="ujpAnnualRevenueForm.$invalid" ng-click="ujpAnnualRevenuesFZO(edb, year)"><i class="fa fa-save"></i> Испрати</button>
+                <a class="btn btn-warning" href="#/ujp/ujpannualrevenuesfzo" ui-sref="ujpannualrevenuesfzoindex">Откажи</a>
+            </div>
+        </div>
+
+        <div ng-show="show" class="col-lg-9">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <button ng-show="!expandOps" ng-click="expandedOps()">+</button>
+                            <button ng-show="expandOps" ng-click="expandedOps()">-</button>
+                            Годишни Приходи ФЗО
+                        </th>
+                    </tr>
+                    <tr ng-show="expandOps">
+                        <th>ЕДБ</th>
+                        <th>Име на обврзникот</th>
+                        <th>Презиме на обврзникот</th>
+                        <th>Година</th>
+                        <th>Бруто остварен годишен приход</th>
+                        <th>Нето остварен годишен приход(плати)</th>
+                        <th>Забелешка</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-show="expandOps">
+                        <td>{{annualRevenuesFZO.edb}}</td>
+                        <td>{{annualRevenuesFZO.firstName}}</td>
+                        <td>{{annualRevenuesFZO.lastName}}</td>
+                        <td>{{annualRevenuesFZO.year}}</td>
+                        <td>{{annualRevenuesFZO.fzO_Bruto}}</td>
+                        <td>{{annualRevenuesFZO.fzO_Neto}}</td>
+                        <td>{{annualRevenuesFZO.zabeleska}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row text-center">
+                <a class="btn btn-default" ng-click="FZOXML()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во XML формат</a>
+                <a class="btn btn-default" ng-click="FZOPDF()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во PDF формат</a>
+            </div>
+        </div>
+    </div>
+</form>

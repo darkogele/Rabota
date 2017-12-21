@@ -1,0 +1,7 @@
+D:\Work\InteropCS\BusSyncMockWCFService\bin\BusSyncMockWCFService.dll.config
+D:\Work\InteropCS\BusSyncMockWCFService\bin\BusSyncMockWCFService.dll
+D:\Work\InteropCS\BusSyncMockWCFService\bin\BusSyncMockWCFService.pdb
+D:\Work\InteropCS\BusSyncMockWCFService\obj\Debug\BusSyncMockWCFService.csproj.CoreCompileInputs.cache
+D:\Work\InteropCS\BusSyncMockWCFService\obj\Debug\BusSyncMockWCFService.dll
+D:\Work\InteropCS\BusSyncMockWCFService\obj\Debug\BusSyncMockWCFService.pdb
+D:\Work\InteropCS\BusSyncMockWCFService\obj\Debug\BusSyncMockWCFService.csprojResolveAssemblyReference.cache

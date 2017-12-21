@@ -1,0 +1,6 @@
+D:\Work\RefatoredInteropHandlers\HttpHandler\Encryption\bin\Debug\Encryption.dll
+D:\Work\RefatoredInteropHandlers\HttpHandler\Encryption\bin\Debug\Encryption.pdb
+D:\Work\RefatoredInteropHandlers\HttpHandler\Encryption\obj\Debug\Encryption.csproj.CoreCompileInputs.cache
+D:\Work\RefatoredInteropHandlers\HttpHandler\Encryption\obj\Debug\Encryption.dll
+D:\Work\RefatoredInteropHandlers\HttpHandler\Encryption\obj\Debug\Encryption.pdb
+D:\Work\RefatoredInteropHandlers\HttpHandler\Encryption\obj\Debug\Encryption.csprojResolveAssemblyReference.cache

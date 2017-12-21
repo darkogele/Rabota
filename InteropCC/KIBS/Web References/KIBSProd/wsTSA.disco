@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://wstsa.kibs.mk/wsTSA.asmx?wsdl" docRef="https://wstsa.kibs.mk/wsTSA.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://wstsa.kibs.mk/wsTSA.asmx" xmlns:q1="http://kibs.com.mk/wsTSA" binding="q1:wsTSASoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://wstsa.kibs.mk/wsTSA.asmx" xmlns:q2="http://kibs.com.mk/wsTSA" binding="q2:wsTSASoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

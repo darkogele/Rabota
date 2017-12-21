@@ -1,0 +1,201 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>Статистика</h2>
+<form name="statisticsForm" novalidate>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group col-lg-4" ng-class="{ 'has-error' : consumerFormField.consumerDropdown.$invalid }">
+                    <ng-form name="consumerFormField">
+                        <label for="consumerDropdown" class="clearfix">Корисник: </label>
+                        <select id="consumerDropdown" class="form-control" name="consumerDropdown" ng-model="selectedConsumer" ng-options="consumer.key as consumer.value for consumer in consumerList" ng-change="changedConsumer(selectedConsumer)">
+                            <option value="" disabled>Одбери корисник...</option>
+                            @*<option value="{{consumer.key}}">{{consumer.value}}</option>*@
+                        </select>
+                    </ng-form>
+                </div>
+
+                <div class="form-group col-lg-4" ng-class="{ 'has-error' : providerFormField.providerDropdown.$invalid }">
+                    <ng-form name="providerFormField">
+                        <label for="providerDropdown" class="clearfix">Провајдер: </label>
+                        <select id="providerDropdown" class="form-control" name="providerDropdown" ng-model="selectedProvider" ng-options="provider.key as provider.value for provider in providerList" ng-change="changedProvider(selectedProvider)">
+                            <option value="" disabled>Одбери провајдер...</option>
+                            @*<option ng-repeat="provider in providerList" ng-selected="selectedProvider == provider.key" value="{{provider.key}}">{{provider.value}}</option>*@
+                        </select>
+                    </ng-form>
+                </div>
+                
+                <div class="form-group col-lg-4" ng-class="{ 'has-error' : serviceFormField.serviceDropdown.$invalid }">
+                    <ng-form name="serviceFormField">
+                        <label for="serviceDropdown" class="clearfix">Сервис: </label>
+                        <select id="serviceDropdown" class="form-control" name="serviceDropdown" ng-model="selectedService">
+                            <option value="" disabled>Одбери сервис...</option>
+                            <option ng-repeat="service in servicesList" ng-selected="selectedService == service" value="{{service}}">{{service}}</option>
+                        </select>
+                    </ng-form>
+                </div>
+                               
+                <div class="form-group col-lg-2">
+                    <label for="unsuccessfullyCheck" class="clearfix">Од: </label>
+                    <p class="input-group">
+                        <input type="text"
+                               placeholder="Од..."
+                               class="form-control"
+                               datepicker-popup="dd.MM.yyyy"
+                               ng-disabled="fromDateSearch.disabled"
+                               ng-readonly="fromDateSearch.disabled"
+                               datepicker-append-to-body="true"
+                               ng-model="fromDate"
+                               is-open="statusFrom.opened"
+                               max-date="maxFromDate"
+                               min-date="minFromDate"
+                               ng-click="statusFrom.opened = true"
+                               show-button-bar="false" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="openFrom($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </p>
+                </div>
+
+                <div class="form-group col-lg-2">
+                    <label for="unsuccessfullyCheck" class="clearfix">До: </label>
+                    <p class="input-group">
+                        <input type="text"
+                               placeholder="До..."
+                               class="form-control"
+                               datepicker-popup="dd.MM.yyyy"
+                               ng-disabled="toDateSearch.disabled"
+                               ng-readonly="toDateSearch.disabled"
+                               datepicker-append-to-body="true"
+                               ng-model="toDate"
+                               is-open="statusTo.opened"
+                               min-date="minToDate"
+                               max-date="maxToDate"
+                               ng-click="statusTo.opened = true"
+                               show-button-bar="false" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="openTo($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </p>
+                </div>
+                
+                <div class="form-group col-lg-1" ng-class="{ 'has-error' : successfullyFormField.successfullyCheck.$invalid }">
+                    <ng-form name="successfullyFormField">
+                        <label for="successfullyCheck" class="clearfix">Успешни: </label>
+                        <input type="checkbox" id="successfullyCheck" class="form-control checkbox checkbox-primary" name="successfullyCheck" ng-model="successfullyCheck" ng-click="checkMessageLogStatus(0)" />
+                    </ng-form>
+                </div>
+
+                <div class="form-group col-lg-1" ng-class="{ 'has-error' : unsuccessfullyFormField.unsuccessfullyCheck.$invalid }">
+                    <ng-form name="unsuccessfullyFormField">
+                        <label for="unsuccessfullyCheck" class="clearfix">Неуспешни: </label>
+                        <input type="checkbox" id="unsuccessfullyCheck" class="form-control" name="unsuccessfullyCheck" ng-model="unsuccessfullyCheck" ng-click="checkMessageLogStatus(1)" />
+                    </ng-form>
+                </div>
+                
+                
+                <div class="modal-footer col-lg-12">
+                    <button type="submit" class="btn btn-primary" ng-disabled="statisticsForm.$invalid" ng-click="statisticsFilter()"><i class="fa fa-search"></i> Барај</button>
+                    <button class="btn btn-default" ng-click="clearSearchStatistics()"><i class="fa fa-eraser"> </i> Исчисти</button>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="row" ng-show="messageList.length">
+            <div class="col-lg-12">
+                <div class="table-responsive">
+                    <table class="table" style="margin-top: 10px">
+                        <thead>
+                            <tr>
+                                <th ng-click="sort('TransactionId')" style="cursor:pointer;">
+                                    <u>
+                                        Трансакција
+                                    </u>
+                                    <span ng-show="sortCol == 'TransactionId' && !sortDir" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortCol == 'TransactionId' && sortDir" class="fa fa-caret-up"></span>
+                                </th>
+                                <th ng-click="sort('ConsumerName')" style="cursor:pointer;">
+                                    <u>
+                                        Корисник
+                                    </u>
+                                    <span ng-show="sortCol == 'ConsumerName' && !sortDir" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortCol == 'ConsumerName' && sortDir" class="fa fa-caret-up"></span>
+                                </th>
+                                <th ng-click="sort('RoutingTokenName')" style="cursor:pointer;">
+                                    <u>
+                                        Провајдер
+                                    </u>
+                                    <span ng-show="sortCol == 'RoutingTokenName' && !sortDir" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortCol == 'RoutingTokenName' && sortDir" class="fa fa-caret-up"></span>
+                                </th>
+                                <th ng-click="sort('Service')" style="cursor:pointer;">
+                                    <u>
+                                        Сервис
+                                    </u>
+                                    <span ng-show="sortCol == 'Service' && !sortDir" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortCol == 'Service' && sortDir" class="fa fa-caret-up"></span>
+                                </th>
+                                <th ng-click="sort('CreateDate')" style="cursor:pointer;">
+                                    <u>
+                                        Време на креирање
+                                    </u>
+                                    <span ng-show="sortCol == 'CreateDate' && !sortDir" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortCol == 'CreateDate' && sortDir" class="fa fa-caret-up"></span>
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <div style="text-align:right;">
+                                @*<a href="#" class="btn btn-default" ng-click="exportAction(selectedConsumer, selectedProvider, successfullyCheck, unsuccessfullyCheck, fromDate, toDate)">
+                            <span class="glyphicon glyphicon-floppy-save"></span> Превземи во PDF формат
+                        </a>
+                                *@
+                                <a href="#" class="btn btn-default" ng-click="exportActionToExcel(selectedConsumer, selectedProvider, successfullyCheck, unsuccessfullyCheck, fromDate, toDate, selectedService)"><span class="glyphicon glyphicon-floppy-save"></span> Превземи во Excel формат</a>
+                                <a href="#" class="btn btn-default" ng-show="visibleAfterSearch" ng-click="exportActionToWord(selectedConsumer, selectedProvider, successfullyCheck, unsuccessfullyCheck, fromDate, toDate, selectedService)"><span class="glyphicon glyphicon-floppy-save"></span> Превземи во Word формат</a>
+                            </div>
+                            <tr ng-repeat="message in messageList | orderBy : sortType : sortReverse" ng-class="{'selected': $index==selectedRow}" ng-click="setSelectedRow($index)">
+                                <td>{{message.transactionId}}</td>
+                                <td>{{message.consumerName}}</td>
+                                <td>{{message.routingTokenName}}</td>
+                                <td>{{message.service}}</td>
+                                <td>{{message.createDate | date:'dd.MM.yyyy HH:mm:ss'}}</td>
+                                <td class="text-center"><a ng-click="messageLogStatisticDetails(message.transactionId, message.consumer, message.routingToken)" class="btn btn-xs btn-info"><i class="fa fa-info"></i> Детали</a></td>
+                            </tr>
+                            <tr ng-show="messageList.length == 0"><td colspan="4"><p class="text-center" style="padding: 15px 15px;color:grey">Нема податоци</p></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                    
+
+                </div>
+            
+            
+            @*TODO*@
+            <div class="col-md-12">
+                <div class="pull-left">
+                    <div previous-text="Претходна" next-text="Следна" pagination total-items="totalItems" max-size="10" items-per-page="pageSize" boundary-links="false" rotate="false" ng-model="currentPage" class="pagination-sm" ng-change="pageChangeHandler(currentPage)"></div>
+                </div>
+                <div class="pull-left">
+                    <select class="form-control" ng-show="totalItems != 0" name="servicesPerPage" ng-model="itemsPerPage" ng-change="pageSizeChanged(itemsPerPage)" style="margin: 18px 30px;">
+                        <option value="1">1</option>
+                        <option value="3">3</option>
+                        <option value="5">5</option>
+                        <option value="10" selected="selected">10</option>
+                    </select>
+                </div>
+                <div ng-show="totalItems != 0" class="pull-right">
+                    <strong>Вкупен број на записи: {{totalItems}}</strong>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12 alert alert-warning" ng-show="messageList.length == 0">
+                <strong>Нема податоци</strong>
+            </div>
+        </div>
+
+    </div>
+</form>

@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7C40BE2E-92C2-48E7-AA9D-0F8475C9E7F7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestAKNDocServices</RootNamespace>
+    <AssemblyName>TestAKNDocServices</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Renci.SshNet">
+      <HintPath>..\packages\SSH.NET.2014.4.6-beta2\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\AdapterCListDocTEST\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AdapterIFDocTEST\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AdapterPListDocTEST\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OriginalDocServicesPROD\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OriginalDocServicesTEST\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PListDocPROD\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Service References\AdapterCListDocTEST\AKNCPlanDoc.wsdl" />
+    <None Include="Service References\AdapterCListDocTEST\AKNCPlanDoc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdapterCListDocTEST\AKNCPlanDoc1.wsdl" />
+    <None Include="Service References\AdapterCListDocTEST\AKNCPlanDoc1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdapterCListDocTEST\AKNCPlanDoc2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdapterCListDocTEST\TestAKNDocServices.AdapterCListDocTEST.AKNDocOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdapterIFDocTEST\AKNDataForIFDoc.wsdl" />
+    <None Include="Service References\AdapterIFDocTEST\AKNDataForIFDoc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdapterIFDocTEST\AKNDataForIFDoc1.wsdl" />
+    <None Include="Service References\AdapterIFDocTEST\AKNDataForIFDoc1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdapterIFDocTEST\AKNDataForIFDoc2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdapterIFDocTEST\TestAKNDocServices.AdapterIFDocTEST.AKNDocOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdapterPListDocTEST\AKNPListDoc.wsdl" />
+    <None Include="Service References\AdapterPListDocTEST\AKNPListDoc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdapterPListDocTEST\AKNPListDoc1.wsdl" />
+    <None Include="Service References\AdapterPListDocTEST\AKNPListDoc1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdapterPListDocTEST\AKNPListDoc2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdapterPListDocTEST\TestAKNDocServices.AdapterPListDocTEST.AKNDocOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OriginalDocServicesPROD\IntegracijaWS.wsdl" />
+    <None Include="Service References\OriginalDocServicesPROD\IntegracijaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OriginalDocServicesPROD\TestAKNDocServices.OriginalDocServicesPROD.documentInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OriginalDocServicesPROD\TestAKNDocServices.OriginalDocServicesPROD.generateDocumentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OriginalDocServicesPROD\TestAKNDocServices.OriginalDocServicesPROD.getPayedReqResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OriginalDocServicesPROD\TestAKNDocServices.OriginalDocServicesPROD.getPlistInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OriginalDocServicesPROD\TestAKNDocServices.OriginalDocServicesPROD.getTestResultResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OriginalDocServicesPROD\TestAKNDocServices.OriginalDocServicesPROD.insLiteUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OriginalDocServicesPROD\TestAKNDocServices.OriginalDocServicesPROD.insNewProcedureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OriginalDocServicesPROD\TestAKNDocServices.OriginalDocServicesPROD.insOISDUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OriginalDocServicesPROD\TestAKNDocServices.OriginalDocServicesPROD.payedReq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OriginalDocServicesPROD\TestAKNDocServices.OriginalDocServicesPROD.plistInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OriginalDocServicesPROD\TestAKNDocServices.OriginalDocServicesPROD.printMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OriginalDocServicesTEST\IntegracijaWS.wsdl" />
+    <None Include="Service References\OriginalDocServicesTEST\IntegracijaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OriginalDocServicesTEST\TestAKNDocServices.OriginalDocServicesTEST.documentInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OriginalDocServicesTEST\TestAKNDocServices.OriginalDocServicesTEST.generateDocumentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OriginalDocServicesTEST\TestAKNDocServices.OriginalDocServicesTEST.getPayedReqResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OriginalDocServicesTEST\TestAKNDocServices.OriginalDocServicesTEST.getPlistInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OriginalDocServicesTEST\TestAKNDocServices.OriginalDocServicesTEST.getTestResultResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OriginalDocServicesTEST\TestAKNDocServices.OriginalDocServicesTEST.insLiteUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OriginalDocServicesTEST\TestAKNDocServices.OriginalDocServicesTEST.insNewProcedureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OriginalDocServicesTEST\TestAKNDocServices.OriginalDocServicesTEST.insOISDUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OriginalDocServicesTEST\TestAKNDocServices.OriginalDocServicesTEST.payedReq.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OriginalDocServicesTEST\TestAKNDocServices.OriginalDocServicesTEST.plistInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OriginalDocServicesTEST\TestAKNDocServices.OriginalDocServicesTEST.printMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PListDocPROD\AKNPListDocProduction.wsdl" />
+    <None Include="Service References\PListDocPROD\AKNPListDocProduction.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PListDocPROD\AKNPListDocProduction1.wsdl" />
+    <None Include="Service References\PListDocPROD\AKNPListDocProduction1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PListDocPROD\AKNPListDocProduction2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PListDocPROD\TestAKNDocServices.PListDocPROD.AKNDocOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AdapterCListDocTEST\" />
+    <WCFMetadataStorage Include="Service References\AdapterIFDocTEST\" />
+    <WCFMetadataStorage Include="Service References\AdapterPListDocTEST\" />
+    <WCFMetadataStorage Include="Service References\OriginalDocServicesPROD\" />
+    <WCFMetadataStorage Include="Service References\OriginalDocServicesTEST\" />
+    <WCFMetadataStorage Include="Service References\PListDocPROD\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OriginalDocServicesPROD\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OriginalDocServicesPROD\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OriginalDocServicesPROD\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterPListDocTEST\AKNPListDoc.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterPListDocTEST\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterPListDocTEST\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterPListDocTEST\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterCListDocTEST\AKNCPlanDoc.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterCListDocTEST\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterCListDocTEST\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterCListDocTEST\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterIFDocTEST\AKNDataForIFDoc.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterIFDocTEST\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterIFDocTEST\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdapterIFDocTEST\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OriginalDocServicesTEST\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OriginalDocServicesTEST\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OriginalDocServicesTEST\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PListDocPROD\AKNPListDocProduction.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PListDocPROD\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PListDocPROD\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PListDocPROD\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

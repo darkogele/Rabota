@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7b3517ce-db36-4de4-87a7-ec98c6c0f2e3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/InteropServices.MON.Host/SRegStudent.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SRegStudent.xsd" MetadataType="Schema" ID="b6eaeb56-a67e-4ce2-bfc1-bf8b5522abc1" SourceId="1" SourceUrl="http://localhost/InteropServices.MON.Host/SRegStudent.svc?xsd=xsd0" />
+    <MetadataFile FileName="SRegStudent1.xsd" MetadataType="Schema" ID="8d3e8b87-4c56-4ac9-baae-e06d14a1b60a" SourceId="1" SourceUrl="http://localhost/InteropServices.MON.Host/SRegStudent.svc?xsd=xsd1" />
+    <MetadataFile FileName="SRegStudent.wsdl" MetadataType="Wsdl" ID="d9a1ecfb-dc78-432b-b1f3-534a7dbf9774" SourceId="1" SourceUrl="http://localhost/InteropServices.MON.Host/SRegStudent.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SRegStudent1.wsdl" MetadataType="Wsdl" ID="a070f64e-0f35-42cf-bf3f-3e84cbf79bec" SourceId="1" SourceUrl="http://localhost/InteropServices.MON.Host/SRegStudent.svc?wsdl" />
+    <MetadataFile FileName="SRegStudent.disco" MetadataType="Disco" ID="cedfcad1-e4a1-4119-acbe-caf395e123e0" SourceId="1" SourceUrl="http://localhost/InteropServices.MON.Host/SRegStudent.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

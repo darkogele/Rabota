@@ -1,0 +1,161 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+<h2>Регистар на обврзници за акциза - Царинска Управа на Република Македонија</h2>
+
+<form name="ujpRegisterOfExciseBondsForm" ng-controller="UjpCtrl">
+
+    <div class="container">
+        <div class="col-lg-3">
+            <div class="form-group" ng-class="{ 'has-error' : edbFormField.edb.$invalid }">
+                <ng-form name="edbFormField">
+                    <label for="edb">ЕДБ:</label>
+                    <input id="edb" type="text" class="form-control" name="edb" ng-model="edb" only-digits required>
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : numberFormField.number.$invalid }">
+                <ng-form name="numberFormField">
+                    <label for="number">Број на акзица:</label>
+                    <input id="number" type="text" class="form-control" name="number" ng-model="number" >
+                </ng-form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" ng-disabled="ujpRegisterOfExciseBondsForm.$invalid" ng-click="ujpRegisterOfExciseBonds(edb, number)"><i class="fa fa-save"></i> Испрати</button>
+                <a class="btn btn-warning" href="#/ujp/ujpregisterofexcisebonds" ui-sref="ujpregisterofexcisebondsindex">Откажи</a>
+            </div>
+        </div>
+
+        <div ng-show="show" class="col-lg-9">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <button ng-show="!expandOps" ng-click="expandedOps()">+</button>
+                            <button ng-show="expandOps" ng-click="expandedOps()">-</button>
+                            Акцизни обврзници
+                        </th>
+                    </tr>
+                    <tr ng-show="expandOps">
+                        <th>Идентификационен број</th>
+                        <th>ЕДБ</th>
+                        <th>Назив</th>
+                        <th>Вид на одобрение</th>
+                        <th>Број на одобрение</th>
+                        <th>Датум на одобрение</th>
+                        <th>Претходно одобрение</th>
+                        <th>Следно одобрение</th>
+                        <th>ЕМБГ на одговорно лице</th>
+                        <th>Назив на одговорно лице</th>
+                        <th>ЕМБГ на полномошник</th>
+                        <th>Назив на полномошник</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="exciseBond in exciseBonds" ng-show="expandOps">
+                        <td>{{exciseBond.id}}</td>
+                        <td>{{exciseBond.edb}}</td>
+                        <td>{{exciseBond.name}}</td>
+                        <td>{{exciseBond.vid_odobrenie}}</td>
+                        <td>{{exciseBond.broj_odobrenie}}</td>
+                        <td>{{exciseBond.datum_odobrenie}}</td>
+                        <td>{{exciseBond.prethodno_odobrenie}}</td>
+                        <td>{{exciseBond.sledno_odobrenie}}</td>
+                        <td>{{exciseBond.embg_odgovorno_lice}}</td>
+                        <td>{{exciseBond.naziv_odgovorno_lice}}</td>
+                        <td>{{exciseBond.embg_polnomosnik}}</td>
+                        <td>{{exciseBond.naziv_polnomosnik}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <button ng-show="!expandLoad" ng-click="expandedLoad()">+</button>
+                            <button ng-show="expandLoad" ng-click="expandedLoad()">-</button>
+                            Акцизни добра
+                        </th>
+                    </tr>
+                    <tr ng-show="expandLoad">
+                        <th>Идентификационен број</th>
+                        <th>Број на одобрение</th>
+                        <th>Ставка</th>
+                        <th>Вид</th>
+                        <th>Производ</th>
+                        <th>Тарифа</th>
+                        <th>Количина</th>
+                        <th>Мерка</th>
+                        <th>За производство</th>
+                        <th>За складирање</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="exciseGood in exciseGoods" ng-show="expandLoad">
+                        <td>{{exciseGood.id}}</td>
+                        <td>{{exciseGood.broj_odobrenie}}</td>
+                        <td>{{exciseGood.stavka}}</td>
+                        <td>{{exciseGood.vid}}</td>
+                        <td>{{exciseGood.proizvod}}</td>
+                        <td>{{exciseGood.tarifa}}</td>
+                        <td>{{exciseGood.kolicina}}</td>
+                        <td>{{exciseGood.opis_merka}}</td>
+                        <td>{{exciseGood.za_proizvodstvo}}</td>
+                        <td>{{exciseGood.za_skladiranje}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <button ng-show="!expandObject" ng-click="expandedObject()">+</button>
+                            <button ng-show="expandObject" ng-click="expandedObject()">-</button>
+                            Акцизни простори
+                        </th>
+                    </tr>
+                    <tr ng-show="expandObject">
+                        <th>Идентификационен број</th>
+                        <th>Број на одобрение</th>
+                        <th>Ставка</th>
+                        <th>Општина</th>
+                        <th>Назив на општина</th>
+                        <th>Место</th>
+                        <th>Назив на Место</th>
+                        <th>Назив на улица</th>
+                        <th>Улица број</th>
+                        <th>За производство</th>
+                        <th>За складирање</th>
+                        <th>ЕМБГ на одговорно лице</th>
+                        <th>Назив на одговорно лице</th>
+                        <th>Забелешка</th>
+                        <th>Статус</th>
+                        <th>Статус датум</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="exciseSpace in exciseSpaces" ng-show="expandObject">
+                        <td>{{exciseSpace.id}}</td>
+                        <td>{{exciseSpace.broj_odobrenie}}</td>
+                        <td>{{exciseSpace.stavka}}</td>
+                        <td>{{exciseSpace.opstina}}</td>
+                        <td>{{exciseSpace.naziv_opstina}}</td>
+                        <td>{{exciseSpace.mesto}}</td>
+                        <td>{{exciseSpace.naziv_mesto}}</td>
+                        <td>{{exciseSpace.naziv_ulica}}</td>
+                        <td>{{exciseSpace.ulica_broj}}</td>
+                        <td>{{exciseSpace.za_proizvodstvo}}</td>
+                        <td>{{exciseSpace.za_skladiranje}}</td>
+                        <td>{{exciseSpace.embg_odgovorno_lice}}</td>
+                        <td>{{exciseSpace.naziv_odgovorno_lice}}</td>
+                        <td>{{exciseSpace.zabeleska}}</td>
+                        <td>{{exciseSpace.status}}</td>
+                        <td>{{exciseSpace.status_datum}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row text-center">
+                <a class="btn btn-default" ng-click="RegistarXML()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во XML формат</a>
+                <a class="btn btn-default" ng-click="RegistarPDF()"><span class="glyphicon glyphicon-floppy-save"></span> Преземи во PDF формат</a>
+            </div>
+        </div>
+    </div>
+</form>

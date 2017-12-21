@@ -1,0 +1,87 @@
+﻿@model Interop.CC.Models.DTO.Institutions.AnnualRevenuesFZOOutputDTO
+<head>
+    <style type="text/css">
+        table, tr, td {
+            border: 1px solid gray;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+
+        th {
+            border: 2px solid black;
+            padding: 5px;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<div style="width: 100%;">
+
+    <div style="float: left; width: 70%;">
+        <img src="@Server.MapPath("~/Views/Template/grbMak.jpg")" style="float: left" alt="MIOA logo" />
+        <label>Република Македонија</label>
+        <h4 style="font-size:.6em;">Министерство за информатичко општество и администрација</h4>
+    </div>
+    <div style="float: right; width: 30%; font-size: .6em">
+        <a style="margin-left: 80px;" href="http://www.interoperabilnost.gov.mk">www.interoperabilnost.gov.mk</a>
+
+        <table class="table-striped" style="margin-top: 20px;">
+            <thead style="display: table-row-group">
+
+            </thead>
+            <tbody style="font-size: .6em">
+                <tr>
+                    <td>Име на услугата:</td>
+                    <td>@Model.ServiceName</td>
+                </tr>
+                <tr>
+                    <td>Услугата ја користи:</td>
+                    <td>@Model.ConsumerName</td>
+                </tr>
+                <tr>
+                    <td>Услугата ја нуди:</td>
+                    <td>@Model.ProviderName</td>
+                </tr>
+                <tr>
+                    <td>Време на повик до услугата:</td>
+                    <td>@Model.ServiceCalledTime.ToString("dd.MM.yyyy HH:mm")</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div style="height: 70px; width: 100%; float: left"></div>
+
+<table class="col-lg-12 pull-left">
+    <thead style="display: table-row-group">
+        <tr id="row1">
+            <th>ЕДБ</th>
+            <th>Име на обврзникот</th>
+            <th>Презиме на обврзникот</th>
+            <th>Година</th>
+            <th>Бруто остварен годишен приход</th>
+            <th>Нето остварен годишен приход(плати)</th>
+            <th>Забелешка</th>
+           
+
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+           
+                <td>@Model.AnnualRevenuesFZO.EDB</td>
+                <td>@Model.AnnualRevenuesFZO.FirstName</td>
+                <td>@Model.AnnualRevenuesFZO.LastName</td>
+                <td>@Model.AnnualRevenuesFZO.Year</td>
+                <td>@Model.AnnualRevenuesFZO.FZO_Bruto</td>
+                <td>@Model.AnnualRevenuesFZO.FZO_Neto</td>
+                <td>@Model.AnnualRevenuesFZO.Zabeleska</td>
+               
+
+           
+            </tr>
+
+
+        </tbody>
+    </table>

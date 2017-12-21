@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f183dc20-b21d-458a-8085-5c7d11afa12f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AKNServicesProd.Host/AKNPopertyListAndCadastrialParcelProduction.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AKNPopertyListAndCadastrialParcelProduction.disco" MetadataType="Disco" ID="cdf52f17-709b-433f-bd07-dd80cd4c33aa" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/AKNPopertyListAndCadastrialParcelProduction.svc?disco" />
+    <MetadataFile FileName="AKNService.wsdl" MetadataType="Wsdl" ID="f362ad3e-d063-441f-b7cb-d316d4f143c1" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/AKNPopertyListAndCadastrialParcelProduction.svc?wsdl" />
+    <MetadataFile FileName="AKNPopertyListAndCadastrialParcelProduction.xsd" MetadataType="Schema" ID="0b8279e3-0c86-4124-8312-efd14daff1ee" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/AKNPopertyListAndCadastrialParcelProduction.svc?xsd=xsd2" />
+    <MetadataFile FileName="AKNPopertyListAndCadastrialParcelProduction.wsdl" MetadataType="Wsdl" ID="d896bf64-0099-4be7-8e77-35597674fe10" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/AKNPopertyListAndCadastrialParcelProduction.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="AKNPopertyListAndCadastrialParcelProduction1.xsd" MetadataType="Schema" ID="092ce15f-9d5d-4572-a784-1f1f46a806b0" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/AKNPopertyListAndCadastrialParcelProduction.svc?xsd=xsd0" />
+    <MetadataFile FileName="AKNPopertyListAndCadastrialParcelProduction2.xsd" MetadataType="Schema" ID="6d2a8f26-b5e1-4647-9f6e-e40d572868fa" SourceId="1" SourceUrl="http://localhost/AKNServicesProd.Host/AKNPopertyListAndCadastrialParcelProduction.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/FaultAdapterAKN" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/FaultAdapterAKN" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="dzgr">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ilist" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="kops" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nizobj" nillable="true" type="tns:ArrayOfObjects" />
+      <xs:element minOccurs="0" name="nizpar" nillable="true" type="tns:ArrayOfParcel" />
+      <xs:element minOccurs="0" name="nizsop" nillable="true" type="tns:ArrayOfOwner" />
+      <xs:element minOccurs="0" name="niztov" nillable="true" type="tns:ArrayOfLoads" />
+      <xs:element minOccurs="0" name="ops" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dzgr" nillable="true" type="tns:dzgr" />
+  <xs:complexType name="ArrayOfObjects">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Objects" nillable="true" type="tns:Objects" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfObjects" nillable="true" type="tns:ArrayOfObjects" />
+  <xs:complexType name="Objects">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="broj" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="godinagradba" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="kat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mesto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="namena" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="objekt" type="xs:int" />
+      <xs:element minOccurs="0" name="osnov" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="povrsina" type="xs:long" />
+      <xs:element minOccurs="0" name="pravo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="stan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vlez" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Objects" nillable="true" type="tns:Objects" />
+  <xs:complexType name="ArrayOfParcel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Parcel" nillable="true" type="tns:Parcel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfParcel" nillable="true" type="tns:ArrayOfParcel" />
+  <xs:complexType name="Parcel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="broj_del" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="klasa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="kultura" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mesto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="objekt" type="xs:int" />
+      <xs:element minOccurs="0" name="povrsina" type="xs:long" />
+      <xs:element minOccurs="0" name="pravo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Parcel" nillable="true" type="tns:Parcel" />
+  <xs:complexType name="ArrayOfOwner">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Owner" nillable="true" type="tns:Owner" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOwner" nillable="true" type="tns:ArrayOfOwner" />
+  <xs:complexType name="Owner">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="broj" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="del" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="embg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mesto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ulica" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Owner" nillable="true" type="tns:Owner" />
+  <xs:complexType name="ArrayOfLoads">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Loads" nillable="true" type="tns:Loads" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLoads" nillable="true" type="tns:ArrayOfLoads" />
+  <xs:complexType name="Loads">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Loads" nillable="true" type="tns:Loads" />
+  <xs:complexType name="ATRparceli">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nizpar" nillable="true" type="tns:ArrayOfParcelAtr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ATRparceli" nillable="true" type="tns:ATRparceli" />
+  <xs:complexType name="ArrayOfParcelAtr">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ParcelAtr" nillable="true" type="tns:ParcelAtr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfParcelAtr" nillable="true" type="tns:ArrayOfParcelAtr" />
+  <xs:complexType name="ParcelAtr">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="broj_del" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ilist" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="kops" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="kultura" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mesto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="objekt" type="xs:int" />
+      <xs:element minOccurs="0" name="ops" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="povrsina" type="xs:long" />
+      <xs:element minOccurs="0" name="pravo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParcelAtr" nillable="true" type="tns:ParcelAtr" />
+</xs:schema>

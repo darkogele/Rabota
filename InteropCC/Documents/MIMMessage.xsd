@@ -1,0 +1,59 @@
+<xs:schema xmlns="http://mioa.gov.mk/interop/mim/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://mioa.gov.mk/interop/mim/v1" elementFormDefault="qualified" >
+  
+  <xs:element name="CryptoHeader" id="CryptoHeader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Key" type="xs:string"/>
+        <xs:element name="InitializationVector" type="xs:string"/>
+        <xs:element name="FormatValue" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MIMBody" id="MIMBody">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Message" type="xs:anyType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="MIMHeader">
+    <xs:sequence>
+      <xs:element name="Consumer" type="xs:string"/>
+      <xs:element name="Provider" type="xs:string"/>
+      <xs:element name="Routing-token" type="xs:string"/>
+      <xs:element name="Service" type="xs:string"/>
+      <xs:element name="Method" type="xs:string"/>
+      <xs:element name="TransactionId">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Dir" type="xs:string"/>
+      <xs:element name="CallType">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="synchronous"/>
+            <xs:enumeration value="asynchronous"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="PublicKey" type="xs:string" minOccurs="0"/>
+      <xs:element name="Status" type="xs:string"/>
+      <xs:element name="MimeType" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            according to http://www.iana.org/assignments/media-types/media-types.xhtml
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TimeStamp" type="xs:string"/>
+      <xs:element name="StatusMessage" type="xs:anyType" minOccurs="0"/>
+      <xs:element name="CorrelationID" type="xs:string" minOccurs="0"/>
+      <xs:element name="Signature" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+</xs:schema>
